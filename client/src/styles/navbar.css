@@ -1,0 +1,507 @@
+#NavBar{
+    position: fixed;
+    width: 100%;
+    height: 60vh;
+    transform: translateY(-90%);
+    background-color: var(--dark-blue);
+    padding-bottom: 7px;
+    padding-left: 7px;
+    transition: all 350ms ease-in-out;
+}
+
+#NavBar::after{
+    content: '';
+    color: var(--dark-blue);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    font-weight: bold;
+    bottom: -35px;
+    right: 10px;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    border: 7px solid var(--dark-blue);
+    background-color: var(--light-blue);
+    z-index: 0;
+}
+
+#NavBar.open{
+    transform: translateY(0);
+}
+
+#NavBar > .wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-left: 60px;
+    z-index: 1;
+}
+
+#NavBar > .wrapper > .Navbar_Toggle {
+    color: var(--dark-blue);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    font-weight: bold;
+    bottom: -50px;
+    right: 10px;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#NavBar > .wrapper > .Navbar_Content_Container{
+    width: 100%;
+    height: 100%;
+    background-color: var(--light-blue);
+}
+
+#NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .vertical_divider{
+    content: '';
+    height: 100%;
+    background-color: var(--dark-blue);
+    opacity: 0.5;
+    width: 1px;
+}
+
+#NavBar > .wrapper > .Navbar_Content_Container > .Top_Side{
+    position: relative;
+    width: 100%;
+    height: 90%;
+    display: flex;
+}
+
+#NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Logo{
+    width: 100%;
+    top: -60px;
+    right: -20px;
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: start;
+}
+
+#NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Logo > img{
+    width: 350px;
+    opacity: 0.3;
+}
+
+#NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide{
+    width: 60%;
+    padding: 20px 30px;
+}
+
+#NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Title{
+    width: 100%;
+}
+
+#NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Title > span{
+    font-size: 50px;
+    color: var(--dark-blue);
+    font-weight: bold;
+}
+
+#NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Content{
+    width: 100%;
+}
+
+#NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Content > *{
+    font-size: 24px;
+    color: var(--dark-blue);
+}
+
+#NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Right_Side{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    padding: 20px 30px;
+}
+
+#NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Right_Side > .Creators{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+#NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Right_Side > .Creators > p{
+    width: 100%;
+    color: var(--dark-blue);
+    text-align: end;
+    font-size: 24px;
+}
+
+#NavBar > .wrapper > .Navbar_Content_Container > .Bottom_Side{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 10px 25px;
+    
+}
+
+#NavBar > .wrapper > .Navbar_Content_Container > .Bottom_Side > img{
+    width: 210px;
+    height: 40px;
+    transform: translateY(3px);
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 1280px){
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Title > span{
+        font-size: 40px;
+    }
+    
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Content > *{
+        font-size: 18px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Right_Side > .Creators > p{
+        font-size: 18px;
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 1024px){
+    #NavBar{
+        height: 63vh;
+    }
+    
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Logo > img{
+        width: 270px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Title > span{
+        font-size: 30px;
+    }
+    
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Content > *{
+        font-size: 14px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Right_Side > .Creators > p{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (orientation: portrait) and (max-width: 1024px){
+    #NavBar{
+        height: 30vh;
+    }
+    
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Logo > img{
+        width: 270px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Title > span{
+        font-size: 30px;
+    }
+    
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Content > *{
+        font-size: 16px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Right_Side > .Creators > p{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 912px){
+    #NavBar{
+        height: 63vh;
+    }
+    
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Logo > img{
+        width: 270px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Title > span{
+        font-size: 30px;
+    }
+    
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Content > *{
+        font-size: 14px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Right_Side > .Creators > p{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (orientation: portrait) and (max-width: 912px){
+    #NavBar{
+        height: 50vh;
+    }
+    
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Logo > img{
+        width: 239px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Title > span{
+        font-size: 30px;
+    }
+    
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Content > *{
+        font-size: 16px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Right_Side > .Creators > p{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 920px) and (max-height: 430px){
+    #NavBar{
+        height: 90vh;
+    }
+
+    #NavBar::after{
+        bottom: -25px;
+        width: 70px;
+        height: 70px;
+    }
+    
+
+    #NavBar > .wrapper > .Navbar_Toggle {
+        font-size: 30px;
+        bottom: -40px;
+        right: 10px;
+        width: 70px;
+        height: 70px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Bottom_Side > img{
+        width: 150px;
+    }
+    
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Logo > img{
+        width: 239px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Title > span{
+        font-size: 30px;
+    }
+    
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Content > *{
+        font-size: 13px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Right_Side > .Creators > p{
+        font-size: 13px;
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 768px){
+    #NavBar{
+        height: 63vh;
+    }
+    
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Logo > img{
+        width: 270px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Title > span{
+        font-size: 30px;
+    }
+    
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Content > *{
+        font-size: 14px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Right_Side > .Creators > p{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (orientation: portrait) and (max-width: 768px){
+    #NavBar{
+        height: 60vh;
+    }
+    
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Logo > img{
+        width: 230px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Title > span{
+        font-size: 30px;
+    }
+    
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Content > *{
+        font-size: 16px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Right_Side > .Creators > p{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 540px){
+    #NavBar{
+        height: 63vh;
+    }
+    
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Logo > img{
+        width: 270px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Title > span{
+        font-size: 30px;
+    }
+    
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Content > *{
+        font-size: 14px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Right_Side > .Creators > p{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (orientation: portrait) and (max-width: 540px){
+    #NavBar{
+        height: 60vh;
+    }
+    
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Logo > img{
+        width: 230px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Title > span{
+        font-size: 30px;
+    }
+    
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Content > *{
+        font-size: 16px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Right_Side > .Creators > p{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 430px){
+    #NavBar{
+        height: 63vh;
+    }
+    
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Logo > img{
+        width: 270px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Title > span{
+        font-size: 30px;
+    }
+    
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Content > *{
+        font-size: 14px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Right_Side > .Creators > p{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (orientation: portrait) and (max-width: 430px){
+    #NavBar{
+        height: 60vh;
+    }
+
+    #NavBar::after{
+        bottom: -25px;
+        width: 70px;
+        height: 70px;
+    }
+
+    #NavBar > .wrapper{
+        padding-left: 40px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Toggle {
+        font-size: 30px;
+        bottom: -40px;
+        right: 10px;
+        width: 70px;
+        height: 70px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Logo{
+        top: -70px;
+        right: -50px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Bottom_Side > img{
+        width: 150px;
+    }
+
+    
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side{
+        height: 90%;
+        flex-direction: column;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Logo > img{
+        width: 230px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide{
+        width: 100%;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Title > span{
+        font-size: 30px;
+    }
+    
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Content > *{
+        font-size: 16px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Right_Side {
+        width: 100%;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Right_Side > .Creators > p{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (orientation: portrait) and (max-width: 320px){
+    #NavBar{
+        height: 60vh;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Logo{
+        top: -70px;
+        right: -50px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Bottom_Side > img{
+        width: 150px;
+    }
+    
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Logo > img{
+        width: 230px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Title > span{
+        font-size: 30px;
+    }
+    
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Content > *{
+        font-size: 14px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Right_Side > .Creators > p{
+        font-size: 14px;
+    }
+}

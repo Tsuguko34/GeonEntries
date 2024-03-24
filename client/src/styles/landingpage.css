@@ -1,0 +1,386 @@
+#LandingPage{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#LandingPage::after{
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url('../assets/images/backgroundOverlay.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.05;
+}
+
+
+#LandingPage > .wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    z-index: 100;
+}
+
+#LandingPage > .wrapper > .LandingPage_Top{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#LandingPage > .wrapper > .LandingPage_Top > img{
+    width: 700px;
+    height: 130px;
+    object-fit: cover;
+}
+
+#LandingPage > .wrapper > .LandingPage_Middle{
+    width: 100%;
+    height: 350px;
+}
+
+#LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container > .Paragraph_Item{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: transform 450ms ease-in-out;
+}
+
+#LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container > .Paragraph_Item > span{
+    display: flex;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    transition: all 1250ms ease-in-out;
+}
+
+#LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container > .Paragraph_Item > span > *{
+    width: 70px;
+    height: 70px;
+}
+
+#LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container > .Paragraph_Item > p{
+    width: 1000px;
+    color: white;
+    line-height: 2;
+    text-align: center;
+    font-size: 26px;
+}
+
+#LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container > .Paragraph_Item.hideLeft{
+    transform: translateX(-200%);
+}
+
+#LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container > .Paragraph_Item.hideRight{
+    transform: translateX(200%);
+}
+
+#LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container > .Paragraph_Item > span.hideLeft{
+    opacity: 0;
+}
+
+#LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container > .Paragraph_Item > span.hideRight{
+    opacity: 0;
+}
+
+#LandingPage > .wrapper > .LandingPage_Bottom{
+    position: relative;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#LandingPage > .wrapper > .LandingPage_Bottom > img{
+    position: relative;
+    width: 250px;
+    height: 165px;
+    opacity: 0.5;
+    object-fit:cover;
+    z-index: 10;
+    transition: all 250ms ease-in-out;
+}
+
+#LandingPage > .wrapper > .LandingPage_Bottom > img.active{
+    opacity: 1;
+    transform: translateX(140px);
+}
+
+#LandingPage > .wrapper > .LandingPage_Bottom > button{
+    position: absolute;
+    text-align: start;
+    padding: 10px 20px;
+    bottom: 3px;
+    width: 220px;
+    height: 60px;
+    border-radius: 15px;
+    border: none;
+    background-color: var(--dark-blue);
+    color: white;
+    font-size: 20px;
+    opacity: 0;
+    transition: all 250ms ease-in-out;
+    z-index: 9;
+}
+
+#LandingPage > .wrapper > .LandingPage_Bottom > button.active{
+    opacity: 0.8;
+}
+
+#LandingPage > .wrapper > .LandingPage_Bottom > button.active:hover{
+    background-color: var(--light-blue);
+    opacity: 1;
+}
+
+@media only screen and (max-width: 1024px){
+    #LandingPage > .wrapper > .LandingPage_Top > img{
+        width: 600px;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Middle{
+        width: 100%;
+        height: 250px;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container{
+        align-items: flex-start;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container > .Paragraph_Item{
+        gap: 10px;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container > .Paragraph_Item > p{
+        width: 1000px;
+        font-size: 20px;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container > .Paragraph_Item{
+        flex-direction: column;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container > .Paragraph_Item.leftSide{
+        flex-direction: column-reverse;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container > .Paragraph_Item > span > *{
+        width: 55px;
+        height: 55px;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Bottom > img{
+        width: 235px;
+        height: 155px;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Bottom > img.active{
+        transform: translateX(140px);
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Bottom > button{
+        width: 200px;
+        height: 65px;
+        font-size: 18px;
+    }
+
+}
+
+@media only screen and (max-width: 900px){
+    #LandingPage > .wrapper > .LandingPage_Top > img{
+        width: 500px;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Middle{
+        width: 100%;
+        height: 250px;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container{
+        align-items: flex-start;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container > .Paragraph_Item{
+        gap: 10px;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container > .Paragraph_Item > p{
+        width: 650px;
+        font-size: 16px;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container > .Paragraph_Item{
+        flex-direction: column;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container > .Paragraph_Item.leftSide{
+        flex-direction: column-reverse;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container > .Paragraph_Item > span > *{
+        width: 55px;
+        height: 55px;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Bottom > img{
+        width: 200px;
+        height: 130px;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Bottom > img.active{
+        transform: translateX(115px);
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Bottom > button{
+        width: 200px;
+        height: 50px;
+        font-size: 15px;
+    }
+
+}
+
+@media only screen and (max-width: 540px){
+    #LandingPage > .wrapper{
+        gap: 20px;
+    }
+    #LandingPage > .wrapper > .LandingPage_Top > img{
+        height: 100px;
+        object-fit: cover;
+    }
+
+    #LandingPage > .wrapper{
+        justify-content: flex-start;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Middle{
+        width: 100%;
+        height: 400px;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container{
+        align-items: flex-start;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container > .Paragraph_Item{
+        gap: 5px;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container > .Paragraph_Item{
+        flex-direction: column;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container > .Paragraph_Item.leftSide{
+        flex-direction: column-reverse;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container > .Paragraph_Item > p{
+        width: 300px;
+        font-size: 16px;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container > .Paragraph_Item > span > *{
+        width: 55px;
+        height: 55px;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Bottom > img{
+        width: 185px;
+        height: 120px;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Bottom > img.active{
+        transform: translateX(100px);
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Bottom > button{
+        width: 175px;
+        height: 50px;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 380px){
+
+    #LandingPage > .wrapper{
+        justify-content: flex-start;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Middle{
+        width: 100%;
+        height: 350px;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container > .Paragraph_Item > p{
+        width: 250px;
+        font-size: 14px;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container > .Paragraph_Item > span > *{
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    #LandingPage > .wrapper > .LandingPage_Middle{
+        width: 100%;
+        height: 300px;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container > .Paragraph_Item > p{
+        width: 200px;
+        font-size: 12px;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container > .Paragraph_Item > span > *{
+        width: 30px;
+        height: 30px;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Bottom > img{
+        width: 150px;
+        height: 100px;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Bottom > button{
+        width: 150px;
+        height: 45px;
+        font-size: 14px;
+    }
+}
+
+
+@media only screen and (max-width: 280px){
+    #LandingPage > .wrapper > .LandingPage_Middle{
+        width: 100%;
+        height: 220px;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container > .Paragraph_Item > p{
+        width: 200px;
+        font-size: 10px !important;
+    }
+
+}
+
+

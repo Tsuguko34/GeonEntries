@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+:root {
+  --background-blue: #176b87;
+  --dark-blue: #053b50;
+  --light-blue: #64ccc5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--background-blue);
+}
+
+a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+button{
+  cursor: pointer;
+  border: none;
+}
+
+/* For WebKit browsers (e.g., Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 5px; /* Set the width of the scrollbar */
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--background-blue); /* Set the color of the scrollbar thumb */
+  border-radius: 10px; /* Set the border radius of the scrollbar thumb */
+}
+
+.Navbar_Container{
+  display: none;
+}
+
+.Navbar_Container.active{
+  display: block;
+  height: 60px;
+}
