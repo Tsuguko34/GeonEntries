@@ -1,6 +1,6 @@
 {
   "homepage": "https://tsuguko34.github.io/GeonEntries",
-  "name": "client",
+  "name": "geomentries",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
