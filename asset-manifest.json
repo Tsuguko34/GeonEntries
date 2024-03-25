@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/GeomEntries/static/css/main.f0e804e5.css",
-    "main.js": "/GeomEntries/static/js/main.aa6f6f4d.js",
-    "static/js/453.d6c0240c.chunk.js": "/GeomEntries/static/js/453.d6c0240c.chunk.js",
-    "static/media/Example B1.mp4": "/GeomEntries/static/media/Example B1.ec78b930684f578e7368.mp4",
-    "static/media/Example B2.mp4": "/GeomEntries/static/media/Example B2.eef41a168d63a6e49227.mp4",
-    "static/media/Example A2.mp4": "/GeomEntries/static/media/Example A2.888f321af03bb65ae55c.mp4",
-    "static/media/Example A1.mp4": "/GeomEntries/static/media/Example A1.0b2b35d54eeb390b85b8.mp4",
-    "static/media/l1p2.png": "/GeomEntries/static/media/l1p2.4bf2ec68ef37ca5c8e1f.png",
-    "static/media/backgroundOverlay.png": "/GeomEntries/static/media/backgroundOverlay.ee5b51499c0f0848b3d1.png",
-    "static/media/l1p1.png": "/GeomEntries/static/media/l1p1.eef5f7487d6fdd1bb818.png",
-    "static/media/miniLogo.png": "/GeomEntries/static/media/miniLogo.61e334bf5aa98e31915f.png",
-    "static/media/head-tail-1.png": "/GeomEntries/static/media/head-tail-1.70ff12cbcd5a073c99b4.png",
-    "static/media/NE1.png": "/GeomEntries/static/media/NE1.2dcd92cfbadf352c4345.png",
-    "static/media/NE2.png": "/GeomEntries/static/media/NE2.ee723fc81c677f8af7b4.png",
-    "static/media/largeLogo.png": "/GeomEntries/static/media/largeLogo.086036721b1d4762fc95.png",
-    "index.html": "/GeomEntries/index.html",
-    "main.f0e804e5.css.map": "/GeomEntries/static/css/main.f0e804e5.css.map",
-    "main.aa6f6f4d.js.map": "/GeomEntries/static/js/main.aa6f6f4d.js.map",
-    "453.d6c0240c.chunk.js.map": "/GeomEntries/static/js/453.d6c0240c.chunk.js.map"
+    "main.css": "/static/css/main.ca518a93.css",
+    "main.js": "/static/js/main.42e7ff5f.js",
+    "static/js/453.d6c0240c.chunk.js": "/static/js/453.d6c0240c.chunk.js",
+    "static/media/Example B1.mp4": "/static/media/Example B1.ec78b930684f578e7368.mp4",
+    "static/media/Example B2.mp4": "/static/media/Example B2.eef41a168d63a6e49227.mp4",
+    "static/media/Example A2.mp4": "/static/media/Example A2.888f321af03bb65ae55c.mp4",
+    "static/media/Example A1.mp4": "/static/media/Example A1.0b2b35d54eeb390b85b8.mp4",
+    "static/media/l1p2.png": "/static/media/l1p2.4bf2ec68ef37ca5c8e1f.png",
+    "static/media/backgroundOverlay.png": "/static/media/backgroundOverlay.ee5b51499c0f0848b3d1.png",
+    "static/media/l1p1.png": "/static/media/l1p1.eef5f7487d6fdd1bb818.png",
+    "static/media/miniLogo.png": "/static/media/miniLogo.61e334bf5aa98e31915f.png",
+    "static/media/head-tail-1.png": "/static/media/head-tail-1.70ff12cbcd5a073c99b4.png",
+    "static/media/NE1.png": "/static/media/NE1.2dcd92cfbadf352c4345.png",
+    "static/media/NE2.png": "/static/media/NE2.ee723fc81c677f8af7b4.png",
+    "static/media/largeLogo.png": "/static/media/largeLogo.086036721b1d4762fc95.png",
+    "index.html": "/index.html",
+    "main.ca518a93.css.map": "/static/css/main.ca518a93.css.map",
+    "main.42e7ff5f.js.map": "/static/js/main.42e7ff5f.js.map",
+    "453.d6c0240c.chunk.js.map": "/static/js/453.d6c0240c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f0e804e5.css",
-    "static/js/main.aa6f6f4d.js"
+    "static/css/main.ca518a93.css",
+    "static/js/main.42e7ff5f.js"
   ]
 }
