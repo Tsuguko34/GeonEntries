@@ -1,4 +1,5 @@
-import { LandingPage, LessonsList } from "../pages";
+import { LandingPage, Lesson, LessonsList, PageNotFound } from "../pages";
+import LessonTopics from "../pages/Lessons/LessonTopics";
 
 const routes = [
   {
@@ -8,6 +9,18 @@ const routes = [
   {
     path: "/LessonsList",
     component: <LessonsList />,
+  },
+  {
+    path: "/Lesson/:lessonName",
+    component: <LessonTopics />,
+  },
+  {
+    path: "/Lesson/:lessonName/:lessonTitle",
+    component: <Lesson />,
+  },
+  {
+    path: "/*",
+    component: <PageNotFound />,
   },
 ];
 

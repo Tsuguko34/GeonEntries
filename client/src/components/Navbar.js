@@ -1,11 +1,19 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../styles/navbar.css";
 
+import * as IoIcons from "react-icons/io";
+import * as FaIcons from "react-icons/fa";
+
+import { GetWindowWidth } from "../utils";
+
 import largeLogo from "../assets/images/largeLogo.png";
 import miniLogo from "../assets/images/miniLogo.png";
+import { useNavigate } from "react-router-dom";
 
-function Navbar() {
+function Navbar({ setOpenSidebar }) {
+  const navigate = useNavigate();
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const windowWidth = GetWindowWidth();
   const handleNavbarClose = () => setNavbarOpen(!navbarOpen);
 
   const navbarRef = useRef(null);
@@ -39,6 +47,18 @@ function Navbar() {
 
   return (
     <section id="NavBar" className={`NavBar ${navbarOpen && "open"}`}>
+      <div className="Hamburger_Icon">
+        {windowWidth > 1024 && (
+          <FaIcons.FaHome
+            onClick={() => navigate("/LessonsList")}
+            className="home"
+          />
+        )}
+        {windowWidth <= 1024 && (
+          <IoIcons.IoMdMenu onClick={() => setOpenSidebar(true)} />
+        )}
+      </div>
+
       <div ref={navbarRef} className="wrapper">
         <div className="Navbar_Content_Container">
           <div className="Top_Side">

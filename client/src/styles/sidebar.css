@@ -1,0 +1,104 @@
+#Sidebar{
+    width: 350px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+#Sidebar > .Content{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: var(--dark-blue);
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    gap: 40px;
+    
+}
+
+#Sidebar > .Content > .Close_Icon{
+    width: 100%;
+    display: none;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 25px;
+}
+
+#Sidebar > .Content > .Close_Icon > *{
+    color: white;
+    width: 25px;
+    height: 25px;
+}
+
+#Sidebar > .Content > .Title{
+    width: 100%;
+    font-size: 22px;
+    text-align: center;
+    color: var(--light-blue);
+    font-weight: bold;
+}
+
+#Sidebar > .Content > .List{
+    height: 600px;
+    overflow-y: auto;
+}
+
+#Sidebar > .Content > .List > .List_Item{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+#Sidebar > .Content > .List > .List_Item > p{
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+}
+
+#Sidebar > .Content > .List > .List_Item > p:hover{
+    color: var(--light-blue);
+}
+
+#Sidebar > .Content > .List > .List_Item.active > p{
+    color: var(--lime-green);
+}
+
+#Sidebar > .Content > .List .SubItems_Container{
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    align-items: start;
+    gap: 20px;
+    padding-left: 30px;
+}
+
+#Sidebar > .Content > .List .SubItems_Container > *{
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+}
+
+#Sidebar > .Content > .List .SubItems_Container:hover > *{
+    color: var(--light-blue);
+}
+
+@media only screen and (max-width: 1024px){
+    #Sidebar > .Content > .Close_Icon{
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    #Sidebar{
+        width: 300px;
+    }
+
+    #Sidebar > .Content{
+        padding: 10px 15px;
+    }
+}

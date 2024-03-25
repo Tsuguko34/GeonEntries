@@ -4,6 +4,7 @@
   --background-blue: #176b87;
   --dark-blue: #053b50;
   --light-blue: #64ccc5;
+  --lime-green: #d2de32;
 }
 
 *,
@@ -39,7 +40,7 @@ button{
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--background-blue); /* Set the color of the scrollbar thumb */
+  background-color: var(--lime-green); /* Set the color of the scrollbar thumb */
   border-radius: 10px; /* Set the border radius of the scrollbar thumb */
 }
 
@@ -49,5 +50,59 @@ button{
 
 .Navbar_Container.active{
   display: block;
-  height: 60px;
+  height: 54px;
+}
+
+.Main_View{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.Main_Content{
+  width: 100%;
+}
+
+.Main_Content.Sidebar{
+  width: 100%;
+}
+
+.Sidebar_Container{
+  position: sticky;
+  top: 54px;
+  height: calc(100vh - 54px);
+}
+
+.Sidebar_Overlay{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  transition: all 250ms ease-in-out forwards;
+  z-index: -10;
+}
+
+.Sidebar_Overlay.open{
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+}
+
+@media only screen and (max-width: 1024px){
+  .Main_Content.Sidebar{
+    width: 100%;
+  }
+
+  .Sidebar_Container{
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    left: -150%;
+    height: 100vh;
+    transition: all 250ms ease-in-out;
+  }
+
+  .Sidebar_Container.open{
+    left: 0;
+  }
 }

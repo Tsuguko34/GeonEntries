@@ -7,6 +7,7 @@
     padding-bottom: 7px;
     padding-left: 7px;
     transition: all 350ms ease-in-out;
+    z-index: 99;
 }
 
 #NavBar::after{
@@ -30,6 +31,33 @@
 
 #NavBar.open{
     transform: translateY(0);
+}
+
+#NavBar > .Hamburger_Icon{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 60px;
+    height: 100%;
+    z-index: 99;
+    padding: 5px 0px;
+    
+}
+
+#NavBar > .Hamburger_Icon > *{
+    width: 50px;
+    height: 50px;
+    color: white;
+    cursor: pointer;
+}
+
+#NavBar > .Hamburger_Icon > .home{
+    width: 40px;
+    height: 40px;
+    padding-bottom: 10px;
+    cursor: pointer;
 }
 
 #NavBar > .wrapper {
@@ -157,6 +185,20 @@
     object-fit: cover;
 }
 
+@media only screen and (max-width: 1440px){
+    #NavBar{
+        height: 60vh;
+        transform: translateY(-88%);
+    }
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Content > *{
+        font-size: 16px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Right_Side > .Creators > p{
+        font-size: 16px;
+    }
+}
+
 @media only screen and (max-width: 1280px){
     #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Title > span{
         font-size: 40px;
@@ -237,7 +279,7 @@
     }
 }
 
-@media only screen and (orientation: portrait) and (max-width: 912px){
+@media only screen and (orientation: portrait) and (max-width: 950px){
     #NavBar{
         height: 50vh;
     }
@@ -259,7 +301,7 @@
     }
 }
 
-@media only screen and (orientation: landscape) and (max-width: 920px) and (max-height: 430px){
+@media only screen and (orientation: landscape) and (max-width: 950px) and (max-height: 430px){
     #NavBar{
         height: 90vh;
     }
@@ -326,6 +368,10 @@
     #NavBar{
         height: 60vh;
     }
+
+    #NavBar > .Hamburger_Icon{
+        padding: 0;
+    }
     
     #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Logo > img{
         width: 230px;
@@ -336,11 +382,52 @@
     }
     
     #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Content > *{
-        font-size: 16px;
+        font-size: 14px;
     }
 
     #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Right_Side > .Creators > p{
-        font-size: 16px;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 667px) and (max-height: 375px){
+    #NavBar{
+        height: 90vh;
+    }
+
+    #NavBar::after{
+        bottom: -25px;
+        width: 70px;
+        height: 70px;
+    }
+    
+
+    #NavBar > .wrapper > .Navbar_Toggle {
+        font-size: 30px;
+        bottom: -40px;
+        right: 10px;
+        width: 70px;
+        height: 70px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Bottom_Side > img{
+        width: 150px;
+    }
+    
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Logo > img{
+        width: 239px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Title > span{
+        font-size: 20px;
+    }
+    
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Content > *{
+        font-size: 10px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Right_Side > .Creators > p{
+        font-size: 10px;
     }
 }
 
@@ -351,6 +438,10 @@
     
     #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Logo > img{
         width: 270px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide{
+        width: 100%;
     }
 
     #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Title > span{
@@ -369,10 +460,26 @@
 @media only screen and (orientation: portrait) and (max-width: 540px){
     #NavBar{
         height: 60vh;
+        transform: translateY(-90%);
     }
     
     #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Logo > img{
         width: 230px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side{
+        height: 90%;
+        flex-direction: column;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide{
+        width: 100%;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Right_Side{
+        width: 100%;
     }
 
     #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Title > span{
@@ -415,6 +522,11 @@
         height: 60vh;
     }
 
+    #NavBar > .Hamburger_Icon > *{
+        width: 40px;
+        height: 40px;
+    }
+
     #NavBar::after{
         bottom: -25px;
         width: 70px;
@@ -423,6 +535,12 @@
 
     #NavBar > .wrapper{
         padding-left: 40px;
+        
+    }
+
+    #NavBar > .Hamburger_Icon{
+        padding-bottom: 5px;
+        width: 40px;
     }
 
     #NavBar > .wrapper > .Navbar_Toggle {
@@ -479,6 +597,7 @@
     #NavBar{
         height: 60vh;
     }
+
 
     #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Logo{
         top: -70px;
