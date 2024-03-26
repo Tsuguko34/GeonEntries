@@ -84,6 +84,51 @@
     cursor: pointer;
 }
 
+#NavBar > .wrapper > .Navbar_Units {
+    color: var(--dark-blue);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-weight: bold;
+    bottom: -50px;
+    right: 400px;
+    width: 220px;
+    height: 50px;
+    cursor: pointer;
+    user-select: none;
+    z-index: -2;
+}
+
+#NavBar > .wrapper > .Navbar_Units >span{
+    background-color: var(--dark-blue);
+    color: var(--light-blue);
+    font-size: 20px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    transform: translateY(-30px);
+    justify-content: center;
+    align-items: flex-end;
+    padding: 5px 15px;
+    border-radius: 10px;
+    border-bottom: 3px solid var(--light-blue);
+    transition: all 250ms ease-in-out;
+}
+
+#NavBar > .wrapper > .Navbar_Units > span.active{
+    border-color: var(--lime-green);
+    transform: translateY(0);
+    color: var(--lime-green);
+}
+
+#NavBar > .wrapper > .Navbar_Units > span:hover{
+    border-color: var(--lime-green);
+    transform: translateY(0);
+    color: var(--lime-green);
+}
+
 #NavBar > .wrapper > .Navbar_Content_Container{
     width: 100%;
     height: 100%;
@@ -168,6 +213,12 @@
     font-size: 24px;
 }
 
+#NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Right_Side > .Creators > p.link{
+    text-decoration: underline;
+    color: purple;
+    cursor: copy;
+}
+
 #NavBar > .wrapper > .Navbar_Content_Container > .Bottom_Side{
     width: 100%;
     height: 10%;
@@ -184,6 +235,19 @@
     transform: translateY(3px);
     object-fit: cover;
 }
+@media only screen and (max-width: 1536px){
+    #NavBar{
+        height: 60vh;
+        transform: translateY(-87%);
+    }
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide > .Content > *{
+        font-size: 16px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Right_Side > .Creators > p{
+        font-size: 16px;
+    }
+}
 
 @media only screen and (max-width: 1440px){
     #NavBar{
@@ -196,6 +260,28 @@
 
     #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Right_Side > .Creators > p{
         font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 1336px){
+    #NavBar > .wrapper > .Navbar_Units {
+        right: 125px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Units >span{
+        background-color: var(--dark-blue);
+        color: var(--light-blue);
+        font-size: 20px;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        transform: translateY(-30px);
+        justify-content: center;
+        align-items: flex-end;
+        padding: 5px 15px;
+        border-radius: 10px;
+        border-bottom: 3px solid var(--light-blue);
+        transition: all 250ms ease-in-out;
     }
 }
 
@@ -257,7 +343,7 @@
     }
 }
 
-@media only screen and (orientation: landscape) and (max-width: 912px){
+@media only screen and (orientation: landscape) and (max-width: 950px){
     #NavBar{
         height: 63vh;
     }
@@ -281,7 +367,8 @@
 
 @media only screen and (orientation: portrait) and (max-width: 950px){
     #NavBar{
-        height: 50vh;
+        height: 60vh;
+        transform: translateY(-87%);
     }
     
     #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Logo > img{
@@ -346,6 +433,8 @@
     #NavBar{
         height: 63vh;
     }
+
+    
     
     #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Logo > img{
         width: 270px;
@@ -369,6 +458,15 @@
         height: 60vh;
     }
 
+    #NavBar > .wrapper > .Navbar_Units {
+        right: 125px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Units >span{
+        height: 75px;
+        transform: translateY(-20px);
+    }
+
     #NavBar > .Hamburger_Icon{
         padding: 0;
     }
@@ -390,9 +488,10 @@
     }
 }
 
-@media only screen and (orientation: landscape) and (max-width: 667px) and (max-height: 375px){
+@media only screen and (max-width: 667px){
     #NavBar{
-        height: 90vh;
+        height: 60vh;
+        transform: translateY(-87%);
     }
 
     #NavBar::after{
@@ -401,13 +500,20 @@
         height: 70px;
     }
     
-
     #NavBar > .wrapper > .Navbar_Toggle {
         font-size: 30px;
         bottom: -40px;
         right: 10px;
         width: 70px;
         height: 70px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .LeftSide{
+        width: 100%;
+    }
+
+    #NavBar > .wrapper > .Navbar_Content_Container > .Top_Side > .Right_Side{
+        width: 100%;
     }
 
     #NavBar > .wrapper > .Navbar_Content_Container > .Bottom_Side > img{
@@ -522,6 +628,15 @@
         height: 60vh;
     }
 
+    #NavBar > .wrapper > .Navbar_Units {
+        right: 90px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Units >span{
+        height: 75px;
+        transform: translateY(-20px);
+    }
+
     #NavBar > .Hamburger_Icon > *{
         width: 40px;
         height: 40px;
@@ -596,6 +711,17 @@
 @media only screen and (orientation: portrait) and (max-width: 320px){
     #NavBar{
         height: 60vh;
+    }
+
+    #NavBar > .wrapper > .Navbar_Units {
+        right: 70px;
+    }
+
+    #NavBar > .wrapper > .Navbar_Units >span{
+        width: 85px;
+        height: 75px;
+        font-size: 18px;
+        transform: translateY(-20px);
     }
 
 

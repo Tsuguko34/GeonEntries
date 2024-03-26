@@ -7,11 +7,13 @@ import miniLogo from "../assets/images/miniLogo.png";
 
 // Icons
 import * as IoIcons from "react-icons/io";
+import { HomePageLessons } from "../components";
 
 function LandingPage() {
   const navigate = useNavigate();
   const [activeSide, setActiveSide] = useState("left");
   const [logoHover, setLogoHover] = useState(false);
+  const [showLessons, setShowLessons] = useState(false);
 
   const handleLogoMouseOver = (action) => {
     if (action === "Enter") {
@@ -26,13 +28,25 @@ function LandingPage() {
 
     const intervalId = setInterval(() => {
       setActiveSide((prevSide) => (prevSide === "left" ? "right" : "left"));
-    }, 5000);
+    }, 15000);
 
     return () => clearInterval(intervalId); // Cleanup function
   }, []);
 
   return (
     <section id="LandingPage" className="LandingPage">
+      <div className="loading_Logo">
+        <img src={miniLogo} alt="" />
+        <div className="loading_bar"></div>
+      </div>
+
+      {showLessons && (
+        <HomePageLessons
+          isVisible={showLessons}
+          setIsVisible={setShowLessons}
+        />
+      )}
+
       <div className="wrapper">
         {/* TopSide */}
         <div className="LandingPage_Top">
@@ -92,11 +106,12 @@ function LandingPage() {
           <img
             src={miniLogo}
             alt="Mini Logo"
+            onClick={() => setShowLessons(true)}
             className={`Logo ${logoHover && "active"}`}
           />
           <button
             className={`${logoHover && "active"}`}
-            onClick={() => navigate("/LessonsList")}
+            onClick={() => setShowLessons(true)}
           >
             Get Started!
           </button>

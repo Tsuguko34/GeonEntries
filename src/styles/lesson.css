@@ -82,6 +82,9 @@
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Header > .Sub_Title{
     width: 100%;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 22px;
     font-size: 22px;
     background-color: var(--light-blue);
@@ -118,7 +121,7 @@
     gap: 10px;
 }
 
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Bullet_Topic > .Explanation > span{
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Bullet_Topic > .Explanation > p{
     font-size: 40px;
 }
 
@@ -266,7 +269,7 @@
     gap: 20px;
 }
 
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Formula_Field > .Formula > .Formula_Main > .Right_Side > span{
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Formula_Field > .Formula > .Formula_Main > .Right_Side > p{
     color: white;
     font-size: 24px;
 }
@@ -314,7 +317,7 @@
     gap: 20px;
 }
 
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Topic_Visual > .Visual_Holder.text > span{
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Topic_Visual > .Visual_Holder.text > p{
     font-size: 28px;
 }
 
@@ -328,9 +331,10 @@
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Topic_Visual > .Visual_Holder.text > .Formula > p{
     font-size: 28px;
     position: relative;
+    color: var(--dark-blue);
 } 
 
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Topic_Visual > .Visual_Holder.text > .Formula > p > span{
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Topic_Visual > .Visual_Holder.text > .Formula > p > p{
     font-weight: bold;
     font-size: 28px;
 }
@@ -364,6 +368,8 @@
     gap: 20px;
 }
 
+
+
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Label{
     color: var(--lime-green);
     font-size: 32px;
@@ -373,10 +379,29 @@
 }
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Description{
+    position: relative;
     color: white;
     font-size: 24px;
     width: 100%;
     text-align: center;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Description.two{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Description.two > .left{
+    width: 15%;
+    font-size: 28px;
+    text-align: center;
+    color: var(--lime-green);
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Description.two > .right{
+    width: 85%;
+    text-align: left;
 }
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Graph_Plotting{
@@ -393,41 +418,42 @@
     border-radius: 5px;
 }
 
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Graph_Plotting > .Input_Group{
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself .Input_Group{
     display: flex;
     justify-content: space-between;
 }
 
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Graph_Plotting > .Input_Group > .Inputs{
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself .Input_Group > .Inputs{
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     gap: 10px;
 }
 
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Graph_Plotting > .Input_Group > .Inputs > *{
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself .Input_Group > .Inputs > *{
     color: white;
-    font-size: 20px;
+    font-size: 24px;
 }
 
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Graph_Plotting > .Input_Group > .Inputs > .vertical{
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself .Input_Group > .Inputs > .vertical{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Graph_Plotting > .Input_Group > .Inputs > .vertical > input{
-    width: 30px;
-    height: 25px;
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself .Input_Group > .Inputs > .vertical > input{
+    width: 40px;
+    height: 30px;
+    font-size: 20px;
     text-align: center;
 }
 
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Graph_Plotting > .Input_Group > .Submit{
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself .Input_Group > .Submit{
     display: flex;
     justify-content: center;
     align-items: flex-end;
 }
 
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Graph_Plotting > .Input_Group > .Submit > button{
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself .Input_Group > .Submit > button{
     width: 100px;
     height: 35px;
     border-radius: 100px;
@@ -438,9 +464,106 @@
     transition: all 250ms ease-in-out;
 }
 
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Graph_Plotting > .Input_Group > .Submit > button:hover{
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself .Input_Group > .Submit > button:hover{
     background-color: var(--dark-blue);
     color: var(--light-blue);
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Side_By_Side{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Side_By_Side > .left,
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Side_By_Side > .right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Side_By_Side > .left > .Label,
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Side_By_Side > .right > .Label{
+    width: 100%;
+    height: 32px;
+    font-size: 25px;
+    color: var(--dark-blue);
+    background-color: var(--light-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Side_By_Side > .left > .Content,
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Side_By_Side > .right > .Content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 30px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Side_By_Side > .left{
+    border-right: 5px solid var(--light-blue);
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Side_By_Side > .left > .Content > .Label,
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Side_By_Side > .right > .Content > .Label{
+    width: 70%;
+    color: white;
+    font-size: 24px;
+}
+
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Side_By_Side > .left > .Content > .Vertical,
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Side_By_Side > .right > .Content > .Vertical{
+    position: relative;
+    align-items: start;
+    width: 100%;
+    gap: 10px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Side_By_Side > .left > .Content.output > .Vertical,
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Side_By_Side > .right > .Content.output > .Vertical{
+    position: relative;
+    align-items: start;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself .Output_Rectangles_Holder{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself .Output_Rectangles_Holder > p{
+    display: flex;
+    width: 30px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself .Output_Rectangles{
+    background-color: whitesmoke;
+    color: var(--dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    content: '';
+    width: 40px;
+    height: 30px;
+}
+
+#Lesson > .wrapper .divider.dashed_vertical{
+    height: 100%;
+    margin-top: 35px;
+    width: 5px;
+    content: '';
+    border-left: 5px dashed var(--light-blue);
 }
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Notes_Container{
@@ -464,10 +587,20 @@
 }
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Notes_Container > .Note{
+    position: relative;
     color: white;
     font-size: 22px;
     width: 100%;
-    text-align: center;
+    width: 90%;
+    text-align: left;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Notes_Container > .Bold{
+    color: white;
+    width: 90%;
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Notes_Container > .Note_Visual > .Visual_Holder.image{
@@ -485,4 +618,347 @@
     height: 180px;
     border-radius: 10px;
     object-fit: cover;
+}
+
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side > .Left_Side,
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side > .Right_Side{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side > .Left_Side  .Vertical,
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side > .Right_Side  .Vertical{
+    align-items: flex-start;
+    position: relative;
+    gap: 10px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side > .Left_Side  .Vertical > p,
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side > .Right_Side  .Vertical > p{
+    position: relative;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side > .Left_Side > .Horizontal,
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side > .Right_Side > .Horizontal{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side > .Left_Side > .Horizontal > p,
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side > .Right_Side > .Horizontal > p{
+    color: white;
+    font-size: 24px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Table{
+    width: 100%;
+    background-color: rgba(5, 59, 80, 0.3);
+    border: 5px solid var(--dark-blue);
+    border-radius: 15px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Table > .Side_By_Side_Row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-top: 5px solid var(--dark-blue);
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Table > .Side_By_Side_Row > .right{
+    border-left: 5px solid var(--dark-blue);
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Table > .Side_By_Side_Row > .left > p{
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Table > .Side_By_Side_Row > .left,
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Table > .Side_By_Side_Row > .right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Light_Blue{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: var(--light-blue);
+    border-radius: 10px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Light_Blue > p{
+    color: var(--dark-blue);
+    width: 100%;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Light_Blue > p.formula.answer{
+    padding-left: 63px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Table > .Row_With_Label{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Table > .Row_With_Label > .Label{
+    width: 100%;
+    background-color: var(--dark-blue);
+    padding: 10px 20px;
+    color: white;
+    font-size: 24px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Table > .Row_With_Label > .Content{
+    padding: 10px 16px;
+    display: flex;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Table > .Row_With_Label > .Content > .left,
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Table > .Row_With_Label > .Content > .right{
+    width: 50%;
+    display: flex;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Table > .Row_With_Label > .Content > .left .Vertical,
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Table > .Row_With_Label > .Content > .right .Vertical{
+    width: 100%;
+    align-items: flex-start;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Table > .Row_With_Label > .Content > .left .Vertical > p,
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Table > .Row_With_Label > .Content > .right .Vertical > p{
+    width: 100%;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Table > .Row_With_Label > .Content .Vertical > p.word{
+    padding-left: 40px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Table > .Row_With_Label > .Content .Vertical > p.formula{
+    padding-left: 60px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Table > .Row_With_Label > .Content .Vertical > p.formula.answer{
+    padding-left: 122px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself p.equal{
+    width: 120px;
+    text-align: end;
+}
+
+.Theorem{
+    width: 100%;
+    height: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.Theorem > .Label_Container{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.Theorem > .Label_Container > .Label{
+    padding: 15px 20px;
+    color: var(--dark-blue);
+    background-color: var(--lime-green);
+    border-radius: 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.Theorem > .Theorem_Content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.Theorem > .Theorem_Content > *{
+    color: white;
+    font-size: 22px;
+}
+
+.Theorem > .Theorem_Content > .Label{
+    padding-left: 40px;
+}
+
+.Theorem > .Theorem_Content > .List{
+    padding-left: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.Theorem > .Theorem_Content > .List > p{
+    position: relative;
+    width: 100%;
+}
+
+@media only screen and (max-width: 1536px){
+    #Lesson > .wrapper > .Lesson_Title{
+        width: 1000px;
+    }
+    #Lesson > .wrapper > .Lesson_Container{
+        width: 1000px;
+    }
+
+    #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Topic_Visual > .Visual_Holder.video{
+        width: 450px;
+        height: 280px;
+    }
+    
+    #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Topic_Visual > .Visual_Holder.video > video{
+        width:430px;
+        border-radius: 15px;
+    }
+    #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself .Output_Rectangles_Holder > p{
+        width: 40px;
+    }
+}
+
+@media only screen and (max-width: 1440px){
+    #Lesson > .wrapper > .Lesson_Title{
+        width: 1000px;
+    }
+    #Lesson > .wrapper > .Lesson_Container{
+        width: 1000px;
+    }
+
+    #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Topic_Visual > .Visual_Holder.video{
+        width: 450px;
+        height: 280px;
+    }
+    
+    #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Topic_Visual > .Visual_Holder.video > video{
+        width:430px;
+        border-radius: 15px;
+    }
+}
+
+@media only screen and (max-width: 1380px){
+    #Lesson > .wrapper > .Lesson_Title{
+        width: 1200px;
+    }
+    #Lesson > .wrapper > .Lesson_Container{
+        width: 1200px;
+    }
+}
+
+@media only screen and (max-width: 1180px){
+    #Lesson > .wrapper > .Lesson_Title{
+        width: 1100px;
+    }
+    #Lesson > .wrapper > .Lesson_Container{
+        width: 1100px;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    #Lesson > .wrapper > .Lesson_Title{
+        width: 1000px;
+    }
+    #Lesson > .wrapper > .Lesson_Container{
+        width: 1000px;
+    }
+
+    #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself .Output_Rectangles_Holder{
+        gap: 5px;
+    }
+
+    #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Side_By_Side > .left > .Content,
+    #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Side_By_Side > .right > .Content{
+    padding: 10px 15px;
+}
+}
+
+@media only screen and (max-width: 950px){
+    #Lesson > .wrapper > .Lesson_Title{
+        width: 700px;
+    }
+    #Lesson > .wrapper > .Lesson_Title > p{
+        font-size: 30px;
+    }
+    #Lesson > .wrapper > .Lesson_Container{
+        width:700px;
+    }
+    #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Header{
+        height: 90px;
+    }
+    #Lesson > .wrapper .Title{
+        font-size: 24px !important;
+    }
+
+    #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson *{
+        font-size: 20px !important;
+    }
+
+    #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Expression{
+        font-size: 70px !important;
+    }
+
+    #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Topic_Visual > .Visual_Holder.video{
+        width: 280px;
+        height: 180px;
+    }
+    
+    #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Topic_Visual > .Visual_Holder.video > video{
+        width:260px;
+        border-radius: 15px;
+    }
+
+    #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself .Output_Rectangles{
+        width: 30px;
+        height: 25px;
+    }
+
+    #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself p.equal{
+        width:80px;
+    }
+}
+
+@media only screen and (max-width: 680px){
+    #Lesson > .wrapper > .Lesson_Title{
+        width: 600px;
+    }
+    #Lesson > .wrapper > .Lesson_Title > p{
+        font-size: 27px;
+    }
+    #Lesson > .wrapper > .Lesson_Container{
+        width:600px;
+    }
 }

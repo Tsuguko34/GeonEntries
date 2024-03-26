@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../../styles/lessontopics.css";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useLocation, useNavigate } from "react-router-dom";
 
 //Icons
 import * as IoIcons from "react-icons/io";
@@ -9,6 +9,11 @@ import { NonEuclideanTopics } from "../../utils";
 
 function LessonTopics() {
   const { lessonName } = useParams();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const currentLocation = location.pathname;
+
+  const [optionsOpen, setOptionsOpen] = useState(false);
 
   const convertLessonName = (name) => {
     if (name === "PlaneEuclideanGeometry") {
@@ -23,6 +28,45 @@ function LessonTopics() {
   }, []);
   return (
     <section id="LessonTopics" className="LessonTopics">
+      <div className="Bottom_Options">
+        <div className="Trigger" onClick={() => setOptionsOpen(!optionsOpen)}>
+          <IoIcons.IoIosArrowUp
+            className={`Icon ${optionsOpen ? "open" : ""}`}
+          />
+        </div>
+        <div className={`Options ${optionsOpen ? "open" : ""}`}>
+          <div className="Option">
+            <span>Q?</span>
+          </div>
+
+          {currentLocation.includes("PlaneEuclideanGeometry") && (
+            <div
+              className="Option"
+              onClick={() => {
+                navigate("/Lesson/NonEuclideanGeometry");
+                setOptionsOpen(false);
+              }}
+            >
+              <span>
+                II. <IoIcons.IoMdListBox />
+              </span>
+            </div>
+          )}
+          {currentLocation.includes("NonEuclideanGeometry") && (
+            <div
+              className="Option"
+              onClick={() => {
+                navigate("/Lesson/PlaneEuclideanGeometry");
+                setOptionsOpen(false);
+              }}
+            >
+              <span>
+                I. <IoIcons.IoMdListBox />
+              </span>
+            </div>
+          )}
+        </div>
+      </div>
       <div className="wrapper">
         <div className="LessonTopics_Container">
           <header>
@@ -31,7 +75,7 @@ function LessonTopics() {
             </Link>
             <p>{convertLessonName(lessonName)}</p>
           </header>
-
+          <span className="reminder">Click a title to start a lesson.</span>
           <div className="LessonTopics_Content">
             {lessonName && lessonName === "PlaneEuclideanGeometry" && (
               <>

@@ -17,12 +17,17 @@ function App() {
       <SidebarContext.Provider value={{ toggleSidebar, setToggleSidebar }}>
         <div
           className={`Sidebar_Overlay ${
-            toggleSidebar && windowWidth <= 1024 && "open"
+            toggleSidebar && windowWidth <= 1366 && "open"
           }`}
           onClick={() => setToggleSidebar(false)}
         ></div>
         <div className={`Navbar_Container ${pageHasNavBar && "active"}`}>
-          {pageHasNavBar && <Navbar setOpenSidebar={setToggleSidebar} />}
+          {pageHasNavBar && (
+            <Navbar
+              setOpenSidebar={setToggleSidebar}
+              pageHasSidebar={pagehasSideBar}
+            />
+          )}
         </div>
         <div className="Main_View">
           <div
@@ -41,7 +46,7 @@ function App() {
 
           <div
             className={`Sidebar_Container ${pagehasSideBar && "active"} ${
-              toggleSidebar && windowWidth <= 1024 && "open"
+              toggleSidebar && windowWidth <= 1366 && "open"
             }`}
           >
             {pagehasSideBar && <Sidebar />}

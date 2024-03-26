@@ -8,13 +8,15 @@ import { GetWindowWidth } from "../utils";
 
 import largeLogo from "../assets/images/largeLogo.png";
 import miniLogo from "../assets/images/miniLogo.png";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
-function Navbar({ setOpenSidebar }) {
+function Navbar({ setOpenSidebar, pageHasSidebar }) {
   const navigate = useNavigate();
+  const location = useLocation();
   const [navbarOpen, setNavbarOpen] = useState(false);
   const windowWidth = GetWindowWidth();
   const handleNavbarClose = () => setNavbarOpen(!navbarOpen);
+  const [showUnits, setShowUnits] = useState(false);
 
   const navbarRef = useRef(null);
   useEffect(() => {
@@ -45,16 +47,43 @@ function Navbar({ setOpenSidebar }) {
     };
   }, []);
 
+  const hasUnits = () => {
+    return /^\/Lesson\/[a-zA-Z0-9]+\/[a-zA-Z0-9]+$/.test(location.pathname);
+  };
+
+  useEffect(() => {
+    setShowUnits(hasUnits());
+  }, [location.pathname]);
+
+  const handleCopy = () => {
+    // Create a temporary textarea element
+    const textarea = document.createElement("textarea");
+    textarea.value = document.getElementById("linkToCopy").innerHTML; // Replace 'Text to copy' with the content you want to copy
+    document.body.appendChild(textarea);
+
+    // Select the text inside the textarea
+    textarea.select();
+
+    // Copy the selected text to the clipboard
+    document.execCommand("copy");
+
+    // Remove the temporary textarea element
+    document.body.removeChild(textarea);
+
+    // Optionally, provide some visual feedback to the user
+    alert("Copied to clipboard!");
+  };
+
   return (
     <section id="NavBar" className={`NavBar ${navbarOpen && "open"}`}>
       <div className="Hamburger_Icon">
-        {windowWidth > 1024 && (
+        {(windowWidth > 1366 || !pageHasSidebar) && (
           <FaIcons.FaHome
             onClick={() => navigate("/LessonsList")}
             className="home"
           />
         )}
-        {windowWidth <= 1024 && (
+        {windowWidth <= 1366 && pageHasSidebar && (
           <IoIcons.IoMdMenu onClick={() => setOpenSidebar(true)} />
         )}
       </div>
@@ -107,6 +136,9 @@ function Navbar({ setOpenSidebar }) {
                 <p>Cajiuat, Justine Rinoa</p>
                 <p>De Vera, Marielle Rowie</p>
                 <p>Santos, Charles Darwin</p>
+                <p id="linkToCopy" className="link" onClick={handleCopy}>
+                  gromentries@gmail.com
+                </p>
               </div>
             </div>
           </div>
@@ -114,6 +146,35 @@ function Navbar({ setOpenSidebar }) {
             <img src={largeLogo} alt="Large Logo" />
           </div>
         </div>
+        {showUnits && (
+          <div className="Navbar_Units">
+            <span
+              className={
+                location.pathname.includes("PlaneEuclideanGeometry")
+                  ? "active"
+                  : ""
+              }
+              onClick={() =>
+                navigate("/Lesson/PlaneEuclideanGeometry/VectorsIn2Space3Space")
+              }
+            >
+              Unit I
+            </span>
+            <span
+              className={
+                location.pathname.includes("NonEuclideanGeometry")
+                  ? "active"
+                  : ""
+              }
+              onClick={() =>
+                navigate("/Lesson/NonEuclideanGeometry/HyperbolicGeometry")
+              }
+            >
+              Unit II
+            </span>
+          </div>
+        )}
+
         <span className="Navbar_Toggle" onClick={() => handleNavbarClose()}>
           <span>i</span>
         </span>

@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import "../../styles/lesson.css";
 import { useLocation, useParams } from "react-router-dom";
 import { PELesson1, PlaneEuclideanSidebar } from "../../components";
+import { GetWindowWidth } from "../../utils";
 
 function Lesson() {
   const location = useLocation();
@@ -33,6 +34,7 @@ function Lesson() {
   useEffect(() => {
     document.title = convertLessonName(lessonTitle);
   }, [location.pathname]);
+
   return (
     <section id="Lesson" className="Lesson">
       <div className="wrapper">

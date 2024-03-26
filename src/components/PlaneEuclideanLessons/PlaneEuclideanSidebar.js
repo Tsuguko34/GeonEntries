@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Collapse } from "@mui/material";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 
-function PlaneEuclideanSidebar() {
+function PlaneEuclideanSidebar({ handleScrollClick }) {
   const location = useLocation();
   const navigate = useNavigate();
   const [activePage, setActivePage] = useState(1);
@@ -20,14 +20,19 @@ function PlaneEuclideanSidebar() {
   useEffect(() => {
     if (location.pathname.includes("VectorsIn2Space3Space")) {
       setActivePage(1);
+      setOpen(1);
     } else if (location.pathname.includes("NormDistanceAndDotProduct")) {
       setActivePage(2);
+      setOpen(2);
     } else if (location.pathname.includes("Orthogonality")) {
       setActivePage(3);
+      setOpen(3);
     } else if (location.pathname.includes("EquationsOfLinesAndPlanes")) {
       setActivePage(4);
+      setOpen(4);
     } else if (location.pathname.includes("CrossProduct")) {
       setActivePage(5);
+      setOpen(5);
     }
   }, [location.pathname]);
 
@@ -35,6 +40,43 @@ function PlaneEuclideanSidebar() {
     handleOpenClose(page);
     navigate(link);
   };
+
+  const scrollTo = (id) => {
+    handleScrollClick(id);
+  };
+
+  const [activeContent, setActiveContent] = useState(null);
+
+  const handleScroll = () => {
+    const sidebarItems = document.querySelectorAll(".Sub_Topic");
+    let maxVisibleHeight = 0;
+    let currentContent = null;
+
+    sidebarItems.forEach((item) => {
+      const rect = item.getBoundingClientRect();
+      const visibleHeight =
+        Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
+
+      // If the current item has more visible height than the previous ones, update the active content
+      if (visibleHeight > maxVisibleHeight) {
+        maxVisibleHeight = visibleHeight;
+        currentContent = item.id;
+      }
+    });
+
+    setActiveContent(currentContent);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    handleScroll();
+  }, []);
   return (
     <>
       <div
@@ -49,31 +91,65 @@ function PlaneEuclideanSidebar() {
         <p>1. Vectors in 2-Space & 3-Space</p>
       </div>
       <Collapse in={open === 1} timeout="auto" unmountOnExit>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic1" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Vector Spaces</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic1")}>
+            Vector Spaces
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic2" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Vectors</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic2")}>
+            Vectors
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic3" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Component Form and Standard Unit Form</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic3")}>
+            Component Form and Standard Unit Form
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic4" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">
+          <p className="Sub_Item" onClick={() => scrollTo("topic4")}>
             Vectors with Initial Point Not on the Origin
           </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic5" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Vector-Scalar Multiplication</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic5")}>
+            Vector-Scalar Multiplication
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic6" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Vector Operations in Rⁿ</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic6")}>
+            Vector Operations in Rⁿ
+          </p>
         </div>
       </Collapse>
       <div

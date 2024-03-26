@@ -21,7 +21,7 @@
 #Sidebar > .Content > .Close_Icon{
     width: 100%;
     display: none;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: flex-end;
     height: 25px;
 }
@@ -38,6 +38,12 @@
     text-align: center;
     color: var(--light-blue);
     font-weight: bold;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+}
+
+#Sidebar > .Content > .Title:hover{
+    color: var(--lime-green);
 }
 
 #Sidebar > .Content > .List{
@@ -87,7 +93,11 @@
     color: var(--light-blue);
 }
 
-@media only screen and (max-width: 1024px){
+#Sidebar > .Content > .List .SubItems_Container.active > *{
+    color: var(--lime-green);
+}
+
+@media only screen and (max-width: 1366px){
     #Sidebar > .Content > .Close_Icon{
         display: flex;
     }

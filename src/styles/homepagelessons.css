@@ -1,0 +1,129 @@
+#HomePageLessons{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: modalIn 250ms ease-in-out forwards;
+}
+
+@keyframes modalIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+#HomePageLessons > .wrapper{
+    width: 100%;
+    height: 100%;
+}
+
+#HomePageLessons > .wrapper > .Container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+#HomePageLessons > .wrapper > .Container > .Lesson{
+    width: 350px;
+    height: 200px;
+    background-color: var(--dark-blue);
+    border: 5px solid var(--light-blue);
+    border-radius: 30px;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+    user-select: none;
+}
+
+#HomePageLessons > .wrapper > .Container > .Lesson > .Lesson_Title{
+    color: var(--light-blue);
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    transition: all 250ms ease-in-out;
+}
+
+#HomePageLessons > .wrapper > .Container > .Lesson > .Lesson_Description{
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+}
+
+#HomePageLessons > .wrapper > .Container > .Lesson:hover{
+    border-color: var(--lime-green);
+}
+
+#HomePageLessons > .wrapper > .Container > .Lesson:hover > .Lesson_Title{
+    color: var(--lime-green);
+}
+
+@media only screen and (max-width: 667px){
+    #HomePageLessons > .wrapper > .Container{
+        padding-inline: 15px;
+    }
+}
+
+@media only screen and (max-width: 540px){
+    #HomePageLessons > .wrapper > .Container{
+        flex-direction: column;
+    }
+    
+}
+
+@media only screen and (max-width: 414px){
+    #HomePageLessons > .wrapper > .Container > .Lesson{
+        width: 325px;
+        height: 200px;
+    }
+
+    #HomePageLessons > .wrapper > .Container > .Lesson > .Lesson_Title{
+        font-size: 20px;
+    }
+    
+    #HomePageLessons > .wrapper > .Container > .Lesson > .Lesson_Description{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    #HomePageLessons > .wrapper > .Container > .Lesson{
+        width: 300px;
+        height: 200px;
+    }
+
+    #HomePageLessons > .wrapper > .Container > .Lesson > .Lesson_Title{
+        font-size: 18px;
+    }
+    
+    #HomePageLessons > .wrapper > .Container > .Lesson > .Lesson_Description{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 280px){
+    #HomePageLessons > .wrapper > .Container > .Lesson{
+        width: 250px;
+        height: 200px;
+    }
+
+    #HomePageLessons > .wrapper > .Container > .Lesson > .Lesson_Title{
+        font-size: 14px;
+    }
+    
+    #HomePageLessons > .wrapper > .Container > .Lesson > .Lesson_Description{
+        font-size: 12px;
+    }
+}
