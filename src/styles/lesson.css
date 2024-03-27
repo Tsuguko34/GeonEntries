@@ -513,7 +513,7 @@
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Side_By_Side > .left > .Content > .Label,
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Side_By_Side > .right > .Content > .Label{
-    width: 70%;
+    width: 80%;
     color: white;
     font-size: 24px;
 }
@@ -530,6 +530,7 @@
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Side_By_Side > .left > .Content.output > .Vertical,
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Side_By_Side > .right > .Content.output > .Vertical{
     position: relative;
+    padding-left: 80px;
     align-items: start;
 }
 
@@ -630,10 +631,11 @@
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side > .Left_Side,
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side > .Right_Side{
+    width: 50%;
     display: flex;
     position: relative;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 50px;
 }
 
@@ -699,25 +701,104 @@
     padding: 20px 30px;
 }
 
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Solution_Example{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Solution_Example > *{
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .large{
+    font-size: 60px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .fraction{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .fraction > .divider{
+    content: '';
+    border-top: 2px solid white;
+    height: 5px;
+    width: 100%;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .fraction > .divider.blue{
+    border-color: var(--dark-blue);
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Solution_Example > .given{
+    display: flex;
+    gap: 5px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Solution_Example > .start{
+    padding-left: 70px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Solution_Example > .solution{
+    padding-left: 125px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .squareRoot_Symbol{
+    color: inherit;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Light_Blue_Holder{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Light_Blue{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    max-width: 500px;
     padding: 15px 20px;
     background-color: var(--light-blue);
     border-radius: 10px;
 }
 
+
+
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Light_Blue > p{
     color: var(--dark-blue);
-    width: 100%;
     font-size: 24px;
     font-weight: bold;
 }
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Light_Blue > p.formula.answer{
     padding-left: 63px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Light_Blue.fraction{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Light_Blue.fraction > p{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Table > .Row_With_Label{
@@ -775,7 +856,7 @@
     text-align: end;
 }
 
-.Theorem{
+#Lesson > .wrapper .Theorem{
     width: 100%;
     height: 100%;
     margin-top: 40px;
@@ -784,14 +865,14 @@
     gap: 20px;
 }
 
-.Theorem > .Label_Container{
+#Lesson > .wrapper .Theorem > .Label_Container{
     width: 100%;
     display: flex;
     justify-content: start;
     align-items: center;
 }
 
-.Theorem > .Label_Container > .Label{
+#Lesson > .wrapper .Theorem > .Label_Container > .Label{
     padding: 15px 20px;
     color: var(--dark-blue);
     background-color: var(--lime-green);
@@ -800,7 +881,8 @@
     font-weight: bold;
 }
 
-.Theorem > .Theorem_Content{
+
+#Lesson > .wrapper .Theorem > .Theorem_Content{
     width: 100%;
     height: 100%;
     display: flex;
@@ -808,25 +890,41 @@
     gap: 20px;
 }
 
-.Theorem > .Theorem_Content > *{
+#Lesson > .wrapper .Theorem > .Theorem_Content > *{
     color: white;
     font-size: 22px;
 }
 
-.Theorem > .Theorem_Content > .Label{
+#Lesson > .wrapper .Theorem > .Theorem_Content > .Label{
     padding-left: 40px;
 }
 
-.Theorem > .Theorem_Content > .List{
+#Lesson > .wrapper .Theorem > .Theorem_Content > .Label.visual{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#Lesson > .wrapper .Theorem > .Theorem_Content > .List{
     padding-left: 70px;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.Theorem > .Theorem_Content > .List > p{
+#Lesson > .wrapper .Theorem > .Theorem_Content > .List > p{
     position: relative;
     width: 100%;
+}
+
+#Lesson > .wrapper .Full_Image{
+    width: 100%;
+    display: flex;
+}
+
+#Lesson > .wrapper .Full_Image > img{
+    width: 100%;
+    height: 100%;
 }
 
 @media only screen and (max-width: 1536px){

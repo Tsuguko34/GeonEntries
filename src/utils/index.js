@@ -8,6 +8,8 @@ import calculateComponentForm from "./calculateComponentForm";
 import calculateVector from "./calculateVector";
 import performOperations from "./performOperations";
 import performOperations3D from "./performOperationsThree";
+import calculateNorm from "./calculateNorm";
+import calculateNorm3D from "./calculateNorm3D";
 
 export {
   hasNavBar,
@@ -20,4 +22,6 @@ export {
   calculateVector,
   performOperations,
   performOperations3D,
+  calculateNorm,
+  calculateNorm3D,
 };

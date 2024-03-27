@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 import "../../styles/lesson.css";
 import { useLocation, useParams } from "react-router-dom";
-import { PELesson1, PlaneEuclideanSidebar } from "../../components";
+import { PELesson1, PELesson2, PlaneEuclideanSidebar } from "../../components";
 import { GetWindowWidth } from "../../utils";
 
 function Lesson() {
@@ -43,6 +43,9 @@ function Lesson() {
         </div>
         <div className="Lesson_Container">
           {location.pathname.includes("VectorsIn2Space3Space") && <PELesson1 />}
+          {location.pathname.includes("NormDistanceAndDotProduct") && (
+            <PELesson2 />
+          )}
         </div>
       </div>
     </section>

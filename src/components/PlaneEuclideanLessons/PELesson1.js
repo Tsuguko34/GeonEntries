@@ -1613,7 +1613,7 @@ function PELesson1() {
                 <div className="Content">
                   <div className="Input_Group">
                     <div className="Inputs">
-                      <p>v = (</p>
+                      <p>w = (</p>
                       <div className="vertical">
                         <input
                           type="text"

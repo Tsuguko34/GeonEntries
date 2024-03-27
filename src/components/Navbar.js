@@ -146,7 +146,7 @@ function Navbar({ setOpenSidebar, pageHasSidebar }) {
             <img src={largeLogo} alt="Large Logo" />
           </div>
         </div>
-        {showUnits && (
+        {/* {showUnits && (
           <div className="Navbar_Units">
             <span
               className={
@@ -173,7 +173,7 @@ function Navbar({ setOpenSidebar, pageHasSidebar }) {
               Unit II
             </span>
           </div>
-        )}
+        )} */}
 
         <span className="Navbar_Toggle" onClick={() => handleNavbarClose()}>
           <span>i</span>

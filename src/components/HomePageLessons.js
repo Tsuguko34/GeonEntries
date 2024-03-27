@@ -49,7 +49,7 @@ function HomePageLessons({ isVisible, setIsVisible }) {
             ref={lessonRef2}
             onClick={() => navigate("/Lesson/PlaneEuclideanGeometry")}
           >
-            <div className="Lesson_Title">I. Plane Euclidean Geometry</div>
+            <div className="Lesson_Title">I. Plane Euclidean Geometries</div>
             <div className="Lesson_Description">
               <p>
                 It deals with the properties and relationships of geometric
@@ -63,7 +63,7 @@ function HomePageLessons({ isVisible, setIsVisible }) {
             ref={lessonRef}
             onClick={() => navigate("/Lesson/NonEuclideanGeometry")}
           >
-            <div className="Lesson_Title">II. Non-Euclidean Geometry</div>
+            <div className="Lesson_Title">II. Non-Euclidean Geometries</div>
             <div className="Lesson_Description">
               <p>
                 It Explores geometrical systems deviating from Euclid's fifth
