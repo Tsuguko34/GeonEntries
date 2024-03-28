@@ -587,7 +587,7 @@ function PELesson1() {
                 <p>Q (9, 7)</p>
                 <p>Sketching the graph:</p>
               </div>
-              <div className="Topic_Visual">
+              <div className="Topic_Visual sideBySide">
                 <div className="Visual_Holder video">
                   <video controls>
                     <source src={ExampleC} type="video/mp4" />

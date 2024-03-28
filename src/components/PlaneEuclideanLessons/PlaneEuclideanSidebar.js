@@ -37,6 +37,7 @@ function PlaneEuclideanSidebar({ handleScrollClick }) {
   }, [location.pathname]);
 
   const handleRedirect = (link, page) => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
     handleOpenClose(page);
     navigate(link);
   };
@@ -164,29 +165,65 @@ function PlaneEuclideanSidebar({ handleScrollClick }) {
         <p>2. Norm, Distance, and Dot Product</p>
       </div>
       <Collapse in={open === 2} timeout="auto" unmountOnExit>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic7" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Norm</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic7")}>
+            Norm
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic8" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Unit Vector</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic8")}>
+            Unit Vector
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic9" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Normalizing the Vector</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic9")}>
+            Normalizing the Vector
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic10" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Distance</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic10")}>
+            Distance
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic11" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Dot Product</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic11")}>
+            Dot Product
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic12" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Angles Between Two Vectors</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic12")}>
+            Angles Between Two Vectors
+          </p>
         </div>
       </Collapse>
       <div
