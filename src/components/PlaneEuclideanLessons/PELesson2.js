@@ -1,30 +1,9 @@
 import React, { useEffect, useState } from "react";
 
 //Images
-import examplec1 from "../../assets/images/Lessons Images/PELesson2/examplec1.png";
-import examplec2 from "../../assets/images/Lessons Images/PELesson2/examplec2.png";
-import exampled1 from "../../assets/images/Lessons Images/PELesson2/exampled1.png";
-import exampled2 from "../../assets/images/Lessons Images/PELesson2/exampled2.png";
 import image2 from "../../assets/images/Lessons Images/PELesson2/image-2.png";
 
-//Videos
-import ExampleA1 from "../../assets/videos/PELesson1/Example A1.mp4";
-import ExampleA2 from "../../assets/videos/PELesson1/Example A2.mp4";
-import ExampleB1 from "../../assets/videos/PELesson1/Example B1.mp4";
-import ExampleB2 from "../../assets/videos/PELesson1/Example B2.mp4";
-import ExampleC from "../../assets/videos/PELesson1/Example C.mp4";
-
-import {
-  GetWindowWidth,
-  calculateComponentForm,
-  calculateDistance,
-  calculateNorm,
-  calculateNorm3D,
-  calculateVector,
-  graphVector,
-  performOperations,
-  performOperations3D,
-} from "../../utils";
+import { calculateDistance, calculateNorm, calculateNorm3D } from "../../utils";
 
 function PELesson2() {
   const [norm, setNorm] = useState({

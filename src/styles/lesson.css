@@ -159,18 +159,22 @@
     object-fit: cover;
 }
 
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Paragraph_Topic{
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Paragraph_Topic{
     width: 100%;
 }
 
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Paragraph_Topic > p{
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Paragraph_Topic.paddingLeft{
+    padding-left: 40px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Paragraph_Topic > p{
     color: white;
     position: relative;
     font-size: 20px;
 }
 
 
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Paragraph_Topic.equation > div{
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Paragraph_Topic.equation > div{
     color: white;
     position: relative;
     display: flex;
@@ -227,6 +231,30 @@
 
 #Lesson > .wrapper .Italic{
     font-style: italic;
+}
+
+#Lesson > .wrapper .Italic.Bold{
+    font-style: italic;
+    font-weight: bold;
+}
+
+#Lesson > .wrapper .Bold{
+    font-weight: bold;
+}
+
+#Lesson > .wrapper .Blue{
+    font-weight: bold;
+    color: var(--light-blue);
+}
+
+#Lesson > .wrapper .Orange{
+    font-weight: bold;
+    color: var(--orange);
+}
+
+#Lesson > .wrapper .LimeGreen{
+    font-weight: bold;
+    color: var(--lime-green);
 }
 
 #Lesson > .wrapper .stack{
@@ -457,6 +485,7 @@
     gap: 10px;
 }
 
+
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself .Input_Group > .Inputs > *{
     color: white;
     font-size: 24px;
@@ -472,6 +501,14 @@
     height: 30px;
     font-size: 20px;
     text-align: center;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself .Input_Group > .Inputs > .Long_Input{
+    width: 100%;
+    height: 30px;
+    color: var(--dark-blue);
+    font-size: 20px;padding-inline: 20px;
+    text-align: start;
 }
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself .Input_Group > .Submit{
@@ -538,11 +575,23 @@
     border-right: 5px solid var(--light-blue);
 }
 
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Side_By_Side > .left > .Content > .Label,
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Side_By_Side > .right > .Content > .Label{
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Side_By_Side > .left > .Content .Group,
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Side_By_Side > .right > .Content .Group{
+    width: 100%;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Side_By_Side > .left > .Content .Label,
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Side_By_Side > .right > .Content .Label{
     width: 80%;
     color: white;
     font-size: 24px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Side_By_Side > .left > .Content .Sub_Label,
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself > .Side_By_Side > .right > .Content .Sub_Label{
+    width: 100%;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
 }
 
 
@@ -568,6 +617,14 @@
     gap: 2px;
 }
 
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself .Output_Rectangles_Holder.Long{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-inline: 30px;
+    gap: 2px;
+}
+
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself .Output_Rectangles_Holder > p{
     display: flex;
@@ -584,6 +641,12 @@
     content: '';
     width: 40px;
     height: 30px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself .Output_Rectangles_Holder.Long .Output_Rectangles{
+    width: 100%;
+    padding-inline: 30px;
+    justify-content: flex-start;
 }
 
 #Lesson > .wrapper .divider.dashed_vertical{
@@ -656,6 +719,7 @@
     gap: 20px;
 }
 
+
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side > .Left_Side,
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side > .Right_Side{
     width: 50%;
@@ -666,11 +730,20 @@
     gap: 50px;
 }
 
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side > .Left_Side.withBorder{
+    border-right: 1px solid white;
+}
+
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side > .Left_Side  .Vertical,
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side > .Right_Side  .Vertical{
     align-items: flex-start;
     position: relative;
     gap: 10px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side > .Left_Side  .Group,
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side > .Right_Side  .Group{
+    padding-inline: 10px;
 }
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side > .Left_Side  .Vertical > p,
@@ -823,6 +896,10 @@
     grid-template-columns: 0.6fr 0.2fr 2fr;
 }
 
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Solution_Example > div.reverse{
+    grid-template-columns: 2fr 0.2fr 0.6fr;
+}
+
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Solution_Example > div > .left{
     width: 100%;
     display: flex;
@@ -840,9 +917,14 @@
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Solution_Example > div > .right{
     width: 100%;
     display: flex;
+    word-wrap: break-word;
     justify-content: flex-start;
     align-items: center;
     gap: 10px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Solution_Example > div > .right.noFraction{
+    display: block;
 }
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .large{
@@ -887,7 +969,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    max-width: 500px;
+    max-width: 700px;
     padding: 15px 20px;
     background-color: var(--light-blue);
     color: var(--dark-blue);
@@ -994,6 +1076,8 @@
     align-items: center;
 }
 
+
+
 #Lesson > .wrapper .Theorem > .Label_Container > .Label{
     padding: 15px 20px;
     color: var(--dark-blue);
@@ -1015,6 +1099,14 @@
 #Lesson > .wrapper .Theorem > .Theorem_Content > *{
     color: white;
     font-size: 22px;
+}
+
+#Lesson > .wrapper .Theorem > .Theorem_Content > .Bold_Underline{
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: underline;
+    padding-left: 40px;
 }
 
 #Lesson > .wrapper .Theorem > .Theorem_Content > .Label{
@@ -1047,6 +1139,25 @@
 #Lesson > .wrapper .Full_Image > img{
     width: 100%;
     height: 100%;
+}
+
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Triple_Grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Triple_Grid > div{
+    padding: 10px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Triple_Grid > .middle{
+    border-inline: 1px solid white;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Triple_Grid > .middle.noBorder{
+    border: none;
 }
 
 @media only screen and (max-width: 1536px){

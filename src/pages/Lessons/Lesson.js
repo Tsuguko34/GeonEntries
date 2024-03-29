@@ -2,7 +2,12 @@ import React, { useEffect } from "react";
 
 import "../../styles/lesson.css";
 import { useLocation, useParams } from "react-router-dom";
-import { PELesson1, PELesson2, PlaneEuclideanSidebar } from "../../components";
+import {
+  PELesson1,
+  PELesson2,
+  PELesson3,
+  PlaneEuclideanSidebar,
+} from "../../components";
 import { GetWindowWidth } from "../../utils";
 
 function Lesson() {
@@ -46,6 +51,7 @@ function Lesson() {
           {location.pathname.includes("NormDistanceAndDotProduct") && (
             <PELesson2 />
           )}
+          {location.pathname.includes("Orthogonality") && <PELesson3 />}
         </div>
       </div>
     </section>

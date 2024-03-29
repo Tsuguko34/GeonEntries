@@ -11,6 +11,7 @@ import performOperations3D from "./performOperationsThree";
 import calculateNorm from "./calculateNorm";
 import calculateNorm3D from "./calculateNorm3D";
 import calculateDistance from "./calculateDistance";
+import calculatePointNormal from "./calculatePointNormal";
 
 export {
   hasNavBar,
@@ -26,4 +27,5 @@ export {
   calculateNorm,
   calculateNorm3D,
   calculateDistance,
+  calculatePointNormal,
 };
