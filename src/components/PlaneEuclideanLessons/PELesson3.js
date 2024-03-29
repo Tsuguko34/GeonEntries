@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 //Images
 import pl from "../../assets/images/Lessons Images/PELesson3/pl.png";
 import image_5_1 from "../../assets/images/Lessons Images/PELesson3/image-5-1.png";
+import image_6 from "../../assets/images/Lessons Images/PELesson3/image-6.png";
 
 //Videos
 import ExampleA1 from "../../assets/videos/PELesson1/Example A1.mp4";
@@ -1325,6 +1326,85 @@ function PELesson3() {
                   <div className="Output_Rectangles_Holder Long">
                     <div id="b" className="Output_Rectangles"></div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ORTHOGONAL PROJECTIONS */}
+      <div id="topic16" className="Sub_Topic">
+        <div className="Sub_Topic_Header">
+          <p className="Title">ORTHOGONAL PROJECTIONS</p>
+          <p className="Sub_Title">Definition 3.4</p>
+        </div>
+        <div className="Sub_Topic_Lesson">
+          <div className="Theorem">
+            <div className="Label_Container">
+              <p className="Label">THEOREM 2.2</p>
+            </div>
+            <div className="Theorem_Content">
+              <p className="Label">
+                Let u & v be vectors in Rⁿ. If v is a nonzero vector, then u can
+                be uniquely represented in the form
+              </p>
+              <div className="Light_Blue_Holder">
+                <div className="Light_Blue">
+                  <p>u = w₁ + w₂</p>
+                </div>
+              </div>
+              <p className="Label">where,</p>
+              <p className="Label paddingLeft">w₁ is a scalar multiple of v</p>
+              <p className="Label paddingLeft">w₂ is orthogonal to v</p>
+            </div>
+          </div>
+
+          <div className="Notes_Container">
+            <div className="Label">Note:</div>
+            <p className="Note">
+              vector w₁ is called the orthogonal projection of u onto v denoted
+              by projᵥu
+            </p>
+            <p className="Note">
+              vector w₂ is called the vector component of u orthogonal to v
+            </p>
+          </div>
+
+          <div className="Side_By_Side">
+            <div className="Left_Side">
+              <div className="Group">
+                <div className="Paragraph_Topic">
+                  <p className="Bold_Underline noPadding">
+                    GENERAL EQUATION OF THE PLANE
+                  </p>
+                </div>
+                <div className="Paragraph_Topic">
+                  <p>
+                    Let u & v be vectors in an inner product space Rⁿ such that
+                    v is a nonzero vector. Then the orthogonal projection of u
+                    onto v is
+                  </p>
+                </div>
+              </div>
+              <div className="Light_Blue_Holder">
+                <div className="Light_Blue fraction">
+                  <p>
+                    projᵥu ={" "}
+                    <div className="fraction">
+                      <span className="upper">u ⋅ v</span>
+                      <span className="divider blue"></span>
+                      <span className="bottom">v ⋅ v</span>
+                    </div>
+                    v
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="Right_Side">
+              <div className="Topic_Visual">
+                <div className="Visual_Holder image">
+                  <img src={image_6} alt="Graph Image" />
                 </div>
               </div>
             </div>

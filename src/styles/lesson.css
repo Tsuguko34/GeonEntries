@@ -1101,7 +1101,7 @@
     font-size: 22px;
 }
 
-#Lesson > .wrapper .Theorem > .Theorem_Content > .Bold_Underline{
+#Lesson > .wrapper .Bold_Underline{
     color: white;
     font-size: 22px;
     font-weight: bold;
@@ -1109,8 +1109,17 @@
     padding-left: 40px;
 }
 
+#Lesson > .wrapper .Bold_Underline.noPadding{
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
 #Lesson > .wrapper .Theorem > .Theorem_Content > .Label{
     padding-left: 40px;
+}
+
+#Lesson > .wrapper .Theorem > .Theorem_Content > .Label.paddingLeft{
+    padding-left: 80px;
 }
 
 #Lesson > .wrapper .Theorem > .Theorem_Content > .Label.visual{
