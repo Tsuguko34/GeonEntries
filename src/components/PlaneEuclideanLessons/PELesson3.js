@@ -1245,7 +1245,7 @@ function PELesson3() {
               entering a value for n and P₀ and observe their point-normal
               equations and general equations.
             </div>
-            <div className="Side_By_Side">
+            <div className="Side_By_Side noGap">
               <div className="left">
                 <p className="Label">INPUT</p>
                 <div className="Content">
@@ -1342,7 +1342,7 @@ function PELesson3() {
         <div className="Sub_Topic_Lesson">
           <div className="Theorem">
             <div className="Label_Container">
-              <p className="Label">THEOREM 2.2</p>
+              <p className="Label">THEOREM 3.4</p>
             </div>
             <div className="Theorem_Content">
               <p className="Label">
@@ -1376,7 +1376,7 @@ function PELesson3() {
               <div className="Group">
                 <div className="Paragraph_Topic">
                   <p className="Bold_Underline noPadding">
-                    GENERAL EQUATION OF THE PLANE
+                    Orthogonal Projection of u onto v
                   </p>
                 </div>
                 <div className="Paragraph_Topic">
@@ -1406,6 +1406,730 @@ function PELesson3() {
                 <div className="Visual_Holder image">
                   <img src={image_6} alt="Graph Image" />
                 </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="Paragraph_Topic">
+            <p className="Bold_Underline noPadding">
+              Vector Component of u orthogonal to v
+            </p>
+          </div>
+          <div className="Paragraph_Topic">
+            <p>
+              Let u & v be vectors in an inner product space Rⁿ such that v is a
+              nonzero vector. Then the vector component of u orthogonal to v is
+            </p>
+          </div>
+          <div className="Light_Blue_Holder">
+            <div className="Light_Blue fraction">
+              <p>
+                u - projᵥu = u -
+                <div className="fraction">
+                  <span className="upper">u ⋅ v</span>
+                  <span className="divider blue"></span>
+                  <span className="bottom">v ⋅ v</span>
+                </div>
+                v
+              </p>
+            </div>
+          </div>
+
+          <div className="Example_Label">
+            <p>Example E</p>
+          </div>
+
+          <div className="Paragraph_Topic">
+            <p>
+              Determine (a.) the orthogonal projection of u onto v or projᵥu and
+              (b.) the vector component of u orthogonal v or u - projᵥu .
+            </p>
+          </div>
+
+          <div className="Solution_Example">
+            <div className="start">
+              <p className="left">
+                <span>u = (3, 8) and v = (6, -1)</span>
+              </p>
+              <p className="center"></p>
+              <p className="right Bold"></p>
+            </div>
+          </div>
+
+          <div className="Solution_Example">
+            <div className="start">
+              <p className="left">
+                <span className="Bold">a.</span>
+              </p>
+              <p className="center"></p>
+              <p className="right Bold">Orthogonal projection of u onto v</p>
+            </div>
+            <div className="solution">
+              <p className="left"></p>
+              <p className="center"></p>
+              <p className="right">
+                Substitute the value of u and v to projᵥu ={" "}
+                <div className="fraction">
+                  <span className="upper">u ⋅ v</span>
+                  <span className="divider"></span>
+                  <span className="bottom">v ⋅ v</span>
+                </div>
+                (By Definition 3.4)
+              </p>
+            </div>
+            <div className="solution">
+              <p className="left">projᵥu</p>
+              <p className="center">=</p>
+              <p className="right row">
+                <div className="fraction">
+                  <span className="upper">(3, 8) ⋅ (6, -1)</span>
+                  <span className="divider"></span>
+                  <span className="bottom">(6, -1) ⋅ (6, -1)</span>
+                </div>
+                (6, -1)
+              </p>
+            </div>
+            <div className="solution">
+              <p className="left"></p>
+              <p className="center">=</p>
+              <p className="right row">
+                <div className="fraction">
+                  <span className="upper">(3)(6) + (8)(-1)</span>
+                  <span className="divider"></span>
+                  <span className="bottom">(6)(6) + (-1)(-1)</span>
+                </div>
+                (6, -1)
+              </p>
+            </div>
+            <div className="solution">
+              <p className="left"></p>
+              <p className="center">=</p>
+              <p className="right row">
+                <div className="fraction">
+                  <span className="upper">18 - 8</span>
+                  <span className="divider"></span>
+                  <span className="bottom">36 + 1</span>
+                </div>
+                (6, -1)
+              </p>
+            </div>
+            <div className="solution">
+              <p className="left"></p>
+              <p className="center">=</p>
+              <p className="right row">
+                <div className="fraction">
+                  <span className="upper">10</span>
+                  <span className="divider"></span>
+                  <span className="bottom">37</span>
+                </div>
+                (6, -1)
+              </p>
+            </div>
+            <div className="solution">
+              <p className="left">projᵥu</p>
+              <p className="center">=</p>
+              <p className="right">
+                <span className="large">(</span>
+                <div className="fraction">
+                  <span className="upper">60</span>
+                  <span className="divider"></span>
+                  <span className="bottom">37</span>
+                </div>
+                ,
+                <div className="fraction">
+                  <span className="upper">-10</span>
+                  <span className="divider"></span>
+                  <span className="bottom">37</span>
+                </div>
+                <span className="large">)</span>
+              </p>
+            </div>
+          </div>
+
+          <div className="Solution_Example">
+            <div className="start">
+              <p className="left">
+                <span className="Bold">b.</span>
+              </p>
+              <p className="center"></p>
+              <p className="right Bold">
+                Vector component of u orthogonal to v
+              </p>
+            </div>
+            <div className="solution">
+              <p className="left"></p>
+              <p className="center"></p>
+              <p className="right">
+                Substitute the value of u and projᵥu to u - projᵥu = u -{" "}
+                <div className="fraction">
+                  <span className="upper">u ⋅ v</span>
+                  <span className="divider"></span>
+                  <span className="bottom">v ⋅ v</span>
+                </div>
+                v (By Definition 3.4)
+              </p>
+            </div>
+            <div className="solution">
+              <p className="left">u - projᵥu</p>
+              <p className="center">=</p>
+              <p className="right row">
+                (3, 8) -<span className="large">(</span>
+                <div className="fraction">
+                  <span className="upper">60</span>
+                  <span className="divider"></span>
+                  <span className="bottom">37</span>
+                </div>
+                ,
+                <div className="fraction">
+                  <span className="upper">-10</span>
+                  <span className="divider"></span>
+                  <span className="bottom">37</span>
+                </div>
+                <span className="large">)</span>
+              </p>
+            </div>
+            <div className="solution">
+              <p className="left"></p>
+              <p className="center">=</p>
+              <p className="right row">
+                <span className="large">(</span>
+                <div className="fraction">
+                  <span className="upper">51</span>
+                  <span className="divider"></span>
+                  <span className="bottom">37</span>
+                </div>
+                ,
+                <div className="fraction">
+                  <span className="upper">306</span>
+                  <span className="divider"></span>
+                  <span className="bottom">37</span>
+                </div>
+                <span className="large">)</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* DISTANCE BETWEEN A POINT AND A LINE */}
+      <div id="topic17" className="Sub_Topic">
+        <div className="Sub_Topic_Header">
+          <p className="Title">DISTANCE BETWEEN A POINT AND A LINE</p>
+          <p className="Sub_Title"></p>
+        </div>
+        <div className="Sub_Topic_Lesson">
+          <div className="Theorem">
+            <div className="Label_Container">
+              <p className="Label">THEOREM 3.5</p>
+            </div>
+            <div className="Theorem_Content">
+              <p className="Label">
+                Let P₀(x₀, y₀) be a point and ax + by + c = 0 be a line in R².
+                Then the distance between P₀(x₀, y₀) and ax + by + c = 0 is
+              </p>
+              <div className="Light_Blue_Holder">
+                <div className="Light_Blue fraction">
+                  <p>
+                    D ={" "}
+                    <div className="fraction">
+                      <span className="upper">|ax₀ + by₀ + c|</span>
+                      <span className="divider blue"></span>
+                      <span className="bottom">
+                        <span className="squareRoot_Symbol">&radic;</span>a² +
+                        b²
+                      </span>
+                    </div>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="Example_Label">
+            <p>Example F</p>
+          </div>
+
+          <div className="Paragraph_Topic">
+            <p>
+              Determine the distance between the point (-5, 7) and the line 6x -
+              y + 15 = 2.
+            </p>
+          </div>
+
+          <div className="Paragraph_Topic paddingLeft">
+            <p>By Theorem 3.5, the distance between a point and a line is</p>
+          </div>
+
+          <div className="Light_Blue_Holder row">
+            D =
+            <div className="fraction white">
+              <span className="upper">
+                <div className="Italic">|ax₀ + by₀ + c|</div>
+              </span>
+              <span className="divider"></span>
+              <span className="bottom">
+                <span className="squareRoot_Symbol">&radic;</span>a² + b²
+              </span>
+            </div>
+          </div>
+
+          <div className="Paragraph_Topic paddingLeft">
+            <p>Substituting the values extracted from the given,</p>
+          </div>
+
+          <div className="Light_Blue_Holder row gap20">
+            <span>x₀ = -5,</span>
+            <span>y₀ = 7,</span>
+            <span>a = 6,</span>
+            <span>b = -1,</span>
+            <span>c = 13</span>
+          </div>
+
+          <div className="Light_Blue_Holder">
+            <div className="Solution_Example">
+              <div className="start">
+                <p className="left">D</p>
+                <p className="center">=</p>
+                <p className="right">
+                  <div className="fraction">
+                    <span className="upper">|(6)(-5) + (-1)(7) + 13|</span>
+                    <span className="divider"></span>
+                    <span className="bottom">
+                      <span className="squareRoot_Symbol">&radic;</span>(6)² +
+                      (-1)²
+                    </span>
+                  </div>
+                </p>
+              </div>
+
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">
+                  <div className="fraction">
+                    <span className="upper">|24|</span>
+                    <span className="divider"></span>
+                    <span className="bottom">
+                      <span className="squareRoot_Symbol">&radic;</span>36 + 1
+                    </span>
+                  </div>
+                </p>
+              </div>
+
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">
+                  <div className="fraction">
+                    <span className="upper">24</span>
+                    <span className="divider"></span>
+                    <span className="bottom">
+                      <span className="squareRoot_Symbol">&radic;</span>37
+                    </span>
+                  </div>
+                </p>
+              </div>
+
+              <div className="solution">
+                <p className="left">D</p>
+                <p className="center">=</p>
+                <p className="right">
+                  <div className="fraction">
+                    <span className="upper">
+                      24<span className="squareRoot_Symbol">&radic;</span>37
+                    </span>
+                    <span className="divider"></span>
+                    <span className="bottom">37</span>
+                  </div>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* DISTANCE BETWEEN A POINT AND A PLANE */}
+      <div id="topic18" className="Sub_Topic">
+        <div className="Sub_Topic_Header">
+          <p className="Title">DISTANCE BETWEEN A POINT AND A PLANE</p>
+          <p className="Sub_Title"></p>
+        </div>
+        <div className="Sub_Topic_Lesson">
+          <div className="Theorem">
+            <div className="Label_Container">
+              <p className="Label">THEOREM 3.6</p>
+            </div>
+            <div className="Theorem_Content">
+              <p className="Label">
+                Let P₀(x₀, y₀, z₀) be a point and ax + by + cz + d = 0 be a
+                plane in R³. Then the distance between P₀(x₀, y₀, z₀) and ax +
+                by + cz + d = 0 is
+              </p>
+              <div className="Light_Blue_Holder">
+                <div className="Light_Blue fraction">
+                  <p>
+                    D ={" "}
+                    <div className="fraction">
+                      <span className="upper">|ax₀ + by₀ + cz₀ +d|</span>
+                      <span className="divider blue"></span>
+                      <span className="bottom">
+                        <span className="squareRoot_Symbol">&radic;</span>a² +
+                        b² + c²
+                      </span>
+                    </div>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="Example_Label">
+            <p>Example G</p>
+          </div>
+
+          <div className="Paragraph_Topic">
+            <p>
+              Determine the distance between the point (8, 0, -11) and the plane
+              8z + 13 = -x + 12y + 7
+            </p>
+          </div>
+
+          <div className="Paragraph_Topic paddingLeft">
+            <p>By Theorem 3.6, the distance between a point and a plane is</p>
+          </div>
+
+          <div className="Light_Blue_Holder row">
+            D ={" "}
+            <div className="fraction">
+              <span className="upper">|ax₀ + by₀ + cz₀ +d|</span>
+              <span className="divider"></span>
+              <span className="bottom">
+                <span className="squareRoot_Symbol">&radic;</span>a² + b² + c²
+              </span>
+            </div>
+          </div>
+
+          <div className="Paragraph_Topic paddingLeft">
+            <p>The plane 8z + 13 = -x + 12y + 7 can be rewritten as</p>
+          </div>
+          <div className="Light_Blue_Holder row gap20">
+            x - 12y + 8z + 6 = 0
+          </div>
+
+          <div className="Paragraph_Topic paddingLeft">
+            <p>Substituting the values extracted from the given,</p>
+          </div>
+          <div className="Light_Blue_Holder row gap20">
+            <span>x₀ = 8,</span>
+            <span>y₀ = 0, </span>
+            <span>z₀ = -11, </span>
+            <span>a = 1,</span>
+            <span>b = -12,</span>
+            <span>c = 8,</span>
+            <span>d = 6</span>
+          </div>
+
+          <div className="Light_Blue_Holder">
+            <div className="Solution_Example">
+              <div className="start">
+                <p className="left">D</p>
+                <p className="center">=</p>
+                <p className="right">
+                  <div className="fraction">
+                    <span className="upper">
+                      |(1)(8) + (-12)(0) + (8)(-11) + 6|
+                    </span>
+                    <span className="divider"></span>
+                    <span className="bottom">
+                      <span className="squareRoot_Symbol">&radic;</span>(8)² +
+                      (-11)²
+                    </span>
+                  </div>
+                </p>
+              </div>
+
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">
+                  <div className="fraction">
+                    <span className="upper">|-74|</span>
+                    <span className="divider"></span>
+                    <span className="bottom">
+                      <span className="squareRoot_Symbol">&radic;</span>185
+                    </span>
+                  </div>
+                </p>
+              </div>
+
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">
+                  <div className="fraction">
+                    <span className="upper">74</span>
+                    <span className="divider"></span>
+                    <span className="bottom">
+                      <span className="squareRoot_Symbol">&radic;</span>185
+                    </span>
+                  </div>
+                </p>
+              </div>
+
+              <div className="solution">
+                <p className="left">D</p>
+                <p className="center">=</p>
+                <p className="right">
+                  <div className="fraction">
+                    <span className="upper">
+                      2<span className="squareRoot_Symbol">&radic;</span>185
+                    </span>
+                    <span className="divider"></span>
+                    <span className="bottom">5</span>
+                  </div>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* DISTANCE BETWEEN PARALLEL PLANES */}
+      <div id="topic19" className="Sub_Topic">
+        <div className="Sub_Topic_Header">
+          <p className="Title">DISTANCE BETWEEN PARALLEL PLANES</p>
+          <p className="Sub_Title"></p>
+        </div>
+        <div className="Sub_Topic_Lesson">
+          <div className="Paragraph_Topic">
+            <p>
+              Two planes are parallel if their normal vectors are parallel. Take
+              note that two vectors are parallel if one of the vectors is a
+              scalar multiple of the other. By Definition 3.3, the normal vector
+              n is given by n = (a, b, c).
+            </p>
+          </div>
+
+          <div className="Paragraph_Topic">
+            <p>To find the distance D between the two parallel planes:</p>
+          </div>
+
+          <div className="Light_Blue_Holder">
+            <div className="Paragraph_Topic paddingLeft">
+              <p>Select an intercept in one of the planes.</p>
+              <p>
+                Find the distance of the intercept to the other plane using the
+                formula from
+              </p>
+            </div>
+          </div>
+
+          <div className="Light_Blue_Holder row">
+            <div className="Paragraph_Topic paddingLeft center">
+              <p>
+                Theorem 3.6: D ={" "}
+                <span className="Italic">
+                  <div className="fraction">
+                    <span className="upper">|ax₀ + by₀ + cz₀ + d|</span>
+                    <span className="divider"></span>
+                    <span className="bottom">
+                      <span className="squareRoot_Symbol">&radic;</span>a² + b²
+                      + c²
+                    </span>
+                  </div>
+                </span>
+              </p>
+            </div>
+          </div>
+
+          <div className="Example_Label">
+            <p>Example H</p>
+          </div>
+
+          <div className="Paragraph_Topic">
+            <p>
+              Determine the distance between 4z + 2 = 7y + 5 - 3x and 21y - 9x =
+              5 + 12z.
+            </p>
+          </div>
+          <div className="Paragraph_Topic paddingLeft">
+            <p>The planes can be rewritten as</p>
+          </div>
+
+          <div className="Light_Blue_Holder">
+            <div className="Paragraph_Topic paddingLeft center">
+              <p>
+                (1) 4z + 2 = 7y + 5 - 3x <span className="arrow">→</span> 3x -
+                7y + 4z - 3 = 0
+              </p>
+            </div>
+            <div className="Paragraph_Topic paddingLeft center">
+              <p>
+                (2) 21y - 9x = 5 + 12z <span className="arrow">→</span> -9x +
+                21y - 12z - 5 = 0
+              </p>
+            </div>
+          </div>
+
+          <div className="Paragraph_Topic paddingLeft">
+            <p>and, respectively, has normal vectors of</p>
+          </div>
+
+          <div className="Light_Blue_Holder">
+            <div className="Paragraph_Topic paddingLeft center">
+              <p>n₁ = (3, -7, 4)</p>
+            </div>
+            <div className="Paragraph_Topic paddingLeft center">
+              <p>n₂ = (-9, 21, -12)</p>
+            </div>
+          </div>
+
+          <div className="Paragraph_Topic paddingLeft">
+            <p>
+              Observe that n₂ is a scalar multiple of n₁ by a factor -3. Thus,
+              the normal vectors of the two planes are parallel .
+            </p>
+          </div>
+
+          <div className="Light_Blue_Holder">
+            <div className="Paragraph_Topic paddingLeft center">
+              <p>
+                <span className="LimeGreen">-3</span> n₁ ={" "}
+                <span className="LimeGreen">-3</span> (3, -7, 4)
+              </p>
+            </div>
+            <div className="Paragraph_Topic paddingLeft center">
+              <p>= (-9, 21, -12)</p>
+            </div>
+            <div className="Paragraph_Topic paddingLeft center">
+              <p>
+                <span className="LimeGreen">-3</span> n₁ = n₂
+              </p>
+            </div>
+          </div>
+
+          <div className="Paragraph_Topic paddingLeft">
+            <p>
+              Equivalently, the two planes are also considered parallel . To
+              determine the distance between the two parallel planes, find an
+              intercept in either of the planes.
+            </p>
+          </div>
+          <div className="Paragraph_Topic paddingLeft2">
+            <p>By Theorem 3.6, the distance between a point and a plane is</p>
+          </div>
+
+          <div className="Light_Blue_Holder">
+            <div className="Paragraph_Topic paddingLeft center">
+              <p>
+                D ={" "}
+                <div className="fraction">
+                  <span className="upper">|ax₀ + by₀ + cz₀ + d|</span>
+                  <span className="divider"></span>
+                  <span className="bottom">
+                    <span className="squareRoot_Symbol">&radic;</span>a² + b² +
+                    c²
+                  </span>
+                </div>
+              </p>
+            </div>
+          </div>
+
+          <div className="Paragraph_Topic paddingLeft2">
+            <p>
+              Consider the plane -9x + 21y - 12z - 5 = 0 and point P₀(1, 0, 0),
+              we can extract
+            </p>
+          </div>
+
+          <div className="Light_Blue_Holder row gap20">
+            <span>x₀ = 1,</span>
+            <span>y₀ = 0, </span>
+            <span>z₀ = 0, </span>
+            <span>a = -9,</span>
+            <span>b = 21,</span>
+            <span>c = -12,</span>
+            <span>d = -5</span>
+          </div>
+
+          <div className="Paragraph_Topic paddingLeft2">
+            <p>
+              Substituting the extracted values from the plane and the point to
+              the equation,
+            </p>
+          </div>
+          <div className="Light_Blue_Holder">
+            <div className="Solution_Example">
+              <div className="start">
+                <p className="left">D</p>
+                <p className="center">=</p>
+                <p className="right">
+                  <div className="fraction">
+                    <span className="upper">
+                      |(-9)(1) + (21)(0) + (-12)(0) - 5|
+                    </span>
+                    <span className="divider"></span>
+                    <span className="bottom">
+                      <span className="squareRoot_Symbol">&radic;</span>(-9)² +
+                      (21)²
+                    </span>
+                  </div>
+                </p>
+              </div>
+
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">
+                  <div className="fraction">
+                    <span className="upper">|-74|</span>
+                    <span className="divider"></span>
+                    <span className="bottom">
+                      <span className="squareRoot_Symbol">&radic;</span>185
+                    </span>
+                  </div>
+                </p>
+              </div>
+
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">
+                  <div className="fraction">
+                    <span className="upper">|-14|</span>
+                    <span className="divider"></span>
+                    <span className="bottom">
+                      <span className="squareRoot_Symbol">&radic;</span>522
+                    </span>
+                  </div>
+                </p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">
+                  <div className="fraction">
+                    <span className="upper">14</span>
+                    <span className="divider"></span>
+                    <span className="bottom">
+                      <span className="squareRoot_Symbol">&radic;</span>522
+                    </span>
+                  </div>
+                </p>
+              </div>
+
+              <div className="solution">
+                <p className="left">D</p>
+                <p className="center">=</p>
+                <p className="right">
+                  <div className="fraction">
+                    <span className="upper">
+                      7<span className="squareRoot_Symbol">&radic;</span>58
+                    </span>
+                    <span className="divider"></span>
+                    <span className="bottom">87</span>
+                  </div>
+                </p>
               </div>
             </div>
           </div>

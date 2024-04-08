@@ -266,7 +266,7 @@ function PELesson2() {
                 and y values and observe its norm.
               </div>
             </div>
-            <div className="Side_By_Side">
+            <div className="Side_By_Side noGap">
               <div className="left">
                 <p className="Label">INPUT</p>
                 <div className="Content">
@@ -1104,6 +1104,15 @@ function PELesson2() {
               <span className="Italic">v</span> is:
             </p>
           </div>
+          <div className="Light_Blue_Holder">
+            <div className="Light_Blue start">
+              <p>d (u, v) = || u - v ||</p>
+              <p>
+                = <span className="squareRoot_Symbol">&radic;</span>(u₁ - v₁)² +
+                (u₂ - v₂)² + ... + (uₙ - vₙ)²
+              </p>
+            </div>
+          </div>
           <div className="Example_Label">
             <p>Example D</p>
           </div>
@@ -1233,7 +1242,7 @@ function PELesson2() {
                 and y values and observe its distance.
               </div>
             </div>
-            <div className="Side_By_Side">
+            <div className="Side_By_Side noGap">
               <div className="left">
                 <p className="Label">INPUT</p>
                 <div className="Content">

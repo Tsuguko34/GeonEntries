@@ -235,33 +235,75 @@ function PlaneEuclideanSidebar({ handleScrollClick }) {
         <p>3. Orthogonality</p>
       </div>
       <Collapse in={open === 3} timeout="auto" unmountOnExit>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic13" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Orthogonal Vectors</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic13")}>
+            Orthogonal Vectors
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic14" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Point-Normal Equation of the Line</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic14")}>
+            Point-Normal Equation of the Line
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic15" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Point-Normal Equation of the Plane</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic15")}>
+            Point-Normal Equation of the Plane
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic16" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Orthogonal Projections</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic16")}>
+            Orthogonal Projections
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic17" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Distance Between a Point and a Line</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic17")}>
+            Distance Between a Point and a Line
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic18" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Distance Between a Point and Plane</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic18")}>
+            Distance Between a Point and Plane
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic19" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Distance Between Parallel Planes</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic19")}>
+            Distance Between Parallel Planes
+          </p>
         </div>
       </Collapse>
       <div
@@ -276,31 +318,65 @@ function PlaneEuclideanSidebar({ handleScrollClick }) {
         <p>4. Equations of Lines and Planes</p>
       </div>
       <Collapse in={open === 4} timeout="auto" unmountOnExit>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic20" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Equations of Lines in R²</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic20")}>
+            Equations of Lines in R²
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic21" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Equations of Planes in R³</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic21")}>
+            Equations of Planes in R³
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic22" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Two-Point Vector Equations</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic22")}>
+            Two-Point Vector Equations
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic23" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">
+          <p className="Sub_Item" onClick={() => scrollTo("topic23")}>
             Intersecting, Parallel, & Perpendicular Lines
           </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic24" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Parallel & Intersecting Planes</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic24")}>
+            Parallel & Intersecting Planes
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic25" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Angle Between Two Planes</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic25")}>
+            Angle Between Two Planes
+          </p>
         </div>
       </Collapse>
       <div

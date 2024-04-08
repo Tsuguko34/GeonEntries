@@ -645,7 +645,7 @@ function PELesson1() {
                 terminal point and observe it corresponding components.
               </div>
             </div>
-            <div className="Side_By_Side">
+            <div className="Side_By_Side noGap">
               <div className="left">
                 <p className="Label">INPUT</p>
                 <div className="Content">
@@ -1298,7 +1298,7 @@ function PELesson1() {
                 following operations:
               </div>
             </div>
-            <div className="Side_By_Side">
+            <div className="Side_By_Side noGap">
               <div className="left">
                 <p className="Label">INPUT</p>
                 <div className="Content">

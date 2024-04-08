@@ -36,8 +36,8 @@ button{
 
 /* For WebKit browsers (e.g., Chrome, Safari) */
 ::-webkit-scrollbar {
-  width: 5px; /* Set the width of the scrollbar */
-  height: 5px;
+  width: 7px; /* Set the width of the scrollbar */
+  height: 7px;
 }
 
 ::-webkit-scrollbar-thumb {

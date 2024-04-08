@@ -6,6 +6,7 @@ import {
   PELesson1,
   PELesson2,
   PELesson3,
+  PELesson4,
   PlaneEuclideanSidebar,
 } from "../../components";
 import { GetWindowWidth } from "../../utils";
@@ -20,19 +21,19 @@ function Lesson() {
     } else if (name === "NonEuclideanGeometry") {
       return "Non-Euclidean Geometry";
     } else if (name === "VectorsIn2Space3Space") {
-      return "Vectors in 2-Space & 3-Space";
+      return "1. Vectors in 2-Space & 3-Space";
     } else if (name === "NormDistanceAndDotProduct") {
-      return "Norm, Distance, and Dot Product";
+      return "2. Norm, Distance, and Dot Product";
     } else if (name === "Orthogonality") {
-      return "Orthogonality";
+      return "3. Orthogonality";
     } else if (name === "EquationsOfLinesAndPlanes") {
-      return "Equations of Lines and Planes";
+      return "4. Equations of Lines and Planes";
     } else if (name === "CrossProduct") {
-      return "Cross Product";
+      return "5. Cross Product";
     } else if (name === "HyperbolicGeometry") {
-      return "Hyperbolic Geometry";
+      return "1. Hyperbolic Geometry";
     } else if (name === "SphericalGeometry") {
-      return "Spherical Geometry";
+      return "2. Spherical Geometry";
     }
   };
 
@@ -52,6 +53,9 @@ function Lesson() {
             <PELesson2 />
           )}
           {location.pathname.includes("Orthogonality") && <PELesson3 />}
+          {location.pathname.includes("EquationsOfLinesAndPlanes") && (
+            <PELesson4 />
+          )}
         </div>
       </div>
     </section>

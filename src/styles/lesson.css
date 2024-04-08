@@ -28,6 +28,12 @@
     padding: 50px 30px;
 }
 
+#Lesson > .wrapper .center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #Lesson > .wrapper > .Lesson_Title{
     width: 1200px;
     height: 50px;
@@ -98,30 +104,38 @@
     padding: 10px 40px;
 }
 
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Bullet_Topic{
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Bullet_Topic{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Bullet_Topic > *{
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Bullet_Topic.paddingLeft{
+    padding-inline: 80px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Bullet_Topic > *{
     color: white;
 }
 
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Bullet_Topic > .Title{
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Bullet_Topic > .Title{
     font-weight: bold;
-    font-size: 24px;
+    width: 100%;
+    font-size: 20px;
     text-decoration: underline;
+    display: flex;
+    justify-content: flex-start;
 }
 
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Bullet_Topic > .Explanation{
-    font-size: 24px;
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Bullet_Topic > .Explanation{
+    font-size: 20px;
     padding-left: 30px;
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Bullet_Topic > .Explanation > p{
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Bullet_Topic > .Explanation > p{
     font-size: 40px;
 }
 
@@ -145,6 +159,7 @@
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Topic_Visual > .Visual_Holder.image{
     width: 350px;
     height: 220px;
+    padding: 10px;
     border-radius: 30px;
     display: flex;
     justify-content: center;
@@ -153,10 +168,10 @@
 }
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Topic_Visual > .Visual_Holder.image > img{
-    width: 280px;
-    height: 180px;
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Paragraph_Topic{
@@ -164,15 +179,48 @@
 }
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Paragraph_Topic.paddingLeft{
-    padding-left: 40px;
+    padding-inline: 40px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Paragraph_Topic.paddingLeft2{
+    padding-inline: 80px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Paragraph_Topic.paddingLeft3{
+    padding-inline: 120px;
+}
+
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Paragraph_Topic.solution{
+    width: 100%;
 }
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Paragraph_Topic > p{
     color: white;
+    display: flex;
+    align-items: center;
     position: relative;
     font-size: 20px;
+    gap: 10px;
 }
 
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Paragraph_Topic.block > p{
+    display: block;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Paragraph_Topic > p > span{
+    display: inline-flex;
+    justify-content: center;
+    align-self: center;
+}
+
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Paragraph_Topic > p > span.arrow{
+    display: inline-flex;
+    justify-content: center;
+    align-self: center;
+    font-size: 40px;
+}
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Paragraph_Topic.equation > div{
     color: white;
@@ -243,18 +291,18 @@
 }
 
 #Lesson > .wrapper .Blue{
-    font-weight: bold;
-    color: var(--light-blue);
+    font-weight: bold !important;
+    color: var(--light-blue) !important;
 }
 
 #Lesson > .wrapper .Orange{
-    font-weight: bold;
-    color: var(--orange);
+    font-weight: bold !important;
+    color: var(--orange) !important;
 }
 
 #Lesson > .wrapper .LimeGreen{
-    font-weight: bold;
-    color: var(--lime-green);
+    font-weight: bold !important;
+    color: var(--lime-green) !important;
 }
 
 #Lesson > .wrapper .stack{
@@ -625,7 +673,6 @@
     gap: 2px;
 }
 
-
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself .Output_Rectangles_Holder > p{
     display: flex;
     width: 30px;
@@ -641,6 +688,11 @@
     content: '';
     width: 40px;
     height: 30px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself .Output_Rectangles.Tall{
+    
+    height: 90px;
 }
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself .Output_Rectangles_Holder.Long .Output_Rectangles{
@@ -712,16 +764,20 @@
 }
 
 
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side{
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Side_By_Side{
     width: 100%;
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Side_By_Side.noGap{
+    gap: 0px;
+}
 
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side > .Left_Side,
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side > .Right_Side{
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Side_By_Side > .Left_Side,
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Side_By_Side > .Right_Side{
     width: 50%;
     display: flex;
     position: relative;
@@ -730,38 +786,52 @@
     gap: 50px;
 }
 
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side > .Left_Side.withBorder{
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Side_By_Side > .Left_Side.noGap,
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Side_By_Side > .Right_Side.noGap{
+    gap: 10px !important;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Side_By_Side > .Left_Side.center p,
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Side_By_Side > .Right_Side.center p{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Side_By_Side > .Left_Side.withBorder{
     border-right: 1px solid white;
 }
 
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side > .Left_Side  .Vertical,
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side > .Right_Side  .Vertical{
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Side_By_Side > .Left_Side  .Vertical,
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Side_By_Side > .Right_Side  .Vertical{
     align-items: flex-start;
     position: relative;
     gap: 10px;
 }
 
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side > .Left_Side  .Group,
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side > .Right_Side  .Group{
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Side_By_Side > .Left_Side  .Group,
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Side_By_Side > .Right_Side  .Group{
     padding-inline: 10px;
 }
 
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side > .Left_Side  .Vertical > p,
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side > .Right_Side  .Vertical > p{
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Side_By_Side > .Left_Side  .Vertical > p,
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Side_By_Side > .Right_Side  .Vertical > p{
     position: relative;
     font-size: 20px;
 }
 
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side > .Left_Side > .Horizontal,
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side > .Right_Side > .Horizontal{
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Side_By_Side > .Left_Side > .Horizontal,
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Side_By_Side > .Right_Side > .Horizontal{
     display: flex;
     justify-content: start;
     align-items: center;
     gap: 10px;
 }
 
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side > .Left_Side > .Horizontal > p,
-#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Side_By_Side > .Right_Side > .Horizontal > p{
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Side_By_Side > .Left_Side > .Horizontal > p,
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Side_By_Side > .Right_Side > .Horizontal > p{
     color: white;
     font-size: 24px;
 }
@@ -889,6 +959,10 @@
     font-size: 20px;
 }
 
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Solution_Example > .label.center{
+    justify-content: center;
+}
+
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Solution_Example > div{
     width: 100%;        
@@ -938,6 +1012,17 @@
     align-items: center;
 }
 
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .fraction > .upper.column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .fraction.white{
+    color: white;
+    font-size: 20px;
+}
+
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .fraction > .divider{
     content: '';
     border-top: 2px solid white;
@@ -947,6 +1032,18 @@
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .fraction > .divider.blue{
     border-color: var(--dark-blue);
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .fraction > .divider.LightBlue{
+    border-color: var(--light-blue);
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .fraction > .divider.LimeGreen{
+    border-color: var(--lime-green);
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .fraction > .divider.Orange{
+    border-color: var(--orange);
 }
 
 
@@ -964,6 +1061,18 @@
     align-items: center;
 }
 
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Light_Blue_Holder.row{
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Light_Blue_Holder.gap20{
+    gap: 20px;
+}
+
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Light_Blue{
     display: flex;
     flex-direction: column;
@@ -974,6 +1083,10 @@
     background-color: var(--light-blue);
     color: var(--dark-blue);
     border-radius: 10px;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Light_Blue.start{
+    align-items: flex-start;
 }
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Light_Blue.row{
@@ -997,6 +1110,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Light_Blue.fraction > p{
@@ -1167,6 +1281,41 @@
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Triple_Grid > .middle.noBorder{
     border: none;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .TableChart_Container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .TableChart_Container > .TableChart{
+    width: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .TableChart_Container > .TableChart > .Row.Left{
+    border-right: 1px solid white;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .TableChart_Container > .TableChart > .Row > p:first-child{
+    border-bottom: 1px solid white;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .TableChart_Container > .TableChart > .Row > p{
+    height: 40px;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .TableChart_Container > .TableChart > .Row > p.Header{
+    font-weight: bold;
 }
 
 @media only screen and (max-width: 1536px){
