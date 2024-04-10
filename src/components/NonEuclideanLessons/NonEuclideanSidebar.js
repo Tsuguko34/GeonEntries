@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Collapse } from "@mui/material";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 
-function NonEuclideanSidebar() {
+function NonEuclideanSidebar({ handleScrollClick }) {
   const location = useLocation();
   const navigate = useNavigate();
   const [activePage, setActivePage] = useState(1);
@@ -18,23 +18,57 @@ function NonEuclideanSidebar() {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("VectorsIn2Space3Space")) {
+    if (location.pathname.includes("HyperbolicGeometry")) {
       setActivePage(1);
-    } else if (location.pathname.includes("NormDistanceAndDotProduct")) {
+      setOpen(1);
+    } else if (location.pathname.includes("SphericalGeometry")) {
       setActivePage(2);
-    } else if (location.pathname.includes("Orthogonality")) {
-      setActivePage(3);
-    } else if (location.pathname.includes("EquationsOfLinesAndPlanes")) {
-      setActivePage(4);
-    } else if (location.pathname.includes("CrossProduct")) {
-      setActivePage(5);
+      setOpen(2);
     }
   }, [location.pathname]);
 
   const handleRedirect = (link, page) => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
     handleOpenClose(page);
     navigate(link);
   };
+
+  const scrollTo = (id) => {
+    handleScrollClick(id);
+  };
+
+  const [activeContent, setActiveContent] = useState(null);
+
+  const handleScroll = () => {
+    const sidebarItems = document.querySelectorAll(".Sub_Topic");
+    let maxVisibleHeight = 0;
+    let currentContent = null;
+
+    sidebarItems.forEach((item) => {
+      const rect = item.getBoundingClientRect();
+      const visibleHeight =
+        Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
+
+      // If the current item has more visible height than the previous ones, update the active content
+      if (visibleHeight > maxVisibleHeight) {
+        maxVisibleHeight = visibleHeight;
+        currentContent = item.id;
+      }
+    });
+
+    setActiveContent(currentContent);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    handleScroll();
+  }, []);
   return (
     <>
       <div
@@ -46,41 +80,95 @@ function NonEuclideanSidebar() {
         <p>1. Hyperbolic Geometry</p>
       </div>
       <Collapse in={open === 1} timeout="auto" unmountOnExit>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic32" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Euclid's First Five Postulate</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic32")}>
+            Euclid's First Five Postulate
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic33" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Euclid's Fifth Postulate</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic33")}>
+            Euclid's Fifth Postulate
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic34" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">The Hyperbolic Axiom</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic34")}>
+            The Hyperbolic Axiom
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic35" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Nonintersecting Lines</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic35")}>
+            Nonintersecting Lines
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic36" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Ideal Points</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic36")}>
+            Ideal Points
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic37" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Omega Triangles</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic37")}>
+            Omega Triangles
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic38" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Hyperbolic Quadrilaterals and Triangles</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic38")}>
+            Hyperbolic Quadrilaterals and Triangles
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic39" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Hyperbolic Plane Model</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic39")}>
+            Hyperbolic Plane Model
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic40" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Hyperbolic Tesselations</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic40")}>
+            Hyperbolic Tesselations
+          </p>
         </div>
       </Collapse>
       <div

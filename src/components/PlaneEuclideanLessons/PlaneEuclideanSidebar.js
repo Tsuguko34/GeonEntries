@@ -388,29 +388,65 @@ function PlaneEuclideanSidebar({ handleScrollClick }) {
         <p>5. Cross Product</p>
       </div>
       <Collapse in={open === 5} timeout="auto" unmountOnExit>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic26" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Cross Product of Two Vectors</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic26")}>
+            Cross Product of Two Vectors
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic27" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Cross Product of Unit Vectors</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic27")}>
+            Cross Product of Unit Vectors
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic28" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Magnitude of the Cross Product</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic28")}>
+            Magnitude of the Cross Product
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic29" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Area of a Parallelogram in R²</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic29")}>
+            Area of a Parallelogram in R²
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic30" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Scalar Triple Product</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic30")}>
+            Scalar Triple Product
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic31" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Volume of a Parallelepiped in R³</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic31")}>
+            Volume of a Parallelepiped in R³
+          </p>
         </div>
       </Collapse>
     </>

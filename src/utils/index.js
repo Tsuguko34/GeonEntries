@@ -13,6 +13,7 @@ import calculateNorm3D from "./calculateNorm3D";
 import calculateDistance from "./calculateDistance";
 import calculatePointNormal from "./calculatePointNormal";
 import calculatePoint3D from "./calculatePoint3D";
+import calculateCrossProduct from "./calculateCrossProduct";
 
 export {
   hasNavBar,
@@ -30,4 +31,5 @@ export {
   calculateDistance,
   calculatePointNormal,
   calculatePoint3D,
+  calculateCrossProduct,
 };

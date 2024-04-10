@@ -7,6 +7,8 @@ import HomePageLessons from "./HomePageLessons";
 import PELesson2 from "./PlaneEuclideanLessons/PELesson2";
 import PELesson3 from "./PlaneEuclideanLessons/PELesson3";
 import PELesson4 from "./PlaneEuclideanLessons/PELesson4";
+import PELesson5 from "./PlaneEuclideanLessons/PELesson5";
+import NELesson1 from "./NonEuclideanLessons/NELesson1";
 
 export {
   Navbar,
@@ -18,4 +20,6 @@ export {
   PELesson2,
   PELesson3,
   PELesson4,
+  PELesson5,
+  NELesson1,
 };

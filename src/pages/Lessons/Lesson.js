@@ -3,10 +3,12 @@ import React, { useEffect } from "react";
 import "../../styles/lesson.css";
 import { useLocation, useParams } from "react-router-dom";
 import {
+  NELesson1,
   PELesson1,
   PELesson2,
   PELesson3,
   PELesson4,
+  PELesson5,
   PlaneEuclideanSidebar,
 } from "../../components";
 import { GetWindowWidth } from "../../utils";
@@ -56,6 +58,8 @@ function Lesson() {
           {location.pathname.includes("EquationsOfLinesAndPlanes") && (
             <PELesson4 />
           )}
+          {location.pathname.includes("CrossProduct") && <PELesson5 />}
+          {location.pathname.includes("HyperbolicGeometry") && <NELesson1 />}
         </div>
       </div>
     </section>

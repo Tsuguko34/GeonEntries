@@ -62,7 +62,7 @@ function Sidebar() {
             )}
           {location.pathname &&
             location.pathname.includes("NonEuclideanGeometry") && (
-              <NonEuclideanSidebar />
+              <NonEuclideanSidebar handleScrollClick={handleScroll} />
             )}
         </div>
       </div>
