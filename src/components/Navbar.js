@@ -76,17 +76,19 @@ function Navbar({ setOpenSidebar, pageHasSidebar }) {
 
   return (
     <section id="NavBar" className={`NavBar ${navbarOpen && "open"}`}>
-      <div className="Hamburger_Icon">
-        {(windowWidth > 1366 || !pageHasSidebar) && (
-          <FaIcons.FaHome
-            onClick={() => navigate("/LessonsList")}
-            className="home"
-          />
-        )}
-        {windowWidth <= 1366 && pageHasSidebar && (
-          <IoIcons.IoMdMenu onClick={() => setOpenSidebar(true)} />
-        )}
-      </div>
+      {location.pathname !== "/" && (
+        <div className="Hamburger_Icon">
+          {(windowWidth > 1366 || !pageHasSidebar) && (
+            <FaIcons.FaHome
+              onClick={() => navigate("/LessonsList")}
+              className="home"
+            />
+          )}
+          {windowWidth <= 1366 && pageHasSidebar && (
+            <IoIcons.IoMdMenu onClick={() => setOpenSidebar(true)} />
+          )}
+        </div>
+      )}
 
       <div ref={navbarRef} className="wrapper">
         <div className="Navbar_Content_Container">
@@ -110,9 +112,6 @@ function Navbar({ setOpenSidebar, pageHasSidebar }) {
                     comprehension in modern geometry.
                   </p>
                 </div>
-                <br />
-                <br />
-                <br />
                 <div className="Credits">
                   <span>Huge credits to:</span>
                   <br />
@@ -121,8 +120,7 @@ function Navbar({ setOpenSidebar, pageHasSidebar }) {
                     University
                   </p>
                 </div>
-                <br />
-                <br />
+
                 <div className="Trademark">
                   <span>GeomEntries • 2023</span>
                 </div>
@@ -136,14 +134,21 @@ function Navbar({ setOpenSidebar, pageHasSidebar }) {
                 <p>Cajiuat, Justine Rinoa</p>
                 <p>De Vera, Marielle Rowie</p>
                 <p>Santos, Charles Darwin</p>
-                <p id="linkToCopy" className="link" onClick={handleCopy}>
-                  gromentries@gmail.com
+                <p
+                  id="linkToCopy"
+                  className="link"
+                  onClick={handleCopy}
+                  style={{ marginTop: "100px" }}
+                >
+                  geomentries@gmail.com
                 </p>
               </div>
             </div>
           </div>
           <div className="Bottom_Side">
-            <img src={largeLogo} alt="Large Logo" />
+            {location.pathname !== "/" && (
+              <img src={largeLogo} alt="Large Logo" />
+            )}
           </div>
         </div>
         {/* {showUnits && (

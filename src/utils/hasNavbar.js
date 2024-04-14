@@ -3,7 +3,7 @@
  **/
 
 export default function hasNavBar(location, routes) {
-  const excludedPaths = ["/"];
+  const excludedPaths = [];
 
   return routes.some((route) => {
     const isExcluded = excludedPaths.includes(route.path);

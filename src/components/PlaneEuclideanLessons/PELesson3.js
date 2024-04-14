@@ -163,7 +163,7 @@ function PELesson3() {
 
           <div className="Side_By_Side">
             <div className="Left_Side withBorder">
-              <div className="Solution_Example">
+              <div className="Solution_Example largerLeft2">
                 <p className="label">Then,</p>
                 <div className="solution">
                   <p className="left">u ⋅ v </p>
@@ -200,7 +200,7 @@ function PELesson3() {
               </div>
             </div>
             <div className="Right_Side">
-              <div className="Solution_Example">
+              <div className="Solution_Example largerLeft2">
                 <p className="label">Solving for x,</p>
                 <div className="start">
                   <p className="left">x</p>
@@ -245,7 +245,7 @@ function PELesson3() {
           </div>
           <div className="Side_By_Side">
             <div className="Left_Side withBorder">
-              <div className="Solution_Example">
+              <div className="Solution_Example largerLeft2">
                 <p className="label">Then,</p>
                 <div className="solution">
                   <p className="left">u ⋅ v </p>
@@ -294,7 +294,7 @@ function PELesson3() {
               </div>
             </div>
             <div className="Right_Side">
-              <div className="Solution_Example">
+              <div className="Solution_Example largerLeft2">
                 <p className="label">Solving for y,</p>
                 <div className="start">
                   <p className="left">5m</p>
@@ -413,12 +413,14 @@ function PELesson3() {
             <div className="Theorem_Content">
               <p className="Bold_Underline">GENERAL EQUATION OF THE LINE</p>
               <p className="Label">Let a & b be nonzero constants.</p>
-              <div className="Label visual">
-                Then the equation{" "}
-                <div className="Light_Blue fraction">
-                  <p>ax + by + c = 0</p>
-                </div>
-                is a line in R² with normal vector n = (a, b).
+              <div className="Paragraph_Topic block">
+                <p>
+                  Then the equation{" "}
+                  <span className="Light_Blue">
+                    <p>ax + by + c = 0</p>
+                  </span>{" "}
+                  is a line in R² with normal vector n = (a, b).
+                </p>
               </div>
             </div>
           </div>
@@ -792,36 +794,34 @@ function PELesson3() {
               </div>
             </div>
             <div className="Right_Side">
-              <div className="Group">
-                <div className="Solution_Example">
-                  <div className="start">
-                    <p className="left">
-                      <span className="Bold">b .</span>
-                    </p>
-                    <p className="center"></p>
-                    <p className="right">Evaluating the equation,</p>
-                  </div>
-                  <div className="solution">
-                    <p className="left"></p>
-                    <p className="center"></p>
-                    <p className="right">-5x + 45 - y - 14 + 2z = 0</p>
-                  </div>
+              <div className="Solution_Example">
+                <div className="start">
+                  <p className="left">
+                    <span className="Bold">b .</span>
+                  </p>
+                  <p className="center"></p>
+                  <p className="right">Evaluating the equation,</p>
                 </div>
-                <div className="Solution_Example">
-                  <div className="start">
-                    <p className="left"></p>
-                    <p className="center"></p>
-                    <p className="right">
-                      <span className="Italic Bold">General Equation:</span>
-                    </p>
-                  </div>
-                  <div className="solution">
-                    <p className="left"></p>
-                    <p className="center"></p>
-                    <p className="right">
-                      <span className="LimeGreen">-5x - y + 2z + 31 = 0</span>
-                    </p>
-                  </div>
+                <div className="solution">
+                  <p className="left"></p>
+                  <p className="center"></p>
+                  <p className="right">-5x + 45 - y - 14 + 2z = 0</p>
+                </div>
+              </div>
+              <div className="Solution_Example">
+                <div className="start">
+                  <p className="left"></p>
+                  <p className="center"></p>
+                  <p className="right">
+                    <span className="Italic Bold">General Equation:</span>
+                  </p>
+                </div>
+                <div className="solution">
+                  <p className="left"></p>
+                  <p className="center"></p>
+                  <p className="right">
+                    <span className="LimeGreen">-5x - y + 2z + 31 = 0</span>
+                  </p>
                 </div>
               </div>
             </div>

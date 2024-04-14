@@ -14,6 +14,8 @@ import calculateDistance from "./calculateDistance";
 import calculatePointNormal from "./calculatePointNormal";
 import calculatePoint3D from "./calculatePoint3D";
 import calculateCrossProduct from "./calculateCrossProduct";
+import calculateAngle from "./calculateAngle";
+import calculateSides from "./calculateSides";
 
 export {
   hasNavBar,
@@ -32,4 +34,6 @@ export {
   calculatePointNormal,
   calculatePoint3D,
   calculateCrossProduct,
+  calculateAngle,
+  calculateSides,
 };

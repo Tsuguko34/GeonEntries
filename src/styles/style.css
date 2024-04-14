@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dorsa&display=swap');
 
 :root {
   --background-blue: #176b87;
@@ -78,15 +79,18 @@ button{
   position: fixed;
   top: 0;
   bottom: 0;
+  opacity: 0;
   width: 100vw;
   height: 100vh;
-  transition: all 250ms ease-in-out forwards;
-  z-index: -10;
+  transition: all 250ms ease-in-out;
+  z-index: 999;
+  pointer-events: none;
 }
 
 .Sidebar_Overlay.open{
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 1;
+  pointer-events: all;
 }
 
 @media only screen and (max-width: 1366px){
@@ -101,6 +105,7 @@ button{
     left: -150%;
     height: 100vh;
     transition: all 250ms ease-in-out;
+    z-index: 1000;
   }
 
   .Sidebar_Container.open{

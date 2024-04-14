@@ -1477,7 +1477,7 @@ function PELesson4() {
             <p>Thus, following the vector equation form,</p>
           </div>
 
-          <div className="Paragraph_Topic paddingLeft center">
+          <div className="Paragraph_Topic paddingLeft center block">
             <p>
               r = r₀ + t₁v₁ + t₂v₂ <span className="arrow">→</span> ({" "}
               <span className="LimeGreen">x</span> ,{" "}

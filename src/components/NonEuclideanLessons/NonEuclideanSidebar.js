@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Collapse } from "@mui/material";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 
-function NonEuclideanSidebar({ handleScrollClick }) {
+function NonEuclideanSidebar({ handleScrollClick, closeSidebar }) {
   const location = useLocation();
   const navigate = useNavigate();
   const [activePage, setActivePage] = useState(1);
@@ -25,6 +25,7 @@ function NonEuclideanSidebar({ handleScrollClick }) {
       setActivePage(2);
       setOpen(2);
     }
+    closeSidebar(false);
   }, [location.pathname]);
 
   const handleRedirect = (link, page) => {
@@ -34,6 +35,7 @@ function NonEuclideanSidebar({ handleScrollClick }) {
   };
 
   const scrollTo = (id) => {
+    closeSidebar(false);
     handleScrollClick(id);
   };
 
@@ -180,29 +182,65 @@ function NonEuclideanSidebar({ handleScrollClick }) {
         <p>2. Spherical Geometry</p>
       </div>
       <Collapse in={open === 2} timeout="auto" unmountOnExit>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic41" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">The Elliptic Axiom</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic41")}>
+            The Elliptic Axiom
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic42" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Elliptic Quadrilaterals and Triangles</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic42")}>
+            Elliptic Quadrilaterals and Triangles
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic43" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">The Sphere S² in R³</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic43")}>
+            The Sphere S² in R³
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic44" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Distance and Spherical Distance</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic44")}>
+            Distance and Spherical Distance
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic45" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Spherical Triangles</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic45")}>
+            Spherical Triangles
+          </p>
         </div>
-        <div className="SubItems_Container">
+        <div
+          className={`SubItems_Container ${
+            activeContent === "topic46" ? "active" : ""
+          }`}
+        >
           <span>•</span>
-          <p className="Sub_Item">Napier's Rule</p>
+          <p className="Sub_Item" onClick={() => scrollTo("topic46")}>
+            Napier's Rule
+          </p>
         </div>
       </Collapse>
     </>

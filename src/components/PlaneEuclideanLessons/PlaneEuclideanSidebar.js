@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Collapse } from "@mui/material";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 
-function PlaneEuclideanSidebar({ handleScrollClick }) {
+function PlaneEuclideanSidebar({ handleScrollClick, closeSidebar }) {
   const location = useLocation();
   const navigate = useNavigate();
   const [activePage, setActivePage] = useState(1);
@@ -34,6 +34,8 @@ function PlaneEuclideanSidebar({ handleScrollClick }) {
       setActivePage(5);
       setOpen(5);
     }
+
+    closeSidebar(false);
   }, [location.pathname]);
 
   const handleRedirect = (link, page) => {
@@ -43,6 +45,7 @@ function PlaneEuclideanSidebar({ handleScrollClick }) {
   };
 
   const scrollTo = (id) => {
+    closeSidebar(false);
     handleScrollClick(id);
   };
 

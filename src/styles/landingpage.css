@@ -109,7 +109,7 @@
     content: '';
     position: absolute;
     width: 0%;
-    height: 150px;
+    height: 135px;
     background-color: var(--light-blue);
     border-top: 5px solid var(--dark-blue);
     border-bottom: 5px solid var(--dark-blue);
@@ -128,7 +128,7 @@
 #LandingPage > .wrapper > .LandingPage_Top > img{
     position: relative;
     width: 0px;
-    max-width: 800px;
+    max-width: 700px;
     height: 130px;
     object-fit: cover;
     z-index: 1;
@@ -140,10 +140,10 @@
         width: 0px;
     }
     75%{
-        width: 800px;
+        width: 700px;
     }
     100%{
-        width: 700px;
+        width: 600px;
     }
 }
 
@@ -186,8 +186,8 @@
 }
 
 #LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container > .Paragraph_Item > span > *{
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
 }
 
 #LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container > .Paragraph_Item > p{
@@ -195,7 +195,7 @@
     color: white;
     line-height: 2;
     text-align: center;
-    font-size: 26px;
+    font-size: 20px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -236,8 +236,8 @@
 
 #LandingPage > .wrapper > .LandingPage_Bottom > img{
     position: relative;
-    width: 250px;
-    height: 165px;
+    width: 200px;
+    height: 130px;
     opacity: 1;
     object-fit:cover;
     z-index: 10;
@@ -254,13 +254,13 @@
     text-align: start;
     padding: 10px 20px;
     bottom: 3px;
-    width: 220px;
-    height: 60px;
+    width: 200px;
+    height: 50px;
     border-radius: 15px;
     border: none;
     background-color: var(--dark-blue);
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     opacity: 0;
     transition: all 250ms ease-in-out;
     z-index: 9;
@@ -272,6 +272,7 @@
 
 #LandingPage > .wrapper > .LandingPage_Bottom > button.active:hover{
     background-color: var(--light-blue);
+    color: var(--dark-blue);
     opacity: 1;
 }
 
@@ -286,10 +287,10 @@
             width: 0px;
         }
         75%{
-            width: 700px;
+            width: 600px;
         }
         100%{
-            width: 600px;
+            width: 500px;
         }
     }
 
@@ -353,10 +354,10 @@
             width: 0px;
         }
         75%{
-            width: 600px;
+            width: 500px;
         }
         100%{
-            width: 500px;
+            width: 400px;
         }
     }
 

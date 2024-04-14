@@ -142,7 +142,7 @@ function PELesson5() {
             </p>
           </div>
 
-          <div className="Paragraph_Topic center">
+          <div className="Paragraph_Topic center formula">
             <p>
               <span className="large">[</span>
               <span className="Vertical">
@@ -773,17 +773,19 @@ function PELesson5() {
                 <div style={{ position: "relative" }}>
                   5. u ×{" "}
                   <span className="stack">
-                    <div>→</div>
-                  </span>
-                  0 ={" "}
+                    <sup>→</sup>
+                    <p>0</p>
+                  </span>{" "}
+                  ={" "}
                   <span className="stack">
-                    <div>→</div>
-                  </span>
-                  0 × v ={" "}
+                    <sup>→</sup>
+                    <p>0</p>
+                  </span>{" "}
+                  × v ={" "}
                   <span className="stack">
-                    <div>→</div>
+                    <sup>→</sup>
+                    <p>0</p>
                   </span>
-                  0
                 </div>
                 <p>6. u × u = 0</p>
               </div>
@@ -1450,13 +1452,15 @@ function PELesson5() {
                   <p>
                     Let{" "}
                     <span className="stack">
-                      <div>→</div>
-                    </span>
-                    AB be vector u and{" "}
+                      <sup>→</sup>
+                      <p>AB</p>
+                    </span>{" "}
+                    be vector u and{" "}
                     <span className="stack">
-                      <div>→</div>
-                    </span>
-                    AC vector v
+                      <sup>→</sup>
+                      <p>AC</p>
+                    </span>{" "}
+                    vector v
                   </p>
                 </div>
               </div>
@@ -1479,9 +1483,10 @@ function PELesson5() {
                   <div className="start">
                     <p className="left withStack">
                       <span className="stack">
-                        <div>→</div>
-                      </span>
-                      AB = u
+                        <sup>→</sup>
+                        <p>AB</p>
+                      </span>{" "}
+                      = u
                     </p>
                     <p className="center">=</p>
                     <p className="right">(x₂ - x₁, y₂ - y₁)</p>
@@ -1507,9 +1512,10 @@ function PELesson5() {
                   <div className="start">
                     <p className="left withStack">
                       <span className="stack">
-                        <div>→</div>
+                        <sup>→</sup>
+                        <p>AC</p>
                       </span>
-                      AC = v
+                      = v
                     </p>
                     <p className="center">=</p>
                     <p className="right">(x₂ - x₁, y₂ - y₁)</p>
@@ -1541,7 +1547,7 @@ function PELesson5() {
           <div className="Paragraph_Topic paddingLeft2">
             <div className="Solution_Example largerLeft">
               <div className="start">
-                <p className="left withStack">
+                <p className="left">
                   A ▱ = abs <span className="large">(</span>det
                   <span className="large">[</span>
                   <span className="Vertical borderLeft center white">

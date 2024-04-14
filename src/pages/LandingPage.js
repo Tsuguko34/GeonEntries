@@ -11,16 +11,16 @@ import { HomePageLessons } from "../components";
 
 function LandingPage() {
   const navigate = useNavigate();
-  const [activeSide, setActiveSide] = useState("left");
-  const [logoHover, setLogoHover] = useState(false);
+  const [activeSide, setActiveSide] = useState("right");
+  const [logoHover, setLogoHover] = useState(true);
   const [showLessons, setShowLessons] = useState(false);
 
   const handleLogoMouseOver = (action) => {
-    if (action === "Enter") {
-      setLogoHover(true);
-    } else if (action === "Leave") {
-      setLogoHover(false);
-    }
+    // if (action === "Enter") {
+    //   setLogoHover(true);
+    // } else if (action === "Leave") {
+    //   setLogoHover(false);
+    // }
   };
 
   useEffect(() => {

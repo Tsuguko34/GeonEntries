@@ -392,14 +392,16 @@ function NELesson1() {
             <p>
               Let P be a point not on line{" "}
               <span className="stack">
-                <div>⟷</div>
+                <sup>⟷</sup>
+                <p>XY</p>
               </span>
-              XY. Then there are at least two distinct lines through the point P
+              . Then there are at least two distinct lines through the point P
               that do not intersect the line
               <span className="stack">
-                <div>⟷</div>
+                <sup>⟷</sup>
+                <p>XY</p>
               </span>
-              XY .
+              .
             </p>
           </div>
 
@@ -418,14 +420,16 @@ function NELesson1() {
                 <p>
                   Let P be a point not on line{" "}
                   <span className="stack">
-                    <div>⟷</div>
+                    <sup>⟷</sup>
+                    <p>XY</p>
                   </span>
-                  XY. Then there are infinite number of lines through the point
-                  P that do not intersect the line{" "}
+                  . Then there are infinite number of lines through the point P
+                  that do not intersect the line{" "}
                   <span className="stack">
-                    <div>⟷</div>
+                    <sup>⟷</sup>
+                    <p>XY</p>
                   </span>
-                  XY.
+                  .
                 </p>
               </div>
             </div>
@@ -445,17 +449,16 @@ function NELesson1() {
             <p className="Explanation block">
               Let P be a point not on line{" "}
               <span className="stack">
-                <div>⟷</div>
-              </span>
-              XY . In hyperbolic geometry, the first lines in either direction
-              through the point P that do
-            </p>
-            <p className="Explanation block">
-              not intersect the line{" "}
+                <sup>⟷</sup>
+                <p>XY</p>
+              </span>{" "}
+              . In hyperbolic geometry, the first lines in either direction
+              through the point P that do not intersect the line{" "}
               <span className="stack">
-                <div>⟷</div>
-              </span>
-              XY are called parallel lines or sensed parallel lines .
+                <sup>⟷</sup>
+                <p>XY</p>
+              </span>{" "}
+              are called parallel lines or sensed parallel lines .
             </p>
           </div>
 
@@ -464,14 +467,16 @@ function NELesson1() {
             <p className="Explanation block">
               Let P be a point not on line{" "}
               <span className="stack">
-                <div>⟷</div>
-              </span>
-              XY . In hyperbolic geometry, the line through the point P that do
-              not intersect the line{" "}
+                <sup>⟷</sup>
+                <p>XY</p>
+              </span>{" "}
+              . In hyperbolic geometry, the line through the point P that do not
+              intersect the line{" "}
               <span className="stack">
-                <div>⟷</div>
-              </span>
-              XY , and not parallel to it, are called nonintersecting lines or
+                <sup>⟷</sup>
+                <p>XY</p>
+              </span>{" "}
+              , and not parallel to it, are called nonintersecting lines or
               ultraparallel lines .
             </p>
           </div>
@@ -486,17 +491,25 @@ function NELesson1() {
             <p>
               There are exactly two parallels to line{" "}
               <span className="stack">
-                <div>⟷</div>
-              </span>
-              XY that passes through point{" "}
+                <sup>⟷</sup>
+                <p>XY</p>
+              </span>{" "}
+              that passes through point{" "}
               <span className="stack">
-                <div>⟷</div>
+                <sup>⟷</sup>
+                <p>P</p>
               </span>
-              P, namely line{" "}
+              , namely line{" "}
               <span className="stack">
-                <div>⟷</div>
+                <sup>⟷</sup>
+                <p>PQ</p>
+              </span>{" "}
+              and line{" "}
+              <span className="stack">
+                <sup>⟷</sup>
+                <p>PR</p>
               </span>
-              PQ and line PR.
+              .
             </p>
           </div>
 
@@ -504,9 +517,10 @@ function NELesson1() {
             <p>
               Line{" "}
               <span className="stack">
-                <div>⟷</div>
-              </span>
-              PQ is the left-hand parallel.
+                <sup>⟷</sup>
+                <p>PQ</p>
+              </span>{" "}
+              is the left-hand parallel.
             </p>
           </div>
 
@@ -514,9 +528,10 @@ function NELesson1() {
             <p>
               Line{" "}
               <span className="stack">
-                <div>⟷</div>
-              </span>
-              PR is the right-hand parallel .
+                <sup>⟷</sup>
+                <p>PR</p>
+              </span>{" "}
+              is the right-hand parallel .
             </p>
           </div>
 
@@ -567,17 +582,20 @@ function NELesson1() {
             <p>
               Let line{" "}
               <span className="stack">
-                <div>⟷</div>
-              </span>
-              PR and{" "}
+                <sup>⟷</sup>
+                <p>PR</p>
+              </span>{" "}
+              and{" "}
               <span className="stack">
-                <div>⟷</div>
-              </span>
-              PQ be the parallels of line{" "}
+                <sup>⟷</sup>
+                <p>PQ</p>
+              </span>{" "}
+              be the parallels of line{" "}
               <span className="stack">
-                <div>⟷</div>
-              </span>
-              XY .
+                <sup>⟷</sup>
+                <p>XY</p>
+              </span>{" "}
+              .
             </p>
           </div>
 
@@ -585,14 +603,15 @@ function NELesson1() {
             <p>
               If the right-hand parallel{" "}
               <span className="stack">
-                <div>⟷</div>
-              </span>
-              PR is extended indefinitely to the right side, it will meet the
-              line{" "}
+                <sup>⟷</sup>
+                <p>PR</p>
+              </span>{" "}
+              is extended indefinitely to the right side, it will meet the line{" "}
               <span className="stack">
-                <div>⟷</div>
-              </span>
-              XY in the ideal point Ω.
+                <sup>⟷</sup>
+                <p>XY</p>
+              </span>{" "}
+              in the ideal point Ω.
             </p>
           </div>
 
@@ -600,14 +619,15 @@ function NELesson1() {
             <p>
               Equivalently, if the left-hand parallel{" "}
               <span className="stack">
-                <div>⟷</div>
-              </span>
-              PQ is extended indefinitely to the left side, it will meet the
-              line{" "}
+                <sup>⟷</sup>
+                <p>PQ</p>
+              </span>{" "}
+              is extended indefinitely to the left side, it will meet the line{" "}
               <span className="stack">
-                <div>⟷</div>
-              </span>
-              XY in the ideal point Ω’.
+                <sup>⟷</sup>
+                <p>XY</p>
+              </span>{" "}
+              in the ideal point Ω’.
             </p>
           </div>
 

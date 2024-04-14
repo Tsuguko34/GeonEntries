@@ -335,31 +335,47 @@ function PELesson2() {
               <div className="right">
                 <p className="Label">OUTPUT</p>
                 <div className="Content output">
-                  <div className="Label">Norm</div>
-                  <div className="Vertical">
-                    <p>
-                      || v || ={" "}
-                      <span className="squareRoot_Symbol">&radic;</span>x² + y²
-                    </p>
-                    <div className="Output_Rectangles_Holder">
-                      || v || ={" "}
-                      <span className="squareRoot_Symbol">&radic;</span>
-                      <div
-                        id="rectangle-4-1"
-                        className="Output_Rectangles"
-                      ></div>
-                      ² +
-                      <div
-                        id="rectangle-3-1"
-                        className="Output_Rectangles"
-                      ></div>
-                      ²
+                  <div class="Label">Norm</div>
+                  <div className="Solution_Example">
+                    <div className="start">
+                      <p className="left">|| v ||</p>
+                      <p className="center">=</p>
+                      <p className="right">
+                        <span className="squareRoot_Symbol">&radic;</span>x² +
+                        y²
+                      </p>
                     </div>
-                  </div>
-                  <div className="Vertical">
-                    <div className="Output_Rectangles_Holder">
-                      || v || ={" "}
-                      <div id="rectangle-a" className="Output_Rectangles"></div>
+                    <div className="start">
+                      <p className="left">|| v ||</p>
+                      <p className="center">=</p>
+                      <p className="right">
+                        <div className="Output_Rectangles_Holder">
+                          <span className="squareRoot_Symbol">&radic;</span>
+                          <div
+                            id="rectangle-4-1"
+                            className="Output_Rectangles"
+                          ></div>
+                          ² +
+                          <div
+                            id="rectangle-3-1"
+                            className="Output_Rectangles"
+                          ></div>
+                          ²
+                        </div>
+                      </p>
+                    </div>
+
+                    <div className="start">
+                      <p className="left">|| v ||</p>
+                      <p className="center">=</p>
+                      <p className="right">
+                        <div className="Output_Rectangles_Holder">
+                          <div
+                            id="rectangle-a"
+                            className="Output_Rectangles"
+                          ></div>
+                        </div>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -372,7 +388,7 @@ function PELesson2() {
                 y, and z values and observe its norm.
               </div>
             </div>
-            <div className="Side_By_Side">
+            <div className="Side_By_Side noGap">
               <div className="left">
                 <p className="Label">INPUT</p>
                 <div className="Content">
@@ -475,39 +491,51 @@ function PELesson2() {
                 <p className="Label">OUTPUT</p>
                 <div className="Content output">
                   <div className="Label">Norm</div>
-                  <div className="Vertical">
-                    <p>
-                      || v || ={" "}
-                      <span className="squareRoot_Symbol">&radic;</span>x² + y²
-                      + z²
-                    </p>
-                    <div className="Output_Rectangles_Holder">
-                      || v || ={" "}
-                      <span className="squareRoot_Symbol">&radic;</span>
-                      <div
-                        id="rectangle-4-2"
-                        className="Output_Rectangles"
-                      ></div>
-                      ² +
-                      <div
-                        id="rectangle-3-2"
-                        className="Output_Rectangles"
-                      ></div>
-                      ² +
-                      <div
-                        id="rectangle-2-1"
-                        className="Output_Rectangles"
-                      ></div>
-                      ²
+                  <div className="Solution_Example">
+                    <div className="start">
+                      <p className="left">|| v ||</p>
+                      <p className="center">=</p>
+                      <p className="right">
+                        <span className="squareRoot_Symbol">&radic;</span>x² +
+                        y² + z²
+                      </p>
                     </div>
-                  </div>
-                  <div className="Vertical">
-                    <div className="Output_Rectangles_Holder">
-                      || v || ={" "}
-                      <div
-                        id="rectangle-aa"
-                        className="Output_Rectangles"
-                      ></div>
+                    <div className="start">
+                      <p className="left">|| v ||</p>
+                      <p className="center">=</p>
+                      <p className="right">
+                        <div className="Output_Rectangles_Holder">
+                          <span className="squareRoot_Symbol">&radic;</span>
+                          <div
+                            id="rectangle-4-2"
+                            className="Output_Rectangles"
+                          ></div>
+                          ² +
+                          <div
+                            id="rectangle-3-2"
+                            className="Output_Rectangles"
+                          ></div>
+                          ² +
+                          <div
+                            id="rectangle-2-1"
+                            className="Output_Rectangles"
+                          ></div>
+                          ²
+                        </div>
+                      </p>
+                    </div>
+
+                    <div className="start">
+                      <p className="left">|| v ||</p>
+                      <p className="center">=</p>
+                      <p className="right">
+                        <div className="Output_Rectangles_Holder">
+                          <div
+                            id="rectangle-aa"
+                            className="Output_Rectangles"
+                          ></div>
+                        </div>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -531,9 +559,10 @@ function PELesson2() {
                 <p>
                   2. || v || = 0 iff. v ={" "}
                   <span className="stack">
-                    <div>→</div>
-                  </span>
-                  0 (zero vector)
+                    <sup>→</sup>
+                    <p>PQ</p>
+                  </span>{" "}
+                  (zero vector)
                 </p>
                 <p>3. || kv || = | k | || v ||</p>
               </div>
@@ -797,19 +826,21 @@ function PELesson2() {
                 <span className="Italic"> v</span>
               </p>
 
-              <div className="Label visual">
-                The vector{" "}
-                <div className="Light_Blue fraction">
-                  <p>
-                    u ={" "}
-                    <div className="fraction">
-                      <span className="upper">v</span>
-                      <span className="divider blue"></span>
-                      <span className="bottom">||v||</span>
-                    </div>
-                  </p>
-                </div>
-                is the unit vector (has a norm 1) in the direction of v.
+              <div className="Paragraph_Topic block paddingLeft2 ">
+                <p>
+                  The vector{" "}
+                  <span className="Light_Blue fraction">
+                    <p>
+                      u ={" "}
+                      <span className="fraction">
+                        <span className="upper">v</span>
+                        <span className="divider blue"></span>
+                        <span className="bottom">||v||</span>
+                      </span>
+                    </p>
+                  </span>{" "}
+                  is the unit vector (has a norm 1) in the direction of v.
+                </p>
               </div>
             </div>
           </div>
@@ -1085,7 +1116,7 @@ function PELesson2() {
           <p className="Sub_Title">Definition 2.3</p>
         </div>
         <div className="Sub_Topic_Lesson">
-          <div className="Paragraph_Topic">
+          <div className="Paragraph_Topic block">
             <p>
               Let <span className="Italic">u</span> &{" "}
               <span className="Italic">v</span> be vectors in Rⁿ. The distance
@@ -1496,19 +1527,14 @@ function PELesson2() {
               <p className="left"></p>
               <p className="center">=</p>
               <p className="right">
-                (<span className="squareRoot_Symbol">&radic;</span>1² + 1²) (
-                <span className="squareRoot_Symbol">&radic;</span>2² + (-2)²)
-                cos 90°
+                (&radic;1² + 1²) ( &radic;2² + (-2)²) cos 90°
               </p>
             </div>
 
             <div className="solution">
               <p className="left"></p>
               <p className="center">=</p>
-              <p className="right">
-                (<span className="squareRoot_Symbol">&radic;</span>2) ( 2
-                <span className="squareRoot_Symbol">&radic;</span>2) (0)
-              </p>
+              <p className="right">(&radic;2) ( 2 &radic;2) (0)</p>
             </div>
             <div className="solution">
               <p className="left"></p>
@@ -1527,10 +1553,8 @@ function PELesson2() {
             <div className="solution">
               <p className="left"></p>
               <p className="center">=</p>
-              <p className="right">
-                (<span className="squareRoot_Symbol">&radic;</span>(-4)² + 2² +
-                1²) (<span className="squareRoot_Symbol">&radic;</span>4² + 4² +
-                3²) cos 55°
+              <p className="right noGap">
+                (&radic;(-4)² + 2² + 1²) ( &radic;4² + 4² + 3²) cos 55°
               </p>
             </div>
 
@@ -1747,13 +1771,15 @@ function PELesson2() {
               <div className="Light_Blue">
                 <p>
                   <span className="stack">
-                    <div>→</div>
-                  </span>
-                  0 ⋅ v = v ⋅{" "}
+                    <sup>→</sup>
+                    <p>0</p>
+                  </span>{" "}
+                  ⋅ v = v ⋅{" "}
                   <span className="stack">
-                    <div>→</div>
-                  </span>
-                  0 = 0
+                    <sup>→</sup>
+                    <p>0</p>
+                  </span>{" "}
+                  = 0
                 </p>
               </div>
             </div>
@@ -1770,7 +1796,7 @@ function PELesson2() {
             </p>
           </div>
 
-          <div className="Solution_Example">
+          <div className="Solution_Example largerLeft2">
             <p className="label">1.) (-3u) ⋅ v</p>
             <div className="start">
               <p className="left">By Theorem 2.4 (3),</p>
@@ -1814,7 +1840,7 @@ function PELesson2() {
             </div>
           </div>
 
-          <div className="Solution_Example">
+          <div className="Solution_Example largerLeft2">
             <p className="label">
               2.) <span className="squareRoot_Symbol">&radic;</span>u ⋅ u
             </p>
@@ -1865,7 +1891,7 @@ function PELesson2() {
             </div>
           </div>
 
-          <div className="Solution_Example">
+          <div className="Solution_Example largerLeft2">
             <p className="label">3.) (w - v) ⋅ u</p>
             <div className="start">
               <p className="left">First,</p>
@@ -1909,7 +1935,7 @@ function PELesson2() {
             </div>
           </div>
 
-          <div className="Solution_Example">
+          <div className="Solution_Example largerLeft2">
             <p className="label">4.) (w ⋅ 3u) + (w ⋅ -v)</p>
             <div className="start">
               <p className="left">By Theorem 2.4 (2, a),</p>
@@ -2296,8 +2322,8 @@ function PELesson2() {
             </p>
 
             <p className="Note">
-              The norm, distance, and dot product are scalar, not another
-              vector.
+              Two vectors are parallel if one of the vectors is a scalar
+              multiple of the other.
             </p>
           </div>
         </div>

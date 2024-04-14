@@ -3,8 +3,9 @@ import { Routes, Route, useLocation, useParams } from "react-router-dom";
 import { routes } from "./config";
 import { Navbar, Sidebar } from "./components";
 import { GetWindowWidth, hasNavBar, hasSidebar } from "./utils";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { SidebarContext } from "./context/context";
+import { Hidden } from "@mui/material";
 
 function App() {
   const location = useLocation();
@@ -12,6 +13,23 @@ function App() {
   const [toggleSidebar, setToggleSidebar] = useState(false);
   const pageHasNavBar = hasNavBar(location, routes);
   const pagehasSideBar = hasSidebar(location, routes);
+
+  useEffect(() => {
+    if (toggleSidebar && windowWidth <= 1366) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [toggleSidebar]);
+
+  useEffect(() => {
+    if (location.pathname === "/" && windowWidth >= 1366) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [location.pathname]);
+
   return (
     <div>
       <SidebarContext.Provider value={{ toggleSidebar, setToggleSidebar }}>
@@ -21,8 +39,12 @@ function App() {
           }`}
           onClick={() => setToggleSidebar(false)}
         ></div>
-        <div className={`Navbar_Container ${pageHasNavBar && "active"}`}>
-          {pageHasNavBar && (
+        <div
+          className={`Navbar_Container ${
+            (pageHasNavBar || location.pathname === "/") && "active"
+          }`}
+        >
+          {(pageHasNavBar || location.pathname === "/") && (
             <Navbar
               setOpenSidebar={setToggleSidebar}
               pageHasSidebar={pagehasSideBar}

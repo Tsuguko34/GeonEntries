@@ -1,10 +1,8 @@
-function graphVector(vectorX, vectorY) {
+function graphVector(vectorX, vectorY, canvasWidth, canvasHeight) {
   var canvas = document.getElementById("vectorCanvas");
   var ctx = canvas.getContext("2d");
 
   // Set canvas size
-  var canvasWidth = 510; // Adjusted to accommodate -99 to 99 with 10 units per line
-  var canvasHeight = 335; // Adjusted to accommodate -99 to 99 with 10 units per line
   canvas.width = canvasWidth;
   canvas.height = canvasHeight;
 

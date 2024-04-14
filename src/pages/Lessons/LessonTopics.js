@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "../../styles/lessontopics.css";
 import { useParams, Link, useLocation, useNavigate } from "react-router-dom";
 
+import miniLogo from "../../assets/images/miniLogo.png";
+
 //Icons
 import * as IoIcons from "react-icons/io";
 import PlaneEuclideanTopics from "../../utils/PlaneEuclideanTopics";
@@ -28,8 +30,12 @@ function LessonTopics() {
   }, []);
   return (
     <section id="LessonTopics" className="LessonTopics">
-      <div className="Bottom_Options">
-        <div className="Trigger" onClick={() => setOptionsOpen(!optionsOpen)}>
+      <div
+        className="Bottom_Options"
+        onMouseEnter={() => setOptionsOpen(true)}
+        onMouseLeave={() => setOptionsOpen(false)}
+      >
+        <div className="Trigger">
           <IoIcons.IoIosArrowUp
             className={`Icon ${optionsOpen ? "open" : ""}`}
           />
@@ -66,6 +72,7 @@ function LessonTopics() {
             </div>
           )}
         </div>
+        <img src={miniLogo} alt="" />
       </div>
       <div className="wrapper">
         <div className="LessonTopics_Container">

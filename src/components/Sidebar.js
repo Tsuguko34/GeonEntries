@@ -58,11 +58,17 @@ function Sidebar() {
         <div className="List">
           {location.pathname &&
             location.pathname.includes("PlaneEuclideanGeometry") && (
-              <PlaneEuclideanSidebar handleScrollClick={handleScroll} />
+              <PlaneEuclideanSidebar
+                handleScrollClick={handleScroll}
+                closeSidebar={setToggleSidebar}
+              />
             )}
           {location.pathname &&
             location.pathname.includes("NonEuclideanGeometry") && (
-              <NonEuclideanSidebar handleScrollClick={handleScroll} />
+              <NonEuclideanSidebar
+                handleScrollClick={handleScroll}
+                closeSidebar={setToggleSidebar}
+              />
             )}
         </div>
       </div>

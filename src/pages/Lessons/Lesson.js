@@ -4,6 +4,7 @@ import "../../styles/lesson.css";
 import { useLocation, useParams } from "react-router-dom";
 import {
   NELesson1,
+  NELesson2,
   PELesson1,
   PELesson2,
   PELesson3,
@@ -60,6 +61,7 @@ function Lesson() {
           )}
           {location.pathname.includes("CrossProduct") && <PELesson5 />}
           {location.pathname.includes("HyperbolicGeometry") && <NELesson1 />}
+          {location.pathname.includes("SphericalGeometry") && <NELesson2 />}
         </div>
       </div>
     </section>

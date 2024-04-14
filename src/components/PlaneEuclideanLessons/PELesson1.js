@@ -24,6 +24,22 @@ import {
 } from "../../utils";
 
 function PELesson1() {
+  const windowWidth = GetWindowWidth();
+  const [canvasSize, setCanvasSize] = useState({
+    height: 335,
+    width: 510,
+  });
+
+  useEffect(() => {
+    if (windowWidth <= 320) {
+      setCanvasSize({ height: 160, width: 190 });
+    } else if (windowWidth <= 430) {
+      setCanvasSize({ height: 190, width: 245 });
+    } else if (windowWidth <= 680) {
+      setCanvasSize({ height: 210, width: 295 });
+    }
+  }, [windowWidth]);
+
   const [exampleA, setExampleA] = useState({
     xAxis: 0,
     yAxis: 0,
@@ -94,7 +110,12 @@ function PELesson1() {
 
   const graphExample1 = () => {
     if (!isNaN(exampleA.xAxis) && !isNaN(exampleA.yAxis))
-      graphVector(exampleA.xAxis, exampleA.yAxis);
+      graphVector(
+        exampleA.xAxis,
+        exampleA.yAxis,
+        canvasSize.width,
+        canvasSize.height
+      );
   };
 
   const solveExampleC2 = () => {
@@ -330,7 +351,11 @@ function PELesson1() {
                 </div>
               </div>
               <div className="Graph">
-                <canvas id="vectorCanvas" width="510" height="335"></canvas>
+                <canvas
+                  id="vectorCanvas"
+                  width={canvasSize.width}
+                  height={canvasSize.height}
+                ></canvas>
               </div>
             </div>
           </div>
@@ -482,33 +507,35 @@ function PELesson1() {
             </p>
           </div>
           <div className="Paragraph_Topic">
-            <p>
+            <p className="withStack">
               Let be{" "}
               <span className="stack">
-                <div>→</div>
+                <sup>→</sup>
+                <p>PQ</p>
               </span>{" "}
-              PQ a vector in 2-space with initial point P (x₁, y₁) and terminal
+              a vector in 2-space with initial point P (x₁, y₁) and terminal
               point Q (x₂, y₂). Then the components of its vector are:
             </p>
           </div>
           <div className="Topic_Visual">
             <div className="Visual_Holder text">
               <div className="Formula">
-                <p>
+                <p className="withStack">
                   <span className="stack">
-                    <div>→</div>
-                    <div></div>
-                  </span>
-                  <p>PQ</p> = (x₂ - x₁ , y₂ - y₁)
+                    <sup>→</sup>
+                    <p>PQ</p>
+                  </span>{" "}
+                  = (x₂ - x₁ , y₂ - y₁)
                 </p>
               </div>
               <p>or</p>
               <div className="Formula">
-                <p>
+                <p className="withStack">
                   <span className="stack">
-                    <div>→</div>
-                  </span>
-                  <p>PQ</p> =
+                    <sup>→</sup>
+                    <p>PQ</p>
+                  </span>{" "}
+                  =
                 </p>
                 <div>
                   <p className="Expression">[</p>
@@ -522,34 +549,35 @@ function PELesson1() {
             </div>
           </div>
           <div className="Paragraph_Topic">
-            <p>
+            <p className="withStack">
               Now, let be{" "}
               <span className="stack">
-                <div>→</div>
+                <sup>→</sup>
+                <p>PQ</p>
               </span>{" "}
-              PQ a vector in 3-space with initial point P (x₁, y₁, z₁) and
-              terminal point Q (x₂, y₂, z₂). Then the components of its vector
-              are:
+              a vector in 3-space with initial point P (x₁, y₁, z₁) and terminal
+              point Q (x₂, y₂, z₂). Then the components of its vector are:
             </p>
           </div>
           <div className="Topic_Visual">
             <div className="Visual_Holder text">
               <div className="Formula">
-                <p>
+                <p className="withStack">
                   <span className="stack">
-                    <div>→</div>
-                    <div></div>
-                  </span>
-                  <p>PQ</p> = (x₂ - x₁ , y₂ - y₁ , z₂ - z₁)
+                    <sup>→</sup>
+                    <p>PQ</p>
+                  </span>{" "}
+                  = (x₂ - x₁ , y₂ - y₁ , z₂ - z₁)
                 </p>
               </div>
               <p>or</p>
               <div className="Formula">
-                <p>
+                <p className="withStack">
                   <span className="stack">
-                    <div>→</div>
-                  </span>
-                  <p>PQ</p> =
+                    <sup>→</sup>
+                    <p>PQ</p>
+                  </span>{" "}
+                  =
                 </p>
                 <div>
                   <p className="Expression">[</p>
@@ -567,14 +595,15 @@ function PELesson1() {
             <p>Example C</p>
           </div>
           <div className="Paragraph_Topic">
-            <p>
+            <p className="withStack">
               Let{" "}
               <span className="stack">
-                <div>→</div>
+                <sup>→</sup>
+                <p>PQ</p>
               </span>{" "}
-              PQ be a vector with initial point P (3, 2) and terminal point Q
-              (9, 7). Sketch the vector PQ and express it in both component form
-              and standard unit form.
+              be a vector with initial point P (3, 2) and terminal point Q (9,
+              7). Sketch the vector PQ and express it in both component form and
+              standard unit form.
             </p>
           </div>
           <div className="Paragraph_Topic">
@@ -599,28 +628,31 @@ function PELesson1() {
             <div className="Right_Side">
               <div className="Vertical">
                 <p className="Italic">Component Form</p>
-                <p>
+                <p className="withStack">
                   <span className="stack">
-                    <div>→</div>
-                  </span>
-                  PQ = (x₂ - x₁, y₂ - y₁)
+                    <sup>→</sup>
+                    <p>PQ</p>
+                  </span>{" "}
+                  = (x₂ - x₁, y₂ - y₁)
                 </p>
                 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= (9 - 3, 7 -2)</p>
-                <p>
+                <p className="withStack">
                   <span className="stack">
-                    <div>→</div>
-                  </span>
-                  PQ = (6, 5)
+                    <sup>→</sup>
+                    <p>PQ</p>
+                  </span>{" "}
+                  = (6, 5)
                 </p>
               </div>
               <div className="Horizontal">
                 <div className="Vertical">
                   <p className="Italic">Standard Unit Form</p>
-                  <p>
+                  <p className="withStack">
                     <span className="stack">
-                      <div>→</div>
-                    </span>
-                    PQ = (6, 5)
+                      <sup>→</sup>
+                      <p>PQ</p>
+                    </span>{" "}
+                    = (6, 5)
                   </p>
                   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 6i + 5j</p>
                 </div>
@@ -636,12 +668,13 @@ function PELesson1() {
             <div className="Label">TRY IT YOURSELF</div>
             <div className="Description two">
               <div className="left">2-space</div>
-              <div className="right">
+              <div className="right withStack">
                 Let{" "}
                 <span className="stack">
-                  <div>→</div>
-                </span>
-                AB be a vector in 2-space. Try entering an initial point and
+                  <sup>→</sup>
+                  <p>AB</p>
+                </span>{" "}
+                be a vector in 2-space. Try entering an initial point and
                 terminal point and observe it corresponding components.
               </div>
             </div>
@@ -768,54 +801,73 @@ function PELesson1() {
               <div className="right">
                 <p className="Label">OUTPUT</p>
                 <div className="Content output">
-                  <div className="Label">Component Form:</div>
-                  <div className="Vertical">
-                    <p>
-                      <span className="stack">
-                        <div>→</div>
-                      </span>
-                      AB = (x₂ - x₁, y₂ - y₁)
-                    </p>
-                    <div className="Output_Rectangles_Holder">
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=(
-                      <div
-                        id="rectangle-26-1"
-                        className="Output_Rectangles"
-                      ></div>
-                      -
-                      <div
-                        id="rectangle-25-1"
-                        className="Output_Rectangles"
-                      ></div>
-                      ,
-                      <div
-                        id="rectangle-24-1"
-                        className="Output_Rectangles"
-                      ></div>
-                      -
-                      <div
-                        id="rectangle-23-1"
-                        className="Output_Rectangles"
-                      ></div>
-                      )
+                  <div class="Label">Component Form:</div>
+                  <div className="Solution_Example">
+                    <div className="start">
+                      <p className="left">
+                        <p className="withStack">
+                          <span className="stack">
+                            <sup>→</sup>
+                            <p>AB</p>
+                          </span>{" "}
+                        </p>
+                      </p>
+                      <p className="center">=</p>
+                      <p className="right">(x₂ - x₁, y₂ - y₁)</p>
                     </div>
-                  </div>
-                  <div className="Vertical">
-                    <div className="Output_Rectangles_Holder">
-                      <span className="stack">
-                        <div>→</div>
-                      </span>
-                      AB = (
-                      <div
-                        id="rectangle-22-1"
-                        className="Output_Rectangles"
-                      ></div>
-                      ,
-                      <div
-                        id="rectangle-20-1"
-                        className="Output_Rectangles"
-                      ></div>
-                      )
+
+                    <div className="start">
+                      <p className="left"></p>
+                      <p className="center">=</p>
+                      <p className="right">
+                        <div className="Output_Rectangles_Holder">
+                          (
+                          <div
+                            id="rectangle-26-1"
+                            className="Output_Rectangles"
+                          ></div>
+                          -
+                          <div
+                            id="rectangle-25-1"
+                            className="Output_Rectangles"
+                          ></div>
+                          ,
+                          <div
+                            id="rectangle-24-1"
+                            className="Output_Rectangles"
+                          ></div>
+                          -
+                          <div
+                            id="rectangle-23-1"
+                            className="Output_Rectangles"
+                          ></div>
+                          )
+                        </div>
+                      </p>
+                    </div>
+                    <div className="start">
+                      <p className="left">
+                        <span className="stack">
+                          <sup>→</sup>
+                          <p>AB</p>
+                        </span>{" "}
+                      </p>
+                      <p className="center">=</p>
+                      <p className="right">
+                        <div className="Output_Rectangles_Holder">
+                          (
+                          <div
+                            id="rectangle-22-1"
+                            className="Output_Rectangles"
+                          ></div>
+                          ,
+                          <div
+                            id="rectangle-20-1"
+                            className="Output_Rectangles"
+                          ></div>
+                          )
+                        </div>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -823,16 +875,17 @@ function PELesson1() {
             </div>
             <div className="Description two">
               <div className="left">3-space</div>
-              <div className="right">
+              <div className="right withStack">
                 Let{" "}
                 <span className="stack">
-                  <div>→</div>
-                </span>
-                AB be a vector in 3-space. Try entering an initial point and
+                  <sup>→</sup>
+                  <p>AB</p>
+                </span>{" "}
+                be a vector in 3-space. Try entering an initial point and
                 terminal point and observe it corresponding components.
               </div>
             </div>
-            <div className="Side_By_Side">
+            <div className="Side_By_Side noGap">
               <div className="left">
                 <p className="Label">INPUT</p>
                 <div className="Content">
@@ -1020,69 +1073,88 @@ function PELesson1() {
               <div className="right">
                 <p className="Label">OUTPUT</p>
                 <div className="Content output">
-                  <div className="Label">Component Form:</div>
-                  <div className="Vertical">
-                    <p>
-                      <span className="stack">
-                        <div>→</div>
-                      </span>
-                      AB = (x₂ - x₁, y₂ - y₁, z₂ - z₁)
-                    </p>
-                    <div className="Output_Rectangles_Holder">
-                      <p>=(</p>
-                      <div
-                        id="rectangle-26"
-                        className="Output_Rectangles"
-                      ></div>
-                      -
-                      <div
-                        id="rectangle-25"
-                        className="Output_Rectangles"
-                      ></div>
-                      ,
-                      <div
-                        id="rectangle-24"
-                        className="Output_Rectangles"
-                      ></div>
-                      -
-                      <div
-                        id="rectangle-23"
-                        className="Output_Rectangles"
-                      ></div>
-                      ,
-                      <div
-                        id="rectangle-28"
-                        className="Output_Rectangles"
-                      ></div>
-                      -
-                      <div
-                        id="rectangle-27"
-                        className="Output_Rectangles"
-                      ></div>
-                      )
+                  <div class="Label">Component Form:</div>
+                  <div className="Solution_Example">
+                    <div className="start">
+                      <p className="left">
+                        <p className="withStack">
+                          <span className="stack">
+                            <sup>→</sup>
+                            <p>AB</p>
+                          </span>{" "}
+                        </p>
+                      </p>
+                      <p className="center">=</p>
+                      <p className="right">(x₂ - x₁, y₂ - y₁, z₂ - z₁)</p>
                     </div>
-                  </div>
-                  <div className="Vertical">
-                    <div className="Output_Rectangles_Holder">
-                      <span className="stack">
-                        <div>→</div>
-                      </span>
-                      AB = (
-                      <div
-                        id="rectangle-22"
-                        className="Output_Rectangles"
-                      ></div>
-                      ,
-                      <div
-                        id="rectangle-20"
-                        className="Output_Rectangles"
-                      ></div>
-                      ,
-                      <div
-                        id="rectangle-21"
-                        className="Output_Rectangles"
-                      ></div>
-                      )
+
+                    <div className="start">
+                      <p className="left"></p>
+                      <p className="center">=</p>
+                      <p className="right">
+                        <div className="Output_Rectangles_Holder">
+                          (
+                          <div
+                            id="rectangle-26"
+                            className="Output_Rectangles"
+                          ></div>
+                          -
+                          <div
+                            id="rectangle-25"
+                            className="Output_Rectangles"
+                          ></div>
+                          ,
+                          <div
+                            id="rectangle-24"
+                            className="Output_Rectangles"
+                          ></div>
+                          -
+                          <div
+                            id="rectangle-23"
+                            className="Output_Rectangles"
+                          ></div>
+                          ,
+                          <div
+                            id="rectangle-28"
+                            className="Output_Rectangles"
+                          ></div>
+                          -
+                          <div
+                            id="rectangle-27"
+                            className="Output_Rectangles"
+                          ></div>
+                          )
+                        </div>
+                      </p>
+                    </div>
+                    <div className="start">
+                      <p className="left">
+                        <span className="stack">
+                          <sup>→</sup>
+                          <p>AB</p>
+                        </span>
+                      </p>
+                      <p className="center">=</p>
+                      <p className="right">
+                        <div className="Output_Rectangles_Holder">
+                          (
+                          <div
+                            id="rectangle-22"
+                            className="Output_Rectangles"
+                          ></div>
+                          ,
+                          <div
+                            id="rectangle-20"
+                            className="Output_Rectangles"
+                          ></div>
+                          ,
+                          <div
+                            id="rectangle-21"
+                            className="Output_Rectangles"
+                          ></div>
+                          )
+                        </div>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -1251,10 +1323,18 @@ function PELesson1() {
               </div>
               <div className="right">
                 <div className="Light_Blue">
-                  <p className="formula">w - v = w + (-v)</p>
-                  <p className="formula answer">
-                    = (w₁ - v₁, w₂ - v₂, ..., wₙ - vₙ)
-                  </p>
+                  <div className="Solution_Example">
+                    <div className="start  DarkBlue">
+                      <p className="left">w - v</p>
+                      <p className="center">=</p>
+                      <p className="right"> w + (-v</p>
+                    </div>
+                    <div className="start  DarkBlue">
+                      <p className="left">w - v</p>
+                      <p className="center">=</p>
+                      <p className="right">(w₁ - v₁, w₂ - v₂, ..., wₙ - vₙ)</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1522,7 +1602,7 @@ function PELesson1() {
                 following operations:
               </div>
             </div>
-            <div className="Side_By_Side">
+            <div className="Side_By_Side noGap">
               <div className="left">
                 <p className="Label">INPUT</p>
                 <div className="Content">
@@ -1836,16 +1916,17 @@ function PELesson1() {
                 <p>
                   3. u +{" "}
                   <span className="stack">
-                    <div>→</div>
-                  </span>
-                  0 = u
+                    <sup>→</sup>
+                    <p>0</p>
+                  </span>{" "}
+                  = u
                 </p>
                 <p>
                   4. u + (-u) ={" "}
                   <span className="stack">
-                    <div>→</div>
+                    <sup>→</sup>
+                    <p>0</p>
                   </span>
-                  0
                 </p>
                 <p>5. k(u + v) = ku + kv</p>
                 <p>6. (k + m)u = ku + mu</p>
@@ -1861,13 +1942,15 @@ function PELesson1() {
               The additive identity in both the R² and R³ is represented by the
               zero vector denoted by{" "}
               <span className="stack">
-                <div>→</div>
+                <sup>→</sup>
+                <p>0</p>
               </span>
-              0 = (0, 0) and{" "}
+              = (0, 0) and{" "}
               <span className="stack">
-                <div>→</div>
-              </span>
-              0 = (0, 0, 0).
+                <sup>→</sup>
+                <p>0</p>
+              </span>{" "}
+              = (0, 0, 0).
             </p>
             <p className="Bold">Additive Inverse</p>
             <p className="Note">
@@ -1889,46 +1972,51 @@ function PELesson1() {
                   1. The additive identity is unique. That is, if v + u = v,
                   then u ={" "}
                   <span className="stack">
-                    <div>→</div>
+                    <sup>→</sup>
+                    <p>0</p>
                   </span>
-                  0.
+                  .
                 </p>
                 <p>
                   The additive inverse of v is unique. That is, if v + u ={" "}
                   <span className="stack">
-                    <div>→</div>
+                    <sup>→</sup>
+                    <p>0</p>
                   </span>
-                  0, then u = -v.
+                  , then u = -v.
                 </p>
                 <p>
                   3. 0 v ={" "}
                   <span className="stack">
-                    <div>→</div>
+                    <sup>→</sup>
+                    <p>0</p>
                   </span>
-                  0
                 </p>
                 <p>
                   4. <span className="Italic">k</span>{" "}
                   <span className="stack">
-                    <div>→</div>
-                  </span>
-                  0 ={" "}
+                    <sup>→</sup>
+                    <p>0</p>
+                  </span>{" "}
+                  ={" "}
                   <span className="stack">
-                    <div>→</div>
+                    <sup>→</sup>
+                    <p>0</p>
                   </span>
-                  0
                 </p>
                 <p>
                   5. If <span className="Italic">kv</span> ={" "}
                   <span className="stack">
-                    <div>→</div>
+                    <sup>→</sup>
+                    <p>0</p>
                   </span>
-                  0, then <span className="Italic">k</span> = 0 or{" "}
+                  , then <span className="Italic">k</span> = 0 or{" "}
                   <span className="Italic">v</span> ={" "}
                   <span className="stack">
-                    <div>→</div>
+                    <sup>→</sup>
+                    <p>0</p>
                   </span>
-                  0.
+                  .
                 </p>
                 <p>
                   6. -(- <span className="Italic">v</span> ) ={" "}
