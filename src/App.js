@@ -14,6 +14,13 @@ function App() {
   const pageHasNavBar = hasNavBar(location, routes);
   const pagehasSideBar = hasSidebar(location, routes);
 
+  //Quiz Stuff
+  const [activeQuestion, setActiveQuestion] = useState(1);
+  const [score, setScore] = useState(0);
+  const [showNextButton, setNextButton] = useState(false);
+  const [answerStatus, setAnswerStatus] = useState("");
+  const [selectedAnswer, setSelectedAnswer] = useState(null);
+
   useEffect(() => {
     if (toggleSidebar && windowWidth <= 1366) {
       document.body.style.overflow = "hidden";
@@ -32,7 +39,22 @@ function App() {
 
   return (
     <div>
-      <SidebarContext.Provider value={{ toggleSidebar, setToggleSidebar }}>
+      <SidebarContext.Provider
+        value={{
+          toggleSidebar,
+          setToggleSidebar,
+          activeQuestion,
+          setActiveQuestion,
+          score,
+          setScore,
+          setNextButton,
+          showNextButton,
+          answerStatus,
+          setAnswerStatus,
+          selectedAnswer,
+          setSelectedAnswer,
+        }}
+      >
         <div
           className={`Sidebar_Overlay ${
             toggleSidebar && windowWidth <= 1366 && "open"

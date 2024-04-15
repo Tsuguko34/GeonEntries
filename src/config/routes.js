@@ -1,4 +1,4 @@
-import { LandingPage, Lesson, LessonsList, PageNotFound } from "../pages";
+import { LandingPage, Lesson, LessonsList, PageNotFound, Quiz } from "../pages";
 import LessonTopics from "../pages/Lessons/LessonTopics";
 
 const routes = [
@@ -17,6 +17,10 @@ const routes = [
   {
     path: "/Lesson/:lessonName/:lessonTitle",
     component: <Lesson />,
+  },
+  {
+    path: "/Lesson/Quiz/:lessonName",
+    component: <Quiz />,
   },
   {
     path: "/*",

@@ -22,6 +22,11 @@ export default function hasNavBar(location, routes) {
         pathname.startsWith(route.path.split("/:")[0]) &&
         /^\/Lesson\/[a-zA-Z0-9]+\/[a-zA-Z0-9]+$/.test(pathname)
       );
+    } else if (route.path === "/Lesson/Quiz/:lessonName") {
+      return (
+        pathname.startsWith(route.path.split("/:")[0]) &&
+        /^\/Lesson\/Quiz\/[a-zA-Z0-9]+$/.test(pathname)
+      );
     } else {
       return !isExcluded && route.path === pathname;
     }

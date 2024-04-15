@@ -7,6 +7,7 @@ import { SidebarContext } from "../context/context";
 
 import * as IoIcons from "react-icons/io";
 import * as FaIcons from "react-icons/fa";
+import QuizSidebar from "./Quiz/QuizSidebar";
 function Sidebar() {
   const location = useLocation();
   const navigate = useNavigate();
@@ -52,24 +53,40 @@ function Sidebar() {
           />
           <IoIcons.IoMdClose onClick={() => setToggleSidebar(false)} />
         </div>
-        <p className="Title" onClick={() => redirect()}>
-          {convertLessonName(location.pathname)}
-        </p>
+        {location.pathname && location.pathname.includes("/Lesson/Quiz") && (
+          <p className="Title" style={{ pointerEvents: "none" }}>
+            Questions
+          </p>
+        )}
+
+        {location.pathname && !location.pathname.includes("/Lesson/Quiz") && (
+          <p className="Title" onClick={() => redirect()}>
+            {convertLessonName(location.pathname)}
+          </p>
+        )}
+
         <div className="List">
           {location.pathname &&
-            location.pathname.includes("PlaneEuclideanGeometry") && (
+            location.pathname.includes("/Lesson/PlaneEuclideanGeometry") && (
               <PlaneEuclideanSidebar
                 handleScrollClick={handleScroll}
                 closeSidebar={setToggleSidebar}
               />
             )}
           {location.pathname &&
-            location.pathname.includes("NonEuclideanGeometry") && (
+            location.pathname.includes("/Lesson/NonEuclideanGeometry") && (
               <NonEuclideanSidebar
                 handleScrollClick={handleScroll}
                 closeSidebar={setToggleSidebar}
               />
             )}
+
+          {location.pathname && location.pathname.includes("/Lesson/Quiz") && (
+            <QuizSidebar
+              handleScrollClick={handleScroll}
+              closeSidebar={setToggleSidebar}
+            />
+          )}
         </div>
       </div>
     </div>

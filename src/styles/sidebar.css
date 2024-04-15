@@ -101,6 +101,92 @@
     color: var(--lime-green);
 }
 
+#Sidebar > .Content > .List .Questions_Container{
+    width: 100%;
+    height: 350px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    overflow-y: auto;
+    margin-bottom: 50px;
+    box-shadow: inset 0 -10px 10px -10px rgba(0, 0, 0, 0.3);
+}
+
+#Sidebar > .Content > .List .Questions_Container > .Question{
+    color: white;
+    font-size: 20px;
+}
+
+#Sidebar > .Content > .List .Questions_Container > .Question.active{
+    color: var(--light-blue);
+}
+
+#Sidebar > .Content > .List .Questions_Container > .Question.wrong{
+    color: var(--red);
+}
+
+#Sidebar > .Content > .List .Questions_Container > .Question.correct{
+    color: var(--lime-green);
+}
+
+#Sidebar > .Content > .List .Actions{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#Sidebar > .Content > .List .Actions > button{
+    width: 140px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    color: var(--lime-green);
+    font-size: 20px;
+    border: 3px solid var(--lime-green);
+    border-radius: 40px;
+    transition: all 250ms ease-in-out;
+}
+
+#Sidebar > .Content > .List .Actions > button.Score{
+    width: 175px;
+}
+
+
+#Sidebar > .Content > .List .Actions > button > .Text{
+    width: 100%;
+    font-weight: bold;
+    transition: all 250ms ease-in-out;
+}
+
+#Sidebar > .Content > .List .Actions > button > .Icon{
+    font-size: 30px;
+    border-radius: 50%;
+    border: 3px solid var(--lime-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 250ms ease-in-out;
+}
+
+#Sidebar > .Content > .List .Actions > button:hover{
+    background-color: var(--lime-green);
+}
+
+#Sidebar > .Content > .List .Actions > button:hover > .Text{
+    color: var(--dark-blue);
+}
+
+#Sidebar > .Content > .List .Actions > button:hover > .Icon{
+    color: var(--dark-blue);
+    border-color: var(--dark-blue);
+}
+
 @media only screen and (max-width: 1366px){
     #Sidebar > .Content > .Close_Icon{
         display: flex;

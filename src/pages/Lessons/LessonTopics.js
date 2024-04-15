@@ -28,6 +28,14 @@ function LessonTopics() {
   useEffect(() => {
     document.title = convertLessonName(lessonName);
   }, []);
+
+  const redirectQuiz = () => {
+    if (currentLocation.includes("PlaneEuclideanGeometry")) {
+      navigate(`/Lesson/Quiz/PlaneEuclideanGeometry`);
+    } else if (currentLocation.includes("NonEuclideanGeometry")) {
+      navigate(`/Lesson/Quiz/NonEuclideanGeometry`);
+    }
+  };
   return (
     <section id="LessonTopics" className="LessonTopics">
       <div
@@ -41,7 +49,7 @@ function LessonTopics() {
           />
         </div>
         <div className={`Options ${optionsOpen ? "open" : ""}`}>
-          <div className="Option">
+          <div className="Option" onClick={() => redirectQuiz()}>
             <span>Q?</span>
           </div>
 

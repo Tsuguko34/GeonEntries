@@ -16,6 +16,8 @@ import calculatePoint3D from "./calculatePoint3D";
 import calculateCrossProduct from "./calculateCrossProduct";
 import calculateAngle from "./calculateAngle";
 import calculateSides from "./calculateSides";
+import neQuestions from "./neQuestions";
+import peQuestions from "./peQuizQuestions";
 
 export {
   hasNavBar,
@@ -36,4 +38,6 @@ export {
   calculateCrossProduct,
   calculateAngle,
   calculateSides,
+  neQuestions,
+  peQuestions,
 };
