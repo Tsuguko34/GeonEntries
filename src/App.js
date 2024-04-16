@@ -20,6 +20,7 @@ function App() {
   const [showNextButton, setNextButton] = useState(false);
   const [answerStatus, setAnswerStatus] = useState("");
   const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const [questions, setQuestions] = useState([]);
 
   useEffect(() => {
     if (toggleSidebar && windowWidth <= 1366) {
@@ -53,6 +54,8 @@ function App() {
           setAnswerStatus,
           selectedAnswer,
           setSelectedAnswer,
+          questions,
+          setQuestions,
         }}
       >
         <div

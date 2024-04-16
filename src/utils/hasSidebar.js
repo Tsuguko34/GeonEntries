@@ -3,7 +3,15 @@
  **/
 
 export default function hasSidebar(location, routes) {
-  const excludedPaths = ["/", "/LessonsList"];
+  const excludedPaths = [
+    "/",
+    "/LessonsList",
+    "/Lesson/ScoreOverview/:lessonName",
+  ];
+
+  if (location.pathname.includes("/Lesson/ScoreOverview/")) {
+    return false;
+  }
 
   return routes.some((route) => {
     const isExcluded = excludedPaths.includes(route.path);

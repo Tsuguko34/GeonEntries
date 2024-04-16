@@ -1,3 +1,23 @@
+import c1 from "../assets/images/Quiz Images/neQuizImages/c-1.png";
+import c2 from "../assets/images/Quiz Images/neQuizImages/c-2.png";
+import c3 from "../assets/images/Quiz Images/neQuizImages/c-3.png";
+import c4 from "../assets/images/Quiz Images/neQuizImages/c-4.png";
+import n1 from "../assets/images/Quiz Images/neQuizImages/n1.png";
+import n2 from "../assets/images/Quiz Images/neQuizImages/n2.png";
+import n3 from "../assets/images/Quiz Images/neQuizImages/n3.png";
+import n4 from "../assets/images/Quiz Images/neQuizImages/n4.png";
+import n5 from "../assets/images/Quiz Images/neQuizImages/n5.png";
+import n6 from "../assets/images/Quiz Images/neQuizImages/n6.png";
+import n7 from "../assets/images/Quiz Images/neQuizImages/n7.png";
+import n8 from "../assets/images/Quiz Images/neQuizImages/n8.png";
+import n9 from "../assets/images/Quiz Images/neQuizImages/n9.png";
+import n10 from "../assets/images/Quiz Images/neQuizImages/n10.png";
+import q1 from "../assets/images/Quiz Images/neQuizImages/q1.png";
+import q2 from "../assets/images/Quiz Images/neQuizImages/q2.png";
+import q9 from "../assets/images/Quiz Images/neQuizImages/q9.png";
+import q101 from "../assets/images/Quiz Images/neQuizImages/q10-1.png";
+import q102 from "../assets/images/Quiz Images/neQuizImages/q10-2.png";
+
 var questions = [
   {
     question: "It is a quadrilateral with three right angles.",
@@ -8,7 +28,7 @@ var questions = [
       "Lambert Quadrilateral",
     ],
     correctAnswer: "Lambert Quadrilateral",
-    explanation: `image_Explanations/n1.png`,
+    explanation: n1,
     explanationType: "image",
     type: "text",
   },
@@ -17,7 +37,7 @@ var questions = [
       "What is the distance between P = (√5/2  ,√5/7,-√3/14) and Q = (-√2/3  ,√2/5,√7/4) in S2?",
     choices: ["0.773", "1.773", "2.773", "3.773"],
     correctAnswer: "1.773",
-    explanation: `image_Explanations/n2.png`,
+    explanation: n2,
     explanationType: "image",
     type: "text",
   },
@@ -26,7 +46,7 @@ var questions = [
       "The Schlafli symbol of a regular tessellation is given by {4, 5}. The tessellation is",
     choices: ["Hyperbolic", "Euclidean", "Spherical", "Klein-Beltrami"],
     correctAnswer: "Hyperbolic",
-    explanation: `image_Explanations/n3.png`,
+    explanation: n3,
     explanationType: "image",
     type: "text",
   },
@@ -35,7 +55,7 @@ var questions = [
       "It is the difference between π and the angle sum of a hyperbolic triangle.",
     choices: ["ideal point", "excess", "tessellation", "defect"],
     correctAnswer: "defect",
-    explanation: `image_Explanations/n4.png`,
+    explanation: n4,
     explanationType: "image",
     type: "text",
   },
@@ -49,7 +69,7 @@ var questions = [
       "congruent and straight",
     ],
     correctAnswer: "congruent and obtuse",
-    explanation: `image_Explanations/n5.png`,
+    explanation: n5,
     explanationType: "image",
     type: "text",
   },
@@ -63,7 +83,7 @@ var questions = [
     ],
     correctAnswer:
       "The distance between P and Q in S² is the arc length of the shortest path along the surface of the sphere from P to Q.",
-    explanation: `image_Explanations/n6.png`,
+    explanation: n6,
     explanationType: "image",
     type: "text",
   },
@@ -72,7 +92,7 @@ var questions = [
       "Let {7, 3} be the Schlafli symbol of a hyperbolic tessellation. What is the angle sum of each heptagon in the tessellation?",
     choices: ["14π/3", "2π/3", "6π/7", "2π/7"],
     correctAnswer: "14π/3",
-    explanation: `image_Explanations/n7.png`,
+    explanation: n7,
     explanationType: "image",
     type: "text",
   },
@@ -81,7 +101,7 @@ var questions = [
       "Let {5, 6} be the Schlafli symbol of a hyperbolic tessellation. What is the area of each pentagon in the tessellation?",
     choices: ["5π/3", "4π/3", "3π/5", "3π/4"],
     correctAnswer: "4π/3",
-    explanation: `image_Explanations/n8.png`,
+    explanation: n8,
     explanationType: "image",
     type: "text",
   },
@@ -95,7 +115,7 @@ var questions = [
       "39° 8’ 45.72’’",
     ],
     correctAnswer: "39° 8’ 45.72’’",
-    explanation: `image_Explanations/n9.png`,
+    explanation: n9,
     explanationType: "image",
     type: "text",
   },
@@ -109,8 +129,7 @@ var questions = [
       "17° 6’ 42.2’’",
     ],
     correctAnswer: "10° 30’ 35.98’’",
-    explanation: `image_Explanations/q10-1.png`,
-
+    explanation: q101,
     explanationType: "image2",
     type: "text",
   },

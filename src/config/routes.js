@@ -1,4 +1,11 @@
-import { LandingPage, Lesson, LessonsList, PageNotFound, Quiz } from "../pages";
+import {
+  LandingPage,
+  Lesson,
+  LessonsList,
+  PageNotFound,
+  Quiz,
+  ScoreOverview,
+} from "../pages";
 import LessonTopics from "../pages/Lessons/LessonTopics";
 
 const routes = [
@@ -21,6 +28,10 @@ const routes = [
   {
     path: "/Lesson/Quiz/:lessonName",
     component: <Quiz />,
+  },
+  {
+    path: "/Lesson/ScoreOverview/:lessonName",
+    component: <ScoreOverview />,
   },
   {
     path: "/*",

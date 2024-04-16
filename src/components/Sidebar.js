@@ -27,6 +27,15 @@ function Sidebar() {
       navigate("/Lesson/NonEuclideanGeometry");
     }
   };
+
+  const redirectQuiz = () => {
+    setToggleSidebar(false);
+    if (location.pathname.includes("PlaneEuclideanGeometry")) {
+      navigate("/Lesson/Quiz/PlaneEuclideanGeometry");
+    } else if (location.pathname.includes("NonEuclideanGeometry")) {
+      navigate("/Lesson/Quiz/NonEuclideanGeometry");
+    }
+  };
   const handleScroll = (id) => {
     const navbarHeight = 70; // Adjust this value according to the height of your fixed navbar
     const topic = document.getElementById(id);
@@ -88,6 +97,12 @@ function Sidebar() {
             />
           )}
         </div>
+
+        {location.pathname && !location.pathname.includes("/Lesson/Quiz") && (
+          <div className="Quiz_Button" onClick={() => redirectQuiz()}>
+            <button>Quiz</button>
+          </div>
+        )}
       </div>
     </div>
   );

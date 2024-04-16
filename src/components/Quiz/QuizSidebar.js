@@ -20,6 +20,8 @@ function QuizSidebar({ handleScrollClick, closeSidebar }) {
     setAnswerStatus,
     selectedAnswer,
     setSelectedAnswer,
+    questions,
+    setQuestions,
   } = useContext(SidebarContext);
   const navigate = useNavigate();
   const [activePage, setActivePage] = useState(1);
@@ -32,30 +34,36 @@ function QuizSidebar({ handleScrollClick, closeSidebar }) {
     setSelectedAnswer(null);
   };
 
-  const getQuestions = (lessonName) => {
+  const navigateToScoreOverview = (lessonName) => {
     if (lessonName.includes("NonEuclideanGeometry")) {
-      return neQuestions;
+      navigate(`/Lesson/ScoreOverview/NonEuclideanGeometry`);
     } else if (lessonName.includes("PlaneEuclideanGeometry")) {
-      return peQuestions;
+      navigate(`/Lesson/ScoreOverview/PlaneEuclideanGeometry`);
     }
   };
-
-  const questions = getQuestions(location.pathname);
+  useEffect(() => {
+    setScore(0);
+    setActiveQuestion(1);
+    setNextButton(false);
+    setAnswerStatus("");
+    setSelectedAnswer(null);
+  }, []);
 
   return (
     <>
       <div className="Questions_Container">
-        {questions.map((question, index) => (
-          <p
-            id={`question${index + 1}`}
-            key={index}
-            className={`Question ${
-              activeQuestion === index + 1 ? "active" : ""
-            } ${question.status && question.status}`}
-          >
-            Question {index + 1}
-          </p>
-        ))}
+        {questions.length > 0 &&
+          questions.map((question, index) => (
+            <p
+              id={`question${index + 1}`}
+              key={index}
+              className={`Question ${
+                activeQuestion === index + 1 ? "active" : ""
+              } ${question.status && question.status}`}
+            >
+              Question {index + 1}
+            </p>
+          ))}
       </div>
       <div className="Actions">
         {showNextButton && questions.length !== activeQuestion && (
@@ -68,7 +76,10 @@ function QuizSidebar({ handleScrollClick, closeSidebar }) {
         )}
 
         {showNextButton && questions.length === activeQuestion && (
-          <button className="Score">
+          <button
+            className="Score"
+            onClick={() => navigateToScoreOverview(location.pathname)}
+          >
             <div className="Icon">
               <MdIcons.MdKeyboardDoubleArrowRight />
             </div>

@@ -213,13 +213,66 @@
     color: white;
 }
 
+#Quiz > .wrapper > .Quiz_Container > .Quiz_Item > .Actions > .Submit > button.Next{
+    width: 140px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    color: var(--lime-green);
+    font-size: 20px;
+    border: 3px solid var(--lime-green);
+    border-radius: 40px;
+    transition: all 250ms ease-in-out;
+}
+
+#Quiz > .wrapper > .Quiz_Container > .Quiz_Item > .Actions > .Submit > button.Next.Score{
+    width: 175px;
+}
+
+
+#Quiz > .wrapper > .Quiz_Container > .Quiz_Item > .Actions > .Submit > button.Next > .Text{
+    width: 100%;
+    font-weight: bold;
+    transition: all 250ms ease-in-out;
+}
+
+#Quiz > .wrapper > .Quiz_Container > .Quiz_Item > .Actions > .Submit > button.Next > .Icon{
+    font-size: 30px;
+    border-radius: 50%;
+    border: 3px solid var(--lime-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 250ms ease-in-out;
+}
+
+#Quiz > .wrapper > .Quiz_Container > .Quiz_Item > .Actions > .Submit > button.Next:hover{
+    background-color: var(--lime-green);
+}
+
+#Quiz > .wrapper > .Quiz_Container > .Quiz_Item > .Actions > .Submit > button.Next:hover > .Text{
+    color: var(--dark-blue);
+}
+
+#Quiz > .wrapper > .Quiz_Container > .Quiz_Item > .Actions > .Submit > button.Next:hover > .Icon{
+    color: var(--dark-blue);
+    border-color: var(--dark-blue);
+}
+
 #Quiz > .wrapper > .Explanation_Container{
     width: 100%;
-    display: flex;
+    display: none;
     height: 600px;
     padding: 40px;
     border-radius: 30px;
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+#Quiz > .wrapper > .Explanation_Container.show{
+    display: flex;
 }
 
 #Quiz > .wrapper > .Explanation_Container > .Explanation_Icon{
@@ -252,6 +305,12 @@
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+}
+
+#Quiz > .wrapper > .Explanation_Container > .Explanation > img.large{
+    max-width: 270%;
+    max-height: 270%;
+    
 }
 
 #Quiz > .wrapper > .Explanation_Container > .Explanation > video{
@@ -313,6 +372,10 @@
         width: 950px;
     }
 
+    #Quiz > .wrapper > .Quiz_Container > .Quiz_Item > .Actions > .Submit{
+        width: 100%;
+    }
+
     #Quiz > .wrapper > .Quiz_Container > .Quiz_Item > .Actions > .Choices_Container > .Choices > .Choice{
         width: 280px;
         height: 170px;
@@ -365,6 +428,10 @@
     #Quiz > .wrapper > .Explanation_Container{
         width: 700px;
         height: 425px;
+    }
+
+    #Quiz > .wrapper > .Explanation_Container > .Explanation{
+        height: 375px;
     }
 }
 

@@ -58,7 +58,7 @@ var questions = [
   {
     question: "What is the graph of the vector v = (1, -1, 4)?",
     choices: [c1, c2, c3, c4],
-    correctAnswer: "image_Choices/c-4.png",
+    correctAnswer: c4,
     explanation: `
         EXPLANATION:<br><br>
         To graph the given vector u = (1, -1, 4), traverse continuously 1 unit<br><br>
