@@ -42,6 +42,7 @@ function LessonTopics() {
         className="Bottom_Options"
         onMouseEnter={() => setOptionsOpen(true)}
         onMouseLeave={() => setOptionsOpen(false)}
+        onClick={() => setOptionsOpen(!optionsOpen)}
       >
         <div className="Trigger">
           <IoIcons.IoIosArrowUp
@@ -50,7 +51,13 @@ function LessonTopics() {
         </div>
         <div className={`Options ${optionsOpen ? "open" : ""}`}>
           <div className="Option" onClick={() => redirectQuiz()}>
-            <span>Q?</span>
+            {lessonName === "PlaneEuclideanGeometry" && (
+              <span className="Test">UNIT TEST I</span>
+            )}
+
+            {lessonName === "NonEuclideanGeometry" && (
+              <span className="Test">UNIT TEST II</span>
+            )}
           </div>
 
           {currentLocation.includes("PlaneEuclideanGeometry") && (

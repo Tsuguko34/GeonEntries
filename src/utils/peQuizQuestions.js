@@ -37,6 +37,7 @@ import q12 from "../assets/images/Quiz Images/peQuizImages/q12.png";
 import q15 from "../assets/images/Quiz Images/peQuizImages/q15.png";
 import q19 from "../assets/images/Quiz Images/peQuizImages/q19.png";
 import q25 from "../assets/images/Quiz Images/peQuizImages/q25.png";
+import Quiz3 from "../assets/videos/Quiz/Quiz3_Video.mp4";
 
 var questions = [
   {
@@ -66,7 +67,7 @@ var questions = [
         side of y-axis, and 4 units upward to the positive side of the z-axis.
         `,
     type: "images",
-    video: "video_Explanations/Quiz3_Video.mp4",
+    video: Quiz3,
   },
   {
     question:

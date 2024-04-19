@@ -11,11 +11,15 @@ import * as FaIcons from "react-icons/fa";
 import * as MdIcons from "react-icons/md";
 import { SidebarContext } from "../../context/context";
 import { GetWindowWidth, neQuestions, peQuestions } from "../../utils";
+import correctSoundFX from "../../assets/audio/correct.aac";
+import wrongSoundFX from "../../assets/audio/wrong.mp3";
 
 function Quiz() {
   const navigate = useNavigate();
   const { lessonName } = useParams();
   const windowWidth = GetWindowWidth();
+  const correctAudio = new Audio(correctSoundFX);
+  const wrongAudio = new Audio(wrongSoundFX);
 
   const {
     activeQuestion,
@@ -72,9 +76,11 @@ function Quiz() {
       setScore((prev) => prev + 1);
       setAnswerStatus("correct");
       questions[activeQuestion - 1].status = "correct";
+      correctAudio.play();
     } else {
       setAnswerStatus("wrong");
       questions[activeQuestion - 1].status = "wrong";
+      wrongAudio.play();
     }
 
     const explanationP = document.getElementById("Explanation_P");
@@ -104,6 +110,59 @@ function Quiz() {
     getQuestions(lessonName);
   }, []);
 
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 100);
+  }, [activeQuestion]);
+
+  useEffect(() => {
+    const videos = document.querySelectorAll("video");
+
+    const handlePlay = (event) => {
+      // Pause other videos when one video starts playing
+      videos.forEach((otherVideo) => {
+        if (otherVideo !== event.target) {
+          otherVideo.pause();
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const video = entry.target;
+        if (!entry.isIntersecting && !video.paused) {
+          // Pause the video if it's not in view and is currently playing
+          video.pause();
+        } else if (entry.isIntersecting && video.paused) {
+          // Play the video if it's in view and is currently paused
+          // Check if the document has been interacted with before trying to play
+          document.documentElement.addEventListener(
+            "click",
+            () => {
+              video.play().catch((error) => {
+                console.error("Failed to play video:", error);
+              });
+            },
+            { once: true }
+          ); // Ensure the event listener runs only once
+        }
+      });
+    });
+
+    videos.forEach((video) => {
+      observer.observe(video);
+      video.addEventListener("play", handlePlay);
+    });
+
+    return () => {
+      // Cleanup: remove event listeners and observers when component unmounts
+      videos.forEach((video) => {
+        observer.unobserve(video);
+        video.removeEventListener("play", handlePlay);
+      });
+    };
+  }, []);
   return (
     <section id="Quiz" className="Quiz">
       <div className="wrapper">
@@ -235,7 +294,11 @@ function Quiz() {
 
             {questions.length > 0 && questions[activeQuestion - 1].video && (
               <video controls>
-                <source id="Example_video" src={ExampleA1} type="video/mp4" />
+                <source
+                  id="Example_video"
+                  src={questions[activeQuestion - 1].video}
+                  type="video/mp4"
+                />
                 Your browser does not support the video tag.
               </video>
             )}

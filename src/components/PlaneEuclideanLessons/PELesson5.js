@@ -21,7 +21,7 @@ function PELesson5() {
   });
 
   const isNumeric = () => {
-    const isNumbers = /^[0-9]+$/;
+    const isNumbers = /^[\d,\s-]+$/;
 
     for (const key in vectors) {
       if (!isNumbers.test(vectors[key])) {
@@ -527,20 +527,39 @@ function PELesson5() {
                         <p>x</p>
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={vectors.ux}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={vectors.ux || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
-                            if (e.target.value === 0) {
-                              setVectors({
-                                ...vectors,
-                                ux: 0,
-                              });
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
+                            if (
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
+                            ) {
+                              if (value === "-" || value >= -99) {
+                                setVectors({
+                                  ...vectors,
+                                  ux: value,
+                                });
+                              }
                             } else {
-                              setVectors({
-                                ...vectors,
-                                ux: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setVectors({
+                                  ...vectors,
+                                  ux: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -550,20 +569,39 @@ function PELesson5() {
                         <p>y</p>
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={vectors.uy}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={vectors.uy || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
-                            if (e.target.value === 0) {
-                              setVectors({
-                                ...vectors,
-                                uy: 0,
-                              });
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
+                            if (
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
+                            ) {
+                              if (value === "-" || value >= -99) {
+                                setVectors({
+                                  ...vectors,
+                                  uy: value,
+                                });
+                              }
                             } else {
-                              setVectors({
-                                ...vectors,
-                                uy: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setVectors({
+                                  ...vectors,
+                                  uy: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -573,20 +611,39 @@ function PELesson5() {
                         <p>z</p>
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={vectors.uz}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={vectors.uz || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
-                            if (e.target.value === 0) {
-                              setVectors({
-                                ...vectors,
-                                uz: 0,
-                              });
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
+                            if (
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
+                            ) {
+                              if (value === "-" || value >= -99) {
+                                setVectors({
+                                  ...vectors,
+                                  uz: value,
+                                });
+                              }
                             } else {
-                              setVectors({
-                                ...vectors,
-                                uz: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setVectors({
+                                  ...vectors,
+                                  uz: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -603,20 +660,39 @@ function PELesson5() {
                       <div className="vertical">
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={vectors.vx}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={vectors.vx || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
-                            if (e.target.value === 0) {
-                              setVectors({
-                                ...vectors,
-                                vx: 0,
-                              });
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
+                            if (
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
+                            ) {
+                              if (value === "-" || value >= -99) {
+                                setVectors({
+                                  ...vectors,
+                                  vx: value,
+                                });
+                              }
                             } else {
-                              setVectors({
-                                ...vectors,
-                                vx: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setVectors({
+                                  ...vectors,
+                                  vx: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -625,20 +701,39 @@ function PELesson5() {
                       <div className="vertical">
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={vectors.vy}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={vectors.vy || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
-                            if (e.target.value === 0) {
-                              setVectors({
-                                ...vectors,
-                                vy: 0,
-                              });
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
+                            if (
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
+                            ) {
+                              if (value === "-" || value >= -99) {
+                                setVectors({
+                                  ...vectors,
+                                  vy: value,
+                                });
+                              }
                             } else {
-                              setVectors({
-                                ...vectors,
-                                vy: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setVectors({
+                                  ...vectors,
+                                  vy: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -647,20 +742,39 @@ function PELesson5() {
                       <div className="vertical">
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={vectors.vz}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={vectors.vz || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
-                            if (e.target.value === 0) {
-                              setVectors({
-                                ...vectors,
-                                vz: 0,
-                              });
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
+                            if (
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
+                            ) {
+                              if (value === "-" || value >= -99) {
+                                setVectors({
+                                  ...vectors,
+                                  vz: value,
+                                });
+                              }
                             } else {
-                              setVectors({
-                                ...vectors,
-                                vz: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setVectors({
+                                  ...vectors,
+                                  vz: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -712,6 +826,7 @@ function PELesson5() {
                             id="outputRec"
                             className="Output_Rectangles"
                           ></div>
+                          ■
                         </div>
                       </p>
                     </div>

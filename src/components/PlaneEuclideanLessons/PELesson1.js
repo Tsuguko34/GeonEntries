@@ -6,7 +6,7 @@ import l1p2 from "../../assets/images/Lessons Images/PELesson1/l1p2.png";
 import headtail1 from "../../assets/images/Lessons Images/PELesson1/head-tail-1.png";
 import direction_new from "../../assets/images/Lessons Images/PELesson1/direction_new.png";
 import magnitude_new from "../../assets/images/Lessons Images/PELesson1/magnitude_new.png";
-
+import magnitude_direction from "../../assets/images/Lessons Images/PELesson1/magnitude-direction-1.png";
 //Videos
 import ExampleA1 from "../../assets/videos/PELesson1/Example A1.mp4";
 import ExampleA2 from "../../assets/videos/PELesson1/Example A2.mp4";
@@ -155,6 +155,54 @@ function PELesson1() {
     }
   };
 
+  useEffect(() => {
+    const videos = document.querySelectorAll("video");
+
+    const handlePlay = (event) => {
+      // Pause other videos when one video starts playing
+      videos.forEach((otherVideo) => {
+        if (otherVideo !== event.target) {
+          otherVideo.pause();
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const video = entry.target;
+        if (!entry.isIntersecting && !video.paused) {
+          // Pause the video if it's not in view and is currently playing
+          video.pause();
+        } else if (entry.isIntersecting && video.paused) {
+          // Play the video if it's in view and is currently paused
+          // Check if the document has been interacted with before trying to play
+          document.documentElement.addEventListener(
+            "click",
+            () => {
+              video.play().catch((error) => {
+                console.error("Failed to play video:", error);
+              });
+            },
+            { once: true }
+          ); // Ensure the event listener runs only once
+        }
+      });
+    });
+
+    videos.forEach((video) => {
+      observer.observe(video);
+      video.addEventListener("play", handlePlay);
+    });
+
+    return () => {
+      // Cleanup: remove event listeners and observers when component unmounts
+      videos.forEach((video) => {
+        observer.unobserve(video);
+        video.removeEventListener("play", handlePlay);
+      });
+    };
+  }, []);
+
   return (
     <div className="Topic_Container">
       {/* Vector Spaces */}
@@ -227,15 +275,16 @@ function PELesson1() {
                 <div className="Formula_Part">or</div>
                 <div className="Formula_Part">
                   <p>v = </p>
-                  <p className="Expression">[</p>
+                  <p className="Expression">&nbsp;[</p>
                   <p className="Vertical">
                     <p>x</p>
                     <p>y</p>
                   </p>
                   <p className="Expression">]</p>
                 </div>
-                <div className="Formula_Part vertical">
-                  <p>Components:</p> <p>(x, y)</p>
+                <div className="Formula_Part vertical  center">
+                  <p>Components:</p>
+                  <p>&nbsp;&nbsp;(x, y)</p>
                 </div>
               </div>
             </div>
@@ -248,16 +297,17 @@ function PELesson1() {
                 <div className="Formula_Part">or</div>
                 <div className="Formula_Part">
                   <p>v = </p>
-                  <p className="Expression">[</p>
+                  <p className="Expression">&nbsp;[</p>
                   <p className="Vertical">
                     <p>x</p>
                     <p>y</p>
                     <p>z</p>
                   </p>
-                  <p className="Expression">]</p>
+                  <p className="Expression">] </p>
                 </div>
-                <div className="Formula_Part vertical">
-                  <p>Components:</p> <p>(x, y)</p>
+                <div className="Formula_Part vertical center">
+                  <p>Components:</p>
+                  <p>&nbsp;&nbsp;(x, y)</p>
                 </div>
               </div>
             </div>
@@ -303,20 +353,39 @@ function PELesson1() {
                     <p>x</p>
                     <input
                       type="text"
-                      pattern="[0-99]*"
-                      value={exampleA.xAxis}
-                      maxLength={2}
+                      pattern="-?([0-9]|1[0-6])"
+                      value={exampleA.xAxis || ""}
+                      maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                       onChange={(e) => {
-                        if (isNaN(e.target.value) || e.target.value === "") {
-                          setExampleA({
-                            ...exampleA,
-                            xAxis: 0,
-                          });
+                        const value = e.target.value;
+
+                        console.log(value);
+                        // Check if the input value starts with '-' and is not followed by another '-' or empty
+                        if (
+                          value === "-" ||
+                          (value.startsWith("-") &&
+                            !value.startsWith("--") &&
+                            value !== "-")
+                        ) {
+                          if (value === "-" || value >= -16) {
+                            setExampleA({
+                              ...exampleA,
+                              xAxis: value,
+                            });
+                          }
                         } else {
-                          setExampleA({
-                            ...exampleA,
-                            xAxis: parseInt(e.target.value),
-                          });
+                          const intValue = parseInt(value);
+                          if (
+                            value === "" || // Allow empty value
+                            (!isNaN(intValue) &&
+                              intValue >= -16 &&
+                              intValue <= 16)
+                          ) {
+                            setExampleA({
+                              ...exampleA,
+                              xAxis: intValue,
+                            });
+                          }
                         }
                       }}
                     />
@@ -327,19 +396,38 @@ function PELesson1() {
                     <input
                       type="text"
                       pattern="[0-99]*"
-                      value={exampleA.yAxis}
+                      value={exampleA.yAxis || ""}
                       maxLength={2}
                       onChange={(e) => {
-                        if (isNaN(e.target.value) || e.target.value === "") {
-                          setExampleA({
-                            ...exampleA,
-                            yAxis: 0,
-                          });
+                        const value = e.target.value;
+
+                        console.log(value);
+                        // Check if the input value starts with '-' and is not followed by another '-' or empty
+                        if (
+                          value === "-" ||
+                          (value.startsWith("-") &&
+                            !value.startsWith("--") &&
+                            value !== "-")
+                        ) {
+                          if (value === "-" || value >= -16) {
+                            setExampleA({
+                              ...exampleA,
+                              yAxis: value,
+                            });
+                          }
                         } else {
-                          setExampleA({
-                            ...exampleA,
-                            yAxis: parseInt(e.target.value),
-                          });
+                          const intValue = parseInt(value);
+                          if (
+                            value === "" || // Allow empty value
+                            (!isNaN(intValue) &&
+                              intValue >= -16 &&
+                              intValue <= 16)
+                          ) {
+                            setExampleA({
+                              ...exampleA,
+                              yAxis: intValue,
+                            });
+                          }
                         }
                       }}
                     />
@@ -407,18 +495,28 @@ function PELesson1() {
             </p>
             <div className="Note_Visual">
               <div className="Visual_Holder image">
-                <img src={headtail1} alt="Graph Image" />
+                <img src={magnitude_direction} alt="Graph Image" />
               </div>
             </div>
             <p className="Note">
-              Zero vector is denoted as 0.→ZERO VECTOR is a vector with no
-              direction, and has both is initial and terminal points at the same
-              location.
+              ZERO VECTOR is a vector with no direction, and has both is initial
+              and terminal points at the same location.
             </p>
             <div className="Note_Visual">
               <div className="Visual_Holder image">
                 <img src={headtail1} alt="Graph Image" />
               </div>
+            </div>
+
+            <div className="Paragraph_Topic">
+              <p className="withStack">
+                Zero vector is denoted as
+                <span className="stack">
+                  <sup>→</sup>
+                  <p>0</p>
+                </span>
+                .
+              </p>
             </div>
           </div>
         </div>
@@ -437,54 +535,56 @@ function PELesson1() {
               another point (head).
             </p>
           </div>
-          <div className="Bullet_Topic">
-            <p className="Title">IN 2-SPACE</p>
-          </div>
-          <div className="Formula_Field">
-            <div className="Formula">
-              <div className="Formula_Main">
-                <div className="Left_Side">
-                  <div className="Top">
-                    <p className="Italic">Component Form</p>
-                    <p>v = (x, y)</p>
+          <div className="Paragraph_Topic">
+            <div className="Bullet_Topic">
+              <p className="Title">IN 2-SPACE</p>
+            </div>
+            <div className="Formula_Field">
+              <div className="Formula">
+                <div className="Formula_Main">
+                  <div className="Left_Side">
+                    <div className="Top">
+                      <p className="Italic">Component Form</p>
+                      <p>v = (x, y)</p>
+                    </div>
+                    <div className="Bottom">
+                      <p className="Italic">Standard Unit Form</p>
+                      <p>v = (x, y)</p>
+                    </div>
                   </div>
-                  <div className="Bottom">
-                    <p className="Italic">Standard Unit Form</p>
-                    <p>v = (x, y)</p>
-                  </div>
-                </div>
-                <div className="Right_Side">
-                  <p>where</p>
-                  <div className="Vertical others">
-                    <p>i = (1, 0),</p>
-                    <p>j = (0, 1)</p>
+                  <div className="Right_Side">
+                    <p>where</p>
+                    <div className="Vertical others">
+                      <p>i = (1, 0),</p>
+                      <p>j = (0, 1)</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="Bullet_Topic">
-            <p className="Title">IN 3-SPACE</p>
-          </div>
-          <div className="Formula_Field">
-            <div className="Formula">
-              <div className="Formula_Main">
-                <div className="Left_Side">
-                  <div className="Top">
-                    <p className="Italic">Component Form</p>
-                    <p>v = (x, y, z)</p>
+            <div className="Bullet_Topic">
+              <p className="Title">IN 3-SPACE</p>
+            </div>
+            <div className="Formula_Field">
+              <div className="Formula">
+                <div className="Formula_Main">
+                  <div className="Left_Side">
+                    <div className="Top">
+                      <p className="Italic">Component Form</p>
+                      <p>v = (x, y, z)</p>
+                    </div>
+                    <div className="Bottom">
+                      <p className="Italic">Standard Unit Form</p>
+                      <p>v = xi + yj + zk</p>
+                    </div>
                   </div>
-                  <div className="Bottom">
-                    <p className="Italic">Standard Unit Form</p>
-                    <p>v = xi + yj + zk</p>
-                  </div>
-                </div>
-                <div className="Right_Side">
-                  <p>where</p>
-                  <div className="Vertical others">
-                    <p>i = (1, 0, 0),</p>
-                    <p>i = (0, 1, 0),</p>
-                    <p>j = (0, 0, 1)</p>
+                  <div className="Right_Side">
+                    <p>where</p>
+                    <div className="Vertical others">
+                      <p>i = (1, 0, 0),</p>
+                      <p>i = (0, 1, 0),</p>
+                      <p>j = (0, 0, 1)</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -611,55 +711,85 @@ function PELesson1() {
           </div>
           <div className="Side_By_Side">
             <div className="Left_Side">
-              <div className="Vertical">
+              <div className="Paragraph_Topic">
                 <p>P (3, 2)</p>
                 <p>Q (9, 7)</p>
                 <p>Sketching the graph:</p>
               </div>
-              <div className="Topic_Visual sideBySide">
-                <div className="Visual_Holder video">
-                  <video controls>
-                    <source src={ExampleC} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
+              <div className="Paragraph_Topic">
+                <div className="Topic_Visual sideBySide">
+                  <div className="Visual_Holder video">
+                    <video controls>
+                      <source src={ExampleC} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
                 </div>
               </div>
             </div>
             <div className="Right_Side">
-              <div className="Vertical">
-                <p className="Italic">Component Form</p>
-                <p className="withStack">
-                  <span className="stack">
-                    <sup>→</sup>
-                    <p>PQ</p>
-                  </span>{" "}
-                  = (x₂ - x₁, y₂ - y₁)
-                </p>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= (9 - 3, 7 -2)</p>
-                <p className="withStack">
-                  <span className="stack">
-                    <sup>→</sup>
-                    <p>PQ</p>
-                  </span>{" "}
-                  = (6, 5)
-                </p>
-              </div>
-              <div className="Horizontal">
-                <div className="Vertical">
-                  <p className="Italic">Standard Unit Form</p>
-                  <p className="withStack">
+              <div className="Solution_Example">
+                <p className="label Italic">Component Form:</p>
+                <div className="start">
+                  <p className="left">
                     <span className="stack">
                       <sup>→</sup>
                       <p>PQ</p>
-                    </span>{" "}
-                    = (6, 5)
+                    </span>
                   </p>
-                  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 6i + 5j</p>
+                  <p className="center">=</p>
+                  <p className="right">(x₂ - x₁, y₂ - y₁)</p>
                 </div>
-                <p>where</p>
-                <div className="Vertical">
-                  <p>i = (1, 0),</p>
-                  <p>j = (0, 1)</p>
+                <div className="start">
+                  <p className="left"></p>
+                  <p className="center">=</p>
+                  <p className="right">(9 - 3, 7 -2)</p>
+                </div>
+                <div className="start">
+                  <p className="left">
+                    <span className="stack">
+                      <sup>→</sup>
+                      <p>PQ</p>
+                    </span>
+                  </p>
+                  <p className="center">
+                    <span>=</span>
+                  </p>
+                  <p className="right">
+                    <span>(6, 5)</span>
+                  </p>
+                </div>
+              </div>
+              <div className="Horizontal">
+                <div className="Solution_Example">
+                  <p className="label Italic">Standard Unit Form:</p>
+                  <div className="start">
+                    <p className="left">
+                      <span className="stack">
+                        <sup>→</sup>
+                        <p>PQ</p>
+                      </span>
+                    </p>
+                    <p className="center">=</p>
+                    <p className="right">(6, 5)</p>
+                  </div>
+                  <div className="start">
+                    <p className="left"></p>
+                    <p className="center">=</p>
+                    <p className="right">6i + 5j</p>
+                  </div>
+                </div>
+                <div className="Solution_Example largerLeft">
+                  <div className="start">
+                    <p className="left">where i</p>
+                    <p className="center">=</p>
+                    <p className="right">(1, 0)</p>
+                  </div>
+                  <div className="start">
+                    <p className="left">j</p>
+                    <p className="center">=</p>
+                    <p className="right">(0, 1)</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -690,20 +820,39 @@ function PELesson1() {
                         <p>x</p>
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={exampleC2.initialX || 0}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={exampleC2.initialX || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
-                            if (e.target.value === 0) {
-                              setExampleC2({
-                                ...exampleC2,
-                                initialX: 0,
-                              });
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
+                            if (
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
+                            ) {
+                              if (value === "-" || value >= -99) {
+                                setExampleC2({
+                                  ...exampleC2,
+                                  initialX: value,
+                                });
+                              }
                             } else {
-                              setExampleC2({
-                                ...exampleC2,
-                                initialX: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setExampleC2({
+                                  ...exampleC2,
+                                  initialX: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -713,20 +862,39 @@ function PELesson1() {
                         <p>y</p>
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={exampleC2.initialY || 0}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={exampleC2.initialY || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
-                            if (e.target.value === 0) {
-                              setExampleC2({
-                                ...exampleC2,
-                                initialY: 0,
-                              });
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
+                            if (
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
+                            ) {
+                              if (value === "-" || value >= -99) {
+                                setExampleC2({
+                                  ...exampleC2,
+                                  initialY: value,
+                                });
+                              }
                             } else {
-                              setExampleC2({
-                                ...exampleC2,
-                                initialY: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setExampleC2({
+                                  ...exampleC2,
+                                  initialY: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -744,20 +912,39 @@ function PELesson1() {
                         <p>x</p>
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={exampleC2.terminalX || 0}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={exampleC2.terminalX || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
-                            if (e.target.value === 0) {
-                              setExampleC2({
-                                ...exampleC2,
-                                terminalX: 0,
-                              });
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
+                            if (
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
+                            ) {
+                              if (value === "-" || value >= -99) {
+                                setExampleC2({
+                                  ...exampleC2,
+                                  terminalX: value,
+                                });
+                              }
                             } else {
-                              setExampleC2({
-                                ...exampleC2,
-                                terminalX: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setExampleC2({
+                                  ...exampleC2,
+                                  terminalX: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -767,20 +954,39 @@ function PELesson1() {
                         <p>y</p>
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={exampleC2.terminalY || 0}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={exampleC2.terminalY || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
-                            if (e.target.value === 0) {
-                              setExampleC2({
-                                ...exampleC2,
-                                terminalY: 0,
-                              });
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
+                            if (
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
+                            ) {
+                              if (value === "-" || value >= -99) {
+                                setExampleC2({
+                                  ...exampleC2,
+                                  terminalY: value,
+                                });
+                              }
                             } else {
-                              setExampleC2({
-                                ...exampleC2,
-                                terminalY: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setExampleC2({
+                                  ...exampleC2,
+                                  terminalY: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -865,7 +1071,7 @@ function PELesson1() {
                             id="rectangle-20-1"
                             className="Output_Rectangles"
                           ></div>
-                          )
+                          ) ■
                         </div>
                       </p>
                     </div>
@@ -897,23 +1103,39 @@ function PELesson1() {
                         <p>x</p>
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={exampleC3.initialX}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={exampleC3.initialX || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
                             if (
-                              isNaN(e.target.value) ||
-                              e.target.value === ""
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
                             ) {
-                              setExampleC3({
-                                ...exampleC3,
-                                initialX: 0,
-                              });
+                              if (value === "-" || value >= -99) {
+                                setExampleC3({
+                                  ...exampleC3,
+                                  initialX: value,
+                                });
+                              }
                             } else {
-                              setExampleC3({
-                                ...exampleC3,
-                                initialX: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setExampleC3({
+                                  ...exampleC3,
+                                  initialX: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -923,23 +1145,39 @@ function PELesson1() {
                         <p>y</p>
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={exampleC3.initialY}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={exampleC3.initialY || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
                             if (
-                              isNaN(e.target.value) ||
-                              e.target.value === ""
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
                             ) {
-                              setExampleC3({
-                                ...exampleC3,
-                                initialY: 0,
-                              });
+                              if (value === "-" || value >= -99) {
+                                setExampleC3({
+                                  ...exampleC3,
+                                  initialY: value,
+                                });
+                              }
                             } else {
-                              setExampleC3({
-                                ...exampleC3,
-                                initialY: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setExampleC3({
+                                  ...exampleC3,
+                                  initialY: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -949,23 +1187,39 @@ function PELesson1() {
                         <p>z</p>
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={exampleC3.initialZ}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={exampleC3.initialZ || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
                             if (
-                              isNaN(e.target.value) ||
-                              e.target.value === ""
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
                             ) {
-                              setExampleC3({
-                                ...exampleC3,
-                                initialZ: 0,
-                              });
+                              if (value === "-" || value >= -99) {
+                                setExampleC3({
+                                  ...exampleC3,
+                                  initialZ: value,
+                                });
+                              }
                             } else {
-                              setExampleC3({
-                                ...exampleC3,
-                                initialZ: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setExampleC3({
+                                  ...exampleC3,
+                                  initialZ: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -983,23 +1237,39 @@ function PELesson1() {
                         <p>x</p>
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={exampleC3.terminalX}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={exampleC3.terminalX || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
                             if (
-                              isNaN(e.target.value) ||
-                              e.target.value === ""
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
                             ) {
-                              setExampleC3({
-                                ...exampleC3,
-                                terminalX: 0,
-                              });
+                              if (value === "-" || value >= -99) {
+                                setExampleC3({
+                                  ...exampleC3,
+                                  terminalX: value,
+                                });
+                              }
                             } else {
-                              setExampleC3({
-                                ...exampleC3,
-                                terminalX: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setExampleC3({
+                                  ...exampleC3,
+                                  terminalX: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -1009,23 +1279,39 @@ function PELesson1() {
                         <p>y</p>
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={exampleC3.terminalY}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={exampleC3.terminalY || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
                             if (
-                              isNaN(e.target.value) ||
-                              e.target.value === ""
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
                             ) {
-                              setExampleC3({
-                                ...exampleC3,
-                                terminalY: 0,
-                              });
+                              if (value === "-" || value >= -99) {
+                                setExampleC3({
+                                  ...exampleC3,
+                                  terminalY: value,
+                                });
+                              }
                             } else {
-                              setExampleC3({
-                                ...exampleC3,
-                                terminalY: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setExampleC3({
+                                  ...exampleC3,
+                                  terminalY: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -1035,23 +1321,39 @@ function PELesson1() {
                         <p>z</p>
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={exampleC3.terminalZ}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={exampleC3.terminalZ || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
                             if (
-                              isNaN(e.target.value) ||
-                              e.target.value === ""
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
                             ) {
-                              setExampleC3({
-                                ...exampleC3,
-                                terminalZ: 0,
-                              });
+                              if (value === "-" || value >= -99) {
+                                setExampleC3({
+                                  ...exampleC3,
+                                  terminalZ: value,
+                                });
+                              }
                             } else {
-                              setExampleC3({
-                                ...exampleC3,
-                                terminalZ: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setExampleC3({
+                                  ...exampleC3,
+                                  terminalZ: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -1152,7 +1454,7 @@ function PELesson1() {
                             id="rectangle-21"
                             className="Output_Rectangles"
                           ></div>
-                          )
+                          ) ■
                         </div>
                       </p>
                     </div>
@@ -1225,24 +1527,22 @@ function PELesson1() {
               <div className="Content">
                 <div className="left">
                   <div className="Vertical">
-                    <p className="number">1.)</p>
-                    <p className="word">If</p>
+                    <p className="number">1.) If</p>
                     <p className="formula">v = (5, 7),</p>
                     <p className="formula">w = (8, 3)</p>
                     <p className="word">Then</p>
                     <p className="formula"> v + w = (5 + 8, 7 + 3)</p>
-                    <p className="formula answer">= (13 , 10)</p>
+                    <p className="formula answer">= (13 , 10) ■</p>
                   </div>
                 </div>
                 <div className="right">
                   <div className="Vertical">
-                    <p className="number">2.)</p>
-                    <p className="word">If</p>
+                    <p className="wnumber">2.) If</p>
                     <p className="formula">v = (-2, 9, 4)</p>
                     <p className="formula">w = (1, -7, -4)</p>
                     <p className="word">Then</p>
                     <p className="formula">v + w = (-2 + 1, 9 – 7, 4 – 4)</p>
-                    <p className="formula answer">= (-1, 2, 0)</p>
+                    <p className="formula answer">= (-1, 2, 0) ■</p>
                   </div>
                 </div>
               </div>
@@ -1262,24 +1562,22 @@ function PELesson1() {
               <div className="Content">
                 <div className="left">
                   <div className="Vertical">
-                    <p className="number">1.)</p>
-                    <p className="word">If</p>
+                    <p className="number">1.) If</p>
                     <p className="formula">v = (-2, 7)</p>
                     <p className="formula">k = 5</p>
                     <p className="word">Then</p>
                     <p className="formula">kv = (5 (-2), 5 (7))</p>
-                    <p className="formula answer">= (-10, 35)</p>
+                    <p className="formula answer">= (-10, 35) ■</p>
                   </div>
                 </div>
                 <div className="right">
                   <div className="Vertical">
-                    <p className="number">2.)</p>
-                    <p className="word">If</p>
+                    <p className="number">2.) If</p>
                     <p className="formula">v = (3, -1, 10)</p>
                     <p className="formula">k = 2</p>
                     <p className="word">Then</p>
                     <p className="formula">kv = (2 (3), 2 (-1), 2 (-10))</p>
-                    <p className="formula answer">= (6, -2, -20)</p>
+                    <p className="formula answer">= (6, -2, -20) ■</p>
                   </div>
                 </div>
               </div>
@@ -1299,20 +1597,18 @@ function PELesson1() {
               <div className="Content">
                 <div className="left">
                   <div className="Vertical">
-                    <p className="number">1.)</p>
-                    <p className="word">If</p>
+                    <p className="number">1.) If</p>
                     <p className="formula">v = (4, -9)</p>
                     <p className="word">Then</p>
-                    <p className="formula">-v = (-4, 9)</p>
+                    <p className="formula">-v = (-4, 9) ■</p>
                   </div>
                 </div>
                 <div className="right">
                   <div className="Vertical">
-                    <p className="number">2.)</p>
-                    <p className="word">If</p>
+                    <p className="number">2.) If</p>
                     <p className="formula">v = (3, -14, 8)</p>
                     <p className="word">Then</p>
-                    <p className="formula">-v = (-3, 14, -8) </p>
+                    <p className="formula">-v = (-3, 14, -8) ■</p>
                   </div>
                 </div>
               </div>
@@ -1343,26 +1639,24 @@ function PELesson1() {
               <div className="Content">
                 <div className="left">
                   <div className="Vertical">
-                    <p className="number">1.)</p>
-                    <p className="word">If</p>
+                    <p className="number">1.) If</p>
                     <p className="formula">v = (3, -6),</p>
                     <p className="formula">w = (-8, 2)</p>
                     <p className="word">Then</p>
                     <p className="formula">w - v = (-8 - 3, 2 - (-6))</p>
-                    <p className="formula answer">= (-11 , 8)</p>
+                    <p className="formula answer">= (-11 , 8) ■</p>
                   </div>
                 </div>
                 <div className="right">
                   <div className="Vertical">
-                    <p className="number">2.)</p>
-                    <p className="word">If</p>
+                    <p className="number">2.) If</p>
                     <p className="formula">v = (0, -5, 7)</p>
                     <p className="formula">w = (-8, 2, -2)</p>
                     <p className="word">Then</p>
                     <p className="formula">
                       w - v = (-8 - 0, 2 – (-5), -2 – 7)
                     </p>
-                    <p className="formula asnwer">= (-8, 7, -9)</p>
+                    <p className="formula asnwer">= (-8, 7, -9) ■</p>
                   </div>
                 </div>
               </div>
@@ -1389,23 +1683,39 @@ function PELesson1() {
                         <p>x</p>
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={vectorOp1.vX}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={vectorOp1.vX || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
                             if (
-                              isNaN(e.target.value) ||
-                              e.target.value === ""
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
                             ) {
-                              setVectorOp1({
-                                ...vectorOp1,
-                                vX: 0,
-                              });
+                              if (value === "-" || value >= -99) {
+                                setVectorOp1({
+                                  ...vectorOp1,
+                                  vX: value,
+                                });
+                              }
                             } else {
-                              setVectorOp1({
-                                ...vectorOp1,
-                                vX: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setVectorOp1({
+                                  ...vectorOp1,
+                                  vX: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -1415,23 +1725,39 @@ function PELesson1() {
                         <p>y</p>
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={vectorOp1.vY}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={vectorOp1.vY || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
                             if (
-                              isNaN(e.target.value) ||
-                              e.target.value === ""
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
                             ) {
-                              setVectorOp1({
-                                ...vectorOp1,
-                                vY: 0,
-                              });
+                              if (value === "-" || value >= -99) {
+                                setVectorOp1({
+                                  ...vectorOp1,
+                                  vY: value,
+                                });
+                              }
                             } else {
-                              setVectorOp1({
-                                ...vectorOp1,
-                                vY: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setVectorOp1({
+                                  ...vectorOp1,
+                                  vY: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -1447,23 +1773,39 @@ function PELesson1() {
                       <div className="vertical">
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={vectorOp1.wX}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={vectorOp1.wX || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
                             if (
-                              isNaN(e.target.value) ||
-                              e.target.value === ""
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
                             ) {
-                              setVectorOp1({
-                                ...vectorOp1,
-                                wX: 0,
-                              });
+                              if (value === "-" || value >= -99) {
+                                setVectorOp1({
+                                  ...vectorOp1,
+                                  wX: value,
+                                });
+                              }
                             } else {
-                              setVectorOp1({
-                                ...vectorOp1,
-                                wX: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setVectorOp1({
+                                  ...vectorOp1,
+                                  wX: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -1472,23 +1814,39 @@ function PELesson1() {
                       <div className="vertical">
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={vectorOp1.wY}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={vectorOp1.wY || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
                             if (
-                              isNaN(e.target.value) ||
-                              e.target.value === ""
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
                             ) {
-                              setVectorOp1({
-                                ...vectorOp1,
-                                wY: 0,
-                              });
+                              if (value === "-" || value >= -99) {
+                                setVectorOp1({
+                                  ...vectorOp1,
+                                  wY: value,
+                                });
+                              }
                             } else {
-                              setVectorOp1({
-                                ...vectorOp1,
-                                wY: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setVectorOp1({
+                                  ...vectorOp1,
+                                  wY: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -1512,7 +1870,7 @@ function PELesson1() {
                   <div className="Input_Group">
                     <div className="Inputs">
                       <p>1.</p>
-                      <p className="equal">v+ w = (</p>
+                      <p className="equal">v + w = (</p>
                       <div className="vertical">
                         <p>x</p>
                         <div
@@ -1534,7 +1892,7 @@ function PELesson1() {
                   <div className="Input_Group">
                     <div className="Inputs">
                       <p>2.</p>
-                      <p className="equal">3v= (</p>
+                      <p className="equal">3v = (</p>
                       <div className="vertical">
                         <div
                           id="rectangle-11-2"
@@ -1613,23 +1971,39 @@ function PELesson1() {
                         <p>x</p>
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={vectorOp2.vX}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={vectorOp2.vX || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
                             if (
-                              isNaN(e.target.value) ||
-                              e.target.value === ""
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
                             ) {
-                              setVectorOp2({
-                                ...vectorOp2,
-                                vX: 0,
-                              });
+                              if (value === "-" || value >= -99) {
+                                setVectorOp2({
+                                  ...vectorOp2,
+                                  vX: value,
+                                });
+                              }
                             } else {
-                              setVectorOp2({
-                                ...vectorOp2,
-                                vX: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setVectorOp2({
+                                  ...vectorOp2,
+                                  vX: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -1639,23 +2013,39 @@ function PELesson1() {
                         <p>y</p>
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={vectorOp2.vY}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={vectorOp2.vY || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
                             if (
-                              isNaN(e.target.value) ||
-                              e.target.value === ""
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
                             ) {
-                              setVectorOp2({
-                                ...vectorOp2,
-                                vY: 0,
-                              });
+                              if (value === "-" || value >= -99) {
+                                setVectorOp2({
+                                  ...vectorOp2,
+                                  vY: value,
+                                });
+                              }
                             } else {
-                              setVectorOp2({
-                                ...vectorOp2,
-                                vY: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setVectorOp2({
+                                  ...vectorOp2,
+                                  vY: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -1665,23 +2055,39 @@ function PELesson1() {
                         <p>z</p>
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={vectorOp2.vZ}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={vectorOp2.vZ || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
                             if (
-                              isNaN(e.target.value) ||
-                              e.target.value === ""
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
                             ) {
-                              setVectorOp2({
-                                ...vectorOp2,
-                                vZ: 0,
-                              });
+                              if (value === "-" || value >= -99) {
+                                setVectorOp2({
+                                  ...vectorOp2,
+                                  vZ: value,
+                                });
+                              }
                             } else {
-                              setVectorOp2({
-                                ...vectorOp2,
-                                vZ: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setVectorOp2({
+                                  ...vectorOp2,
+                                  vZ: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -1697,23 +2103,39 @@ function PELesson1() {
                       <div className="vertical">
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={vectorOp2.wX}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={vectorOp2.wX || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
                             if (
-                              isNaN(e.target.value) ||
-                              e.target.value === ""
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
                             ) {
-                              setVectorOp2({
-                                ...vectorOp2,
-                                wX: 0,
-                              });
+                              if (value === "-" || value >= -99) {
+                                setVectorOp2({
+                                  ...vectorOp2,
+                                  wX: value,
+                                });
+                              }
                             } else {
-                              setVectorOp2({
-                                ...vectorOp2,
-                                wX: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setVectorOp2({
+                                  ...vectorOp2,
+                                  wX: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -1722,23 +2144,39 @@ function PELesson1() {
                       <div className="vertical">
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={vectorOp2.wY}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={vectorOp2.wY || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
                             if (
-                              isNaN(e.target.value) ||
-                              e.target.value === ""
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
                             ) {
-                              setVectorOp2({
-                                ...vectorOp2,
-                                wY: 0,
-                              });
+                              if (value === "-" || value >= -99) {
+                                setVectorOp2({
+                                  ...vectorOp2,
+                                  wY: value,
+                                });
+                              }
                             } else {
-                              setVectorOp2({
-                                ...vectorOp2,
-                                wY: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setVectorOp2({
+                                  ...vectorOp2,
+                                  wY: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -1747,23 +2185,39 @@ function PELesson1() {
                       <div className="vertical">
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={vectorOp2.wZ}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={vectorOp2.wZ || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
                             if (
-                              isNaN(e.target.value) ||
-                              e.target.value === ""
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
                             ) {
-                              setVectorOp2({
-                                ...vectorOp2,
-                                wZ: 0,
-                              });
+                              if (value === "-" || value >= -99) {
+                                setVectorOp2({
+                                  ...vectorOp2,
+                                  wZ: value,
+                                });
+                              }
                             } else {
-                              setVectorOp2({
-                                ...vectorOp2,
-                                wZ: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setVectorOp2({
+                                  ...vectorOp2,
+                                  wZ: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -1912,7 +2366,7 @@ function PELesson1() {
               </p>
               <div className="List">
                 <p>1. u + v = v + u</p>
-                <p>2. (u + v) = w = u + (v + w)</p>
+                <p>2. (u + v) + w = u + (v + w)</p>
                 <p>
                   3. u +{" "}
                   <span className="stack">

@@ -10,9 +10,6 @@ import image17 from "../../assets/images/Lessons Images/PELesson4/image-17.png";
 import image19 from "../../assets/images/Lessons Images/PELesson4/image-19.png";
 import image75 from "../../assets/images/Lessons Images/PELesson4/image-75.png";
 
-//Videos
-import ExampleA1 from "../../assets/videos/PELesson1/Example A1.mp4";
-
 import { calculatePoint3D } from "../../utils";
 
 function PELesson4() {
@@ -22,7 +19,7 @@ function PELesson4() {
   });
 
   const isNumeric = (value) => {
-    return /^[0-9,]+$/.test(value);
+    return /^[\d,\s-]+$/.test(value);
   };
   const solvePoint3D = () => {
     if (isNumeric(pointNormal.point) && isNumeric(pointNormal.normal)) {

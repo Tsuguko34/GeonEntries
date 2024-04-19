@@ -7,9 +7,10 @@ import rightRed from "../../assets/images/Quiz Images/scoreOverview/right-red-2.
 import miniLogo from "../../assets/images/miniLogo.png";
 import { useNavigate, useParams } from "react-router-dom";
 import { SidebarContext } from "../../context/context";
-import { neQuestions, peQuestions } from "../../utils";
+import { GetWindowWidth, neQuestions, peQuestions } from "../../utils";
 
 function ScoreOverview() {
+  const windowWith = GetWindowWidth();
   const navigate = useNavigate();
   const { lessonName } = useParams();
   const {
@@ -31,7 +32,8 @@ function ScoreOverview() {
 
   const calculatePercentage = () => {
     if (questions) {
-      return (score / questions.length) * 100;
+      const totalScore = Math.round((score / questions.length) * 100);
+      return totalScore;
     }
   };
 
@@ -46,21 +48,6 @@ function ScoreOverview() {
           <img src={pent1} alt="" />
         </div>
         <div className="Contents">
-          <div className="Actions">
-            <button
-              className="Retry"
-              onClick={() => navigate(`/Lesson/Quiz/${lessonName}`)}
-            ></button>
-            <button
-              className="Home"
-              onClick={() => navigate(`/LessonsList`)}
-            ></button>
-            <button
-              className="Lessons"
-              onClick={() => navigate(`/Lesson/${lessonName}`)}
-            ></button>
-          </div>
-
           <div className="Score_Container">
             <div className="Left_Side">
               <div className="Percentage">
@@ -72,15 +59,14 @@ function ScoreOverview() {
                   onMouseEnter={() => setLeftHover(true)}
                   onMouseLeave={() => setLeftHover(false)}
                 >
-                  {score && score} correct
+                  {score} correct
                 </p>
                 <p
                   className={`wrong ${rightHover ? "hover" : ""}`}
                   onMouseEnter={() => setRightHover(true)}
                   onMouseLeave={() => setRightHover(false)}
                 >
-                  {score && questions.length > 0 && questions.length - score}{" "}
-                  wrong
+                  {questions.length > 0 && questions.length - score} wrong
                 </p>
               </div>
             </div>
@@ -103,11 +89,7 @@ function ScoreOverview() {
                       rightHover ? "show" : ""
                     }`}
                   >
-                    <p>
-                      {score &&
-                        questions.length > 0 &&
-                        questions.length - score}{" "}
-                    </p>
+                    <p>{questions.length > 0 && questions.length - score} </p>
                   </div>
                 </div>
                 <div className="Center">
@@ -137,11 +119,25 @@ function ScoreOverview() {
                       leftHover ? "show" : ""
                     }`}
                   >
-                    <p>{score && score}</p>
+                    <p>{score}</p>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+          <div className="Actions">
+            <button
+              className="Retry"
+              onClick={() => navigate(`/Lesson/Quiz/${lessonName}`)}
+            ></button>
+            <button
+              className="Home"
+              onClick={() => navigate(`/LessonsList`)}
+            ></button>
+            <button
+              className="Lessons"
+              onClick={() => navigate(`/Lesson/${lessonName}`)}
+            ></button>
           </div>
 
           <div className="Bottom_Text">

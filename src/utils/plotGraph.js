@@ -39,16 +39,16 @@ function graphVector(vectorX, vectorY, canvasWidth, canvasHeight) {
   );
 
   // Draw axes
-  drawAxes(ctx, canvasWidth / 2, canvasHeight / 2, canvasWidth, canvasHeight);
+  drawAxes(ctx, canvasWidth, canvasHeight);
 }
 
-function drawAxes(ctx, x, y, canvasWidth, canvasHeight) {
+function drawAxes(ctx, canvasWidth, canvasHeight) {
   // Draw axes
   ctx.beginPath();
-  ctx.moveTo(0, y);
-  ctx.lineTo(canvasWidth, y);
-  ctx.moveTo(x, 0);
-  ctx.lineTo(x, canvasHeight);
+  ctx.moveTo(canvasWidth / 2, 0);
+  ctx.lineTo(canvasWidth / 2, canvasHeight);
+  ctx.moveTo(0, canvasHeight / 2);
+  ctx.lineTo(canvasWidth, canvasHeight / 2);
   ctx.strokeStyle = "#053b50";
   ctx.stroke();
 }
@@ -57,8 +57,12 @@ function drawGrid(ctx, canvasWidth, canvasHeight, gridSpacing) {
   // Set a fixed line width for the grid lines
   ctx.lineWidth = 1;
 
+  // Calculate the center of the canvas
+  var centerX = canvasWidth / 2;
+  var centerY = canvasHeight / 2;
+
   // Draw vertical grid lines
-  for (var i = 0; i < canvasWidth; i += gridSpacing) {
+  for (var i = centerX % gridSpacing; i < canvasWidth; i += gridSpacing) {
     ctx.beginPath();
     ctx.moveTo(i, 0);
     ctx.lineTo(i, canvasHeight);
@@ -67,7 +71,7 @@ function drawGrid(ctx, canvasWidth, canvasHeight, gridSpacing) {
   }
 
   // Draw horizontal grid lines
-  for (var j = 0; j < canvasHeight; j += gridSpacing) {
+  for (var j = centerY % gridSpacing; j < canvasHeight; j += gridSpacing) {
     ctx.beginPath();
     ctx.moveTo(0, j);
     ctx.lineTo(canvasWidth, j);

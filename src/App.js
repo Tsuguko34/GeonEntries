@@ -66,8 +66,8 @@ function App() {
         ></div>
         <div
           className={`Navbar_Container ${
-            (pageHasNavBar || location.pathname === "/") && "active"
-          }`}
+            location.pathname === "/" ? "homepage" : ""
+          } ${(pageHasNavBar || location.pathname === "/") && "active"}`}
         >
           {(pageHasNavBar || location.pathname === "/") && (
             <Navbar

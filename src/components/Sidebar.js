@@ -53,13 +53,23 @@ function Sidebar() {
     <div id="Sidebar" className="Sidebar">
       <div className="Content">
         <div className="Close_Icon">
-          <FaIcons.FaHome
-            onClick={() => {
-              setToggleSidebar(false);
-              navigate("/LessonsList");
-            }}
-            className="home"
-          />
+          <div className="Group">
+            <FaIcons.FaHome
+              onClick={() => {
+                setToggleSidebar(false);
+                navigate("/LessonsList");
+              }}
+              className="home"
+            />
+            <IoIcons.IoIosArrowRoundBack
+              onClick={() => {
+                setToggleSidebar(false);
+                redirect();
+              }}
+              className="home"
+            />
+          </div>
+
           <IoIcons.IoMdClose onClick={() => setToggleSidebar(false)} />
         </div>
         {location.pathname && location.pathname.includes("/Lesson/Quiz") && (
@@ -97,12 +107,6 @@ function Sidebar() {
             />
           )}
         </div>
-
-        {location.pathname && !location.pathname.includes("/Lesson/Quiz") && (
-          <div className="Quiz_Button" onClick={() => redirectQuiz()}>
-            <button>Quiz</button>
-          </div>
-        )}
       </div>
     </div>
   );

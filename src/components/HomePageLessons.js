@@ -41,7 +41,7 @@ function HomePageLessons({ isVisible, setIsVisible }) {
     };
   }, []);
   return (
-    <section id="HomePageLessons" className="HomePageLessons">
+    <div id="HomePageLessons" className="HomePageLessons">
       <div className="wrapper">
         <div className="Container">
           <div
@@ -66,15 +66,15 @@ function HomePageLessons({ isVisible, setIsVisible }) {
             <div className="Lesson_Title">II. Non-Euclidean Geometries</div>
             <div className="Lesson_Description">
               <p>
-                It Explores geometrical systems deviating from Euclid's fifth
-                postulate or the parallel postulate. It Includes hyperbolic and
-                spherical geometry.
+                It explores geometrical systems deviating from Euclid's fifth
+                postulate or the parallel postulate. It includes Hyperbolic and
+                Spherical geometry.
               </p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 

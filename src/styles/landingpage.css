@@ -246,7 +246,18 @@
 
 #LandingPage > .wrapper > .LandingPage_Bottom > img.active{
     opacity: 1;
-    transform: translateX(140px);
+    animation: goRight 0.5s ease-in-out forwards 4.5s;
+    transform: translateX(0px);
+}
+
+@keyframes goRight{
+    from{
+        transform: translateX(0px);
+    }
+
+    to{
+        transform: translateX(140px);
+    }
 }
 
 #LandingPage > .wrapper > .LandingPage_Bottom > button{
@@ -267,7 +278,17 @@
 }
 
 #LandingPage > .wrapper > .LandingPage_Bottom > button.active{
-    opacity: 0.8;
+    opacity: 0;
+    animation: setVisible 0.5s ease-in-out forwards 4.5s;
+}
+
+@keyframes setVisible{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 0.8;
+    }
 }
 
 #LandingPage > .wrapper > .LandingPage_Bottom > button.active:hover{

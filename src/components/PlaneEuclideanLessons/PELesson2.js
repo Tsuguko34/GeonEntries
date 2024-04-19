@@ -278,20 +278,39 @@ function PELesson2() {
                         <p>x</p>
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={norm.x || 0}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={norm.x || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
-                            if (e.target.value === 0) {
-                              setNorm({
-                                ...norm,
-                                x: 0,
-                              });
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
+                            if (
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
+                            ) {
+                              if (value === "-" || value >= -99) {
+                                setNorm({
+                                  ...norm,
+                                  x: value,
+                                });
+                              }
                             } else {
-                              setNorm({
-                                ...norm,
-                                x: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setNorm({
+                                  ...norm,
+                                  x: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -301,20 +320,39 @@ function PELesson2() {
                         <p>y</p>
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={norm.y || 0}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={norm.y || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
-                            if (e.target.value === 0) {
-                              setNorm({
-                                ...norm,
-                                y: 0,
-                              });
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
+                            if (
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
+                            ) {
+                              if (value === "-" || value >= -99) {
+                                setNorm({
+                                  ...norm,
+                                  y: value,
+                                });
+                              }
                             } else {
-                              setNorm({
-                                ...norm,
-                                y: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setNorm({
+                                  ...norm,
+                                  y: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -374,6 +412,7 @@ function PELesson2() {
                             id="rectangle-a"
                             className="Output_Rectangles"
                           ></div>
+                          ■
                         </div>
                       </p>
                     </div>
@@ -400,23 +439,39 @@ function PELesson2() {
                         <p>x</p>
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={norm2.x}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={norm2.x || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
                             if (
-                              isNaN(e.target.value) ||
-                              e.target.value === ""
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
                             ) {
-                              setNorm2({
-                                ...norm2,
-                                x: 0,
-                              });
+                              if (value === "-" || value >= -99) {
+                                setNorm2({
+                                  ...norm2,
+                                  x: value,
+                                });
+                              }
                             } else {
-                              setNorm2({
-                                ...norm2,
-                                x: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setNorm2({
+                                  ...norm2,
+                                  x: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -426,23 +481,39 @@ function PELesson2() {
                         <p>y</p>
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={norm2.y}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={norm2.y || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
                             if (
-                              isNaN(e.target.value) ||
-                              e.target.value === ""
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
                             ) {
-                              setNorm2({
-                                ...norm2,
-                                y: 0,
-                              });
+                              if (value === "-" || value >= -99) {
+                                setNorm2({
+                                  ...norm2,
+                                  y: value,
+                                });
+                              }
                             } else {
-                              setNorm2({
-                                ...norm2,
-                                y: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setNorm2({
+                                  ...norm2,
+                                  y: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -452,23 +523,39 @@ function PELesson2() {
                         <p>z</p>
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={norm2.z}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={norm2.z || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
                             if (
-                              isNaN(e.target.value) ||
-                              e.target.value === ""
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
                             ) {
-                              setNorm2({
-                                ...norm2,
-                                z: 0,
-                              });
+                              if (value === "-" || value >= -99) {
+                                setNorm2({
+                                  ...norm2,
+                                  z: value,
+                                });
+                              }
                             } else {
-                              setNorm2({
-                                ...norm2,
-                                z: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setNorm2({
+                                  ...norm2,
+                                  z: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -534,6 +621,7 @@ function PELesson2() {
                             id="rectangle-aa"
                             className="Output_Rectangles"
                           ></div>
+                          ■
                         </div>
                       </p>
                     </div>
@@ -859,15 +947,15 @@ function PELesson2() {
             <p>Let u be vector in R².</p>
           </div>
 
-          <div className="Paragraph_Topic equation">
-            <div>
+          <div className="Paragraph_Topic equation block">
+            <p>
               The unit vector in the direction of v is u ={" "}
-              <div className="fraction">
+              <span className="fraction">
                 <span className="upper">v</span>
                 <span className="divider"></span>
                 <span className="bottom">||v||</span>
-              </div>
-            </div>
+              </span>
+            </p>
           </div>
 
           <div className="Side_By_Side">
@@ -1150,87 +1238,89 @@ function PELesson2() {
           <div className="Paragraph_Topic">
             <p>Determine the distance between the following given vectors.</p>
           </div>
-          <div className="Solution_Example">
-            <p className="label">1). (9, -7), (5, -7)</p>
-            <div className="start">
-              <p className="left">d(u, v)</p>
-              <p className="center">=</p>
-              <p className="right">
-                <span className="squareRoot_Symbol">&radic;</span>
-                (u₁ - v₁)² + (u₂ - v₂)²
-              </p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">
-                <span className="squareRoot_Symbol">&radic;</span>
-                (9 - 5)² + (-7 - (-7))²
-              </p>
+          <div className="Paragraph_Topic">
+            <div className="Solution_Example">
+              <p className="label">1). (9, -7), (5, -7)</p>
+              <div className="start">
+                <p className="left">d(u, v)</p>
+                <p className="center">=</p>
+                <p className="right">
+                  <span className="squareRoot_Symbol">&radic;</span>
+                  (u₁ - v₁)² + (u₂ - v₂)²
+                </p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">
+                  <span className="squareRoot_Symbol">&radic;</span>
+                  (9 - 5)² + (-7 - (-7))²
+                </p>
+              </div>
+
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">
+                  <span className="squareRoot_Symbol">&radic;</span>
+                  (4)²
+                </p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">4</p>
+              </div>
             </div>
 
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">
-                <span className="squareRoot_Symbol">&radic;</span>
-                (4)²
-              </p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">4</p>
-            </div>
-          </div>
+            <div className="Solution_Example">
+              <p className="label">2). (-5, 2, 1), (-5, 5, 4)</p>
+              <div className="start">
+                <p className="left">d(u, v)</p>
+                <p className="center">=</p>
+                <p className="right">
+                  <span className="squareRoot_Symbol">&radic;</span>
+                  (u₁ - v₁)² + (u₂ - v₂)² + (u₃ - v₃)²
+                </p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">
+                  <span className="squareRoot_Symbol">&radic;</span>
+                  (-5 - (-5))² + (2 - 5)² + (1 - 4)²
+                </p>
+              </div>
 
-          <div className="Solution_Example">
-            <p className="label">2). (-5, 2, 1), (-5, 5, 4)</p>
-            <div className="start">
-              <p className="left">d(u, v)</p>
-              <p className="center">=</p>
-              <p className="right">
-                <span className="squareRoot_Symbol">&radic;</span>
-                (u₁ - v₁)² + (u₂ - v₂)² + (u₃ - v₃)²
-              </p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">
-                <span className="squareRoot_Symbol">&radic;</span>
-                (-5 - (-5))² + (2 - 5)² + (1 - 4)²
-              </p>
-            </div>
-
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">
-                <span className="squareRoot_Symbol">&radic;</span>
-                (-3)² + (-3)²
-              </p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">
-                <span className="squareRoot_Symbol">&radic;</span>9 + 9
-              </p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">
-                <span className="squareRoot_Symbol">&radic;</span>18
-              </p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">
-                3<span className="squareRoot_Symbol">&radic;</span>2
-              </p>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">
+                  <span className="squareRoot_Symbol">&radic;</span>
+                  (-3)² + (-3)²
+                </p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">
+                  <span className="squareRoot_Symbol">&radic;</span>9 + 9
+                </p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">
+                  <span className="squareRoot_Symbol">&radic;</span>18
+                </p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">
+                  3<span className="squareRoot_Symbol">&radic;</span>2
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -1285,20 +1375,39 @@ function PELesson2() {
                         <p>x</p>
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={distance.x1}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={distance.x1 || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
-                            if (e.target.value === 0) {
-                              setDistance({
-                                ...distance,
-                                x1: 0,
-                              });
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
+                            if (
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
+                            ) {
+                              if (value === "-" || value >= -99) {
+                                setDistance({
+                                  ...distance,
+                                  x1: value,
+                                });
+                              }
                             } else {
-                              setDistance({
-                                ...distance,
-                                x1: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setDistance({
+                                  ...distance,
+                                  x1: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -1308,20 +1417,39 @@ function PELesson2() {
                         <p>y</p>
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={distance.y1}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={distance.x2 || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
-                            if (e.target.value === 0) {
-                              setDistance({
-                                ...distance,
-                                y1: 0,
-                              });
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
+                            if (
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
+                            ) {
+                              if (value === "-" || value >= -99) {
+                                setDistance({
+                                  ...distance,
+                                  x2: value,
+                                });
+                              }
                             } else {
-                              setDistance({
-                                ...distance,
-                                y1: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setDistance({
+                                  ...distance,
+                                  x2: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -1335,20 +1463,39 @@ function PELesson2() {
                       <div className="vertical">
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={distance.x2}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={distance.y1 || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
-                            if (e.target.value === 0) {
-                              setDistance({
-                                ...distance,
-                                x2: 0,
-                              });
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
+                            if (
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
+                            ) {
+                              if (value === "-" || value >= -99) {
+                                setDistance({
+                                  ...distance,
+                                  y1: value,
+                                });
+                              }
                             } else {
-                              setDistance({
-                                ...distance,
-                                x2: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setDistance({
+                                  ...distance,
+                                  y1: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -1357,20 +1504,39 @@ function PELesson2() {
                       <div className="vertical">
                         <input
                           type="text"
-                          pattern="[0-99]*"
-                          value={distance.y2}
-                          maxLength={2}
+                          pattern="-?([0-9]|1[0-6])"
+                          value={distance.y2 || ""}
+                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
-                            if (e.target.value === 0) {
-                              setDistance({
-                                ...distance,
-                                y2: 0,
-                              });
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
+                            if (
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
+                            ) {
+                              if (value === "-" || value >= -99) {
+                                setDistance({
+                                  ...distance,
+                                  y2: value,
+                                });
+                              }
                             } else {
-                              setDistance({
-                                ...distance,
-                                y2: parseInt(e.target.value),
-                              });
+                              const intValue = parseInt(value);
+                              if (
+                                value === "" || // Allow empty value
+                                (!isNaN(intValue) &&
+                                  intValue >= -99 &&
+                                  intValue <= 99)
+                              ) {
+                                setDistance({
+                                  ...distance,
+                                  y2: intValue,
+                                });
+                              }
                             }
                           }}
                         />
@@ -1441,6 +1607,7 @@ function PELesson2() {
                             id="rectangle-8"
                             className="Output_Rectangles"
                           ></div>
+                          ■
                         </div>
                       </p>
                     </div>

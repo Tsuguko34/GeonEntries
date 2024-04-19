@@ -49,7 +49,11 @@ function NELesson2() {
   };
 
   const isNumeric = (value) => {
-    return !isNaN(value);
+    if (value > 99 || value < -99) {
+      return false;
+    } else {
+      return /^[\d-]+$/.test(value);
+    }
   };
 
   return (
@@ -1068,8 +1072,8 @@ function NELesson2() {
                       <input
                         type="text"
                         className="Long_Input"
-                        placeholder="e.g. 1, 2"
-                        value={sides.p}
+                        placeholder="e.g. 90"
+                        value={sides.p || ""}
                         onChange={(e) => {
                           const inputValue = e.target.value;
                           if (isNumeric(inputValue) || inputValue === "") {
@@ -1097,8 +1101,8 @@ function NELesson2() {
                       <input
                         type="text"
                         className="Long_Input"
-                        placeholder="e.g. 1, 2"
-                        value={sides.q}
+                        placeholder="e.g. 90"
+                        value={sides.q || ""}
                         onChange={(e) => {
                           const inputValue = e.target.value;
                           if (isNumeric(inputValue) || inputValue === "") {
@@ -1126,8 +1130,8 @@ function NELesson2() {
                       <input
                         type="text"
                         className="Long_Input"
-                        placeholder="e.g. 1, 2"
-                        value={sides.r}
+                        placeholder="e.g. 90"
+                        value={sides.r || ""}
                         onChange={(e) => {
                           const inputValue = e.target.value;
                           if (isNumeric(inputValue) || inputValue === "") {
@@ -1269,8 +1273,8 @@ function NELesson2() {
                       <input
                         type="text"
                         className="Long_Input"
-                        placeholder="e.g. 1, 2"
-                        value={angles.angleA}
+                        placeholder="e.g. 90"
+                        value={angles.angleA || ""}
                         onChange={(e) => {
                           const inputValue = e.target.value;
                           if (isNumeric(inputValue) || inputValue === "") {
@@ -1301,8 +1305,8 @@ function NELesson2() {
                       <input
                         type="text"
                         className="Long_Input"
-                        placeholder="e.g. 1, 2"
-                        value={angles.angleB}
+                        placeholder="e.g. 90"
+                        value={angles.angleB || ""}
                         onChange={(e) => {
                           const inputValue = e.target.value;
                           if (isNumeric(inputValue) || inputValue === "") {
@@ -1333,8 +1337,8 @@ function NELesson2() {
                       <input
                         type="text"
                         className="Long_Input"
-                        placeholder="e.g. 1, 2"
-                        value={angles.angleC}
+                        placeholder="e.g. 90"
+                        value={angles.angleC || ""}
                         onChange={(e) => {
                           const inputValue = e.target.value;
                           if (isNumeric(inputValue) || inputValue === "") {

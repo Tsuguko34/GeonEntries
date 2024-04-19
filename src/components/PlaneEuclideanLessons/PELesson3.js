@@ -5,9 +5,6 @@ import pl from "../../assets/images/Lessons Images/PELesson3/pl.png";
 import image_5_1 from "../../assets/images/Lessons Images/PELesson3/image-5-1.png";
 import image_6 from "../../assets/images/Lessons Images/PELesson3/image-6.png";
 
-//Videos
-import ExampleA1 from "../../assets/videos/PELesson1/Example A1.mp4";
-
 import {
   calculateDistance,
   calculateNorm,
@@ -22,7 +19,7 @@ function PELesson3() {
   });
 
   const isNumeric = (value) => {
-    return /^[0-9,]+$/.test(value);
+    return /^[\d,\s-]+$/.test(value);
   };
   const solvePointNormal = () => {
     if (isNumeric(pointNormal.point) && isNumeric(pointNormal.normal)) {
@@ -64,82 +61,84 @@ function PELesson3() {
             </p>
           </div>
 
-          <div className="Solution_Example">
-            <p className="label">1.) u = (-6, 4), v = (2, 3)</p>
-            <p className="label">
-              By Definition 3.1, a vector is orthogonal if u ⋅ v = 0
-            </p>
-            <div className="start">
-              <p className="left">Solving for u ⋅ v,</p>
-              <p className="center"></p>
-              <p className="right"></p>
-            </div>
-            <div className="solution">
-              <p className="left">u ⋅ v</p>
-              <p className="center">=</p>
-              <p className="right">(-6, 4) ⋅ (2, 3)</p>
+          <div className="Paragraph_Topic">
+            <div className="Solution_Example">
+              <p className="label">1.) u = (-6, 4), v = (2, 3)</p>
+              <p className="label">
+                By Definition 3.1, a vector is orthogonal if u ⋅ v = 0
+              </p>
+              <div className="start">
+                <p className="left">Solving for u ⋅ v,</p>
+                <p className="center"></p>
+                <p className="right"></p>
+              </div>
+              <div className="solution">
+                <p className="left">u ⋅ v</p>
+                <p className="center">=</p>
+                <p className="right">(-6, 4) ⋅ (2, 3)</p>
+              </div>
+
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">(-6)(2) + (4)(3)</p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">-12 + 12</p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">0</p>
+              </div>
+              <p className="label">
+                Since u ⋅ v = 0, then u = (-6, 4) and v = (2, 3) are orthogonal.
+              </p>
             </div>
 
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">(-6)(2) + (4)(3)</p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">-12 + 12</p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">0</p>
-            </div>
-            <p className="label">
-              Since u ⋅ v = 0, then u = (-6, 4) and v = (2, 3) are orthogonal.
-            </p>
-          </div>
+            <div className="Solution_Example">
+              <p className="label">2.) u = (2, 9, -1), v = (7, -1, 5)</p>
+              <p className="label">
+                By Definition 3.1, a vector is orthogonal if u ⋅ v = 0
+              </p>
+              <div className="start">
+                <p className="left">Solving for u ⋅ v,</p>
+                <p className="center"></p>
+                <p className="right"></p>
+              </div>
+              <div className="solution">
+                <p className="left">u ⋅ v</p>
+                <p className="center">=</p>
+                <p className="right">( 2, 9, -1 ) ⋅ ( 7, -1, 5 )</p>
+              </div>
 
-          <div className="Solution_Example">
-            <p className="label">2.) u = (2, 9, -1), v = (7, -1, 5)</p>
-            <p className="label">
-              By Definition 3.1, a vector is orthogonal if u ⋅ v = 0
-            </p>
-            <div className="start">
-              <p className="left">Solving for u ⋅ v,</p>
-              <p className="center"></p>
-              <p className="right"></p>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">(-6)(2) + (4)(3)</p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">(2)(7) + (9)(-1) + (-1)(5)</p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">14 + (-9) + (-5)</p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">0</p>
+              </div>
+              <p className="label">
+                Since u ⋅ v = 0, then u = (2, 9, -1) and v = (7, -1, 5) are
+                orthogonal.
+              </p>
             </div>
-            <div className="solution">
-              <p className="left">u ⋅ v</p>
-              <p className="center">=</p>
-              <p className="right">( 2, 9, -1 ) ⋅ ( 7, -1, 5 )</p>
-            </div>
-
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">(-6)(2) + (4)(3)</p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">(2)(7) + (9)(-1) + (-1)(5)</p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">14 + (-9) + (-5)</p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">0</p>
-            </div>
-            <p className="label">
-              Since u ⋅ v = 0, then u = (2, 9, -1) and v = (7, -1, 5) are
-              orthogonal.
-            </p>
           </div>
 
           <div className="Example_Label">
@@ -153,184 +152,186 @@ function PELesson3() {
             </p>
           </div>
 
-          <div className="Solution_Example">
-            <p className="label">1.) u = (9, -1)</p>
-            <p className="label">Let v = (x, y) be orthogonal to u .</p>
-            <p className="label">
-              By Definition 3.1, a vector is orthogonal if u ⋅ v = 0
-            </p>
-          </div>
+          <div className="Paragraph_Topic">
+            <div className="Solution_Example">
+              <p className="label">1.) u = (9, -1)</p>
+              <p className="label">Let v = (x, y) be orthogonal to u .</p>
+              <p className="label">
+                By Definition 3.1, a vector is orthogonal if u ⋅ v = 0
+              </p>
+            </div>
 
-          <div className="Side_By_Side">
-            <div className="Left_Side withBorder">
-              <div className="Solution_Example largerLeft2">
-                <p className="label">Then,</p>
-                <div className="solution">
-                  <p className="left">u ⋅ v </p>
-                  <p className="center">=</p>
-                  <p className="right">0</p>
-                </div>
+            <div className="Side_By_Side">
+              <div className="Left_Side withBorder">
+                <div className="Solution_Example largerLeft2">
+                  <p className="label">Then,</p>
+                  <div className="solution">
+                    <p className="left">u ⋅ v </p>
+                    <p className="center">=</p>
+                    <p className="right">0</p>
+                  </div>
 
-                <div className="solution">
-                  <p className="left">(9, -1) ⋅ (x, y)</p>
-                  <p className="center">=</p>
-                  <p className="right">0</p>
-                </div>
-                <div className="solution">
-                  <p className="left">9x - y</p>
-                  <p className="center">=</p>
-                  <p className="right">0</p>
-                </div>
-                <div className="solution">
-                  <p className="left">9x</p>
-                  <p className="center">=</p>
-                  <p className="right">y</p>
-                </div>
-                <div className="solution">
-                  <p className="left">y</p>
-                  <p className="center">=</p>
-                  <p className="right">9x</p>
-                </div>
-                <p className="label">Let y = m ∈ ℝ , then,</p>
-                <div className="solution">
-                  <p className="left">m</p>
-                  <p className="center">=</p>
-                  <p className="right">9x</p>
+                  <div className="solution">
+                    <p className="left">(9, -1) ⋅ (x, y)</p>
+                    <p className="center">=</p>
+                    <p className="right">0</p>
+                  </div>
+                  <div className="solution">
+                    <p className="left">9x - y</p>
+                    <p className="center">=</p>
+                    <p className="right">0</p>
+                  </div>
+                  <div className="solution">
+                    <p className="left">9x</p>
+                    <p className="center">=</p>
+                    <p className="right">y</p>
+                  </div>
+                  <div className="solution">
+                    <p className="left">y</p>
+                    <p className="center">=</p>
+                    <p className="right">9x</p>
+                  </div>
+                  <p className="label">Let y = m ∈ ℝ , then,</p>
+                  <div className="solution">
+                    <p className="left">m</p>
+                    <p className="center">=</p>
+                    <p className="right">9x</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="Right_Side">
-              <div className="Solution_Example largerLeft2">
-                <p className="label">Solving for x,</p>
-                <div className="start">
-                  <p className="left">x</p>
-                  <p className="center">=</p>
-                  <p className="right">
+              <div className="Right_Side">
+                <div className="Solution_Example largerLeft2">
+                  <p className="label">Solving for x,</p>
+                  <div className="start">
+                    <p className="left">x</p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <div className="fraction">
+                        <span className="upper">m</span>
+                        <span className="divider"></span>
+                        <span className="bottom">9</span>
+                      </div>
+                    </p>
+                  </div>
+                  <p className="label">
+                    Thus, every vector that is orthogonal to u = (9, -1) is
+                  </p>
+
+                  <p className="label">
+                    v = (
                     <div className="fraction">
                       <span className="upper">m</span>
                       <span className="divider"></span>
                       <span className="bottom">9</span>
                     </div>
-                  </p>
-                </div>
-                <p className="label">
-                  Thus, every vector that is orthogonal to u = (9, -1) is
-                </p>
-
-                <p className="label">
-                  v = (
-                  <div className="fraction">
-                    <span className="upper">m</span>
-                    <span className="divider"></span>
-                    <span className="bottom">9</span>
-                  </div>
-                  , m) or v = m (
-                  <div className="fraction">
-                    <span className="upper">1</span>
-                    <span className="divider"></span>
-                    <span className="bottom">9</span>
-                  </div>
-                  , 1), ∀ m ∈ ℝ.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="Solution_Example">
-            <p className="label">2.) u = (5, 11)</p>
-            <p className="label">Let v = (x, y) be orthogonal to u .</p>
-            <p className="label">
-              By Definition 3.1, a vector is orthogonal if u ⋅ v = 0
-            </p>
-          </div>
-          <div className="Side_By_Side">
-            <div className="Left_Side withBorder">
-              <div className="Solution_Example largerLeft2">
-                <p className="label">Then,</p>
-                <div className="solution">
-                  <p className="left">u ⋅ v </p>
-                  <p className="center">=</p>
-                  <p className="right">0</p>
-                </div>
-
-                <div className="solution">
-                  <p className="left">(5, 11) ⋅ (x, y)</p>
-                  <p className="center">=</p>
-                  <p className="right">0</p>
-                </div>
-                <div className="solution">
-                  <p className="left">5x + 11y</p>
-                  <p className="center">=</p>
-                  <p className="right">0</p>
-                </div>
-                <div className="solution">
-                  <p className="left">5x</p>
-                  <p className="center">=</p>
-                  <p className="right">-11y</p>
-                </div>
-                <div className="solution">
-                  <p className="left">x</p>
-                  <p className="center">=</p>
-                  <p className="right">
+                    , m) or v = m (
                     <div className="fraction">
-                      <span className="upper">-11y</span>
+                      <span className="upper">1</span>
                       <span className="divider"></span>
-                      <span className="bottom">5</span>
+                      <span className="bottom">9</span>
                     </div>
-                  </p>
-                </div>
-                <p className="label">Let y = m ∈ ℝ , then,</p>
-                <div className="solution">
-                  <p className="left">m</p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    <div className="fraction">
-                      <span className="upper">-11y</span>
-                      <span className="divider"></span>
-                      <span className="bottom">5</span>
-                    </div>
+                    , 1), ∀ m ∈ ℝ.
                   </p>
                 </div>
               </div>
             </div>
-            <div className="Right_Side">
-              <div className="Solution_Example largerLeft2">
-                <p className="label">Solving for y,</p>
-                <div className="start">
-                  <p className="left">5m</p>
-                  <p className="center">=</p>
-                  <p className="right">-11y</p>
+
+            <div className="Solution_Example">
+              <p className="label">2.) u = (5, 11)</p>
+              <p className="label">Let v = (x, y) be orthogonal to u .</p>
+              <p className="label">
+                By Definition 3.1, a vector is orthogonal if u ⋅ v = 0
+              </p>
+            </div>
+            <div className="Side_By_Side">
+              <div className="Left_Side withBorder">
+                <div className="Solution_Example largerLeft2">
+                  <p className="label">Then,</p>
+                  <div className="solution">
+                    <p className="left">u ⋅ v </p>
+                    <p className="center">=</p>
+                    <p className="right">0</p>
+                  </div>
+
+                  <div className="solution">
+                    <p className="left">(5, 11) ⋅ (x, y)</p>
+                    <p className="center">=</p>
+                    <p className="right">0</p>
+                  </div>
+                  <div className="solution">
+                    <p className="left">5x + 11y</p>
+                    <p className="center">=</p>
+                    <p className="right">0</p>
+                  </div>
+                  <div className="solution">
+                    <p className="left">5x</p>
+                    <p className="center">=</p>
+                    <p className="right">-11y</p>
+                  </div>
+                  <div className="solution">
+                    <p className="left">x</p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <div className="fraction">
+                        <span className="upper">-11y</span>
+                        <span className="divider"></span>
+                        <span className="bottom">5</span>
+                      </div>
+                    </p>
+                  </div>
+                  <p className="label">Let y = m ∈ ℝ , then,</p>
+                  <div className="solution">
+                    <p className="left">m</p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <div className="fraction">
+                        <span className="upper">-11y</span>
+                        <span className="divider"></span>
+                        <span className="bottom">5</span>
+                      </div>
+                    </p>
+                  </div>
                 </div>
-                <div className="start">
-                  <p className="left">y</p>
-                  <p className="center">=</p>
-                  <p className="right">
+              </div>
+              <div className="Right_Side">
+                <div className="Solution_Example largerLeft2">
+                  <p className="label">Solving for y,</p>
+                  <div className="start">
+                    <p className="left">5m</p>
+                    <p className="center">=</p>
+                    <p className="right">-11y</p>
+                  </div>
+                  <div className="start">
+                    <p className="left">y</p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <div className="fraction">
+                        <span className="upper">5m-</span>
+                        <span className="divider"></span>
+                        <span className="bottom">11</span>
+                      </div>
+                    </p>
+                  </div>
+                  <p className="label">
+                    Thus, every vector that is orthogonal to u = (5, 11) is
+                  </p>
+
+                  <p className="label">
+                    v = ( m ,
                     <div className="fraction">
-                      <span className="upper">5m-</span>
+                      <span className="upper">-5m</span>
                       <span className="divider"></span>
                       <span className="bottom">11</span>
                     </div>
+                    ) or v = m ( 1 ,
+                    <div className="fraction">
+                      <span className="upper">-5</span>
+                      <span className="divider"></span>
+                      <span className="bottom">11</span>
+                    </div>
+                    ), ∀ m ∈ ℝ.
                   </p>
                 </div>
-                <p className="label">
-                  Thus, every vector that is orthogonal to u = (5, 11) is
-                </p>
-
-                <p className="label">
-                  v = ( m ,
-                  <div className="fraction">
-                    <span className="upper">-5m</span>
-                    <span className="divider"></span>
-                    <span className="bottom">11</span>
-                  </div>
-                  ) or v = m ( 1 ,
-                  <div className="fraction">
-                    <span className="upper">-5</span>
-                    <span className="divider"></span>
-                    <span className="bottom">11</span>
-                  </div>
-                  ), ∀ m ∈ ℝ.
-                </p>
               </div>
             </div>
           </div>
@@ -436,205 +437,207 @@ function PELesson3() {
             </p>
           </div>
 
-          <div className="Solution_Example">
-            <p className="label">1.) P₀ (-4, 7) and n = (3, 11)</p>
-          </div>
+          <div className="Paragraph_Topic">
+            <div className="Solution_Example">
+              <p className="label">1.) P₀ (-4, 7) and n = (3, 11)</p>
+            </div>
 
-          <div className="Side_By_Side">
-            <div className="Left_Side withBorder">
-              <div className="Group">
-                <div className="Solution_Example">
-                  <div className="start">
-                    <p className="left">
-                      <span className="Bold">a.</span>
-                    </p>
-                    <p className="center"></p>
-                    <p className="right">
-                      By Definition 3.2, the point-normal equation of the line
-                      is
-                    </p>
+            <div className="Side_By_Side">
+              <div className="Left_Side withBorder">
+                <div className="Group">
+                  <div className="Solution_Example">
+                    <div className="start">
+                      <p className="left">
+                        <span className="Bold">a.</span>
+                      </p>
+                      <p className="center"></p>
+                      <p className="right">
+                        By Definition 3.2, the point-normal equation of the line
+                        is
+                      </p>
+                    </div>
+                    <div className="solution">
+                      <p className="left"></p>
+                      <p className="center"></p>
+                      <p className="right">
+                        <span className="Blue">a</span> (x -{" "}
+                        <span className="Orange">x₀</span> ) +{" "}
+                        <span className="Blue">b</span> (y -{" "}
+                        <span className="Orange">y₀</span> ) = 0
+                      </p>
+                    </div>
                   </div>
-                  <div className="solution">
-                    <p className="left"></p>
-                    <p className="center"></p>
-                    <p className="right">
-                      <span className="Blue">a</span> (x -{" "}
-                      <span className="Orange">x₀</span> ) +{" "}
-                      <span className="Blue">b</span> (y -{" "}
-                      <span className="Orange">y₀</span> ) = 0
-                    </p>
+                  <div className="Solution_Example">
+                    <div className="start">
+                      <p className="left"></p>
+                      <p className="center"></p>
+                      <p className="right">
+                        Substituting the value of P₀ and n to the equation,
+                      </p>
+                    </div>
+                    <div className="solution">
+                      <p className="left"></p>
+                      <p className="center"></p>
+                      <p className="right">
+                        <span className="Blue">3</span> (x -{" "}
+                        <span className="Orange">(-4)</span> ) +{" "}
+                        <span className="Blue">11</span> (y -{" "}
+                        <span className="Orange">7</span> ) = 0
+                      </p>
+                    </div>
+                  </div>
+                  <div className="Solution_Example">
+                    <div className="start">
+                      <p className="left"></p>
+                      <p className="center"></p>
+                      <p className="right">
+                        <span className="Italic Bold">
+                          Point-Normal Equation:
+                        </span>
+                      </p>
+                    </div>
+                    <div className="solution">
+                      <p className="left"></p>
+                      <p className="center"></p>
+                      <p className="right">
+                        <span className="LimeGreen">
+                          3(x + 4) + 11(y - 7) = 0
+                        </span>
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="Solution_Example">
-                  <div className="start">
-                    <p className="left"></p>
-                    <p className="center"></p>
-                    <p className="right">
-                      Substituting the value of P₀ and n to the equation,
-                    </p>
+              </div>
+              <div className="Right_Side">
+                <div className="Group">
+                  <div className="Solution_Example">
+                    <div className="start">
+                      <p className="left">
+                        <span className="Bold">b .</span>
+                      </p>
+                      <p className="center"></p>
+                      <p className="right">Evaluating the equation,</p>
+                    </div>
+                    <div className="solution">
+                      <p className="left"></p>
+                      <p className="center"></p>
+                      <p className="right">3x + 12 + 11y - 77 = 0</p>
+                    </div>
                   </div>
-                  <div className="solution">
-                    <p className="left"></p>
-                    <p className="center"></p>
-                    <p className="right">
-                      <span className="Blue">3</span> (x -{" "}
-                      <span className="Orange">(-4)</span> ) +{" "}
-                      <span className="Blue">11</span> (y -{" "}
-                      <span className="Orange">7</span> ) = 0
-                    </p>
-                  </div>
-                </div>
-                <div className="Solution_Example">
-                  <div className="start">
-                    <p className="left"></p>
-                    <p className="center"></p>
-                    <p className="right">
-                      <span className="Italic Bold">
-                        Point-Normal Equation:
-                      </span>
-                    </p>
-                  </div>
-                  <div className="solution">
-                    <p className="left"></p>
-                    <p className="center"></p>
-                    <p className="right">
-                      <span className="LimeGreen">
-                        3(x + 4) + 11(y - 7) = 0
-                      </span>
-                    </p>
+                  <div className="Solution_Example">
+                    <div className="start">
+                      <p className="left"></p>
+                      <p className="center"></p>
+                      <p className="right">
+                        <span className="Italic Bold">General Equation:</span>
+                      </p>
+                    </div>
+                    <div className="solution">
+                      <p className="left"></p>
+                      <p className="center"></p>
+                      <p className="right">
+                        <span className="LimeGreen">3x + 11y - 65 = 0</span>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="Right_Side">
-              <div className="Group">
-                <div className="Solution_Example">
-                  <div className="start">
-                    <p className="left">
-                      <span className="Bold">b .</span>
-                    </p>
-                    <p className="center"></p>
-                    <p className="right">Evaluating the equation,</p>
+
+            <div className="Solution_Example">
+              <p className="label">2.) P₀ (0, -8) and n = (-12, 5)</p>
+            </div>
+
+            <div className="Side_By_Side">
+              <div className="Left_Side withBorder">
+                <div className="Group">
+                  <div className="Solution_Example">
+                    <div className="start">
+                      <p className="left">
+                        <span className="Bold">a.</span>
+                      </p>
+                      <p className="center"></p>
+                      <p className="right">
+                        By Definition 3.2, the point-normal equation of the line
+                        is
+                      </p>
+                    </div>
+                    <div className="solution">
+                      <p className="left"></p>
+                      <p className="center"></p>
+                      <p className="right">
+                        <span className="Blue">a</span> (x -{" "}
+                        <span className="Orange">x₀</span> ) +{" "}
+                        <span className="Blue">b</span> (y -{" "}
+                        <span className="Orange">y₀</span> ) = 0
+                      </p>
+                    </div>
                   </div>
-                  <div className="solution">
-                    <p className="left"></p>
-                    <p className="center"></p>
-                    <p className="right">3x + 12 + 11y - 77 = 0</p>
+                  <div className="Solution_Example">
+                    <div className="start">
+                      <p className="left"></p>
+                      <p className="center"></p>
+                      <p className="right">
+                        Substituting the value of P₀ and n to the equation,
+                      </p>
+                    </div>
+                    <div className="solution">
+                      <p className="left"></p>
+                      <p className="center"></p>
+                      <p className="right">
+                        <span className="Blue">-12</span> (x -{" "}
+                        <span className="Orange">0</span> ) +{" "}
+                        <span className="Blue">b</span> (y -{" "}
+                        <span className="Orange">(-8)</span> ) = 0
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div className="Solution_Example">
-                  <div className="start">
-                    <p className="left"></p>
-                    <p className="center"></p>
-                    <p className="right">
-                      <span className="Italic Bold">General Equation:</span>
-                    </p>
-                  </div>
-                  <div className="solution">
-                    <p className="left"></p>
-                    <p className="center"></p>
-                    <p className="right">
-                      <span className="LimeGreen">3x + 11y - 65 = 0</span>
-                    </p>
+                  <div className="Solution_Example">
+                    <div className="start">
+                      <p className="left"></p>
+                      <p className="center"></p>
+                      <p className="right">
+                        <span className="Italic Bold">
+                          Point-Normal Equation:
+                        </span>
+                      </p>
+                    </div>
+                    <div className="solution">
+                      <p className="left"></p>
+                      <p className="center"></p>
+                      <p className="right">
+                        <span className="LimeGreen">-12x + 5(y + 8) = 0</span>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div className="Solution_Example">
-            <p className="label">2.) P₀ (0, -8) and n = (-12, 5)</p>
-          </div>
-
-          <div className="Side_By_Side">
-            <div className="Left_Side withBorder">
-              <div className="Group">
-                <div className="Solution_Example">
-                  <div className="start">
-                    <p className="left">
-                      <span className="Bold">a.</span>
-                    </p>
-                    <p className="center"></p>
-                    <p className="right">
-                      By Definition 3.2, the point-normal equation of the line
-                      is
-                    </p>
+              <div className="Right_Side">
+                <div className="Group">
+                  <div className="Solution_Example">
+                    <div className="start">
+                      <p className="left">
+                        <span className="Bold">b .</span>
+                      </p>
+                      <p className="center"></p>
+                      <p className="right">Evaluating the equation,</p>
+                    </div>
                   </div>
-                  <div className="solution">
-                    <p className="left"></p>
-                    <p className="center"></p>
-                    <p className="right">
-                      <span className="Blue">a</span> (x -{" "}
-                      <span className="Orange">x₀</span> ) +{" "}
-                      <span className="Blue">b</span> (y -{" "}
-                      <span className="Orange">y₀</span> ) = 0
-                    </p>
-                  </div>
-                </div>
-                <div className="Solution_Example">
-                  <div className="start">
-                    <p className="left"></p>
-                    <p className="center"></p>
-                    <p className="right">
-                      Substituting the value of P₀ and n to the equation,
-                    </p>
-                  </div>
-                  <div className="solution">
-                    <p className="left"></p>
-                    <p className="center"></p>
-                    <p className="right">
-                      <span className="Blue">-12</span> (x -{" "}
-                      <span className="Orange">0</span> ) +{" "}
-                      <span className="Blue">b</span> (y -{" "}
-                      <span className="Orange">(-8)</span> ) = 0
-                    </p>
-                  </div>
-                </div>
-                <div className="Solution_Example">
-                  <div className="start">
-                    <p className="left"></p>
-                    <p className="center"></p>
-                    <p className="right">
-                      <span className="Italic Bold">
-                        Point-Normal Equation:
-                      </span>
-                    </p>
-                  </div>
-                  <div className="solution">
-                    <p className="left"></p>
-                    <p className="center"></p>
-                    <p className="right">
-                      <span className="LimeGreen">-12x + 5(y + 8) = 0</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="Right_Side">
-              <div className="Group">
-                <div className="Solution_Example">
-                  <div className="start">
-                    <p className="left">
-                      <span className="Bold">b .</span>
-                    </p>
-                    <p className="center"></p>
-                    <p className="right">Evaluating the equation,</p>
-                  </div>
-                </div>
-                <div className="Solution_Example">
-                  <div className="start">
-                    <p className="left"></p>
-                    <p className="center"></p>
-                    <p className="right">
-                      <span className="Italic Bold">General Equation:</span>
-                    </p>
-                  </div>
-                  <div className="solution">
-                    <p className="left"></p>
-                    <p className="center"></p>
-                    <p className="right">
-                      <span className="LimeGreen">-12x + 5y + 40 = 0 </span>
-                    </p>
+                  <div className="Solution_Example">
+                    <div className="start">
+                      <p className="left"></p>
+                      <p className="center"></p>
+                      <p className="right">
+                        <span className="Italic Bold">General Equation:</span>
+                      </p>
+                    </div>
+                    <div className="solution">
+                      <p className="left"></p>
+                      <p className="center"></p>
+                      <p className="right">
+                        <span className="LimeGreen">-12x + 5y + 40 = 0 </span>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -719,35 +722,94 @@ function PELesson3() {
             </p>
           </div>
 
-          <div className="Solution_Example">
-            <p className="label">1.) P₀ (9, -14, 0) and n = (-5, -1, 2)</p>
-          </div>
+          <div className="Paragraph_Topic">
+            <div className="Solution_Example">
+              <p className="label">1.) P₀ (9, -14, 0) and n = (-5, -1, 2)</p>
+            </div>
 
-          <div className="Side_By_Side">
-            <div className="Left_Side withBorder">
-              <div className="Group">
+            <div className="Side_By_Side">
+              <div className="Left_Side withBorder">
+                <div className="Group">
+                  <div className="Solution_Example">
+                    <div className="start">
+                      <p className="left">
+                        <span className="Bold">a.</span>
+                      </p>
+                      <p className="center"></p>
+                      <p className="right">
+                        By Definition 3.3, the point-normal equation of the line
+                        is
+                      </p>
+                    </div>
+                    <div className="solution">
+                      <p className="left"></p>
+                      <p className="center"></p>
+                      <p className="right noFraction">
+                        <span className="Blue">a</span> (x -{" "}
+                        <span className="Orange">x₀</span> ) +{" "}
+                        <span className="Blue">b</span> (y -{" "}
+                        <span className="Orange">y₀</span> ) +{" "}
+                        <span className="Blue">c</span>(z -{" "}
+                        <span className="Orange">z₀</span>) = 0
+                      </p>
+                    </div>
+                  </div>
+                  <div className="Solution_Example">
+                    <div className="start">
+                      <p className="left"></p>
+                      <p className="center"></p>
+                      <p className="right">
+                        Substituting the value of P₀ and n to the equation,
+                      </p>
+                    </div>
+                    <div className="solution">
+                      <p className="left"></p>
+                      <p className="center"></p>
+                      <p className="right noFraction">
+                        <span className="Blue">(-5)</span> (x -{" "}
+                        <span className="Orange">9</span> ) +{" "}
+                        <span className="Blue">(-1)</span> (y -{" "}
+                        <span className="Orange">(-14)</span> ) +{" "}
+                        <span className="Blue">2</span>(z -{" "}
+                        <span className="Orange">0</span>) = 0
+                      </p>
+                    </div>
+                  </div>
+                  <div className="Solution_Example">
+                    <div className="start">
+                      <p className="left"></p>
+                      <p className="center"></p>
+                      <p className="right">
+                        <span className="Italic Bold">
+                          Point-Normal Equation:
+                        </span>
+                      </p>
+                    </div>
+                    <div className="solution">
+                      <p className="left"></p>
+                      <p className="center"></p>
+                      <p className="right">
+                        <span className="LimeGreen">
+                          -5(x - 9) - (y + 14) + 2z
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="Right_Side">
                 <div className="Solution_Example">
                   <div className="start">
                     <p className="left">
-                      <span className="Bold">a.</span>
+                      <span className="Bold">b .</span>
                     </p>
                     <p className="center"></p>
-                    <p className="right">
-                      By Definition 3.3, the point-normal equation of the line
-                      is
-                    </p>
+                    <p className="right">Evaluating the equation,</p>
                   </div>
                   <div className="solution">
                     <p className="left"></p>
                     <p className="center"></p>
-                    <p className="right noFraction">
-                      <span className="Blue">a</span> (x -{" "}
-                      <span className="Orange">x₀</span> ) +{" "}
-                      <span className="Blue">b</span> (y -{" "}
-                      <span className="Orange">y₀</span> ) +{" "}
-                      <span className="Blue">c</span>(z -{" "}
-                      <span className="Orange">z₀</span>) = 0
-                    </p>
+                    <p className="right">-5x + 45 - y - 14 + 2z = 0</p>
                   </div>
                 </div>
                 <div className="Solution_Example">
@@ -755,78 +817,22 @@ function PELesson3() {
                     <p className="left"></p>
                     <p className="center"></p>
                     <p className="right">
-                      Substituting the value of P₀ and n to the equation,
-                    </p>
-                  </div>
-                  <div className="solution">
-                    <p className="left"></p>
-                    <p className="center"></p>
-                    <p className="right noFraction">
-                      <span className="Blue">(-5)</span> (x -{" "}
-                      <span className="Orange">9</span> ) +{" "}
-                      <span className="Blue">(-1)</span> (y -{" "}
-                      <span className="Orange">(-14)</span> ) +{" "}
-                      <span className="Blue">2</span>(z -{" "}
-                      <span className="Orange">0</span>) = 0
-                    </p>
-                  </div>
-                </div>
-                <div className="Solution_Example">
-                  <div className="start">
-                    <p className="left"></p>
-                    <p className="center"></p>
-                    <p className="right">
-                      <span className="Italic Bold">
-                        Point-Normal Equation:
-                      </span>
+                      <span className="Italic Bold">General Equation:</span>
                     </p>
                   </div>
                   <div className="solution">
                     <p className="left"></p>
                     <p className="center"></p>
                     <p className="right">
-                      <span className="LimeGreen">
-                        -5(x - 9) - (y + 14) + 2z
-                      </span>
+                      <span className="LimeGreen">-5x - y + 2z + 31 = 0</span>
                     </p>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div className="Right_Side">
-              <div className="Solution_Example">
-                <div className="start">
-                  <p className="left">
-                    <span className="Bold">b .</span>
-                  </p>
-                  <p className="center"></p>
-                  <p className="right">Evaluating the equation,</p>
-                </div>
-                <div className="solution">
-                  <p className="left"></p>
-                  <p className="center"></p>
-                  <p className="right">-5x + 45 - y - 14 + 2z = 0</p>
-                </div>
-              </div>
-              <div className="Solution_Example">
-                <div className="start">
-                  <p className="left"></p>
-                  <p className="center"></p>
-                  <p className="right">
-                    <span className="Italic Bold">General Equation:</span>
-                  </p>
-                </div>
-                <div className="solution">
-                  <p className="left"></p>
-                  <p className="center"></p>
-                  <p className="right">
-                    <span className="LimeGreen">-5x - y + 2z + 31 = 0</span>
-                  </p>
                 </div>
               </div>
             </div>
           </div>
-          <div className="Paragraph_Topic paddingLeft">
+
+          <div className="Paragraph_Topic paddingLeft block">
             <p>
               <span className="Bold">c.</span> To find the intercepts of the
               plane, set the value of the other variables as 0 and substitute it
@@ -977,118 +983,120 @@ function PELesson3() {
             </div>
           </div>
 
-          <div className="Solution_Example">
-            <p className="label">2.) P₀ (-8, 3, -4) and n = (7, 2, -6)</p>
-          </div>
+          <div className="Paragraph_Topic">
+            <div className="Solution_Example">
+              <p className="label">2.) P₀ (-8, 3, -4) and n = (7, 2, -6)</p>
+            </div>
 
-          <div className="Side_By_Side">
-            <div className="Left_Side withBorder">
-              <div className="Group">
-                <div className="Solution_Example">
-                  <div className="start">
-                    <p className="left">
-                      <span className="Bold">a.</span>
-                    </p>
-                    <p className="center"></p>
-                    <p className="right">
-                      By Definition 3.3, the point-normal equation of the line
-                      is
-                    </p>
+            <div className="Side_By_Side">
+              <div className="Left_Side withBorder">
+                <div className="Group">
+                  <div className="Solution_Example">
+                    <div className="start">
+                      <p className="left">
+                        <span className="Bold">a.</span>
+                      </p>
+                      <p className="center"></p>
+                      <p className="right">
+                        By Definition 3.3, the point-normal equation of the line
+                        is
+                      </p>
+                    </div>
+                    <div className="solution">
+                      <p className="left"></p>
+                      <p className="center"></p>
+                      <p className="right noFraction">
+                        <span className="Blue">a</span> (x -{" "}
+                        <span className="Orange">x₀</span> ) +{" "}
+                        <span className="Blue">b</span> (y -{" "}
+                        <span className="Orange">y₀</span> ) +{" "}
+                        <span className="Blue">c</span>(z -{" "}
+                        <span className="Orange">z₀</span>) = 0
+                      </p>
+                    </div>
                   </div>
-                  <div className="solution">
-                    <p className="left"></p>
-                    <p className="center"></p>
-                    <p className="right noFraction">
-                      <span className="Blue">a</span> (x -{" "}
-                      <span className="Orange">x₀</span> ) +{" "}
-                      <span className="Blue">b</span> (y -{" "}
-                      <span className="Orange">y₀</span> ) +{" "}
-                      <span className="Blue">c</span>(z -{" "}
-                      <span className="Orange">z₀</span>) = 0
-                    </p>
+                  <div className="Solution_Example">
+                    <div className="start">
+                      <p className="left"></p>
+                      <p className="center"></p>
+                      <p className="right">
+                        Substituting the value of P₀ and n to the equation,
+                      </p>
+                    </div>
+                    <div className="solution">
+                      <p className="left"></p>
+                      <p className="center"></p>
+                      <p className="right noFraction">
+                        <span className="Blue">7</span> (x -{" "}
+                        <span className="Orange">(-8)</span> ) +{" "}
+                        <span className="Blue">2</span> (y -{" "}
+                        <span className="Orange">3</span> ) +{" "}
+                        <span className="Blue">(-6)</span>(z -{" "}
+                        <span className="Orange">(-4)</span>) = 0
+                      </p>
+                    </div>
+                  </div>
+                  <div className="Solution_Example">
+                    <div className="start">
+                      <p className="left"></p>
+                      <p className="center"></p>
+                      <p className="right">
+                        <span className="Italic Bold">
+                          Point-Normal Equation:
+                        </span>
+                      </p>
+                    </div>
+                    <div className="solution">
+                      <p className="left"></p>
+                      <p className="center"></p>
+                      <p className="right">
+                        <span className="LimeGreen">
+                          7(x + 8) + 2(y - 3) - 6(z + 4) = 0
+                        </span>
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="Solution_Example">
-                  <div className="start">
-                    <p className="left"></p>
-                    <p className="center"></p>
-                    <p className="right">
-                      Substituting the value of P₀ and n to the equation,
-                    </p>
+              </div>
+              <div className="Right_Side">
+                <div className="Group">
+                  <div className="Solution_Example">
+                    <div className="start">
+                      <p className="left">
+                        <span className="Bold">b .</span>
+                      </p>
+                      <p className="center"></p>
+                      <p className="right">Evaluating the equation,</p>
+                    </div>
+                    <div className="start">
+                      <p className="left"></p>
+                      <p className="center"></p>
+                      <p className="right">7x + 56 + 2y - 6 - 6z - 24 = 0</p>
+                    </div>
                   </div>
-                  <div className="solution">
-                    <p className="left"></p>
-                    <p className="center"></p>
-                    <p className="right noFraction">
-                      <span className="Blue">7</span> (x -{" "}
-                      <span className="Orange">(-8)</span> ) +{" "}
-                      <span className="Blue">2</span> (y -{" "}
-                      <span className="Orange">3</span> ) +{" "}
-                      <span className="Blue">(-6)</span>(z -{" "}
-                      <span className="Orange">(-4)</span>) = 0
-                    </p>
-                  </div>
-                </div>
-                <div className="Solution_Example">
-                  <div className="start">
-                    <p className="left"></p>
-                    <p className="center"></p>
-                    <p className="right">
-                      <span className="Italic Bold">
-                        Point-Normal Equation:
-                      </span>
-                    </p>
-                  </div>
-                  <div className="solution">
-                    <p className="left"></p>
-                    <p className="center"></p>
-                    <p className="right">
-                      <span className="LimeGreen">
-                        7(x + 8) + 2(y - 3) - 6(z + 4) = 0
-                      </span>
-                    </p>
+                  <div className="Solution_Example">
+                    <div className="start">
+                      <p className="left"></p>
+                      <p className="center"></p>
+                      <p className="right">
+                        <span className="Italic Bold">General Equation:</span>
+                      </p>
+                    </div>
+
+                    <div className="solution">
+                      <p className="left"></p>
+                      <p className="center"></p>
+                      <p className="right">
+                        <span className="LimeGreen">7x + 2y - 6z + 26 = 0</span>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="Right_Side">
-              <div className="Group">
-                <div className="Solution_Example">
-                  <div className="start">
-                    <p className="left">
-                      <span className="Bold">b .</span>
-                    </p>
-                    <p className="center"></p>
-                    <p className="right">Evaluating the equation,</p>
-                  </div>
-                  <div className="start">
-                    <p className="left"></p>
-                    <p className="center"></p>
-                    <p className="right">7x + 56 + 2y - 6 - 6z - 24 = 0</p>
-                  </div>
-                </div>
-                <div className="Solution_Example">
-                  <div className="start">
-                    <p className="left"></p>
-                    <p className="center"></p>
-                    <p className="right">
-                      <span className="Italic Bold">General Equation:</span>
-                    </p>
-                  </div>
-
-                  <div className="solution">
-                    <p className="left"></p>
-                    <p className="center"></p>
-                    <p className="right">
-                      <span className="LimeGreen">7x + 2y - 6z + 26 = 0</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
 
-          <div className="Paragraph_Topic paddingLeft">
+          <div className="Paragraph_Topic block paddingLeft">
             <p>
               <span className="Bold">c.</span> To find the intercepts of the
               plane, set the value of the other variables as 0 and substitute it
