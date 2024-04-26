@@ -278,9 +278,9 @@ function PELesson2() {
                         <p>x</p>
                         <input
                           type="text"
-                          pattern="-?([0-9]|1[0-6])"
+                          pattern="-?\d*\.?\d{0,2}" // Updated pattern to allow negative numbers with up to two decimal places
                           value={norm.x || ""}
-                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
+                          maxLength={6} // Increased maxLength to accommodate the optional '-' sign and decimal part
                           onChange={(e) => {
                             const value = e.target.value;
 
@@ -299,16 +299,12 @@ function PELesson2() {
                                 });
                               }
                             } else {
-                              const intValue = parseInt(value);
-                              if (
-                                value === "" || // Allow empty value
-                                (!isNaN(intValue) &&
-                                  intValue >= -99 &&
-                                  intValue <= 99)
-                              ) {
+                              // Allow empty value or valid decimal value with up to two decimal places
+                              const decimalPattern = /^-?\d*\.?\d{0,2}$/;
+                              if (value === "" || decimalPattern.test(value)) {
                                 setNorm({
                                   ...norm,
-                                  x: intValue,
+                                  x: value,
                                 });
                               }
                             }
@@ -320,9 +316,9 @@ function PELesson2() {
                         <p>y</p>
                         <input
                           type="text"
-                          pattern="-?([0-9]|1[0-6])"
+                          pattern="-?\d*\.?\d{0,2}" // Updated pattern to allow negative numbers with up to two decimal places
                           value={norm.y || ""}
-                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
+                          maxLength={6} // Increased maxLength to accommodate the optional '-' sign and decimal part
                           onChange={(e) => {
                             const value = e.target.value;
 
@@ -341,16 +337,12 @@ function PELesson2() {
                                 });
                               }
                             } else {
-                              const intValue = parseInt(value);
-                              if (
-                                value === "" || // Allow empty value
-                                (!isNaN(intValue) &&
-                                  intValue >= -99 &&
-                                  intValue <= 99)
-                              ) {
+                              // Allow empty value or valid decimal value with up to two decimal places
+                              const decimalPattern = /^-?\d*\.?\d{0,2}$/;
+                              if (value === "" || decimalPattern.test(value)) {
                                 setNorm({
                                   ...norm,
-                                  y: intValue,
+                                  y: value,
                                 });
                               }
                             }
@@ -439,9 +431,9 @@ function PELesson2() {
                         <p>x</p>
                         <input
                           type="text"
-                          pattern="-?([0-9]|1[0-6])"
+                          pattern="-?\d*\.?\d{0,2}" // Updated pattern to allow negative numbers with up to two decimal places
                           value={norm2.x || ""}
-                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
+                          maxLength={6} // Increased maxLength to accommodate the optional '-' sign and decimal part
                           onChange={(e) => {
                             const value = e.target.value;
 
@@ -460,16 +452,12 @@ function PELesson2() {
                                 });
                               }
                             } else {
-                              const intValue = parseInt(value);
-                              if (
-                                value === "" || // Allow empty value
-                                (!isNaN(intValue) &&
-                                  intValue >= -99 &&
-                                  intValue <= 99)
-                              ) {
+                              // Allow empty value or valid decimal value with up to two decimal places
+                              const decimalPattern = /^-?\d*\.?\d{0,2}$/;
+                              if (value === "" || decimalPattern.test(value)) {
                                 setNorm2({
                                   ...norm2,
-                                  x: intValue,
+                                  x: value,
                                 });
                               }
                             }
@@ -481,9 +469,9 @@ function PELesson2() {
                         <p>y</p>
                         <input
                           type="text"
-                          pattern="-?([0-9]|1[0-6])"
+                          pattern="-?\d*\.?\d{0,2}" // Updated pattern to allow negative numbers with up to two decimal places
                           value={norm2.y || ""}
-                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
+                          maxLength={6} // Increased maxLength to accommodate the optional '-' sign and decimal part
                           onChange={(e) => {
                             const value = e.target.value;
 
@@ -502,16 +490,12 @@ function PELesson2() {
                                 });
                               }
                             } else {
-                              const intValue = parseInt(value);
-                              if (
-                                value === "" || // Allow empty value
-                                (!isNaN(intValue) &&
-                                  intValue >= -99 &&
-                                  intValue <= 99)
-                              ) {
+                              // Allow empty value or valid decimal value with up to two decimal places
+                              const decimalPattern = /^-?\d*\.?\d{0,2}$/;
+                              if (value === "" || decimalPattern.test(value)) {
                                 setNorm2({
                                   ...norm2,
-                                  y: intValue,
+                                  y: value,
                                 });
                               }
                             }
@@ -523,9 +507,9 @@ function PELesson2() {
                         <p>z</p>
                         <input
                           type="text"
-                          pattern="-?([0-9]|1[0-6])"
+                          pattern="-?\d*\.?\d{0,2}" // Updated pattern to allow negative numbers with up to two decimal places
                           value={norm2.z || ""}
-                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
+                          maxLength={6} // Increased maxLength to accommodate the optional '-' sign and decimal part
                           onChange={(e) => {
                             const value = e.target.value;
 
@@ -544,16 +528,12 @@ function PELesson2() {
                                 });
                               }
                             } else {
-                              const intValue = parseInt(value);
-                              if (
-                                value === "" || // Allow empty value
-                                (!isNaN(intValue) &&
-                                  intValue >= -99 &&
-                                  intValue <= 99)
-                              ) {
+                              // Allow empty value or valid decimal value with up to two decimal places
+                              const decimalPattern = /^-?\d*\.?\d{0,2}$/;
+                              if (value === "" || decimalPattern.test(value)) {
                                 setNorm2({
                                   ...norm2,
-                                  z: intValue,
+                                  z: value,
                                 });
                               }
                             }
@@ -1375,9 +1355,9 @@ function PELesson2() {
                         <p>x</p>
                         <input
                           type="text"
-                          pattern="-?([0-9]|1[0-6])"
+                          pattern="-?\d*\.?\d{0,2}" // Updated pattern to allow negative numbers with up to two decimal places
                           value={distance.x1 || ""}
-                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
+                          maxLength={6} // Increased maxLength to accommodate the optional '-' sign and decimal part
                           onChange={(e) => {
                             const value = e.target.value;
 
@@ -1396,16 +1376,12 @@ function PELesson2() {
                                 });
                               }
                             } else {
-                              const intValue = parseInt(value);
-                              if (
-                                value === "" || // Allow empty value
-                                (!isNaN(intValue) &&
-                                  intValue >= -99 &&
-                                  intValue <= 99)
-                              ) {
+                              // Allow empty value or valid decimal value with up to two decimal places
+                              const decimalPattern = /^-?\d*\.?\d{0,2}$/;
+                              if (value === "" || decimalPattern.test(value)) {
                                 setDistance({
                                   ...distance,
-                                  x1: intValue,
+                                  x1: value,
                                 });
                               }
                             }
@@ -1417,9 +1393,9 @@ function PELesson2() {
                         <p>y</p>
                         <input
                           type="text"
-                          pattern="-?([0-9]|1[0-6])"
+                          pattern="-?\d*\.?\d{0,2}" // Updated pattern to allow negative numbers with up to two decimal places
                           value={distance.x2 || ""}
-                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
+                          maxLength={6} // Increased maxLength to accommodate the optional '-' sign and decimal part
                           onChange={(e) => {
                             const value = e.target.value;
 
@@ -1438,16 +1414,12 @@ function PELesson2() {
                                 });
                               }
                             } else {
-                              const intValue = parseInt(value);
-                              if (
-                                value === "" || // Allow empty value
-                                (!isNaN(intValue) &&
-                                  intValue >= -99 &&
-                                  intValue <= 99)
-                              ) {
+                              // Allow empty value or valid decimal value with up to two decimal places
+                              const decimalPattern = /^-?\d*\.?\d{0,2}$/;
+                              if (value === "" || decimalPattern.test(value)) {
                                 setDistance({
                                   ...distance,
-                                  x2: intValue,
+                                  x2: value,
                                 });
                               }
                             }
@@ -1463,9 +1435,9 @@ function PELesson2() {
                       <div className="vertical">
                         <input
                           type="text"
-                          pattern="-?([0-9]|1[0-6])"
+                          pattern="-?\d*\.?\d{0,2}" // Updated pattern to allow negative numbers with up to two decimal places
                           value={distance.y1 || ""}
-                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
+                          maxLength={6} // Increased maxLength to accommodate the optional '-' sign and decimal part
                           onChange={(e) => {
                             const value = e.target.value;
 
@@ -1484,16 +1456,12 @@ function PELesson2() {
                                 });
                               }
                             } else {
-                              const intValue = parseInt(value);
-                              if (
-                                value === "" || // Allow empty value
-                                (!isNaN(intValue) &&
-                                  intValue >= -99 &&
-                                  intValue <= 99)
-                              ) {
+                              // Allow empty value or valid decimal value with up to two decimal places
+                              const decimalPattern = /^-?\d*\.?\d{0,2}$/;
+                              if (value === "" || decimalPattern.test(value)) {
                                 setDistance({
                                   ...distance,
-                                  y1: intValue,
+                                  y1: value,
                                 });
                               }
                             }
@@ -1504,9 +1472,9 @@ function PELesson2() {
                       <div className="vertical">
                         <input
                           type="text"
-                          pattern="-?([0-9]|1[0-6])"
+                          pattern="-?\d*\.?\d{0,2}" // Updated pattern to allow negative numbers with up to two decimal places
                           value={distance.y2 || ""}
-                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
+                          maxLength={6} // Increased maxLength to accommodate the optional '-' sign and decimal part
                           onChange={(e) => {
                             const value = e.target.value;
 
@@ -1525,16 +1493,12 @@ function PELesson2() {
                                 });
                               }
                             } else {
-                              const intValue = parseInt(value);
-                              if (
-                                value === "" || // Allow empty value
-                                (!isNaN(intValue) &&
-                                  intValue >= -99 &&
-                                  intValue <= 99)
-                              ) {
+                              // Allow empty value or valid decimal value with up to two decimal places
+                              const decimalPattern = /^-?\d*\.?\d{0,2}$/;
+                              if (value === "" || decimalPattern.test(value)) {
                                 setDistance({
                                   ...distance,
-                                  y2: intValue,
+                                  y2: value,
                                 });
                               }
                             }

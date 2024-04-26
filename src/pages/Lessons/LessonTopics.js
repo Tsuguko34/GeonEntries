@@ -97,7 +97,7 @@ function LessonTopics() {
             </Link>
             <p>{convertLessonName(lessonName)}</p>
           </header>
-          <span className="reminder">Click a title to start a lesson.</span>
+          <span className="reminder">Selct a lesson to start.</span>
           <div className="LessonTopics_Content">
             {lessonName && lessonName === "PlaneEuclideanGeometry" && (
               <>
@@ -110,9 +110,9 @@ function LessonTopics() {
                       <p className="Description">{topic.lessonDescription}</p>
                     </div>
                     <div className="Right_Side">
-                      <div className="Image">
+                      <Link to={topic.lessonPath} className="Image">
                         <img src={topic.lessonImage} alt="lesson Image" />
-                      </div>
+                      </Link>
                     </div>
                   </div>
                 ))}
@@ -130,9 +130,9 @@ function LessonTopics() {
                       <p className="Description">{topic.lessonDescription}</p>
                     </div>
                     <div className="Right_Side">
-                      <div className="Image">
+                      <Link to={topic.lessonPath} className="Image">
                         <img src={topic.lessonImage} alt="lesson Image" />
-                      </div>
+                      </Link>
                     </div>
                   </div>
                 ))}

@@ -19,7 +19,7 @@ function PELesson3() {
   });
 
   const isNumeric = (value) => {
-    return /^[\d,\s-]+$/.test(value);
+    return /^[\d\s,-.]+$/.test(value);
   };
   const solvePointNormal = () => {
     if (isNumeric(pointNormal.point) && isNumeric(pointNormal.normal)) {

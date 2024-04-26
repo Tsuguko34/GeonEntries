@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 
 import { Collapse } from "@mui/material";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
@@ -39,6 +39,20 @@ function QuizSidebar({ handleScrollClick, closeSidebar }) {
       navigate(`/Lesson/ScoreOverview/NonEuclideanGeometry`);
     } else if (lessonName.includes("PlaneEuclideanGeometry")) {
       navigate(`/Lesson/ScoreOverview/PlaneEuclideanGeometry`);
+    } else if (lessonName.includes("VectorsIn2Space3Space")) {
+      navigate(`/Lesson/ScoreOverview/VectorsIn2Space3Space`);
+    } else if (lessonName.includes("NormDistanceAndDotProduct")) {
+      navigate(`/Lesson/ScoreOverview/NormDistanceAndDotProduct`);
+    } else if (lessonName.includes("Orthogonality")) {
+      navigate(`/Lesson/ScoreOverview/Orthogonality`);
+    } else if (lessonName.includes("EquationsOfLinesAndPlanes")) {
+      navigate(`/Lesson/ScoreOverview/EquationsOfLinesAndPlanes`);
+    } else if (lessonName.includes("CrossProduct")) {
+      navigate(`/Lesson/ScoreOverview/CrossProduct`);
+    } else if (lessonName.includes("HyperbolicGeometry")) {
+      navigate(`/Lesson/ScoreOverview/HyperbolicGeometry`);
+    } else if (lessonName.includes("SphericalGeometry")) {
+      navigate(`/Lesson/ScoreOverview/SphericalGeometry`);
     }
   };
   useEffect(() => {
@@ -49,9 +63,30 @@ function QuizSidebar({ handleScrollClick, closeSidebar }) {
     setSelectedAnswer(null);
   }, []);
 
+  // Add a ref to the Questions_Container
+  const containerRef = useRef(null);
+
+  // Scroll the container to the active question element whenever activeQuestion changes
+  useEffect(() => {
+    if (containerRef.current) {
+      const container = containerRef.current;
+      const activeElement = container.querySelector(".active");
+      if (activeElement) {
+        const containerRect = container.getBoundingClientRect();
+        const activeRect = activeElement.getBoundingClientRect();
+        if (
+          activeRect.top < containerRect.top ||
+          activeRect.bottom > containerRect.bottom
+        ) {
+          container.scrollTop += activeRect.top - containerRect.top;
+        }
+      }
+    }
+  }, [activeQuestion]);
+
   return (
     <>
-      <div className="Questions_Container">
+      <div className="Questions_Container" ref={containerRef}>
         {questions.length > 0 &&
           questions.map((question, index) => (
             <p

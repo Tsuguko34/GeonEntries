@@ -6,6 +6,7 @@ import { GetWindowWidth, hasNavBar, hasSidebar } from "./utils";
 import { useEffect, useState } from "react";
 import { SidebarContext } from "./context/context";
 import { Hidden } from "@mui/material";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const location = useLocation();
@@ -40,6 +41,16 @@ function App() {
 
   return (
     <div>
+      <Toaster
+        position="bottom-center"
+        reverseOrder={false}
+        toastOptions={{
+          style: {
+            backgroundColor: "#053b50",
+            color: "#FFF",
+          },
+        }}
+      />
       <SidebarContext.Provider
         value={{
           toggleSidebar,

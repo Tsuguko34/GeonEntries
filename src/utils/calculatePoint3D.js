@@ -1,7 +1,12 @@
 export default function calculatePoint3D(pointInput, directionInput) {
   // Parse input into arrays
-  const pointCoordinates = pointInput.split(",").map(Number);
-  const directionComponents = directionInput.split(",").map(Number);
+
+  if (!pointInput.includes(",") || !directionInput.includes(",")) {
+    console.error("Both pointInput and normalInput must contain a comma.");
+    return;
+  }
+  const pointCoordinates = pointInput.split(",").map(parseFloat);
+  const directionComponents = directionInput.split(",").map(parseFloat);
 
   if (pointCoordinates && directionComponents) {
     // Determine vector space
@@ -9,25 +14,41 @@ export default function calculatePoint3D(pointInput, directionInput) {
     const vectorSpace = dimension === 2 ? "(x, y)" : "(x, y, z)";
 
     // Calculate equations
-    const vectorEquation = `${vectorSpace} = (${pointCoordinates[0]} + t * ${
-      directionComponents[0]
-    }, ${pointCoordinates[1]} + t * ${directionComponents[1]}${
+    const vectorEquation = `${vectorSpace} = (${parseFloat(
+      pointCoordinates[0]
+    ).toFixed(2)} + t * ${parseFloat(directionComponents[0]).toFixed(
+      2
+    )}, ${parseFloat(pointCoordinates[1]).toFixed(2)} + t * ${parseFloat(
+      directionComponents[1]
+    ).toFixed(2)}${
       dimension === 3
-        ? `, ${pointCoordinates[2]} + t * ${directionComponents[2]}`
+        ? `, ${parseFloat(pointCoordinates[2]).toFixed(2)} + t * ${parseFloat(
+            directionComponents[2]
+          ).toFixed(2)}`
         : ""
     })`;
-    const parametricEquations = `x = ${pointCoordinates[0]} + t * ${
-      directionComponents[0]
-    }\n y = ${pointCoordinates[1]} + t * ${directionComponents[1]}${
+    const parametricEquations = `x = ${parseFloat(pointCoordinates[0]).toFixed(
+      2
+    )} + t * ${parseFloat(directionComponents[0]).toFixed(
+      2
+    )}\n y = ${parseFloat(pointCoordinates[1]).toFixed(2)} + t * ${parseFloat(
+      directionComponents[1]
+    ).toFixed(2)}${
       dimension === 3
-        ? `\n z = ${pointCoordinates[2]} + t * ${directionComponents[2]}`
+        ? `\n z = ${parseFloat(pointCoordinates[2]).toFixed(
+            2
+          )} + t * ${parseFloat(directionComponents[2]).toFixed(2)}`
         : ""
     }`;
-    const symmetricEquations = `(x - ${pointCoordinates[0]}) / ${
-      directionComponents[0]
-    } = (y - ${pointCoordinates[1]}) / ${directionComponents[1]}${
+    const symmetricEquations = `(x - ${parseFloat(pointCoordinates[0]).toFixed(
+      2
+    )}) / ${parseFloat(directionComponents[0]).toFixed(2)} = (y - ${parseFloat(
+      pointCoordinates[1]
+    ).toFixed(2)}) / ${parseFloat(directionComponents[1]).toFixed(2)}${
       dimension === 3
-        ? ` = (z - ${pointCoordinates[2]}) / ${directionComponents[2]}`
+        ? ` = (z - ${parseFloat(pointCoordinates[2]).toFixed(
+            2
+          )}) / ${parseFloat(directionComponents[2]).toFixed(2)}`
         : ""
     }`;
 

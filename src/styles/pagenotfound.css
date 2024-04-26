@@ -1,0 +1,119 @@
+#PageNotFound{
+    width: 100vw;
+    height: 100vh;
+}
+
+#PageNotFound::after{
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-image: url('../assets/images/backgroundOverlay.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.05;
+    z-index: -1;
+}
+
+#PageNotFound > .wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#PageNotFound > .wrapper > .Illustration{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#PageNotFound > .wrapper > .Illustration > img{
+    width: 400px;
+    height: 90px;
+    object-fit: cover;
+}
+
+#PageNotFound > .wrapper > .Illustration > .White{
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+}
+
+#PageNotFound > .wrapper > .Illustration > .Bold{
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+
+#PageNotFound > .wrapper > .Illustration > p{
+    color: white;
+    font-size: 13px;
+    text-align: center;
+}
+
+#PageNotFound > .wrapper > .Action{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#PageNotFound > .wrapper > .Action > button{
+    width: 400px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--dark-blue);
+    color: white;
+    transition: all 250ms ease-in-out;
+}
+
+#PageNotFound > .wrapper > .Action > button:hover{
+    background-color: var(--lime-green);
+    color: var(--dark-blue);
+}
+
+@media only screen and (max-width: 425px){
+    #PageNotFound > .wrapper > .Illustration > img{
+        width: 350px;
+    }
+
+    #PageNotFound > .wrapper > .Illustration > .White{
+        font-size: 50px;
+    }
+    
+    #PageNotFound > .wrapper > .Illustration > .Bold{
+        font-size: 18px;
+    }
+    
+    #PageNotFound > .wrapper > .Action > button{
+        width: 350px;
+
+    }
+}
+
+@media only screen and (max-width: 320px){
+    #PageNotFound > .wrapper > .Illustration > img{
+        width: 300px;
+    }
+
+    #PageNotFound > .wrapper > .Illustration > .White{
+        font-size: 50px;
+    }
+    
+    #PageNotFound > .wrapper > .Illustration > .Bold{
+        font-size: 18px;
+    }
+    
+    #PageNotFound > .wrapper > .Action > button{
+        width: 300px;
+
+    }
+}

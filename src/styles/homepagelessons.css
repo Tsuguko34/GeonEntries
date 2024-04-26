@@ -32,8 +32,8 @@
 }
 
 #HomePageLessons > .wrapper > .Container > .Lesson{
-    width: 350px;
-    height: 200px;
+    width: 450px;
+    height: 250px;
     background-color: var(--dark-blue);
     border: 5px solid var(--light-blue);
     border-radius: 30px;
@@ -52,13 +52,13 @@
     color: var(--light-blue);
     width: 100%;
     text-align: center;
-    font-size: 22px;
+    font-size: 24px;
     transition: all 250ms ease-in-out;
 }
 
 #HomePageLessons > .wrapper > .Container > .Lesson > .Lesson_Description{
     color: white;
-    font-size: 14px;
+    font-size: 18px;
     text-align: center;
     width: 100%;
 }
@@ -71,18 +71,42 @@
     color: var(--lime-green);
 }
 
+@media only screen and (max-width: 970px){
+    #HomePageLessons > .wrapper > .Container > .Lesson{
+        width: 400px;
+        height: 225px;
+    }
+}
+
+@media only screen and (max-width: 870px){
+    #HomePageLessons > .wrapper > .Container > .Lesson{
+        width: 370px;
+        height: 230px;
+    }
+
+    #HomePageLessons > .wrapper > .Container > .Lesson > .Lesson_Title{
+        font-size: 22px;
+    }
+    
+    #HomePageLessons > .wrapper > .Container > .Lesson > .Lesson_Description{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    #HomePageLessons > .wrapper > .Container{
+        flex-direction: column;
+    }
+    
+}
+
 @media only screen and (max-width: 667px){
     #HomePageLessons > .wrapper > .Container{
         padding-inline: 15px;
     }
 }
 
-@media only screen and (max-width: 540px){
-    #HomePageLessons > .wrapper > .Container{
-        flex-direction: column;
-    }
-    
-}
+
 
 @media only screen and (max-width: 414px){
     #HomePageLessons > .wrapper > .Container > .Lesson{

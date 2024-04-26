@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import "../../styles/quiz.css";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 
 import miniLogo from "../../assets/images/miniLogo.png";
 import correctIcon from "../../assets/images/Quiz Images/check.png";
@@ -10,11 +10,23 @@ import ExampleA1 from "../../assets/videos/PELesson1/Example A1.mp4";
 import * as FaIcons from "react-icons/fa";
 import * as MdIcons from "react-icons/md";
 import { SidebarContext } from "../../context/context";
-import { GetWindowWidth, neQuestions, peQuestions } from "../../utils";
+import {
+  GetWindowWidth,
+  neLesson1Questions,
+  neLesson2Questions,
+  neQuestions,
+  peLesson1Questions,
+  peLesson2Questions,
+  peLesson3Questions,
+  peLesson4Questions,
+  peLesson5Questions,
+  peQuestions,
+} from "../../utils";
 import correctSoundFX from "../../assets/audio/correct.aac";
 import wrongSoundFX from "../../assets/audio/wrong.mp3";
 
 function Quiz() {
+  const location = useLocation();
   const navigate = useNavigate();
   const { lessonName } = useParams();
   const windowWidth = GetWindowWidth();
@@ -35,11 +47,25 @@ function Quiz() {
     questions,
     setQuestions,
   } = useContext(SidebarContext);
-  const getLessonName = (lessonName) => {
-    if (lessonName === "NonEuclideanGeometry") {
-      return "Non-Euclidean Geometry";
-    } else if (lessonName === "PlaneEuclideanGeometry") {
+  const getLessonName = (name) => {
+    if (name === "PlaneEuclideanGeometry") {
       return "Plane Euclidean Geometry";
+    } else if (name === "NonEuclideanGeometry") {
+      return "Non-Euclidean Geometry";
+    } else if (name === "VectorsIn2Space3Space") {
+      return "Vectors in 2-Space & 3-Space";
+    } else if (name === "NormDistanceAndDotProduct") {
+      return "Norm, Distance, and Dot Product";
+    } else if (name === "Orthogonality") {
+      return "Orthogonality";
+    } else if (name === "EquationsOfLinesAndPlanes") {
+      return "Equations of Lines and Planes";
+    } else if (name === "CrossProduct") {
+      return "Cross Product";
+    } else if (name === "HyperbolicGeometry") {
+      return "Hyperbolic Geometry";
+    } else if (name === "SphericalGeometry") {
+      return "Spherical Geometry";
     }
   };
 
@@ -57,7 +83,22 @@ function Quiz() {
       questionList = neQuestions;
     } else if (lessonName === "PlaneEuclideanGeometry") {
       questionList = peQuestions;
+    } else if (lessonName === "VectorsIn2Space3Space") {
+      questionList = peLesson1Questions;
+    } else if (lessonName === "NormDistanceAndDotProduct") {
+      questionList = peLesson2Questions;
+    } else if (lessonName === "Orthogonality") {
+      questionList = peLesson3Questions;
+    } else if (lessonName === "EquationsOfLinesAndPlanes") {
+      questionList = peLesson4Questions;
+    } else if (lessonName === "CrossProduct") {
+      questionList = peLesson5Questions;
+    } else if (lessonName === "HyperbolicGeometry") {
+      questionList = neLesson1Questions;
+    } else if (lessonName === "SphericalGeometry") {
+      questionList = neLesson2Questions;
     }
+    console.log(questionList);
     setQuestions(removeStatusField(questionList));
   };
 
@@ -100,6 +141,28 @@ function Quiz() {
     setNextButton(true);
   };
 
+  const navigateToScoreOverview = (lessonName) => {
+    if (lessonName.includes("NonEuclideanGeometry")) {
+      navigate(`/Lesson/ScoreOverview/NonEuclideanGeometry`);
+    } else if (lessonName.includes("PlaneEuclideanGeometry")) {
+      navigate(`/Lesson/ScoreOverview/PlaneEuclideanGeometry`);
+    } else if (lessonName.includes("VectorsIn2Space3Space")) {
+      navigate(`/Lesson/ScoreOverview/VectorsIn2Space3Space`);
+    } else if (lessonName.includes("NormDistanceAndDotProduct")) {
+      navigate(`/Lesson/ScoreOverview/NormDistanceAndDotProduct`);
+    } else if (lessonName.includes("Orthogonality")) {
+      navigate(`/Lesson/ScoreOverview/Orthogonality`);
+    } else if (lessonName.includes("EquationsOfLinesAndPlanes")) {
+      navigate(`/Lesson/ScoreOverview/EquationsOfLinesAndPlanes`);
+    } else if (lessonName.includes("CrossProduct")) {
+      navigate(`/Lesson/ScoreOverview/CrossProduct`);
+    } else if (lessonName.includes("HyperbolicGeometry")) {
+      navigate(`/Lesson/ScoreOverview/HyperbolicGeometry`);
+    } else if (lessonName.includes("SphericalGeometry")) {
+      navigate(`/Lesson/ScoreOverview/SphericalGeometry`);
+    }
+  };
+
   useEffect(() => {
     document.title = `${getLessonName(lessonName)} Quiz`;
     setScore(0);
@@ -134,18 +197,6 @@ function Quiz() {
         if (!entry.isIntersecting && !video.paused) {
           // Pause the video if it's not in view and is currently playing
           video.pause();
-        } else if (entry.isIntersecting && video.paused) {
-          // Play the video if it's in view and is currently paused
-          // Check if the document has been interacted with before trying to play
-          document.documentElement.addEventListener(
-            "click",
-            () => {
-              video.play().catch((error) => {
-                console.error("Failed to play video:", error);
-              });
-            },
-            { once: true }
-          ); // Ensure the event listener runs only once
         }
       });
     });
@@ -241,9 +292,7 @@ function Quiz() {
                   windowWidth <= 1024 && (
                     <button
                       className="Next Score"
-                      onClick={() =>
-                        navigate(`/Lesson/ScoreOverview/${lessonName}`)
-                      }
+                      onClick={() => navigateToScoreOverview(location.pathname)}
                     >
                       <div className="Icon">
                         <MdIcons.MdKeyboardDoubleArrowRight />

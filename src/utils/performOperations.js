@@ -3,24 +3,33 @@ export default function performOperations(vX, vY, wX, wY) {
   var w = [wX, wY];
 
   // Addition v + w
-  var vPlusW = [v[0] + w[0], v[1] + w[1]];
+  var vPlusW = [
+    (parseFloat(v[0]) + parseFloat(w[0])).toFixed(2),
+    (parseFloat(v[1]) + parseFloat(w[1])).toFixed(2),
+  ];
 
   // Scalar multiplication 3v
-  var threeV = [3 * v[0], 3 * v[1]];
+  var threeV = [
+    (3 * parseFloat(v[0])).toFixed(2),
+    (3 * parseFloat(v[1])).toFixed(2),
+  ];
 
   // Negation -v
-  var negV = [-v[0], -v[1]];
+  var negV = [(-parseFloat(v[0])).toFixed(2), (-parseFloat(v[1])).toFixed(2)];
 
   // Subtraction w - v
-  var wMinusV = [w[0] - v[0], w[1] - v[1]];
+  var wMinusV = [
+    (parseFloat(w[0]) - parseFloat(v[0])).toFixed(2),
+    (parseFloat(w[1]) - parseFloat(v[1])).toFixed(2),
+  ];
 
   // Update rectangles with user input values
-  document.getElementById("rectangle-13").innerHTML = "" + vPlusW[0] + "";
-  document.getElementById("rectangle-12").innerHTML = "" + vPlusW[1] + "";
-  document.getElementById("rectangle-11-2").innerHTML = "" + threeV[0] + "";
-  document.getElementById("rectangle-10-2").innerHTML = "" + threeV[1] + "";
-  document.getElementById("rectangle-11-3").innerHTML = "" + negV[0] + "";
-  document.getElementById("rectangle-10-3").innerHTML = "" + negV[1] + "";
-  document.getElementById("rectangle-11-4").innerHTML = "" + wMinusV[0] + "";
-  document.getElementById("rectangle-10-4").innerHTML = "" + wMinusV[1] + "";
+  document.getElementById("rectangle-13").innerHTML = vPlusW[0];
+  document.getElementById("rectangle-12").innerHTML = vPlusW[1];
+  document.getElementById("rectangle-11-2").innerHTML = threeV[0];
+  document.getElementById("rectangle-10-2").innerHTML = threeV[1];
+  document.getElementById("rectangle-11-3").innerHTML = negV[0];
+  document.getElementById("rectangle-10-3").innerHTML = negV[1];
+  document.getElementById("rectangle-11-4").innerHTML = wMinusV[0];
+  document.getElementById("rectangle-10-4").innerHTML = wMinusV[1];
 }

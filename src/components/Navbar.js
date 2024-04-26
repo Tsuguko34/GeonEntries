@@ -147,7 +147,12 @@ function Navbar({ setOpenSidebar, pageHasSidebar }) {
           </div>
           <div className="Bottom_Side">
             {location.pathname !== "/" && (
-              <img src={largeLogo} alt="Large Logo" />
+              <img
+                onClick={() => navigate(`/`)}
+                style={{ cursor: "pointer" }}
+                src={largeLogo}
+                alt="Large Logo"
+              />
             )}
           </div>
         </div>

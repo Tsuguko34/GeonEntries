@@ -86,12 +86,14 @@
 }
 
 #LessonTopics > .wrapper > .LessonTopics_Container > .LessonTopics_Content > .Topic{
+    position: relative;
     width: 100%;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     gap: 20px;
     align-items: center;
+    z-index: 1;
 }
 
 #LessonTopics > .wrapper > .LessonTopics_Container > .LessonTopics_Content > .Topic > .Left_Side{
@@ -144,9 +146,9 @@
 
 
 #LessonTopics > .wrapper > .LessonTopics_Container > .LessonTopics_Content > .Topic > .Right_Side > .Image > img{
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
 }
 
 @media only screen and (max-width: 1180px){
@@ -178,8 +180,8 @@
     }
     
     #LessonTopics > .wrapper > .LessonTopics_Container > .LessonTopics_Content > .Topic > .Right_Side > .Image > img{
-        width: 75px;
-        height: 75px;
+        width: 100px;
+        height: 100px;
     }
 }
 
@@ -211,8 +213,8 @@
     }
     
     #LessonTopics > .wrapper > .LessonTopics_Container > .LessonTopics_Content > .Topic > .Right_Side > .Image > img{
-        width: 65px;
-        height: 65px;
+        width: 90px;
+        height: 90px;
     }
 }
 
@@ -252,8 +254,8 @@
     }
     
     #LessonTopics > .wrapper > .LessonTopics_Container > .LessonTopics_Content > .Topic > .Right_Side > .Image > img{
-        width: 55px;
-        height: 55px;
+        width: 70px;
+        height: 70px;
     }
 }
 

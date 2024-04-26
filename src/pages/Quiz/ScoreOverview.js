@@ -39,6 +39,9 @@ function ScoreOverview() {
 
   useEffect(() => {
     document.title = `Score Overview`;
+    if (isNaN(calculatePercentage())) {
+      navigate(`/Lesson/Quiz/${lessonName}`);
+    }
   }, []);
   return (
     <section id="ScoreOverview" className="ScoreOverview">

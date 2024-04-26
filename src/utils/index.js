@@ -18,6 +18,13 @@ import calculateAngle from "./calculateAngle";
 import calculateSides from "./calculateSides";
 import neQuestions from "./neQuestions";
 import peQuestions from "./peQuizQuestions";
+import peLesson1Questions from "./PELesson1Quiz";
+import peLesson2Questions from "./PELesson2Quiz";
+import peLesson3Questions from "./PELesson3Quiz";
+import peLesson4Questions from "./PELesson4Quiz";
+import peLesson5Questions from "./peLesson5Quiz";
+import neLesson1Questions from "./NELesson1Quiz";
+import neLesson2Questions from "./NELesson2Quiz";
 
 export {
   hasNavBar,
@@ -40,4 +47,11 @@ export {
   calculateSides,
   neQuestions,
   peQuestions,
+  peLesson1Questions,
+  peLesson2Questions,
+  peLesson3Questions,
+  peLesson4Questions,
+  peLesson5Questions,
+  neLesson1Questions,
+  neLesson2Questions,
 };

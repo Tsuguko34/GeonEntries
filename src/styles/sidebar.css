@@ -18,7 +18,7 @@
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    gap: 40px;
+    gap: 10px;
     
 }
 
@@ -52,7 +52,7 @@
 #Sidebar > .Content > .Title{
     width: 100%;
     font-size: 22px;
-    text-align: center;
+    text-align: start;
     color: var(--light-blue);
     font-weight: bold;
     cursor: pointer;

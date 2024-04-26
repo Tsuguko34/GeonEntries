@@ -41,19 +41,19 @@ function Lesson() {
     } else if (name === "NonEuclideanGeometry") {
       return "Non-Euclidean Geometry";
     } else if (name === "VectorsIn2Space3Space") {
-      return "1. Vectors in 2-Space & 3-Space";
+      return "Vectors in 2-Space & 3-Space";
     } else if (name === "NormDistanceAndDotProduct") {
-      return "2. Norm, Distance, and Dot Product";
+      return "Norm, Distance, and Dot Product";
     } else if (name === "Orthogonality") {
-      return "3. Orthogonality";
+      return "Orthogonality";
     } else if (name === "EquationsOfLinesAndPlanes") {
-      return "4. Equations of Lines and Planes";
+      return "Equations of Lines and Planes";
     } else if (name === "CrossProduct") {
-      return "5. Cross Product";
+      return "Cross Product";
     } else if (name === "HyperbolicGeometry") {
-      return "1. Hyperbolic Geometry";
+      return "Hyperbolic Geometry";
     } else if (name === "SphericalGeometry") {
-      return "2. Spherical Geometry";
+      return "Spherical Geometry";
     }
   };
 

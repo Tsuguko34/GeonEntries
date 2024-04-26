@@ -26,6 +26,7 @@ import {
   calculatePoint3D,
   calculateSides,
 } from "../../utils";
+import toast from "react-hot-toast";
 
 function NELesson2() {
   const [sides, setSides] = useState({
@@ -35,7 +36,19 @@ function NELesson2() {
   });
 
   const handleCalculateAngle = () => {
-    calculateAngle(sides.p, sides.q, sides.r);
+    if (
+      sides.p < 10 ||
+      sides.p > 89 ||
+      sides.q < 10 ||
+      sides.q > 89 ||
+      sides.r < 10 ||
+      sides.r > 89
+    ) {
+      toast.error("Sides must be between 10° and 89°.");
+    } else {
+      console.log(true);
+      calculateAngle(sides.p, sides.q, sides.r);
+    }
   };
 
   const [angles, setAngles] = useState({
@@ -45,14 +58,31 @@ function NELesson2() {
   });
 
   const handleCalculateSide = () => {
-    calculateSides(angles.angleA, angles.angleB, angles.angleC);
+    if (
+      angles.angleA < 45 ||
+      angles.angleA > 90 ||
+      angles.angleB < 45 ||
+      angles.angleB > 90
+    ) {
+      toast.error("Angles must be between 45° and 90°.");
+    } else {
+      calculateSides(angles.angleA, angles.angleB);
+    }
   };
 
   const isNumeric = (value) => {
-    if (value > 99 || value < -99) {
+    // Remove non-numeric characters except minus sign and decimal point
+    const numericValue = value.replace(/[^0-9.-]/g, "");
+
+    // Check if the remaining value is a valid number and within the specified range
+    if (
+      isNaN(parseFloat(numericValue)) ||
+      parseFloat(numericValue) > 99 ||
+      parseFloat(numericValue) < -99
+    ) {
       return false;
     } else {
-      return /^[\d-]+$/.test(value);
+      return /^-?\d+(\.\d{0,2})?$/.test(numericValue); // Check for up to 2 decimal places
     }
   };
 
@@ -1071,6 +1101,7 @@ function NELesson2() {
                     <div className="Inputs">
                       <input
                         type="text"
+                        disabled={sides.q && sides.r}
                         className="Long_Input"
                         placeholder="e.g. 90"
                         value={sides.p || ""}
@@ -1100,6 +1131,7 @@ function NELesson2() {
                     <div className="Inputs">
                       <input
                         type="text"
+                        disabled={sides.p && sides.r}
                         className="Long_Input"
                         placeholder="e.g. 90"
                         value={sides.q || ""}
@@ -1129,6 +1161,7 @@ function NELesson2() {
                     <div className="Inputs">
                       <input
                         type="text"
+                        disabled={sides.p && sides.q}
                         className="Long_Input"
                         placeholder="e.g. 90"
                         value={sides.r || ""}
@@ -1313,38 +1346,6 @@ function NELesson2() {
                             setAngles({
                               ...angles,
                               angleB: inputValue,
-                            });
-                          }
-                        }}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="Content">
-                  <div
-                    className="Input_Group"
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "10px",
-                    }}
-                  >
-                    <p style={{ color: "white", fontSize: "20px" }}>
-                      {" "}
-                      Angle C ={" "}
-                    </p>
-                    <div className="Inputs">
-                      <input
-                        type="text"
-                        className="Long_Input"
-                        placeholder="e.g. 90"
-                        value={angles.angleC || ""}
-                        onChange={(e) => {
-                          const inputValue = e.target.value;
-                          if (isNumeric(inputValue) || inputValue === "") {
-                            setAngles({
-                              ...angles,
-                              angleC: inputValue,
                             });
                           }
                         }}
