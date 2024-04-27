@@ -812,12 +812,11 @@
     font-size: 16px;
     content: '';
     width: 40px;
-    height: 30px;
+    min-height: 30px;
 }
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself .Output_Rectangles.Tall{
-    
-    height: 90px;
+    min-height: 90px;
 }
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself .Output_Rectangles_Holder.Long .Output_Rectangles{
@@ -1676,7 +1675,7 @@
 
     #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself .Output_Rectangles{
         width: 30px;
-        height: 25px;
+        min-height: 25px;
     }
 
     #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself p.equal{

@@ -11,6 +11,7 @@ import {
   calculateNorm3D,
   calculatePointNormal,
 } from "../../utils";
+import toast from "react-hot-toast";
 
 function PELesson3() {
   const [pointNormal, setPointNormal] = useState({
@@ -22,8 +23,28 @@ function PELesson3() {
     return /^[\d\s,-.]+$/.test(value);
   };
   const solvePointNormal = () => {
-    if (isNumeric(pointNormal.point) && isNumeric(pointNormal.normal)) {
-      calculatePointNormal(pointNormal.point, pointNormal.normal);
+    const pointNumbers = pointNormal.point
+      .split(",")
+      .map((num) => parseInt(num.trim(), 10));
+    const normalNumbers = pointNormal.normal
+      .split(",")
+      .map((num) => parseInt(num.trim(), 10));
+    if (pointNumbers.length === 0 || normalNumbers.length === 0) {
+      toast.error("Please provide all the inputs.");
+      return;
+    } else if (pointNumbers.length === 1 || normalNumbers.length === 1) {
+      toast.error("Please provide 2 numbers.");
+      return;
+    } else if (pointNumbers.some(isNaN) || normalNumbers.some(isNaN)) {
+      toast.error("Please provide 2 numbers.");
+      return;
+    } else if (pointNumbers.length > 2 || normalNumbers.length > 2) {
+      toast.error("Please provide 2 numbers.");
+      return;
+    } else if (pointNumbers.length === 2 || normalNumbers.length === 2) {
+      if (isNumeric(pointNormal.point) && isNumeric(pointNormal.normal)) {
+        calculatePointNormal(pointNormal.point, pointNormal.normal);
+      }
     }
   };
 
