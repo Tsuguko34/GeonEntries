@@ -391,8 +391,12 @@ function NELesson2() {
                   <div className="Light_Blue fraction">
                     <p>
                       d (P, Q) ={" "}
-                      <span className="squareRoot_Symbol">&radic;</span>(x₂ -
-                      x₁)² + (y₂ - y₁)² + (z₂ - z₁)²
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">
+                          (x₂ - x₁)² + (y₂ - y₁)² + (z₂ - z₁)²
+                        </span>
+                      </span>
                     </p>
                   </div>
                 </div>
@@ -470,7 +474,10 @@ function NELesson2() {
               ,{" "}
               <div className="fraction">
                 <span className="upper">
-                  <span className="squareRoot_Symbol">&radic;</span>7
+                  <span className="Squareroot_Container">
+                    <span className="squareRoot_Symbol">&radic;</span>
+                    <span className="squareRoot_Formula">7</span>
+                  </span>
                 </span>
                 <span className="divider"></span>
                 <span className="bottom">4</span>
@@ -479,7 +486,10 @@ function NELesson2() {
               <span className="large">(</span>
               <div className="fraction">
                 <span className="upper">
-                  <span className="squareRoot_Symbol">&radic;</span>3
+                  <span className="Squareroot_Container">
+                    <span className="squareRoot_Symbol">&radic;</span>
+                    <span className="squareRoot_Formula">3</span>
+                  </span>
                 </span>
                 <span className="divider"></span>
                 <span className="bottom">3</span>
@@ -487,7 +497,10 @@ function NELesson2() {
               ,{" "}
               <div className="fraction">
                 <span className="upper">
-                  <span className="squareRoot_Symbol">&radic;</span>2
+                  <span className="Squareroot_Container">
+                    <span className="squareRoot_Symbol">&radic;</span>
+                    <span className="squareRoot_Formula">2</span>
+                  </span>
                 </span>
                 <span className="divider"></span>
                 <span className="bottom">2</span>
@@ -495,7 +508,10 @@ function NELesson2() {
               ,{" "}
               <div className="fraction">
                 <span className="upper">
-                  <span className="squareRoot_Symbol">&radic;</span>6
+                  <span className="Squareroot_Container">
+                    <span className="squareRoot_Symbol">&radic;</span>
+                    <span className="squareRoot_Formula">6</span>
+                  </span>
                 </span>
                 <span className="divider"></span>
                 <span className="bottom">6</span>
@@ -514,8 +530,12 @@ function NELesson2() {
                 <p className="left">d (P, Q)</p>
                 <p className="center">=</p>
                 <p className="right">
-                  <span className="squareRoot_Symbol">&radic;</span>(x₂ - x₁)² +
-                  (y₂ - y₁)² + (z₂ - z₁)²
+                  <span className="Squareroot_Container">
+                    <span className="squareRoot_Symbol">&radic;</span>
+                    <span className="squareRoot_Formula">
+                      (x₂ - x₁)² + (y₂ - y₁)² + (z₂ - z₁)²
+                    </span>
+                  </span>
                 </p>
               </div>
 
@@ -523,48 +543,70 @@ function NELesson2() {
                 <p className="left"></p>
                 <p className="center">=</p>
                 <p className="right">
-                  <span className="squareRoot_Symbol">&radic;</span>
-                  <span className="large">(</span>
-                  <div className="fraction">
-                    <span className="upper">
-                      <span className="squareRoot_Symbol">&radic;</span>3
+                  <span className="Squareroot_Container">
+                    <span className="squareRoot_Symbol large_formula">
+                      &radic;
                     </span>
-                    <span className="divider"></span>
-                    <span className="bottom">3</span>
-                  </div>
-                  -
-                  <div className="fraction">
-                    <span className="upper">3</span>
-                    <span className="divider"></span>
-                    <span className="bottom">4</span>
-                  </div>
-                  <span className="large">)</span>² +
-                  <span className="large">(</span>
-                  <div className="fraction">
-                    <span className="upper">
-                      <span className="squareRoot_Symbol">&radic;</span>2
+                    <span className="squareRoot_Formula large_formula">
+                      <span className="large">(</span>
+                      <div className="fraction">
+                        <span className="upper">
+                          <span className="Squareroot_Container">
+                            <span className="squareRoot_Symbol">&radic;</span>
+                            <span className="squareRoot_Formula">58</span>
+                          </span>
+                          3
+                        </span>
+                        <span className="divider"></span>
+                        <span className="bottom">3</span>
+                      </div>
+                      -
+                      <div className="fraction">
+                        <span className="upper">3</span>
+                        <span className="divider"></span>
+                        <span className="bottom">4</span>
+                      </div>
+                      <span className="large">)</span>² +
+                      <span className="large">(</span>
+                      <div className="fraction">
+                        <span className="upper">
+                          <span className="Squareroot_Container">
+                            <span className="squareRoot_Symbol">&radic;</span>
+                            <span className="squareRoot_Formula">58</span>
+                          </span>
+                          2
+                        </span>
+                        <span className="divider"></span>
+                        <span className="bottom">2</span>
+                      </div>
+                      -
+                      <div className="fraction">
+                        <span className="upper">
+                          <span className="Squareroot_Container">
+                            <span className="squareRoot_Symbol">&radic;</span>
+                            <span className="squareRoot_Formula">58</span>
+                          </span>
+                          7
+                        </span>
+                        <span className="divider"></span>
+                        <span className="bottom">4</span>
+                      </div>
+                      <span className="large">)</span>² +
+                      <span className="large">(</span>
+                      <div className="fraction">
+                        <span className="upper">
+                          <span className="Squareroot_Container">
+                            <span className="squareRoot_Symbol">&radic;</span>
+                            <span className="squareRoot_Formula">58</span>
+                          </span>
+                          6
+                        </span>
+                        <span className="divider"></span>
+                        <span className="bottom">6</span>
+                      </div>
+                      - 0<span className="large">)</span>²
                     </span>
-                    <span className="divider"></span>
-                    <span className="bottom">2</span>
-                  </div>
-                  -
-                  <div className="fraction">
-                    <span className="upper">
-                      <span className="squareRoot_Symbol">&radic;</span>7
-                    </span>
-                    <span className="divider"></span>
-                    <span className="bottom">4</span>
-                  </div>
-                  <span className="large">)</span>² +
-                  <span className="large">(</span>
-                  <div className="fraction">
-                    <span className="upper">
-                      <span className="squareRoot_Symbol">&radic;</span>6
-                    </span>
-                    <span className="divider"></span>
-                    <span className="bottom">6</span>
-                  </div>
-                  - 0<span className="large">)</span>²
+                  </span>
                 </p>
               </div>
 

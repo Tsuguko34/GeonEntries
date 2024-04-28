@@ -15,6 +15,10 @@ function LandingPage() {
   const [logoHover, setLogoHover] = useState(true);
   const [showLessons, setShowLessons] = useState(false);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, []);
+
   const handleLogoMouseOver = (action) => {
     // if (action === "Enter") {
     //   setLogoHover(true);

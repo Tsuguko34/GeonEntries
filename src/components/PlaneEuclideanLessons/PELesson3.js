@@ -65,10 +65,10 @@ function PELesson3() {
               <p>If u ⋅ v = 0, then u & v are orthogonal (or perpendicular).</p>
             </div>
           </div>
-          <div className="Paragraph_Topic">
+          <div className="Paragraph_Topic withSup">
             <p>
-              Now, let v = (x, y). We define v ⊥= (-y, x). Clearly, v and v ⊥are
-              orthogonal.
+              Now, let v = (x, y). We define v<sup>⊥</sup> = (-y, x). Clearly, v
+              and v<sup>⊥</sup> are orthogonal.
             </p>
           </div>
 
@@ -402,7 +402,9 @@ function PELesson3() {
                 <p>The point-normal equation of the line is written as:</p>
               </div>
               <div className="Light_Blue">
-                <p>u ⋅ v = ||u|| ||v|| cos θ</p>
+                <p>
+                  <span className="Bold">a(x - x₀) + b(y - y₀)</span> = 0
+                </p>
               </div>
             </div>
             <div className="Right_Side">
@@ -414,17 +416,17 @@ function PELesson3() {
             </div>
           </div>
 
-          <div className="Paragraph_Topic">
+          <div className="Paragraph_Topic paddingLeft2">
             <p>where,</p>
           </div>
 
-          <div className="Paragraph_Topic paddingLeft">
+          <div className="Paragraph_Topic paddingLeft3">
             <p>n = (a, b), the normal vector which is orthogonal to the line</p>
           </div>
-          <div className="Paragraph_Topic paddingLeft">
+          <div className="Paragraph_Topic paddingLeft3">
             <p>P₀ (x₀, y₀), any point on the line</p>
           </div>
-          <div className="Paragraph_Topic paddingLeft">
+          <div className="Paragraph_Topic paddingLeft3">
             <p>P(x, y), an arbitrary point on the line</p>
           </div>
 
@@ -480,7 +482,7 @@ function PELesson3() {
                     <div className="solution">
                       <p className="left"></p>
                       <p className="center"></p>
-                      <p className="right">
+                      <p className="right withPadding">
                         <span className="Blue">a</span> (x -{" "}
                         <span className="Orange">x₀</span> ) +{" "}
                         <span className="Blue">b</span> (y -{" "}
@@ -499,7 +501,7 @@ function PELesson3() {
                     <div className="solution">
                       <p className="left"></p>
                       <p className="center"></p>
-                      <p className="right">
+                      <p className="right withPadding">
                         <span className="Blue">3</span> (x -{" "}
                         <span className="Orange">(-4)</span> ) +{" "}
                         <span className="Blue">11</span> (y -{" "}
@@ -520,7 +522,7 @@ function PELesson3() {
                     <div className="solution">
                       <p className="left"></p>
                       <p className="center"></p>
-                      <p className="right">
+                      <p className="right withPadding">
                         <span className="LimeGreen">
                           3(x + 4) + 11(y - 7) = 0
                         </span>
@@ -542,7 +544,9 @@ function PELesson3() {
                     <div className="solution">
                       <p className="left"></p>
                       <p className="center"></p>
-                      <p className="right">3x + 12 + 11y - 77 = 0</p>
+                      <p className="right withPadding">
+                        3x + 12 + 11y - 77 = 0
+                      </p>
                     </div>
                   </div>
                   <div className="Solution_Example">
@@ -556,7 +560,7 @@ function PELesson3() {
                     <div className="solution">
                       <p className="left"></p>
                       <p className="center"></p>
-                      <p className="right">
+                      <p className="right withPadding">
                         <span className="LimeGreen">3x + 11y - 65 = 0</span>
                       </p>
                     </div>
@@ -586,7 +590,7 @@ function PELesson3() {
                     <div className="solution">
                       <p className="left"></p>
                       <p className="center"></p>
-                      <p className="right">
+                      <p className="right withPadding">
                         <span className="Blue">a</span> (x -{" "}
                         <span className="Orange">x₀</span> ) +{" "}
                         <span className="Blue">b</span> (y -{" "}
@@ -605,7 +609,7 @@ function PELesson3() {
                     <div className="solution">
                       <p className="left"></p>
                       <p className="center"></p>
-                      <p className="right">
+                      <p className="right withPadding">
                         <span className="Blue">-12</span> (x -{" "}
                         <span className="Orange">0</span> ) +{" "}
                         <span className="Blue">b</span> (y -{" "}
@@ -626,7 +630,7 @@ function PELesson3() {
                     <div className="solution">
                       <p className="left"></p>
                       <p className="center"></p>
-                      <p className="right">
+                      <p className="right withPadding">
                         <span className="LimeGreen">-12x + 5(y + 8) = 0</span>
                       </p>
                     </div>
@@ -655,7 +659,7 @@ function PELesson3() {
                     <div className="solution">
                       <p className="left"></p>
                       <p className="center"></p>
-                      <p className="right">
+                      <p className="right withPadding">
                         <span className="LimeGreen">-12x + 5y + 40 = 0 </span>
                       </p>
                     </div>
@@ -720,13 +724,17 @@ function PELesson3() {
             </div>
             <div className="Theorem_Content">
               <p className="Bold_Underline">GENERAL EQUATION OF THE PLANE</p>
-              <p className="Label">Let a, b, and c be nonzero constants.</p>
-              <div className="Label visual">
-                Then the equation{" "}
-                <div className="Light_Blue fraction">
-                  <p>ax + by + cz + d = 0</p>
-                </div>
-                is a plane in R³ with normal vector n = (a, b, c).
+              <div className="Paragraph_Topic">
+                <p>Let a, b, and c be nonzero constants.</p>
+              </div>
+              <div className="Paragraph_Topic block">
+                <p>
+                  Then the equation{" "}
+                  <span className="Light_Blue fraction">
+                    <p>ax + by + cz + d = 0</p>
+                  </span>
+                  &nbsp;is a plane in R³ with normal vector n = (a, b, c).
+                </p>
               </div>
             </div>
           </div>
@@ -765,7 +773,7 @@ function PELesson3() {
                     <div className="solution">
                       <p className="left"></p>
                       <p className="center"></p>
-                      <p className="right noFraction">
+                      <p className="right noFraction withPadding">
                         <span className="Blue">a</span> (x -{" "}
                         <span className="Orange">x₀</span> ) +{" "}
                         <span className="Blue">b</span> (y -{" "}
@@ -786,7 +794,7 @@ function PELesson3() {
                     <div className="solution">
                       <p className="left"></p>
                       <p className="center"></p>
-                      <p className="right noFraction">
+                      <p className="right noFraction withPadding">
                         <span className="Blue">(-5)</span> (x -{" "}
                         <span className="Orange">9</span> ) +{" "}
                         <span className="Blue">(-1)</span> (y -{" "}
@@ -809,8 +817,8 @@ function PELesson3() {
                     <div className="solution">
                       <p className="left"></p>
                       <p className="center"></p>
-                      <p className="right">
-                        <span className="LimeGreen">
+                      <p className="right withPadding">
+                        <span className="LimeGreen ">
                           -5(x - 9) - (y + 14) + 2z
                         </span>
                       </p>
@@ -830,7 +838,9 @@ function PELesson3() {
                   <div className="solution">
                     <p className="left"></p>
                     <p className="center"></p>
-                    <p className="right">-5x + 45 - y - 14 + 2z = 0</p>
+                    <p className="right withPadding">
+                      -5x + 45 - y - 14 + 2z = 0
+                    </p>
                   </div>
                 </div>
                 <div className="Solution_Example">
@@ -844,7 +854,7 @@ function PELesson3() {
                   <div className="solution">
                     <p className="left"></p>
                     <p className="center"></p>
-                    <p className="right">
+                    <p className="right withPadding">
                       <span className="LimeGreen">-5x - y + 2z + 31 = 0</span>
                     </p>
                   </div>
@@ -1664,8 +1674,10 @@ function PELesson3() {
                       <span className="upper">|ax₀ + by₀ + c|</span>
                       <span className="divider blue"></span>
                       <span className="bottom">
-                        <span className="squareRoot_Symbol">&radic;</span>a² +
-                        b²
+                        <span className="Squareroot_Container">
+                          <span className="squareRoot_Symbol">&radic;</span>
+                          <span className="squareRoot_Formula">a² + b²</span>
+                        </span>
                       </span>
                     </div>
                   </p>
@@ -1697,7 +1709,10 @@ function PELesson3() {
               </span>
               <span className="divider"></span>
               <span className="bottom">
-                <span className="squareRoot_Symbol">&radic;</span>a² + b²
+                <span className="Squareroot_Container">
+                  <span className="squareRoot_Symbol">&radic;</span>
+                  <span className="squareRoot_Formula">a² + b²</span>
+                </span>
               </span>
             </div>
           </div>
@@ -1724,8 +1739,10 @@ function PELesson3() {
                     <span className="upper">|(6)(-5) + (-1)(7) + 13|</span>
                     <span className="divider"></span>
                     <span className="bottom">
-                      <span className="squareRoot_Symbol">&radic;</span>(6)² +
-                      (-1)²
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">(6)² + (-1)²</span>
+                      </span>
                     </span>
                   </div>
                 </p>
@@ -1739,7 +1756,10 @@ function PELesson3() {
                     <span className="upper">|24|</span>
                     <span className="divider"></span>
                     <span className="bottom">
-                      <span className="squareRoot_Symbol">&radic;</span>36 + 1
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">36 + 1</span>
+                      </span>
                     </span>
                   </div>
                 </p>
@@ -1753,7 +1773,10 @@ function PELesson3() {
                     <span className="upper">24</span>
                     <span className="divider"></span>
                     <span className="bottom">
-                      <span className="squareRoot_Symbol">&radic;</span>37
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">37</span>
+                      </span>
                     </span>
                   </div>
                 </p>
@@ -1765,7 +1788,11 @@ function PELesson3() {
                 <p className="right">
                   <div className="fraction">
                     <span className="upper">
-                      24<span className="squareRoot_Symbol">&radic;</span>37
+                      24
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">37</span>
+                      </span>
                     </span>
                     <span className="divider"></span>
                     <span className="bottom">37</span>
@@ -1802,8 +1829,12 @@ function PELesson3() {
                       <span className="upper">|ax₀ + by₀ + cz₀ +d|</span>
                       <span className="divider blue"></span>
                       <span className="bottom">
-                        <span className="squareRoot_Symbol">&radic;</span>a² +
-                        b² + c²
+                        <span className="Squareroot_Container">
+                          <span className="squareRoot_Symbol">&radic;</span>
+                          <span className="squareRoot_Formula">
+                            a² + b² + c²
+                          </span>
+                        </span>
                       </span>
                     </div>
                   </p>
@@ -1833,7 +1864,10 @@ function PELesson3() {
               <span className="upper">|ax₀ + by₀ + cz₀ +d|</span>
               <span className="divider"></span>
               <span className="bottom">
-                <span className="squareRoot_Symbol">&radic;</span>a² + b² + c²
+                <span className="Squareroot_Container">
+                  <span className="squareRoot_Symbol">&radic;</span>
+                  <span className="squareRoot_Formula">a² + b² + c²</span>
+                </span>
               </span>
             </div>
           </div>
@@ -1870,8 +1904,10 @@ function PELesson3() {
                     </span>
                     <span className="divider"></span>
                     <span className="bottom">
-                      <span className="squareRoot_Symbol">&radic;</span>(8)² +
-                      (-11)²
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">185</span>
+                      </span>
                     </span>
                   </div>
                 </p>
@@ -1885,7 +1921,10 @@ function PELesson3() {
                     <span className="upper">|-74|</span>
                     <span className="divider"></span>
                     <span className="bottom">
-                      <span className="squareRoot_Symbol">&radic;</span>185
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">185</span>
+                      </span>
                     </span>
                   </div>
                 </p>
@@ -1899,7 +1938,10 @@ function PELesson3() {
                     <span className="upper">74</span>
                     <span className="divider"></span>
                     <span className="bottom">
-                      <span className="squareRoot_Symbol">&radic;</span>185
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">185</span>
+                      </span>
                     </span>
                   </div>
                 </p>
@@ -1911,7 +1953,11 @@ function PELesson3() {
                 <p className="right">
                   <div className="fraction">
                     <span className="upper">
-                      2<span className="squareRoot_Symbol">&radic;</span>185
+                      2
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">185</span>
+                      </span>
                     </span>
                     <span className="divider"></span>
                     <span className="bottom">5</span>
@@ -1962,8 +2008,10 @@ function PELesson3() {
                     <span className="upper">|ax₀ + by₀ + cz₀ + d|</span>
                     <span className="divider"></span>
                     <span className="bottom">
-                      <span className="squareRoot_Symbol">&radic;</span>a² + b²
-                      + c²
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">a² + b² + c²</span>
+                      </span>
                     </span>
                   </div>
                 </span>
@@ -2044,6 +2092,32 @@ function PELesson3() {
               intercept in either of the planes.
             </p>
           </div>
+
+          <div className="Paragraph_Topic paddingLeft2">
+            <p>Consider plane 3x - 7y + 4z - 3 = 0, find x-intercept.</p>
+          </div>
+
+          <div className="Paragraph_Topic paddingLeft3">
+            <p>Let y = 0 and z = 0. Then,</p>
+          </div>
+
+          <div className="Paragraph_Topic paddingLeft3">
+            <p>3x - 7(0) + 4(0) - 3 = 0</p>
+            <p>3x = 3</p>
+            <p>x = 1</p>
+          </div>
+
+          <div className="Paragraph_Topic paddingLeft3">
+            <p className="LimeGreen">x-intercept: P₀ (1, 0, 0)</p>
+          </div>
+
+          <div className="Paragraph_Topic paddingLeft">
+            <p>
+              After finding an intercept or a point in the plane 3x - 7y +4z - 3
+              = 0, find its distance from the other plane -9x + 21y - 12z - 5 =
+              0.
+            </p>
+          </div>
           <div className="Paragraph_Topic paddingLeft2">
             <p>By Theorem 3.6, the distance between a point and a plane is</p>
           </div>
@@ -2056,8 +2130,10 @@ function PELesson3() {
                   <span className="upper">|ax₀ + by₀ + cz₀ + d|</span>
                   <span className="divider"></span>
                   <span className="bottom">
-                    <span className="squareRoot_Symbol">&radic;</span>a² + b² +
-                    c²
+                    <span className="Squareroot_Container">
+                      <span className="squareRoot_Symbol">&radic;</span>
+                      <span className="squareRoot_Formula">a² + b² + c²</span>
+                    </span>
                   </span>
                 </div>
               </p>
@@ -2099,8 +2175,12 @@ function PELesson3() {
                     </span>
                     <span className="divider"></span>
                     <span className="bottom">
-                      <span className="squareRoot_Symbol">&radic;</span>(-9)² +
-                      (21)²
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">
+                          (-9)² + (21)²
+                        </span>
+                      </span>
                     </span>
                   </div>
                 </p>
@@ -2114,7 +2194,10 @@ function PELesson3() {
                     <span className="upper">|-74|</span>
                     <span className="divider"></span>
                     <span className="bottom">
-                      <span className="squareRoot_Symbol">&radic;</span>185
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">185</span>
+                      </span>
                     </span>
                   </div>
                 </p>
@@ -2128,7 +2211,10 @@ function PELesson3() {
                     <span className="upper">|-14|</span>
                     <span className="divider"></span>
                     <span className="bottom">
-                      <span className="squareRoot_Symbol">&radic;</span>522
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">522</span>
+                      </span>
                     </span>
                   </div>
                 </p>
@@ -2141,7 +2227,10 @@ function PELesson3() {
                     <span className="upper">14</span>
                     <span className="divider"></span>
                     <span className="bottom">
-                      <span className="squareRoot_Symbol">&radic;</span>522
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">522</span>
+                      </span>
                     </span>
                   </div>
                 </p>
@@ -2153,7 +2242,11 @@ function PELesson3() {
                 <p className="right">
                   <div className="fraction">
                     <span className="upper">
-                      7<span className="squareRoot_Symbol">&radic;</span>58
+                      7
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">58</span>
+                      </span>
                     </span>
                     <span className="divider"></span>
                     <span className="bottom">87</span>

@@ -260,7 +260,9 @@ function PELesson1() {
           </div>
           <div className="Formula_Field">
             <div className="Formula">
-              <p className="Label">in 2-SPACE:</p>
+              <div className="Paragraph_Topic paddingLeft3">
+                <p>in 2-SPACE:</p>
+              </div>
               <div className="Formula_Main">
                 <div className="Formula_Part">v = (x, y)</div>
                 <div className="Formula_Part">or</div>
@@ -282,7 +284,9 @@ function PELesson1() {
           </div>
           <div className="Formula_Field">
             <div className="Formula">
-              <p className="Label">in 3-SPACE:</p>
+              <div className="Paragraph_Topic paddingLeft3">
+                <p>in 3-SPACE:</p>
+              </div>
               <div className="Formula_Main">
                 <div className="Formula_Part">v = (x, y, z)</div>
                 <div className="Formula_Part">or</div>
@@ -513,14 +517,13 @@ function PELesson1() {
         <div className="Sub_Topic_Lesson">
           <div className="Paragraph_Topic">
             <p>
-              Vectors are graphically represented as a directed line segment
-              that starts from the origin pointing from one point (tail) to
-              another point (head).
+              Vectors in 2-space and 3-space can be represented in two ways the
+              component form and the standard unit form.
             </p>
           </div>
           <div className="Paragraph_Topic">
-            <div className="Bullet_Topic">
-              <p className="Title">IN 2-SPACE</p>
+            <div className="Paragraph_Topic paddingLeft3">
+              <p className="Bold_Underline noPadding">IN 2-SPACE</p>
             </div>
             <div className="Formula_Field">
               <div className="Formula">
@@ -545,8 +548,8 @@ function PELesson1() {
                 </div>
               </div>
             </div>
-            <div className="Bullet_Topic">
-              <p className="Title">IN 3-SPACE</p>
+            <div className="Paragraph_Topic paddingLeft3">
+              <p className="Bold_Underline noPadding">IN 3-SPACE</p>
             </div>
             <div className="Formula_Field">
               <div className="Formula">
@@ -611,7 +614,7 @@ function PELesson1() {
                   = (x₂ - x₁ , y₂ - y₁)
                 </p>
               </div>
-              <p>or</p>
+              <p className="DarkBlue">or</p>
               <div className="Formula">
                 <p className="withStack">
                   <span className="stack">
@@ -653,7 +656,7 @@ function PELesson1() {
                   = (x₂ - x₁ , y₂ - y₁ , z₂ - z₁)
                 </p>
               </div>
-              <p>or</p>
+              <p className="DarkBlue">or</p>
               <div className="Formula">
                 <p className="withStack">
                   <span className="stack">
@@ -694,9 +697,11 @@ function PELesson1() {
           </div>
           <div className="Side_By_Side">
             <div className="Left_Side">
-              <div className="Paragraph_Topic">
+              <div className="Paragraph_Topic paddingLeft2">
                 <p>P (3, 2)</p>
                 <p>Q (9, 7)</p>
+              </div>
+              <div className="Paragraph_Topic">
                 <p>Sketching the graph:</p>
               </div>
               <div className="Paragraph_Topic">
@@ -743,9 +748,11 @@ function PELesson1() {
                   </p>
                 </div>
               </div>
+              <div className="Paragraph_Topic noPadding">
+                <p className="Italic">Standard Unit Form:</p>
+              </div>
               <div className="Horizontal">
                 <div className="Solution_Example">
-                  <p className="label Italic">Standard Unit Form:</p>
                   <div className="start">
                     <p className="left">
                       <span className="stack">
@@ -798,7 +805,7 @@ function PELesson1() {
                   <div className="Label">Initial Point</div>
                   <div className="Input_Group">
                     <div className="Inputs">
-                      <p>A(</p>
+                      <p>A (</p>
                       <div className="vertical">
                         <p>x</p>
                         <input
@@ -882,7 +889,7 @@ function PELesson1() {
                   <div className="Label">Terminal Point</div>
                   <div className="Input_Group">
                     <div className="Inputs">
-                      <p>B(</p>
+                      <p>B (</p>
                       <div className="vertical">
                         <p>x</p>
                         <input
@@ -975,7 +982,7 @@ function PELesson1() {
                 <p className="Label">OUTPUT</p>
                 <div className="Content output">
                   <div class="Label">Component Form:</div>
-                  <div className="Solution_Example">
+                  <div className="Solution_Example margin_top">
                     <div className="start">
                       <p className="left">
                         <p className="withStack">
@@ -1319,7 +1326,7 @@ function PELesson1() {
                 <p className="Label">OUTPUT</p>
                 <div className="Content output">
                   <div class="Label">Component Form:</div>
-                  <div className="Solution_Example">
+                  <div className="Solution_Example margin_top">
                     <div className="start">
                       <p className="left">
                         <p className="withStack">
@@ -2144,7 +2151,7 @@ function PELesson1() {
                   <div className="Input_Group">
                     <div className="Inputs">
                       <p>1.</p>
-                      <p className="equal">v+ w = (</p>
+                      <p className="equal">v + w = (</p>
                       <div className="vertical">
                         <p>x</p>
                         <div
@@ -2295,24 +2302,26 @@ function PELesson1() {
           <div className="Notes_Container">
             <div className="Label">Note:</div>
             <p className="Bold">Additive Identity</p>
-            <p className="Note">
-              The additive identity in both the R² and R³ is represented by the
-              zero vector denoted by{" "}
-              <span className="stack">
-                <sup>→</sup>
-                <p>0</p>
-              </span>
-              = (0, 0) and{" "}
-              <span className="stack">
-                <sup>→</sup>
-                <p>0</p>
-              </span>{" "}
-              = (0, 0, 0).
-            </p>
+            <div className="Paragraph_Topic paddingLeft2">
+              <p>
+                The additive identity in both the R² and R³ is represented by
+                the zero vector denoted by{" "}
+                <span className="stack">
+                  <sup>→</sup>
+                  <p>0</p>
+                </span>
+                = (0, 0) and{" "}
+                <span className="stack">
+                  <sup>→</sup>
+                  <p>0</p>
+                </span>{" "}
+                = (0, 0, 0).
+              </p>
+            </div>
             <p className="Bold">Additive Inverse</p>
-            <p className="Note">
-              The additive inverse of v is represented by -v.
-            </p>
+            <div className="Paragraph_Topic paddingLeft2">
+              <p>The additive inverse of v is represented by -v.</p>
+            </div>
           </div>
           <div className="Theorem">
             <div className="Label_Container">

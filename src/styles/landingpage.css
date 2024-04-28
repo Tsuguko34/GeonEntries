@@ -297,6 +297,16 @@
     opacity: 1;
 }
 
+@media only screen and (max-width: 1440px){
+    #LandingPage > .wrapper > .LandingPage_Middle > .LandingPage_Paragraph_Container > .Paragraph_Item > p{
+        font-size: 22px;
+    }
+
+    #LandingPage > .wrapper > .LandingPage_Middle{
+        height: 275px;
+    }
+}
+
 @media only screen and (max-width: 1024px){
 
     #LandingPage > .wrapper > .LandingPage_Top > img{

@@ -543,7 +543,6 @@ function PELesson4() {
           </div>
 
           <div className="Bullet_Topic paddingLeft">
-            <p className="Title">PARAMETRIC EQUATIONS</p>
             <p className="Explanation">
               From the vector equation (x, y, z) = t(4, -7, 5) , we can equate
               its corresponding components on the two sides of the equation to
@@ -559,7 +558,7 @@ function PELesson4() {
             <div className="Explanation">
               <div className="Triple_Grid">
                 <div className="left">
-                  <div className="Solution_Example">
+                  <div className="Solution_Example largerLeft">
                     <p className="label">For x-component:</p>
                     <div className="start">
                       <p className="left">
@@ -579,7 +578,7 @@ function PELesson4() {
                   </div>
                 </div>
                 <div className="middle">
-                  <div className="Solution_Example">
+                  <div className="Solution_Example largerLeft">
                     <p className="label">For y-component:</p>
                     <div className="start">
                       <p className="left">
@@ -599,7 +598,7 @@ function PELesson4() {
                   </div>
                 </div>
                 <div className="right">
-                  <div className="Solution_Example">
+                  <div className="Solution_Example largerLeft">
                     <p className="label">For z-component:</p>
                     <div className="start">
                       <p className="left">
@@ -793,14 +792,14 @@ function PELesson4() {
           </div>
           <div className="Bullet_Topic paddingLeft">
             <p className="Explanation">
-              <span className="Italic">x₀ , y₀</span> , and{" "}
+              <span className="Italic">x₀, y₀,</span> and{" "}
               <span className="Italic">z₀</span> are 0 since the line passes
               through the origin.
             </p>
           </div>
           <div className="Bullet_Topic paddingLeft">
             <p className="Explanation">
-              <span className="Italic">a, b</span> , and{" "}
+              <span className="Italic">a, b,</span> and{" "}
               <span className="Italic">c</span> are the coordinates of the
               direction vector <span className="Italic">v,</span> thus,
             </p>
@@ -1024,7 +1023,7 @@ function PELesson4() {
           </div>
           <div className="Side_By_Side">
             <div className="Left_Side center">
-              <div className="Paragraph_Topic">
+              <div className="Paragraph_Topic alignEnd">
                 <p>d(P, X) + d(X, Q) = d(P, Q)</p>
               </div>
             </div>
@@ -1471,21 +1470,21 @@ function PELesson4() {
               <div className="Row">
                 <p className="Header">-8t₁ + 6t₂ + 13</p>
                 <p className="LimeGreen">13</p>
-                <p className="Orange">0</p>
-                <p className="Blue">0</p>
+                <p className="LimeGreen">-8</p>
+                <p className="LimeGreen">6</p>
               </div>
 
               <div className="Row">
                 <p className="Header">t₁</p>
-                <p className="LimeGreen">-8</p>
+                <p className="Orange">0</p>
                 <p className="Orange">1</p>
-                <p className="Blue">0</p>
+                <p className="Orange">0</p>
               </div>
 
               <div className="Row">
                 <p className="Header">t₂</p>
-                <p className="LimeGreen">6</p>
-                <p className="Orange">0</p>
+                <p className="Blue">0</p>
+                <p className="Blue">0</p>
                 <p className="Blue">1</p>
               </div>
             </div>
@@ -1948,27 +1947,32 @@ function PELesson4() {
           <p className="Sub_Title">Definition 4.4</p>
         </div>
         <div className="Sub_Topic_Lesson">
-          <div className="Bullet_Topic">
-            <p className="Title">INTERSECTING LINES</p>
-            <p className="Explanation">
-              If two lines pass through a common point P , then they intersect
-              at P . Point P is the point of intersection of the two lines.
-            </p>
+          <div className="Paragraph_Topic">
+            <div className="Bullet_Topic">
+              <p className="Title">INTERSECTING LINES</p>
+              <p className="Explanation">
+                If two lines pass through a common point P , then they intersect
+                at P . Point P is the point of intersection of the two lines.
+              </p>
+            </div>
           </div>
-          <div className="Bullet_Topic">
-            <p className="Title">PARALLEL LINES</p>
-            <p className="Explanation">
-              If two lines m & n have no point of intersection, then they are
-              parallel , denoted as m || n.
-            </p>
+          <div className="Paragraph_Topic">
+            <div className="Bullet_Topic">
+              <p className="Title">PARALLEL LINES</p>
+              <p className="Explanation">
+                If two lines m & n have no point of intersection, then they are
+                parallel , denoted as m || n.
+              </p>
+            </div>
           </div>
-
-          <div className="Bullet_Topic">
-            <p className="Title">PERPENDICULAR LINES</p>
-            <p className="Explanation">
-              If two lines m & n have orthogonal direction vectors, then they
-              are perpendicular , denoted as m ⊥ n.
-            </p>
+          <div className="Paragraph_Topic">
+            <div className="Bullet_Topic">
+              <p className="Title">PERPENDICULAR LINES</p>
+              <p className="Explanation">
+                If two lines m & n have orthogonal direction vectors, then they
+                are perpendicular , denoted as m ⊥ n.
+              </p>
+            </div>
           </div>
 
           <div className="Side_By_Side">
@@ -1985,7 +1989,7 @@ function PELesson4() {
               <div className="Paragraph_Topic">
                 <p>
                   Then, <span className="Italic">M</span> is a{" "}
-                  <span className="Bold">midpoin</span>t of segment PQ.
+                  <span className="Bold">midpoint</span> of segment PQ.
                 </p>
               </div>
               <div className="Paragraph_Topic">
@@ -2170,11 +2174,13 @@ function PELesson4() {
             <p className="Bold_Underline noPadding">PARAMETRIC EQUATIONS</p>
           </div>
           <div className="Paragraph_Topic paddingLeft3">
-            <p>Let:</p>
+            <p></p>
           </div>
           <div className="Solution_Example">
             <div className="start">
-              <p className="left Bold">Plane A</p>
+              <p className="left">
+                Let:&nbsp;<span className="Bold"> Plane A </span>
+              </p>
               <p className="center">:</p>
               <p className="right">4x + 2y - 5z + 2 = 0</p>
             </div>
@@ -2233,8 +2239,7 @@ function PELesson4() {
             <p>
               <div className="fraction">
                 <span className="upper column">
-                  <span className="Orange">2x - 9z - 4 = 0</span>- (4x + 2x = 9z
-                  + 4
+                  <span className="Orange">2x - 9z - 4 = 0</span> 2x = 9z + 4
                 </span>
               </div>
               <span className="arrow">→</span>{" "}
@@ -2261,7 +2266,7 @@ function PELesson4() {
             </p>
           </div>
 
-          <div className="Paragraph_Topic paddingLeft center">
+          <div className="Paragraph_Topic paddingLeft center alignEnd">
             <p>
               <div className="fraction">
                 <span className="upper column">
@@ -2328,20 +2333,25 @@ function PELesson4() {
                   </span>
                 </span>
               </div>
-              <span className="arrow">→</span>{" "}
-              <span className="Blue">y = </span>
-              <div className="fraction Blue">
-                <span className="upper column">-13z - 10</span>
-                <span className="divider LightBlue"></span>
-                <span className="bottom">2</span>
+              <div
+                className="Group"
+                style={{ display: "flex", gap: "10px", alignItems: "center" }}
+              >
+                <span className="arrow">→</span>{" "}
+                <span className="Blue">y = </span>
+                <div className="fraction Blue">
+                  <span className="upper column">-13z - 10</span>
+                  <span className="divider LightBlue"></span>
+                  <span className="bottom">2</span>
+                </div>
+                <span className="Blue">or y = </span>
+                <div className="fraction Blue">
+                  <span className="upper column">-13z</span>
+                  <span className="divider LightBlue"></span>
+                  <span className="bottom">2</span>
+                </div>
+                <span className="Blue">- 5</span>
               </div>
-              <span className="Blue">or y = </span>
-              <div className="fraction Blue">
-                <span className="upper column">-13z</span>
-                <span className="divider LightBlue"></span>
-                <span className="bottom">2</span>
-              </div>
-              <span className="Blue">- 5</span>
             </p>
           </div>
 
@@ -2634,20 +2644,22 @@ function PELesson4() {
               n₂.
             </p>
           </div>
-
-          <div className="Bullet_Topic">
-            <p className="Title">PARALLEL PLANES</p>
-            <p className="Explanation">
-              If n₁ is a scalar multiple of n₂ or vice versa, then A and B are
-              parallel.
-            </p>
+          <div className="Paragraph_Topic">
+            <div className="Bullet_Topic">
+              <p className="Title">PARALLEL PLANES</p>
+              <p className="Explanation">
+                If n₁ is a scalar multiple of n₂ or vice versa, then A and B are
+                parallel.
+              </p>
+            </div>
           </div>
-
-          <div className="Bullet_Topic">
-            <p className="Title">ORTHOGONAL PLANES</p>
-            <p className="Explanation">
-              If n₁ ⋅ n₂ = 0, then A and B are orthogonal.
-            </p>
+          <div className="Paragraph_Topic">
+            <div className="Bullet_Topic">
+              <p className="Title">ORTHOGONAL PLANES</p>
+              <p className="Explanation">
+                If n₁ ⋅ n₂ = 0, then A and B are orthogonal.
+              </p>
+            </div>
           </div>
 
           <div className="Side_By_Side">
@@ -2662,9 +2674,6 @@ function PELesson4() {
                   If n₁ ⋅ n₂ ≠ 0, then we can find the angle θ between A and B
                   using the formula:
                 </p>
-              </div>
-              <div className="Paragraph_Topic center">
-                <p>d(P, M) = d(M, Q) = 1/2 d(P, Q)</p>
               </div>
 
               <div className="Light_Blue_Holder">
@@ -2968,8 +2977,10 @@ function PELesson4() {
                     <p className="left">|| n₁ ||</p>
                     <p className="center">=</p>
                     <p className="right">
-                      <span className="squareRoot_Symbol">&radic;</span>x² + y²
-                      + z²
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">x² + y² + z²</span>
+                      </span>
                     </p>
                   </div>
 
@@ -2977,8 +2988,12 @@ function PELesson4() {
                     <p className="left"></p>
                     <p className="center">=</p>
                     <p className="right">
-                      <span className="squareRoot_Symbol">&radic;</span>6² +
-                      (-3)² + (-2)²
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">
+                          6² + (-3)² + (-2)²
+                        </span>
+                      </span>
                     </p>
                   </div>
                   <div className="solution">
@@ -2995,8 +3010,10 @@ function PELesson4() {
                     <p className="left">|| n₂ ||</p>
                     <p className="center">=</p>
                     <p className="right">
-                      <span className="squareRoot_Symbol">&radic;</span>x² + y²
-                      + z²
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">x² + y² + z²</span>
+                      </span>
                     </p>
                   </div>
 
@@ -3004,15 +3021,23 @@ function PELesson4() {
                     <p className="left"></p>
                     <p className="center">=</p>
                     <p className="right">
-                      <span className="squareRoot_Symbol">&radic;</span>4² + 1²
-                      + (-9)²
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">
+                          4² + 1² + (-9)²
+                        </span>
+                      </span>
                     </p>
                   </div>
                   <div className="solution">
                     <p className="left"></p>
                     <p className="center">=</p>
                     <p className="right">
-                      7<span className="squareRoot_Symbol">&radic;</span>2
+                      7
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">2</span>
+                      </span>
                     </p>
                   </div>
                 </div>
@@ -3045,7 +3070,14 @@ function PELesson4() {
                   <div className="fraction">
                     <span className="upper">|(6)(4) + (-3)(1) + (-2)(-9)|</span>
                     <span className="divider"></span>
-                    <span className="bottom">(7)(7√2)</span>
+                    <span className="bottom">
+                      (7)(7
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">2</span>
+                      </span>
+                      )
+                    </span>
                   </div>
                   <span className="large">)</span>
                 </p>
@@ -3059,7 +3091,11 @@ function PELesson4() {
                     <span className="upper">39</span>
                     <span className="divider"></span>
                     <span className="bottom">
-                      49<span className="squareRoot_Symbol">&radic;</span>2
+                      49
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">2</span>
+                      </span>
                     </span>
                   </div>
                   <span className="large">)</span>
