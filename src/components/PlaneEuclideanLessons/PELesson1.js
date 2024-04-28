@@ -1422,25 +1422,33 @@ function PELesson1() {
           <p className="Sub_Title"></p>
         </div>
         <div className="Sub_Topic_Lesson">
-          <div className="Bullet_Topic">
-            <p className="Title">MAGNITUDE of the NEW VECTOR</p>
-            <p className="Explanation">
-              The magnitude or norm of the new vector is the absolute value of k
-              times the length of v.
-            </p>
+          <div className="Paragraph_Topic">
+            <div className="Bullet_Topic">
+              <p className="Title">MAGNITUDE of the NEW VECTOR</p>
+              <p className="Explanation">
+                The magnitude or norm of the new vector is the absolute value of
+                k times the length of v.
+              </p>
+            </div>
           </div>
+
           <div className="Topic_Visual">
             <div className="Visual_Holder image">
               <img src={magnitude_new} alt="Graph Image" />
             </div>
           </div>
-          <div className="Bullet_Topic">
-            <p className="Title">DIRECTION of the NEW VECTOR</p>
-            <p className="Explanation">
-              If k is positive, the new vector points in the same direction v.
-              if k is negative, the new vector points in the opposite direction.
-            </p>
+
+          <div className="Paragraph_Topic">
+            <div className="Bullet_Topic">
+              <p className="Title">DIRECTION of the NEW VECTOR</p>
+              <p className="Explanation">
+                If k is positive, the new vector points in the same direction v.
+                if k is negative, the new vector points in the opposite
+                direction.
+              </p>
+            </div>
           </div>
+
           <div className="Topic_Visual">
             <div className="Visual_Holder image">
               <img src={direction_new} alt="Graph Image" />
@@ -1570,12 +1578,12 @@ function PELesson1() {
               <div className="right">
                 <div className="Light_Blue">
                   <div className="Solution_Example">
-                    <div className="start  DarkBlue">
+                    <div className="start  DarkBlue Bold">
                       <p className="left">w - v</p>
                       <p className="center">=</p>
-                      <p className="right"> w + (-v</p>
+                      <p className="right"> w + (-v)</p>
                     </div>
-                    <div className="start  DarkBlue">
+                    <div className="start  DarkBlue Bold">
                       <p className="left">w - v</p>
                       <p className="center">=</p>
                       <p className="right">(w₁ - v₁, w₂ - v₂, ..., wₙ - vₙ)</p>

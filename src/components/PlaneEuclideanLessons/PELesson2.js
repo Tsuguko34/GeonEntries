@@ -128,7 +128,7 @@ function PELesson2() {
           <div className="Paragraph_Topic">
             <p>Determine the norm of the following vectors.</p>
           </div>
-          <div className="Paragraph_Topic">
+          <div className="Paragraph_Topic paddingLeft2">
             <div className="Side_By_Side">
               <div className="Left_Side">
                 <div className="Solution_Example">
@@ -695,6 +695,7 @@ function PELesson2() {
             <div className="Theorem_Content">
               <p className="Label">
                 Let <span className="Italic">v</span> be a vector in Rⁿ, and
+                &nbsp;
                 <span className="Italic">k</span> be any scalars, then:
               </p>
               <div className="List">
@@ -706,7 +707,7 @@ function PELesson2() {
                   2. || v || = 0 iff. v ={" "}
                   <span className="stack">
                     <sup>→</sup>
-                    <p>PQ</p>
+                    <p>0</p>
                   </span>{" "}
                   (zero vector)
                 </p>
@@ -731,280 +732,285 @@ function PELesson2() {
             <p>Example B</p>
           </div>
           <div className="Paragraph_Topic">
-            <p>A unit vector is a vector that has a norm of 1.</p>
+            <p>Determine the norm of the following vectors:</p>
           </div>
-          <div className="Solution_Example">
-            <p className="label">
-              1.) v=
-              <span className="large">(</span>
-              <div className="fraction">
-                <span className="upper">-3</span>
-                <span className="divider"></span>
-                <span className="bottom">2</span>
-              </div>
-              ,
-              <div className="fraction">
-                <span className="upper">4</span>
-                <span className="divider"></span>
-                <span className="bottom">5</span>
-              </div>
-              <span className="large">)</span>
-            </p>
-            <div className="start">
-              <p className="left">|| v ||</p>
-              <p className="center">=</p>
-              <p className="right">
-                <span className="Squareroot_Container">
-                  <span className="squareRoot_Symbol">&radic;</span>
-                  <span className="squareRoot_Formula">x² + y²</span>
-                </span>
+          <div className="Paragraph_Topic paddingLeft2">
+            <div className="Solution_Example">
+              <p className="label">
+                1.) v=
+                <span className="large">(</span>
+                <div className="fraction">
+                  <span className="upper">-3</span>
+                  <span className="divider"></span>
+                  <span className="bottom">2</span>
+                </div>
+                ,
+                <div className="fraction">
+                  <span className="upper">4</span>
+                  <span className="divider"></span>
+                  <span className="bottom">5</span>
+                </div>
+                <span className="large">)</span>
               </p>
-            </div>
-            <div className="solution">
-              <p className="left">|| v ||</p>
-              <p className="center">=</p>
-              <p className="right">
-                <span className="Squareroot_Container">
-                  <span className="squareRoot_Symbol large_formula">
-                    &radic;
+              <div className="start">
+                <p className="left">|| v ||</p>
+                <p className="center">=</p>
+                <p className="right">
+                  <span className="Squareroot_Container">
+                    <span className="squareRoot_Symbol">&radic;</span>
+                    <span className="squareRoot_Formula">x² + y²</span>
                   </span>
-                  <span className="squareRoot_Formula large_formula">
-                    <span className="large">(</span>
-                    <div className="fraction">
-                      <span className="upper">-3</span>
-                      <span className="divider"></span>
-                      <span className="bottom">2</span>
-                    </div>
-                    <span className="large">)</span>² +{" "}
-                    <span className="large">(</span>
-                    <div className="fraction">
-                      <span className="upper">4</span>
-                      <span className="divider"></span>
-                      <span className="bottom">52</span>
-                    </div>
-                    <span className="large">)</span>²
+                </p>
+              </div>
+              <div className="solution">
+                <p className="left">|| v ||</p>
+                <p className="center">=</p>
+                <p className="right">
+                  <span className="Squareroot_Container">
+                    <span className="squareRoot_Symbol large_formula">
+                      &radic;
+                    </span>
+                    <span className="squareRoot_Formula large_formula">
+                      <span className="large">(</span>
+                      <div className="fraction">
+                        <span className="upper">-3</span>
+                        <span className="divider"></span>
+                        <span className="bottom">2</span>
+                      </div>
+                      <span className="large">)</span>² +{" "}
+                      <span className="large">(</span>
+                      <div className="fraction">
+                        <span className="upper">4</span>
+                        <span className="divider"></span>
+                        <span className="bottom">52</span>
+                      </div>
+                      <span className="large">)</span>²
+                    </span>
                   </span>
-                </span>
-              </p>
-            </div>
+                </p>
+              </div>
 
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">
-                <span className="Squareroot_Container">
-                  <span className="squareRoot_Symbol large_formula">
-                    &radic;
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">
+                  <span className="Squareroot_Container">
+                    <span className="squareRoot_Symbol large_formula">
+                      &radic;
+                    </span>
+                    <span className="squareRoot_Formula large_formula">
+                      <span className="large">(</span>
+                      <div className="fraction">
+                        <span className="upper">9</span>
+                        <span className="divider"></span>
+                        <span className="bottom">25</span>
+                      </div>
+                      <span className="large">)</span>² +{" "}
+                      <span className="large">(</span>
+                      <div className="fraction">
+                        <span className="upper">16</span>
+                        <span className="divider"></span>
+                        <span className="bottom">25</span>
+                      </div>
+                      <span className="large">)</span>²
+                    </span>
                   </span>
-                  <span className="squareRoot_Formula large_formula">
-                    <span className="large">(</span>
-                    <div className="fraction">
-                      <span className="upper">9</span>
-                      <span className="divider"></span>
-                      <span className="bottom">25</span>
-                    </div>
-                    <span className="large">)</span>² +{" "}
-                    <span className="large">(</span>
-                    <div className="fraction">
-                      <span className="upper">16</span>
-                      <span className="divider"></span>
-                      <span className="bottom">25</span>
-                    </div>
-                    <span className="large">)</span>²
+                </p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">
+                  <span className="Squareroot_Container">
+                    <span className="squareRoot_Symbol withFraction">
+                      &radic;
+                    </span>
+                    <span className="squareRoot_Formula withFraction">
+                      <div className="fraction">
+                        <span className="upper">25</span>
+                        <span className="divider"></span>
+                        <span className="bottom">25</span>
+                      </div>
+                    </span>
                   </span>
-                </span>
-              </p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">
-                <span className="Squareroot_Container">
-                  <span className="squareRoot_Symbol withFraction">
-                    &radic;
-                  </span>
-                  <span className="squareRoot_Formula withFraction">
-                    <div className="fraction">
-                      <span className="upper">25</span>
-                      <span className="divider"></span>
-                      <span className="bottom">25</span>
-                    </div>
-                  </span>
-                </span>
-              </p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">1</p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center"></p>
-              <p className="right">
-                Since its norm is equal to 1, then v is a unit vector.
-              </p>
+                </p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">1</p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center"></p>
+                <p className="right">
+                  Since its norm is equal to 1, then v is a unit vector.
+                </p>
+              </div>
             </div>
           </div>
-          <div className="Solution_Example">
-            <p className="label">
-              2.) v =<span className="large">(</span>
-              <div className="fraction">
-                <span className="upper">-5</span>
-                <span className="divider"></span>
-                <span className="bottom">
+
+          <div className="Paragraph_Topic paddingLeft2">
+            <div className="Solution_Example">
+              <p className="label">
+                2.) v =<span className="large">(</span>
+                <div className="fraction">
+                  <span className="upper">-5</span>
+                  <span className="divider"></span>
+                  <span className="bottom">
+                    <span className="Squareroot_Container">
+                      <span className="squareRoot_Symbol">&radic;</span>
+                      <span className="squareRoot_Formula">65</span>
+                    </span>
+                  </span>
+                </div>
+                ,
+                <div className="fraction">
+                  <span className="upper">2</span>
+                  <span className="divider"></span>
+                  <span className="bottom">
+                    <span className="Squareroot_Container">
+                      <span className="squareRoot_Symbol">&radic;</span>
+                      <span className="squareRoot_Formula">65</span>
+                    </span>
+                  </span>
+                </div>
+                ,
+                <div className="fraction">
+                  <span className="upper">-6</span>
+                  <span className="divider"></span>
+                  <span className="bottom">
+                    <span className="Squareroot_Container">
+                      <span className="squareRoot_Symbol">&radic;</span>
+                      <span className="squareRoot_Formula">65</span>
+                    </span>
+                  </span>
+                </div>
+                <span className="large">)</span>
+              </p>
+              <div className="start">
+                <p className="left">|| v ||</p>
+                <p className="center">=</p>
+                <p className="right">
                   <span className="Squareroot_Container">
                     <span className="squareRoot_Symbol">&radic;</span>
-                    <span className="squareRoot_Formula">65</span>
+                    <span className="squareRoot_Formula">x² + y² + z²</span>
                   </span>
-                </span>
+                </p>
               </div>
-              ,
-              <div className="fraction">
-                <span className="upper">2</span>
-                <span className="divider"></span>
-                <span className="bottom">
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">
                   <span className="Squareroot_Container">
-                    <span className="squareRoot_Symbol">&radic;</span>
-                    <span className="squareRoot_Formula">65</span>
+                    <span className="squareRoot_Symbol large_formula">
+                      &radic;
+                    </span>
+                    <span className="squareRoot_Formula large_formula">
+                      <span className="large">(</span>
+                      <div className="fraction">
+                        <span className="upper">-5</span>
+                        <span className="divider"></span>
+                        <span className="bottom">
+                          <span className="Squareroot_Container">
+                            <span className="squareRoot_Symbol">&radic;</span>
+                            <span className="squareRoot_Formula">65</span>
+                          </span>
+                        </span>
+                      </div>
+                      <span className="large">)</span>² +{" "}
+                      <span className="large">(</span>
+                      <div className="fraction">
+                        <span className="upper">2</span>
+                        <span className="divider"></span>
+                        <span className="bottom">
+                          <span className="Squareroot_Container">
+                            <span className="squareRoot_Symbol">&radic;</span>
+                            <span className="squareRoot_Formula">65</span>
+                          </span>
+                        </span>
+                      </div>
+                      <span className="large">)</span>²+{" "}
+                      <span className="large">(</span>
+                      <div className="fraction">
+                        <span className="upper">-6</span>
+                        <span className="divider"></span>
+                        <span className="bottom">
+                          <span className="Squareroot_Container">
+                            <span className="squareRoot_Symbol">&radic;</span>
+                            <span className="squareRoot_Formula">65</span>
+                          </span>
+                        </span>
+                      </div>
+                      <span className="large">)</span>²
+                    </span>
                   </span>
-                </span>
+                </p>
               </div>
-              ,
-              <div className="fraction">
-                <span className="upper">-6</span>
-                <span className="divider"></span>
-                <span className="bottom">
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">
                   <span className="Squareroot_Container">
-                    <span className="squareRoot_Symbol">&radic;</span>
-                    <span className="squareRoot_Formula">65</span>
+                    <span className="squareRoot_Symbol large_formula">
+                      &radic;
+                    </span>
+                    <span className="squareRoot_Formula large_formula">
+                      <span className="large">(</span>
+                      <div className="fraction">
+                        <span className="upper">25</span>
+                        <span className="divider"></span>
+                        <span className="bottom">65</span>
+                      </div>
+                      <span className="large">)</span>² +{" "}
+                      <span className="large">(</span>
+                      <div className="fraction">
+                        <span className="upper">4</span>
+                        <span className="divider"></span>
+                        <span className="bottom">65</span>
+                      </div>
+                      <span className="large">)</span>²+{" "}
+                      <span className="large">(</span>
+                      <div className="fraction">
+                        <span className="upper">36</span>
+                        <span className="divider"></span>
+                        <span className="bottom">65</span>
+                      </div>
+                      <span className="large">)</span>²
+                    </span>
                   </span>
-                </span>
+                </p>
               </div>
-              <span className="large">)</span>
-            </p>
-            <div className="start">
-              <p className="left">|| v ||</p>
-              <p className="center">=</p>
-              <p className="right">
-                <span className="Squareroot_Container">
-                  <span className="squareRoot_Symbol">&radic;</span>
-                  <span className="squareRoot_Formula">x² + y² + z²</span>
-                </span>
-              </p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">
-                <span className="Squareroot_Container">
-                  <span className="squareRoot_Symbol large_formula">
-                    &radic;
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">
+                  <span className="Squareroot_Container">
+                    <span className="squareRoot_Symbol withFraction">
+                      &radic;
+                    </span>
+                    <span className="squareRoot_Formula withFraction">
+                      <div className="fraction">
+                        <span className="upper">65</span>
+                        <span className="divider"></span>
+                        <span className="bottom">65</span>
+                      </div>
+                    </span>
                   </span>
-                  <span className="squareRoot_Formula large_formula">
-                    <span className="large">(</span>
-                    <div className="fraction">
-                      <span className="upper">-5</span>
-                      <span className="divider"></span>
-                      <span className="bottom">
-                        <span className="Squareroot_Container">
-                          <span className="squareRoot_Symbol">&radic;</span>
-                          <span className="squareRoot_Formula">65</span>
-                        </span>
-                      </span>
-                    </div>
-                    <span className="large">)</span>² +{" "}
-                    <span className="large">(</span>
-                    <div className="fraction">
-                      <span className="upper">2</span>
-                      <span className="divider"></span>
-                      <span className="bottom">
-                        <span className="Squareroot_Container">
-                          <span className="squareRoot_Symbol">&radic;</span>
-                          <span className="squareRoot_Formula">65</span>
-                        </span>
-                      </span>
-                    </div>
-                    <span className="large">)</span>²+{" "}
-                    <span className="large">(</span>
-                    <div className="fraction">
-                      <span className="upper">-6</span>
-                      <span className="divider"></span>
-                      <span className="bottom">
-                        <span className="Squareroot_Container">
-                          <span className="squareRoot_Symbol">&radic;</span>
-                          <span className="squareRoot_Formula">65</span>
-                        </span>
-                      </span>
-                    </div>
-                    <span className="large">)</span>²
-                  </span>
-                </span>
-              </p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">
-                <span className="Squareroot_Container">
-                  <span className="squareRoot_Symbol large_formula">
-                    &radic;
-                  </span>
-                  <span className="squareRoot_Formula large_formula">
-                    <span className="large">(</span>
-                    <div className="fraction">
-                      <span className="upper">25</span>
-                      <span className="divider"></span>
-                      <span className="bottom">65</span>
-                    </div>
-                    <span className="large">)</span>² +{" "}
-                    <span className="large">(</span>
-                    <div className="fraction">
-                      <span className="upper">4</span>
-                      <span className="divider"></span>
-                      <span className="bottom">65</span>
-                    </div>
-                    <span className="large">)</span>²+{" "}
-                    <span className="large">(</span>
-                    <div className="fraction">
-                      <span className="upper">36</span>
-                      <span className="divider"></span>
-                      <span className="bottom">65</span>
-                    </div>
-                    <span className="large">)</span>²
-                  </span>
-                </span>
-              </p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">
-                <span className="Squareroot_Container">
-                  <span className="squareRoot_Symbol withFraction">
-                    &radic;
-                  </span>
-                  <span className="squareRoot_Formula withFraction">
-                    <div className="fraction">
-                      <span className="upper">65</span>
-                      <span className="divider"></span>
-                      <span className="bottom">65</span>
-                    </div>
-                  </span>
-                </span>
-              </p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">1</p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center"></p>
-              <p className="right">
-                Since its norm is equal to 1, then v is a unit vector.
-              </p>
+                </p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">1</p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center"></p>
+                <p className="right">
+                  Since its norm is equal to 1, then v is a unit vector.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -1059,11 +1065,11 @@ function PELesson2() {
           <div className="Paragraph_Topic">
             <p>1.) v = (4, −1)</p>
           </div>
-          <div className="Paragraph_Topic">
+          <div className="Paragraph_Topic paddingLeft2">
             <p>Let u be vector in R².</p>
           </div>
 
-          <div className="Paragraph_Topic equation block">
+          <div className="Paragraph_Topic equation paddingLeft2">
             <p>
               The unit vector in the direction of v is u ={" "}
               <span className="fraction">
@@ -1074,129 +1080,131 @@ function PELesson2() {
             </p>
           </div>
 
-          <div className="Side_By_Side">
-            <div className="Left_Side">
-              <div className="Solution_Example">
-                <p className="label">Finding || v ||</p>
-                <div className="start">
-                  <p className="left">|| v ||</p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    <span className="Squareroot_Container">
-                      <span className="squareRoot_Symbol">&radic;</span>
-                      <span className="squareRoot_Formula">x² + y²</span>
-                    </span>
-                  </p>
-                </div>
-                <div className="solution">
-                  <p className="left"></p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    <span className="Squareroot_Container">
-                      <span className="squareRoot_Symbol">&radic;</span>
-                      <span className="squareRoot_Formula">4² + (-1)²</span>
-                    </span>
-                  </p>
-                </div>
+          <div className="Paragraph_Topic paddingLeft3">
+            <div className="Side_By_Side">
+              <div className="Left_Side">
+                <div className="Solution_Example">
+                  <p className="label">Finding || v ||</p>
+                  <div className="start">
+                    <p className="left">|| v ||</p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">x² + y²</span>
+                      </span>
+                    </p>
+                  </div>
+                  <div className="solution">
+                    <p className="left"></p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">4² + (-1)²</span>
+                      </span>
+                    </p>
+                  </div>
 
-                <div className="solution">
-                  <p className="left"></p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    <span className="Squareroot_Container">
-                      <span className="squareRoot_Symbol">&radic;</span>
-                      <span className="squareRoot_Formula">16 + 1</span>
-                    </span>
-                  </p>
-                </div>
-                <div className="solution">
-                  <p className="left"></p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    <span className="Squareroot_Container">
-                      <span className="squareRoot_Symbol">&radic;</span>
-                      <span className="squareRoot_Formula">17</span>
-                    </span>
-                  </p>
+                  <div className="solution">
+                    <p className="left"></p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">16 + 1</span>
+                      </span>
+                    </p>
+                  </div>
+                  <div className="solution">
+                    <p className="left"></p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">17</span>
+                      </span>
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="Right_Side">
-              <div className="Solution_Example">
-                <p className="label">Substituting to u</p>
-                <div className="start">
-                  <p className="left">u</p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    <div className="fraction">
-                      <span className="upper">v</span>
-                      <span className="divider"></span>
-                      <span className="bottom">||v||</span>
-                    </div>
-                  </p>
-                </div>
-                <div className="solution">
-                  <p className="left">u</p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    <div className="fraction">
-                      <span className="upper">(4, -1)</span>
-                      <span className="divider"></span>
-                      <span className="bottom">
-                        <span className="Squareroot_Container">
-                          <span className="squareRoot_Symbol">&radic;</span>
-                          <span className="squareRoot_Formula">17</span>
+              <div className="Right_Side">
+                <div className="Solution_Example">
+                  <p className="label">Substituting to u</p>
+                  <div className="start">
+                    <p className="left">u</p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <div className="fraction">
+                        <span className="upper">v</span>
+                        <span className="divider"></span>
+                        <span className="bottom">||v||</span>
+                      </div>
+                    </p>
+                  </div>
+                  <div className="solution">
+                    <p className="left">u</p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <div className="fraction">
+                        <span className="upper">(4, -1)</span>
+                        <span className="divider"></span>
+                        <span className="bottom">
+                          <span className="Squareroot_Container">
+                            <span className="squareRoot_Symbol">&radic;</span>
+                            <span className="squareRoot_Formula">17</span>
+                          </span>
                         </span>
-                      </span>
-                    </div>
-                  </p>
-                </div>
+                      </div>
+                    </p>
+                  </div>
 
-                <div className="solution">
-                  <p className="left"></p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    <div className="fraction">
-                      <span className="upper">1</span>
-                      <span className="divider"></span>
-                      <span className="bottom">
-                        <span className="Squareroot_Container">
-                          <span className="squareRoot_Symbol">&radic;</span>
-                          <span className="squareRoot_Formula">17</span>
+                  <div className="solution">
+                    <p className="left"></p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <div className="fraction">
+                        <span className="upper">1</span>
+                        <span className="divider"></span>
+                        <span className="bottom">
+                          <span className="Squareroot_Container">
+                            <span className="squareRoot_Symbol">&radic;</span>
+                            <span className="squareRoot_Formula">17</span>
+                          </span>
                         </span>
-                      </span>
-                    </div>
-                    <span>(4, -1)</span>
-                  </p>
-                </div>
-                <div className="solution">
-                  <p className="left"></p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    <div className="large">(</div>
-                    <div className="fraction">
-                      <span className="upper">4</span>
-                      <span className="divider"></span>
-                      <span className="bottom">
-                        <span className="Squareroot_Container">
-                          <span className="squareRoot_Symbol">&radic;</span>
-                          <span className="squareRoot_Formula">17</span>
+                      </div>
+                      <span>(4, -1)</span>
+                    </p>
+                  </div>
+                  <div className="solution">
+                    <p className="left"></p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <div className="large">(</div>
+                      <div className="fraction">
+                        <span className="upper">4</span>
+                        <span className="divider"></span>
+                        <span className="bottom">
+                          <span className="Squareroot_Container">
+                            <span className="squareRoot_Symbol">&radic;</span>
+                            <span className="squareRoot_Formula">17</span>
+                          </span>
                         </span>
-                      </span>
-                    </div>
-                    <span>,</span>
-                    <div className="fraction">
-                      <span className="upper">-1</span>
-                      <span className="divider"></span>
-                      <span className="bottom">
-                        <span className="Squareroot_Container">
-                          <span className="squareRoot_Symbol">&radic;</span>
-                          <span className="squareRoot_Formula">17</span>
+                      </div>
+                      <span>,</span>
+                      <div className="fraction">
+                        <span className="upper">-1</span>
+                        <span className="divider"></span>
+                        <span className="bottom">
+                          <span className="Squareroot_Container">
+                            <span className="squareRoot_Symbol">&radic;</span>
+                            <span className="squareRoot_Formula">17</span>
+                          </span>
                         </span>
-                      </span>
-                    </div>
-                    <div className="large">)</div>
-                  </p>
+                      </div>
+                      <div className="large">)</div>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1205,11 +1213,11 @@ function PELesson2() {
           <div className="Paragraph_Topic">
             <p>2.) v = (1, 5, -3)</p>
           </div>
-          <div className="Paragraph_Topic">
+          <div className="Paragraph_Topic paddingLeft2">
             <p>Let u be vector in R³.</p>
           </div>
 
-          <div className="Paragraph_Topic equation">
+          <div className="Paragraph_Topic equation paddingLeft2">
             <div>
               The unit vector in the direction of v is u ={" "}
               <div className="fraction">
@@ -1220,142 +1228,144 @@ function PELesson2() {
             </div>
           </div>
 
-          <div className="Side_By_Side">
-            <div className="Left_Side">
-              <div className="Solution_Example">
-                <p className="label">Finding || v ||</p>
-                <div className="start">
-                  <p className="left">|| v ||</p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    <span className="Squareroot_Container">
-                      <span className="squareRoot_Symbol">&radic;</span>
-                      <span className="squareRoot_Formula">x² + y² + z²</span>
-                    </span>
-                  </p>
-                </div>
-                <div className="solution">
-                  <p className="left"></p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    <span className="Squareroot_Container">
-                      <span className="squareRoot_Symbol">&radic;</span>
-                      <span className="squareRoot_Formula">
-                        1² + + 5² (-3)²
+          <div className="Paragraph_Topic paddingLeft3">
+            <div className="Side_By_Side">
+              <div className="Left_Side">
+                <div className="Solution_Example">
+                  <p className="label">Finding || v ||</p>
+                  <div className="start">
+                    <p className="left">|| v ||</p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">x² + y² + z²</span>
                       </span>
-                    </span>
-                  </p>
-                </div>
+                    </p>
+                  </div>
+                  <div className="solution">
+                    <p className="left"></p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">
+                          1² + + 5² (-3)²
+                        </span>
+                      </span>
+                    </p>
+                  </div>
 
-                <div className="solution">
-                  <p className="left"></p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    <span className="Squareroot_Container">
-                      <span className="squareRoot_Symbol">&radic;</span>
-                      <span className="squareRoot_Formula">1 + 25 + 9</span>
-                    </span>
-                  </p>
-                </div>
-                <div className="solution">
-                  <p className="left"></p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    <span className="Squareroot_Container">
-                      <span className="squareRoot_Symbol">&radic;</span>
-                      <span className="squareRoot_Formula">35</span>
-                    </span>
-                  </p>
+                  <div className="solution">
+                    <p className="left"></p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">1 + 25 + 9</span>
+                      </span>
+                    </p>
+                  </div>
+                  <div className="solution">
+                    <p className="left"></p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">35</span>
+                      </span>
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="Right_Side">
-              <div className="Solution_Example">
-                <p className="label">Substituting to u</p>
-                <div className="start">
-                  <p className="left">u</p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    <div className="fraction">
-                      <span className="upper">v</span>
-                      <span className="divider"></span>
-                      <span className="bottom">||v||</span>
-                    </div>
-                  </p>
-                </div>
-                <div className="solution">
-                  <p className="left">u</p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    <div className="fraction">
-                      <span className="upper">(1, 5, -3)</span>
-                      <span className="divider"></span>
-                      <span className="bottom">
-                        <span className="Squareroot_Container">
-                          <span className="squareRoot_Symbol">&radic;</span>
-                          <span className="squareRoot_Formula">35</span>
+              <div className="Right_Side">
+                <div className="Solution_Example">
+                  <p className="label">Substituting to u</p>
+                  <div className="start">
+                    <p className="left">u</p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <div className="fraction">
+                        <span className="upper">v</span>
+                        <span className="divider"></span>
+                        <span className="bottom">||v||</span>
+                      </div>
+                    </p>
+                  </div>
+                  <div className="solution">
+                    <p className="left">u</p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <div className="fraction">
+                        <span className="upper">(1, 5, -3)</span>
+                        <span className="divider"></span>
+                        <span className="bottom">
+                          <span className="Squareroot_Container">
+                            <span className="squareRoot_Symbol">&radic;</span>
+                            <span className="squareRoot_Formula">35</span>
+                          </span>
                         </span>
-                      </span>
-                    </div>
-                  </p>
-                </div>
+                      </div>
+                    </p>
+                  </div>
 
-                <div className="solution">
-                  <p className="left"></p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    <div className="fraction">
-                      <span className="upper">1</span>
-                      <span className="divider"></span>
-                      <span className="bottom">
-                        <span className="Squareroot_Container">
-                          <span className="squareRoot_Symbol">&radic;</span>
-                          <span className="squareRoot_Formula">35</span>
+                  <div className="solution">
+                    <p className="left"></p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <div className="fraction">
+                        <span className="upper">1</span>
+                        <span className="divider"></span>
+                        <span className="bottom">
+                          <span className="Squareroot_Container">
+                            <span className="squareRoot_Symbol">&radic;</span>
+                            <span className="squareRoot_Formula">35</span>
+                          </span>
                         </span>
-                      </span>
-                    </div>
-                    <span>(1, 5, -3)</span>
-                  </p>
-                </div>
-                <div className="solution">
-                  <p className="left"></p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    <div className="large">(</div>
-                    <div className="fraction">
-                      <span className="upper">1</span>
-                      <span className="divider"></span>
-                      <span className="bottom">
-                        <span className="Squareroot_Container">
-                          <span className="squareRoot_Symbol">&radic;</span>
-                          <span className="squareRoot_Formula">35</span>
+                      </div>
+                      <span>(1, 5, -3)</span>
+                    </p>
+                  </div>
+                  <div className="solution">
+                    <p className="left"></p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <div className="large">(</div>
+                      <div className="fraction">
+                        <span className="upper">1</span>
+                        <span className="divider"></span>
+                        <span className="bottom">
+                          <span className="Squareroot_Container">
+                            <span className="squareRoot_Symbol">&radic;</span>
+                            <span className="squareRoot_Formula">35</span>
+                          </span>
                         </span>
-                      </span>
-                    </div>
-                    <span>,</span>
-                    <div className="fraction">
-                      <span className="upper">5</span>
-                      <span className="divider"></span>
-                      <span className="bottom">
-                        <span className="Squareroot_Container">
-                          <span className="squareRoot_Symbol">&radic;</span>
-                          <span className="squareRoot_Formula">35</span>
+                      </div>
+                      <span>,</span>
+                      <div className="fraction">
+                        <span className="upper">5</span>
+                        <span className="divider"></span>
+                        <span className="bottom">
+                          <span className="Squareroot_Container">
+                            <span className="squareRoot_Symbol">&radic;</span>
+                            <span className="squareRoot_Formula">35</span>
+                          </span>
                         </span>
-                      </span>
-                    </div>
-                    <span>,</span>
-                    <div className="fraction">
-                      <span className="upper">-3</span>
-                      <span className="divider"></span>
-                      <span className="bottom">
-                        <span className="Squareroot_Container">
-                          <span className="squareRoot_Symbol">&radic;</span>
-                          <span className="squareRoot_Formula">35</span>
+                      </div>
+                      <span>,</span>
+                      <div className="fraction">
+                        <span className="upper">-3</span>
+                        <span className="divider"></span>
+                        <span className="bottom">
+                          <span className="Squareroot_Container">
+                            <span className="squareRoot_Symbol">&radic;</span>
+                            <span className="squareRoot_Formula">35</span>
+                          </span>
                         </span>
-                      </span>
-                    </div>
-                    <div className="large">)</div>
-                  </p>
+                      </div>
+                      <div className="large">)</div>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1409,9 +1419,9 @@ function PELesson2() {
           <div className="Paragraph_Topic">
             <p>Determine the distance between the following given vectors.</p>
           </div>
-          <div className="Paragraph_Topic">
+          <div className="Paragraph_Topic paddingLeft2">
             <div className="Solution_Example">
-              <p className="label">1). (9, -7), (5, -7)</p>
+              <p className="label">1). u = (9, -7), v = (5, -7)</p>
               <div className="start">
                 <p className="left">d(u, v)</p>
                 <p className="center">=</p>
@@ -1455,7 +1465,7 @@ function PELesson2() {
             </div>
 
             <div className="Solution_Example">
-              <p className="label">2). (-5, 2, 1), (-5, 5, 4)</p>
+              <p className="label">2). u = (-5, 2, 1), v = (-5, 5, 4)</p>
               <div className="start">
                 <p className="left">d(u, v)</p>
                 <p className="center">=</p>
@@ -1830,13 +1840,14 @@ function PELesson2() {
               denoted by u ⋅ v .
             </p>
           </div>
-
-          <div className="Bullet_Topic">
-            <p className="Title">Dot Product with Angle</p>
-            <p className="Explanation">
-              Let u & v be a vector in R² or R³ , and θ be the angle between u &
-              v. Then the dot product of u & v is:
-            </p>
+          <div className="Paragraph_Topic">
+            <div className="Bullet_Topic">
+              <p className="Title">Dot Product with Angle</p>
+              <p className="Explanation">
+                Let u & v be a vector in R² or R³ , and θ be the angle between u
+                & v. Then the dot product of u & v is:
+              </p>
+            </div>
           </div>
 
           <div className="Side_By_Side">
@@ -1854,13 +1865,15 @@ function PELesson2() {
             </div>
           </div>
 
-          <div className="Bullet_Topic">
-            <p className="Title">Component Form of the Dot Product</p>
-            <p className="Explanation">Let u & v be vectors in Rⁿ .</p>
-            <p className="Explanation">
-              If u = (u₁, u₂, ..., uₙ ) & v = (v₁, v₂, ..., vₙ) , then the dot
-              product of u & v is:
-            </p>
+          <div className="Paragraph_Topic">
+            <div className="Bullet_Topic">
+              <p className="Title">Component Form of the Dot Product</p>
+              <p className="Explanation">Let u & v be vectors in Rⁿ .</p>
+              <p className="Explanation">
+                If u = (u₁, u₂, ..., uₙ ) & v = (v₁, v₂, ..., vₙ) , then the dot
+                product of u & v is:
+              </p>
+            </div>
           </div>
 
           <div className="Light_Blue_Holder">
@@ -1879,175 +1892,179 @@ function PELesson2() {
             </p>
           </div>
 
-          <div className="Solution_Example">
-            <p className="label">1.) u = (1, 1), v = (2,-2), θ = 90°</p>
-            <div className="start">
-              <p className="left">u ⋅ v</p>
-              <p className="center">=</p>
-              <p className="right">|| u || || v || cos θ</p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">
-                (
-                <span className="Squareroot_Container">
-                  <span className="squareRoot_Symbol">&radic;</span>
-                  <span className="squareRoot_Formula">1² + 1²</span>
-                </span>
-                ) ({" "}
-                <span className="Squareroot_Container">
-                  <span className="squareRoot_Symbol">&radic;</span>
-                  <span className="squareRoot_Formula">2² + (-2)²</span>
-                </span>
-                ) cos 90°
-              </p>
-            </div>
-
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">
-                (
-                <span className="Squareroot_Container">
-                  <span className="squareRoot_Symbol">&radic;</span>
-                  <span className="squareRoot_Formula">2</span>
-                </span>
-                ) ( 2{" "}
-                <span className="Squareroot_Container">
-                  <span className="squareRoot_Symbol">&radic;</span>
-                  <span className="squareRoot_Formula">2</span>
-                </span>
-                ) (0)
-              </p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">0</p>
-            </div>
-          </div>
-
-          <div className="Solution_Example">
-            <p className="label">2.) u = (-4, 2, 1), v = (4, 0, 3), θ = 55°</p>
-            <div className="start">
-              <p className="left">u ⋅ v</p>
-              <p className="center">=</p>
-              <p className="right">|| u || || v || cos θ</p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right noGap">
-                (
-                <span className="Squareroot_Container">
-                  <span className="squareRoot_Symbol">&radic;</span>
-                  <span className="squareRoot_Formula">(-4)² + 2² + 1²</span>
-                </span>
-                ) ({" "}
-                <span className="Squareroot_Container">
-                  <span className="squareRoot_Symbol">&radic;</span>
-                  <span className="squareRoot_Formula">4² + 4² + 3²</span>
-                </span>
-                ) cos 55°
-              </p>
-            </div>
-
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">
-                <div className="fraction">
-                  <span className="upper">1</span>
-                  <span className="divider"></span>
-                  <span className="bottom">
-                    <span className="Squareroot_Container">
-                      <span className="squareRoot_Symbol">&radic;</span>
-                      <span className="squareRoot_Formula">17</span>
-                    </span>
+          <div className="Paragraph_Topic paddingLeft2">
+            <div className="Solution_Example">
+              <p className="label">1.) u = (1, 1), v = (2,-2), θ = 90°</p>
+              <div className="start">
+                <p className="left">u ⋅ v</p>
+                <p className="center">=</p>
+                <p className="right">|| u || || v || cos θ</p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">
+                  (
+                  <span className="Squareroot_Container">
+                    <span className="squareRoot_Symbol">&radic;</span>
+                    <span className="squareRoot_Formula">1² + 1²</span>
                   </span>
-                </div>
-                <span>(4, -1)</span>
-              </p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">
-                <div className="large">(</div>
-                <div className="fraction">
-                  <span className="upper">4</span>
-                  <span className="divider"></span>
-                  <span className="bottom">
-                    <span className="Squareroot_Container">
-                      <span className="squareRoot_Symbol">&radic;</span>
-                      <span className="squareRoot_Formula">17</span>
-                    </span>
+                  ) ({" "}
+                  <span className="Squareroot_Container">
+                    <span className="squareRoot_Symbol">&radic;</span>
+                    <span className="squareRoot_Formula">2² + (-2)²</span>
                   </span>
-                </div>
-                <span>,</span>
-                <div className="fraction">
-                  <span className="upper">-1</span>
-                  <span className="divider"></span>
-                  <span className="bottom">
-                    <span className="Squareroot_Container">
-                      <span className="squareRoot_Symbol">&radic;</span>
-                      <span className="squareRoot_Formula">17</span>
-                    </span>
+                  ) cos 90°
+                </p>
+              </div>
+
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">
+                  (
+                  <span className="Squareroot_Container">
+                    <span className="squareRoot_Symbol">&radic;</span>
+                    <span className="squareRoot_Formula">2</span>
                   </span>
-                </div>
-                <div className="large">)</div>
+                  ) ( 2{" "}
+                  <span className="Squareroot_Container">
+                    <span className="squareRoot_Symbol">&radic;</span>
+                    <span className="squareRoot_Formula">2</span>
+                  </span>
+                  ) (0)
+                </p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">0</p>
+              </div>
+            </div>
+
+            <div className="Solution_Example">
+              <p className="label">
+                2.) u = (-4, 2, 1), v = (4, 0, 3), θ = 55°
               </p>
-            </div>
-          </div>
+              <div className="start">
+                <p className="left">u ⋅ v</p>
+                <p className="center">=</p>
+                <p className="right">|| u || || v || cos θ</p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right noGap">
+                  (
+                  <span className="Squareroot_Container">
+                    <span className="squareRoot_Symbol">&radic;</span>
+                    <span className="squareRoot_Formula">(-4)² + 2² + 1²</span>
+                  </span>
+                  ) ({" "}
+                  <span className="Squareroot_Container">
+                    <span className="squareRoot_Symbol">&radic;</span>
+                    <span className="squareRoot_Formula">4² + 4² + 3²</span>
+                  </span>
+                  ) cos 55°
+                </p>
+              </div>
 
-          <div className="Solution_Example">
-            <p className="label">3.) u = (12, -3), v = (7, 6)</p>
-            <div className="start">
-              <p className="left">u ⋅ v</p>
-              <p className="center">=</p>
-              <p className="right">u₁v₁ + u₂v₂</p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">(12)(7) + (-3)(6)</p>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">
+                  <div className="fraction">
+                    <span className="upper">1</span>
+                    <span className="divider"></span>
+                    <span className="bottom">
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">17</span>
+                      </span>
+                    </span>
+                  </div>
+                  <span>(4, -1)</span>
+                </p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">
+                  <div className="large">(</div>
+                  <div className="fraction">
+                    <span className="upper">4</span>
+                    <span className="divider"></span>
+                    <span className="bottom">
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">17</span>
+                      </span>
+                    </span>
+                  </div>
+                  <span>,</span>
+                  <div className="fraction">
+                    <span className="upper">-1</span>
+                    <span className="divider"></span>
+                    <span className="bottom">
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">17</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div className="large">)</div>
+                </p>
+              </div>
             </div>
 
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">84 - 18</p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">66</p>
-            </div>
-          </div>
+            <div className="Solution_Example">
+              <p className="label">3.) u = (12, -3), v = (7, 6)</p>
+              <div className="start">
+                <p className="left">u ⋅ v</p>
+                <p className="center">=</p>
+                <p className="right">u₁v₁ + u₂v₂</p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">(12)(7) + (-3)(6)</p>
+              </div>
 
-          <div className="Solution_Example">
-            <p className="label">4.) u = (-2, 5, 0), v = (1, -8, -4)</p>
-            <div className="start">
-              <p className="left">u ⋅ v</p>
-              <p className="center">=</p>
-              <p className="right">u₁v₁ + u₂v₂ + u₃v₃</p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">(-2)(1) + (5)(-8) + (0)(-4)</p>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">84 - 18</p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">66</p>
+              </div>
             </div>
 
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">-2 - 40</p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">-42</p>
+            <div className="Solution_Example">
+              <p className="label">4.) u = (-2, 5, 0), v = (1, -8, -4)</p>
+              <div className="start">
+                <p className="left">u ⋅ v</p>
+                <p className="center">=</p>
+                <p className="right">u₁v₁ + u₂v₂ + u₃v₃</p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">(-2)(1) + (5)(-8) + (0)(-4)</p>
+              </div>
+
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">-2 - 40</p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">-42</p>
+              </div>
             </div>
           </div>
 
@@ -2203,230 +2220,232 @@ function PELesson2() {
             </p>
           </div>
 
-          <div className="Solution_Example largerLeft2">
-            <p className="label">1.) (-3u) ⋅ v</p>
-            <div className="start">
-              <p className="left">By Theorem 2.4 (3),</p>
-              <p className="center"></p>
-              <p className="right"></p>
+          <div className="Paragraph_Topic paddingLeft2">
+            <div className="Solution_Example largerLeft2">
+              <p className="label">1.) (-3u) ⋅ v</p>
+              <div className="start">
+                <p className="left">By Theorem 2.4 (3),</p>
+                <p className="center"></p>
+                <p className="right"></p>
+              </div>
+              <div className="start">
+                <p className="left">(-3u) ⋅ v</p>
+                <p className="center">=</p>
+                <p className="right"> -3 (u ⋅ v)</p>
+              </div>
+              <div className="solution">
+                <p className="left">Now,</p>
+                <p className="center"></p>
+                <p className="right"></p>
+              </div>
+              <div className="start">
+                <p className="left">(-3u) ⋅ v</p>
+                <p className="center">=</p>
+                <p className="right">-3 (u₁v₁ + u₂v₂)</p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">-3 (-9(5) + 4(-7))</p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">-3 (-45 + -28)</p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">-3 (-73)</p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">219</p>
+              </div>
             </div>
-            <div className="start">
-              <p className="left">(-3u) ⋅ v</p>
-              <p className="center">=</p>
-              <p className="right"> -3 (u ⋅ v)</p>
-            </div>
-            <div className="solution">
-              <p className="left">Now,</p>
-              <p className="center"></p>
-              <p className="right"></p>
-            </div>
-            <div className="start">
-              <p className="left">(-3u) ⋅ v</p>
-              <p className="center">=</p>
-              <p className="right">-3 (u₁v₁ + u₂v₂)</p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">-3 (-9(5) + 4(-7))</p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">-3 (-45 + -28)</p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">-3 (-73)</p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">219</p>
-            </div>
-          </div>
 
-          <div className="Solution_Example largerLeft2">
-            <p className="label">
-              2.){" "}
-              <span className="Squareroot_Container">
-                <span className="squareRoot_Symbol">&radic;</span>
-                <span className="squareRoot_Formula">u ⋅ u</span>
-              </span>
-            </p>
-            <div className="start">
-              <p className="left">By Theorem 2.4 (5),</p>
-              <p className="center"></p>
-              <p className="right"></p>
-            </div>
-            <div className="start">
-              <p className="left">
+            <div className="Solution_Example largerLeft2">
+              <p className="label">
+                2.){" "}
                 <span className="Squareroot_Container">
                   <span className="squareRoot_Symbol">&radic;</span>
                   <span className="squareRoot_Formula">u ⋅ u</span>
                 </span>
               </p>
-              <p className="center">=</p>
-              <p className="right">|| u ||</p>
+              <div className="start">
+                <p className="left">By Theorem 2.4 (5),</p>
+                <p className="center"></p>
+                <p className="right"></p>
+              </div>
+              <div className="start">
+                <p className="left">
+                  <span className="Squareroot_Container">
+                    <span className="squareRoot_Symbol">&radic;</span>
+                    <span className="squareRoot_Formula">u ⋅ u</span>
+                  </span>
+                </p>
+                <p className="center">=</p>
+                <p className="right">|| u ||</p>
+              </div>
+              <div className="solution">
+                <p className="left">Now,</p>
+                <p className="center"></p>
+                <p className="right"></p>
+              </div>
+              <div className="start">
+                <p className="left">|| u ||</p>
+                <p className="center">=</p>
+                <p className="right">
+                  <span className="Squareroot_Container">
+                    <span className="squareRoot_Symbol">&radic;</span>
+                    <span className="squareRoot_Formula">x² + y²</span>
+                  </span>
+                </p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">
+                  <span className="Squareroot_Container">
+                    <span className="squareRoot_Symbol">&radic;</span>
+                    <span className="squareRoot_Formula">(-9)² + 4²</span>
+                  </span>
+                </p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">
+                  <span className="Squareroot_Container">
+                    <span className="squareRoot_Symbol">&radic;</span>
+                    <span className="squareRoot_Formula">81 + 16</span>
+                  </span>
+                </p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">
+                  <span className="Squareroot_Container">
+                    <span className="squareRoot_Symbol">&radic;</span>
+                    <span className="squareRoot_Formula">97</span>
+                  </span>
+                </p>
+              </div>
             </div>
-            <div className="solution">
-              <p className="left">Now,</p>
-              <p className="center"></p>
-              <p className="right"></p>
-            </div>
-            <div className="start">
-              <p className="left">|| u ||</p>
-              <p className="center">=</p>
-              <p className="right">
-                <span className="Squareroot_Container">
-                  <span className="squareRoot_Symbol">&radic;</span>
-                  <span className="squareRoot_Formula">x² + y²</span>
-                </span>
-              </p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">
-                <span className="Squareroot_Container">
-                  <span className="squareRoot_Symbol">&radic;</span>
-                  <span className="squareRoot_Formula">(-9)² + 4²</span>
-                </span>
-              </p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">
-                <span className="Squareroot_Container">
-                  <span className="squareRoot_Symbol">&radic;</span>
-                  <span className="squareRoot_Formula">81 + 16</span>
-                </span>
-              </p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">
-                <span className="Squareroot_Container">
-                  <span className="squareRoot_Symbol">&radic;</span>
-                  <span className="squareRoot_Formula">97</span>
-                </span>
-              </p>
-            </div>
-          </div>
 
-          <div className="Solution_Example largerLeft2">
-            <p className="label">3.) (w - v) ⋅ u</p>
-            <div className="start">
-              <p className="left">First,</p>
-              <p className="center"></p>
-              <p className="right"></p>
+            <div className="Solution_Example largerLeft2">
+              <p className="label">3.) (w - v) ⋅ u</p>
+              <div className="start">
+                <p className="left">First,</p>
+                <p className="center"></p>
+                <p className="right"></p>
+              </div>
+              <div className="start">
+                <p className="left">w - v</p>
+                <p className="center">=</p>
+                <p className="right">(-1 - 5, -3 - (-7))</p>
+              </div>
+              <div className="start">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">(-6, 4)</p>
+              </div>
+              <div className="solution">
+                <p className="left">Now,</p>
+                <p className="center"></p>
+                <p className="right"></p>
+              </div>
+              <div className="start">
+                <p className="left">(w - v) ⋅ u</p>
+                <p className="center">=</p>
+                <p className="right">(-6, 4) ⋅ (-9, 4)</p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">(-6)(-9) + (4)(4)</p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">63 + 16</p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">79</p>
+              </div>
             </div>
-            <div className="start">
-              <p className="left">w - v</p>
-              <p className="center">=</p>
-              <p className="right">(-1 - 5, -3 - (-7))</p>
-            </div>
-            <div className="start">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">(-6, 4)</p>
-            </div>
-            <div className="solution">
-              <p className="left">Now,</p>
-              <p className="center"></p>
-              <p className="right"></p>
-            </div>
-            <div className="start">
-              <p className="left">(w - v) ⋅ u</p>
-              <p className="center">=</p>
-              <p className="right">(-6, 4) ⋅ (-9, 4)</p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">(-6)(-9) + (4)(4)</p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">63 + 16</p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">79</p>
-            </div>
-          </div>
 
-          <div className="Solution_Example largerLeft2">
-            <p className="label">4.) (w ⋅ 3u) + (w ⋅ -v)</p>
-            <div className="start">
-              <p className="left">By Theorem 2.4 (2, a),</p>
-              <p className="center"></p>
-              <p className="right"></p>
-            </div>
-            <div className="start">
-              <p className="left">(w ⋅ 3u) + (w ⋅ -v)</p>
-              <p className="center">=</p>
-              <p className="right">w ⋅ (3u + -v)</p>
-            </div>
-            <div className="solution">
-              <p className="left">First,</p>
-              <p className="center"></p>
-              <p className="right"></p>
-            </div>
-            <div className="start">
-              <p className="left">3u</p>
-              <p className="center">=</p>
-              <p className="right">3(-9, 4)</p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">(-27, 12)</p>
-            </div>
-            <div className="solution">
-              <p className="left">Now,</p>
-              <p className="center"></p>
-              <p className="right"></p>
-            </div>
-            <div className="solution">
-              <p className="left">3u + -v</p>
-              <p className="center">=</p>
-              <p className="right">(-27, 12) + (-5, 7)</p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">(-32, 19)</p>
-            </div>
-            <div className="solution">
-              <p className="left">Finally,</p>
-              <p className="center"></p>
-              <p className="right"></p>
-            </div>
-            <div className="solution">
-              <p className="left">w ⋅ (3u + -v)</p>
-              <p className="center">=</p>
-              <p className="right">(-1, -3) ⋅ (-32, 19)</p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">((-1)(-32) + (-3)(19))</p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">(32 - 57)</p>
-            </div>
-            <div className="solution">
-              <p className="left"></p>
-              <p className="center">=</p>
-              <p className="right">-25</p>
+            <div className="Solution_Example largerLeft2">
+              <p className="label">4.) (w ⋅ 3u) + (w ⋅ -v)</p>
+              <div className="start">
+                <p className="left">By Theorem 2.4 (2, a),</p>
+                <p className="center"></p>
+                <p className="right"></p>
+              </div>
+              <div className="start">
+                <p className="left">(w ⋅ 3u) + (w ⋅ -v)</p>
+                <p className="center">=</p>
+                <p className="right">w ⋅ (3u + -v)</p>
+              </div>
+              <div className="solution">
+                <p className="left">First,</p>
+                <p className="center"></p>
+                <p className="right"></p>
+              </div>
+              <div className="start">
+                <p className="left">3u</p>
+                <p className="center">=</p>
+                <p className="right">3(-9, 4)</p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">(-27, 12)</p>
+              </div>
+              <div className="solution">
+                <p className="left">Now,</p>
+                <p className="center"></p>
+                <p className="right"></p>
+              </div>
+              <div className="solution">
+                <p className="left">3u + -v</p>
+                <p className="center">=</p>
+                <p className="right">(-27, 12) + (-5, 7)</p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">(-32, 19)</p>
+              </div>
+              <div className="solution">
+                <p className="left">Finally,</p>
+                <p className="center"></p>
+                <p className="right"></p>
+              </div>
+              <div className="solution">
+                <p className="left">w ⋅ (3u + -v)</p>
+                <p className="center">=</p>
+                <p className="right">(-1, -3) ⋅ (-32, 19)</p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">((-1)(-32) + (-3)(19))</p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">(32 - 57)</p>
+              </div>
+              <div className="solution">
+                <p className="left"></p>
+                <p className="center">=</p>
+                <p className="right">-25</p>
+              </div>
             </div>
           </div>
         </div>
@@ -2476,329 +2495,335 @@ function PELesson2() {
           <div className="Paragraph_Topic">
             <p>1.) u = (-4, 11) v = (0, -2)</p>
           </div>
-          <div className="Side_By_Side">
-            <div className="Left_Side">
-              <div className="Solution_Example">
-                <p className="label">Finding || u ||:</p>
-                <div className="start">
-                  <p className="left">|| u ||</p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    <span className="Squareroot_Container">
-                      <span className="squareRoot_Symbol">&radic;</span>
-                      <span className="squareRoot_Formula">x² + y²</span>
-                    </span>
-                  </p>
-                </div>
-                <div className="solution">
-                  <p className="left"></p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    <span className="Squareroot_Container">
-                      <span className="squareRoot_Symbol">&radic;</span>
-                      <span className="squareRoot_Formula">(-4)² + 11²</span>
-                    </span>
-                  </p>
-                </div>
 
-                <div className="solution">
-                  <p className="left"></p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    <span className="Squareroot_Container">
-                      <span className="squareRoot_Symbol">&radic;</span>
-                      <span className="squareRoot_Formula">16 + 121</span>
-                    </span>
-                  </p>
-                </div>
-                <div className="solution">
-                  <p className="left"></p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    <span className="Squareroot_Container">
-                      <span className="squareRoot_Symbol">&radic;</span>
-                      <span className="squareRoot_Formula">137</span>
-                    </span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="Right_Side">
-              <div className="Solution_Example">
-                <p className="label">Finding || v ||:</p>
-                <div className="start">
-                  <p className="left">|| v ||</p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    <span className="Squareroot_Container">
-                      <span className="squareRoot_Symbol">&radic;</span>
-                      <span className="squareRoot_Formula">x² + y²</span>
-                    </span>
-                  </p>
-                </div>
-                <div className="solution">
-                  <p className="left"></p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    <span className="Squareroot_Container">
-                      <span className="squareRoot_Symbol">&radic;</span>
-                      <span className="squareRoot_Formula">0² + (-2)²</span>
-                    </span>
-                  </p>
-                </div>
-
-                <div className="solution">
-                  <p className="left"></p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    <span className="Squareroot_Container">
-                      <span className="squareRoot_Symbol">&radic;</span>
-                      <span className="squareRoot_Formula">4</span>
-                    </span>
-                  </p>
-                </div>
-                <div className="solution">
-                  <p className="left"></p>
-                  <p className="center">=</p>
-                  <p className="right">2</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="Side_By_Side">
-            <div className="Left_Side">
-              <div className="Solution_Example">
-                <p className="label">Substituting to θ:</p>
-                <div className="start">
-                  <p className="left">θ</p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    cos⁻¹ <div className="large">(</div>
-                    <div className="fraction">
-                      <span className="upper">u ⋅ v</span>
-                      <span className="divider"></span>
-                      <span className="bottom">||u|| ||v||</span>
-                    </div>
-                    <div className="large">)</div>
-                  </p>
-                </div>
-                <div className="solution">
-                  <p className="left"></p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    cos⁻¹ <div className="large">(</div>
-                    <div className="fraction">
-                      <span className="upper">(-4)(0) + (11)(-2)</span>
-                      <span className="divider"></span>
-                      <span className="bottom">
-                        (
-                        <span className="Squareroot_Container">
-                          <span className="squareRoot_Symbol">&radic;</span>
-                          <span className="squareRoot_Formula">137</span>
-                        </span>
-                        ) (2)
+          <div className="Paragraph_Topic paddingLeft2">
+            <div className="Side_By_Side">
+              <div className="Left_Side">
+                <div className="Solution_Example">
+                  <p className="label">Finding || u ||:</p>
+                  <div className="start">
+                    <p className="left">|| u ||</p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">x² + y²</span>
                       </span>
-                    </div>
-                    <div className="large">)</div>
-                  </p>
-                </div>
-
-                <div className="solution">
-                  <p className="left"></p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    cos⁻¹ <div className="large">(</div>
-                    <div className="fraction">
-                      <span className="upper">-22</span>
-                      <span className="divider"></span>
-                      <span className="bottom">
-                        2
-                        <span className="Squareroot_Container">
-                          <span className="squareRoot_Symbol">&radic;</span>
-                          <span className="squareRoot_Formula">137</span>
-                        </span>
+                    </p>
+                  </div>
+                  <div className="solution">
+                    <p className="left"></p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">(-4)² + 11²</span>
                       </span>
-                    </div>
-                    <div className="large">)</div>
-                  </p>
+                    </p>
+                  </div>
+
+                  <div className="solution">
+                    <p className="left"></p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">16 + 121</span>
+                      </span>
+                    </p>
+                  </div>
+                  <div className="solution">
+                    <p className="left"></p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">137</span>
+                      </span>
+                    </p>
+                  </div>
                 </div>
-                <div className="solution">
-                  <p className="left"></p>
-                  <p className="center">≈</p>
-                  <p className="right">160.02°</p>
+              </div>
+              <div className="Right_Side">
+                <div className="Solution_Example">
+                  <p className="label">Finding || v ||:</p>
+                  <div className="start">
+                    <p className="left">|| v ||</p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">x² + y²</span>
+                      </span>
+                    </p>
+                  </div>
+                  <div className="solution">
+                    <p className="left"></p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">0² + (-2)²</span>
+                      </span>
+                    </p>
+                  </div>
+
+                  <div className="solution">
+                    <p className="left"></p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">4</span>
+                      </span>
+                    </p>
+                  </div>
+                  <div className="solution">
+                    <p className="left"></p>
+                    <p className="center">=</p>
+                    <p className="right">2</p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="Right_Side"></div>
+            <div className="Side_By_Side">
+              <div className="Left_Side">
+                <div className="Solution_Example">
+                  <p className="label">Substituting to θ:</p>
+                  <div className="start">
+                    <p className="left">θ</p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      cos⁻¹ <div className="large">(</div>
+                      <div className="fraction">
+                        <span className="upper">u ⋅ v</span>
+                        <span className="divider"></span>
+                        <span className="bottom">||u|| ||v||</span>
+                      </div>
+                      <div className="large">)</div>
+                    </p>
+                  </div>
+                  <div className="solution">
+                    <p className="left"></p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      cos⁻¹ <div className="large">(</div>
+                      <div className="fraction">
+                        <span className="upper">(-4)(0) + (11)(-2)</span>
+                        <span className="divider"></span>
+                        <span className="bottom">
+                          (
+                          <span className="Squareroot_Container">
+                            <span className="squareRoot_Symbol">&radic;</span>
+                            <span className="squareRoot_Formula">137</span>
+                          </span>
+                          ) (2)
+                        </span>
+                      </div>
+                      <div className="large">)</div>
+                    </p>
+                  </div>
+
+                  <div className="solution">
+                    <p className="left"></p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      cos⁻¹ <div className="large">(</div>
+                      <div className="fraction">
+                        <span className="upper">-22</span>
+                        <span className="divider"></span>
+                        <span className="bottom">
+                          2
+                          <span className="Squareroot_Container">
+                            <span className="squareRoot_Symbol">&radic;</span>
+                            <span className="squareRoot_Formula">137</span>
+                          </span>
+                        </span>
+                      </div>
+                      <div className="large">)</div>
+                    </p>
+                  </div>
+                  <div className="solution">
+                    <p className="left"></p>
+                    <p className="center">≈</p>
+                    <p className="right">160.02°</p>
+                  </div>
+                </div>
+              </div>
+              <div className="Right_Side"></div>
+            </div>
           </div>
 
           <div className="Paragraph_Topic">
             <p>2.) u = (3, 7) v = (-2, 5)</p>
           </div>
-          <div className="Side_By_Side">
-            <div className="Left_Side">
-              <div className="Solution_Example">
-                <p className="label">Finding || u ||:</p>
-                <div className="start">
-                  <p className="left">|| u ||</p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    <span className="Squareroot_Container">
-                      <span className="squareRoot_Symbol">&radic;</span>
-                      <span className="squareRoot_Formula">x² + y²</span>
-                    </span>
-                  </p>
-                </div>
-                <div className="solution">
-                  <p className="left"></p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    <span className="Squareroot_Container">
-                      <span className="squareRoot_Symbol">&radic;</span>
-                      <span className="squareRoot_Formula">3² + 7²</span>
-                    </span>
-                  </p>
-                </div>
 
-                <div className="solution">
-                  <p className="left"></p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    <span className="Squareroot_Container">
-                      <span className="squareRoot_Symbol">&radic;</span>
-                      <span className="squareRoot_Formula">9 + 49</span>
-                    </span>
-                  </p>
-                </div>
-                <div className="solution">
-                  <p className="left"></p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    <span className="Squareroot_Container">
-                      <span className="squareRoot_Symbol">&radic;</span>
-                      <span className="squareRoot_Formula">58</span>
-                    </span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="Right_Side">
-              <div className="Solution_Example">
-                <p className="label">Finding || v ||:</p>
-                <div className="start">
-                  <p className="left">|| v ||</p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    <span className="Squareroot_Container">
-                      <span className="squareRoot_Symbol">&radic;</span>
-                      <span className="squareRoot_Formula">x² + y²</span>
-                    </span>
-                  </p>
-                </div>
-                <div className="solution">
-                  <p className="left"></p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    <span className="Squareroot_Container">
-                      <span className="squareRoot_Symbol">&radic;</span>
-                      <span className="squareRoot_Formula">(-2)² + 5²</span>
-                    </span>
-                  </p>
-                </div>
-
-                <div className="solution">
-                  <p className="left"></p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    <span className="Squareroot_Container">
-                      <span className="squareRoot_Symbol">&radic;</span>
-                      <span className="squareRoot_Formula">4 + 25</span>
-                    </span>
-                  </p>
-                </div>
-                <div className="solution">
-                  <p className="left"></p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    <span className="Squareroot_Container">
-                      <span className="squareRoot_Symbol">&radic;</span>
-                      <span className="squareRoot_Formula">29</span>
-                    </span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="Side_By_Side">
-            <div className="Left_Side">
-              <div className="Solution_Example">
-                <p className="label">Substituting to θ:</p>
-                <div className="start">
-                  <p className="left">θ</p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    cos⁻¹ <div className="large">(</div>
-                    <div className="fraction">
-                      <span className="upper">u ⋅ v</span>
-                      <span className="divider"></span>
-                      <span className="bottom">||u|| ||v||</span>
-                    </div>
-                    <div className="large">)</div>
-                  </p>
-                </div>
-                <div className="solution">
-                  <p className="left"></p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    cos⁻¹ <div className="large">(</div>
-                    <div className="fraction">
-                      <span className="upper">(3)(-2) + (7)(5)</span>
-                      <span className="divider"></span>
-                      <span className="bottom">
-                        (
-                        <span className="Squareroot_Container">
-                          <span className="squareRoot_Symbol">&radic;</span>
-                          <span className="squareRoot_Formula">58</span>
-                        </span>
-                        ) (
-                        <span className="Squareroot_Container">
-                          <span className="squareRoot_Symbol">&radic;</span>
-                          <span className="squareRoot_Formula">29</span>
-                        </span>
-                        )
+          <div className="Paragraph_Topic paddingLeft2">
+            <div className="Side_By_Side">
+              <div className="Left_Side">
+                <div className="Solution_Example">
+                  <p className="label">Finding || u ||:</p>
+                  <div className="start">
+                    <p className="left">|| u ||</p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">x² + y²</span>
                       </span>
-                    </div>
-                    <div className="large">)</div>
-                  </p>
-                </div>
-
-                <div className="solution">
-                  <p className="left"></p>
-                  <p className="center">=</p>
-                  <p className="right">
-                    cos⁻¹ <div className="large">(</div>
-                    <div className="fraction">
-                      <span className="upper">29</span>
-                      <span className="divider"></span>
-                      <span className="bottom">
-                        29
-                        <span className="Squareroot_Container">
-                          <span className="squareRoot_Symbol">&radic;</span>
-                          <span className="squareRoot_Formula">2</span>
-                        </span>
+                    </p>
+                  </div>
+                  <div className="solution">
+                    <p className="left"></p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">3² + 7²</span>
                       </span>
-                    </div>
-                    <div className="large">)</div>
-                  </p>
+                    </p>
+                  </div>
+
+                  <div className="solution">
+                    <p className="left"></p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">9 + 49</span>
+                      </span>
+                    </p>
+                  </div>
+                  <div className="solution">
+                    <p className="left"></p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">58</span>
+                      </span>
+                    </p>
+                  </div>
                 </div>
-                <div className="solution">
-                  <p className="left"></p>
-                  <p className="center">≈</p>
-                  <p className="right">45°</p>
+              </div>
+              <div className="Right_Side">
+                <div className="Solution_Example">
+                  <p className="label">Finding || v ||:</p>
+                  <div className="start">
+                    <p className="left">|| v ||</p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">x² + y²</span>
+                      </span>
+                    </p>
+                  </div>
+                  <div className="solution">
+                    <p className="left"></p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">(-2)² + 5²</span>
+                      </span>
+                    </p>
+                  </div>
+
+                  <div className="solution">
+                    <p className="left"></p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">4 + 25</span>
+                      </span>
+                    </p>
+                  </div>
+                  <div className="solution">
+                    <p className="left"></p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      <span className="Squareroot_Container">
+                        <span className="squareRoot_Symbol">&radic;</span>
+                        <span className="squareRoot_Formula">29</span>
+                      </span>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="Right_Side"></div>
+            <div className="Side_By_Side">
+              <div className="Left_Side">
+                <div className="Solution_Example">
+                  <p className="label">Substituting to θ:</p>
+                  <div className="start">
+                    <p className="left">θ</p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      cos⁻¹ <div className="large">(</div>
+                      <div className="fraction">
+                        <span className="upper">u ⋅ v</span>
+                        <span className="divider"></span>
+                        <span className="bottom">||u|| ||v||</span>
+                      </div>
+                      <div className="large">)</div>
+                    </p>
+                  </div>
+                  <div className="solution">
+                    <p className="left"></p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      cos⁻¹ <div className="large">(</div>
+                      <div className="fraction">
+                        <span className="upper">(3)(-2) + (7)(5)</span>
+                        <span className="divider"></span>
+                        <span className="bottom">
+                          (
+                          <span className="Squareroot_Container">
+                            <span className="squareRoot_Symbol">&radic;</span>
+                            <span className="squareRoot_Formula">58</span>
+                          </span>
+                          ) (
+                          <span className="Squareroot_Container">
+                            <span className="squareRoot_Symbol">&radic;</span>
+                            <span className="squareRoot_Formula">29</span>
+                          </span>
+                          )
+                        </span>
+                      </div>
+                      <div className="large">)</div>
+                    </p>
+                  </div>
+
+                  <div className="solution">
+                    <p className="left"></p>
+                    <p className="center">=</p>
+                    <p className="right">
+                      cos⁻¹ <div className="large">(</div>
+                      <div className="fraction">
+                        <span className="upper">29</span>
+                        <span className="divider"></span>
+                        <span className="bottom">
+                          29
+                          <span className="Squareroot_Container">
+                            <span className="squareRoot_Symbol">&radic;</span>
+                            <span className="squareRoot_Formula">2</span>
+                          </span>
+                        </span>
+                      </div>
+                      <div className="large">)</div>
+                    </p>
+                  </div>
+                  <div className="solution">
+                    <p className="left"></p>
+                    <p className="center">≈</p>
+                    <p className="right">45°</p>
+                  </div>
+                </div>
+              </div>
+              <div className="Right_Side"></div>
+            </div>
           </div>
 
           <div className="Notes_Container">

@@ -28,6 +28,14 @@
     padding: 50px 30px;
 }
 
+#Lesson > .wrapper .alignCenter{
+    align-items: center !important;
+}
+
+#Lesson > .wrapper .alignStart{
+    align-items: flex-start!important;
+}
+
 #Lesson > .wrapper .margin_top{
     margin-top: 50px;
 }
@@ -399,6 +407,7 @@
     position: relative;
     display: inline-flex;
     flex-direction: column;
+    align-items: center;
     margin-inline: 0.5rem !important;
     padding: 0;
     height: 100%;
@@ -406,9 +415,9 @@
 }
 
 #Lesson > .wrapper .stack > sup{
-    font-size: 28px;
+    font-size: 24px;
     position: absolute;
-    top: -23px;
+    top: -18px;
 }
 
 #Lesson > .wrapper .stack > p{
@@ -562,6 +571,7 @@
 }
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Topic_Visual > .Visual_Holder.text > p{
+    font-weight: bold;
     font-size: 20px;
 }
 
@@ -574,6 +584,7 @@
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Topic_Visual > .Visual_Holder.text > .Formula > p{
     font-size: 20px;
+    font-weight: bold;
     position: relative;
     color: var(--dark-blue);
 } 
@@ -1177,7 +1188,7 @@
     height: 100%;
     display: flex;
     justify-content: flex-end;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -1334,6 +1345,10 @@
     border-radius: 10px;
 }
 
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Light_Blue *:not(.large){
+    font-weight: bold;
+}
+
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Light_Blue.start{
     align-items: flex-start;
 }
@@ -1346,6 +1361,7 @@
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Light_Blue > p{
     position: relative;
+    font-weight: bold;
     color: var(--dark-blue);
     font-size: 20px;
 }

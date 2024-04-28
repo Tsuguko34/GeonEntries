@@ -82,7 +82,7 @@ function PELesson3() {
             </p>
           </div>
 
-          <div className="Paragraph_Topic">
+          <div className="Paragraph_Topic paddingLeft2">
             <div className="Solution_Example">
               <p className="label">1.) u = (-6, 4), v = (2, 3)</p>
               <p className="label">
@@ -172,10 +172,11 @@ function PELesson3() {
               vectors.
             </p>
           </div>
-
           <div className="Paragraph_Topic">
+            <p>1.) u = (9, -1)</p>
+          </div>
+          <div className="Paragraph_Topic paddingLeft2">
             <div className="Solution_Example">
-              <p className="label">1.) u = (9, -1)</p>
               <p className="label">Let v = (x, y) be orthogonal to u .</p>
               <p className="label">
                 By Definition 3.1, a vector is orthogonal if u ⋅ v = 0
@@ -239,26 +240,30 @@ function PELesson3() {
                   </p>
 
                   <p className="label">
-                    v = (
+                    v = (&nbsp;
                     <div className="fraction">
                       <span className="upper">m</span>
                       <span className="divider"></span>
                       <span className="bottom">9</span>
                     </div>
-                    , m) or v = m (
+                    , m ) or v = m (&nbsp;
                     <div className="fraction">
                       <span className="upper">1</span>
                       <span className="divider"></span>
                       <span className="bottom">9</span>
                     </div>
-                    , 1), ∀ m ∈ ℝ.
+                    , 1 ), ∀ m ∈ ℝ.
                   </p>
                 </div>
               </div>
             </div>
+          </div>
 
+          <div className="Paragraph_Topic">
+            <p>2.) u = (5, 11)</p>
+          </div>
+          <div className="Paragraph_Topic paddingLeft2">
             <div className="Solution_Example">
-              <p className="label">2.) u = (5, 11)</p>
               <p className="label">Let v = (x, y) be orthogonal to u .</p>
               <p className="label">
                 By Definition 3.1, a vector is orthogonal if u ⋅ v = 0
@@ -338,19 +343,19 @@ function PELesson3() {
                   </p>
 
                   <p className="label">
-                    v = ( m ,
+                    v = ( m ,&nbsp;
                     <div className="fraction">
                       <span className="upper">-5m</span>
                       <span className="divider"></span>
                       <span className="bottom">11</span>
                     </div>
-                    ) or v = m ( 1 ,
+                    &nbsp; ) or v = m ( 1 ,&nbsp;
                     <div className="fraction">
                       <span className="upper">-5</span>
                       <span className="divider"></span>
                       <span className="bottom">11</span>
                     </div>
-                    ), ∀ m ∈ ℝ.
+                    &nbsp; ), ∀ m ∈ ℝ.
                   </p>
                 </div>
               </div>
@@ -470,7 +475,7 @@ function PELesson3() {
                 <div className="Group">
                   <div className="Solution_Example">
                     <div className="start">
-                      <p className="left">
+                      <p className="left alignStart">
                         <span className="Bold">a.</span>
                       </p>
                       <p className="center"></p>
@@ -578,7 +583,7 @@ function PELesson3() {
                 <div className="Group">
                   <div className="Solution_Example">
                     <div className="start">
-                      <p className="left">
+                      <p className="left alignStart">
                         <span className="Bold">a.</span>
                       </p>
                       <p className="center"></p>
@@ -706,15 +711,15 @@ function PELesson3() {
             <p>where,</p>
           </div>
 
-          <div className="Paragraph_Topic paddingLeft">
+          <div className="Paragraph_Topic paddingLeft2">
             <p>
               n = (a, b, c), the normal vector which is orthogonal to the plane
             </p>
           </div>
-          <div className="Paragraph_Topic paddingLeft">
+          <div className="Paragraph_Topic paddingLeft2">
             <p>P₀ (x₀, y₀, z₀), any point on the plane</p>
           </div>
-          <div className="Paragraph_Topic paddingLeft">
+          <div className="Paragraph_Topic paddingLeft2">
             <p>P(x, y, z), an arbitrary point on the plane</p>
           </div>
 
@@ -761,7 +766,7 @@ function PELesson3() {
                 <div className="Group">
                   <div className="Solution_Example">
                     <div className="start">
-                      <p className="left">
+                      <p className="left alignStart">
                         <span className="Bold">a.</span>
                       </p>
                       <p className="center"></p>
@@ -870,145 +875,148 @@ function PELesson3() {
               to the general equation.
             </p>
           </div>
-          <div className="Triple_Grid">
-            <div className="left">
-              <div className="Solution_Example">
-                <p className="label">Finding x-intercepts:</p>
-                <p className="label">Let y = 0 and z = 0. Then,</p>
-                <div className="start reverse">
-                  <p className="left">
-                    <span className="Bold">-5x - y + 2z + 31</span>
-                  </p>
-                  <p className="center">=</p>
-                  <p className="right">0</p>
+
+          <div className="Paragraph_Topic paddingLeft">
+            <div className="Triple_Grid">
+              <div className="left">
+                <div className="Solution_Example">
+                  <p className="label">Finding x-intercepts:</p>
+                  <p className="label">Let y = 0 and z = 0. Then,</p>
+                  <div className="start reverse">
+                    <p className="left">
+                      <span className="Bold">-5x - y + 2z + 31</span>
+                    </p>
+                    <p className="center">=</p>
+                    <p className="right">0</p>
+                  </div>
+                  <div className="start reverse">
+                    <p className="left">-5x - 0 + 2(0) + 31</p>
+                    <p className="center">=</p>
+                    <p className="right">0</p>
+                  </div>
+                  <div className="start reverse">
+                    <p className="left">-5x</p>
+                    <p className="center">=</p>
+                    <p className="right">31</p>
+                  </div>
+                  <div className="start reverse">
+                    <p className="left">x</p>
+                    <p className="center">=</p>
+                    <p className="right">31/5</p>
+                  </div>
                 </div>
-                <div className="start reverse">
-                  <p className="left">-5x - 0 + 2(0) + 31</p>
-                  <p className="center">=</p>
-                  <p className="right">0</p>
+              </div>
+              <div className="middle">
+                <div className="Solution_Example">
+                  <p className="label">Finding y-intercepts:</p>
+                  <p className="label">Let x = 0 and z = 0. Then,</p>
+                  <div className="start reverse">
+                    <p className="left">-5x - y + 2z + 31</p>
+                    <p className="center">=</p>
+                    <p className="right">0</p>
+                  </div>
+                  <div className="start reverse">
+                    <p className="left">-5(0) - y + 2(0) + 31</p>
+                    <p className="center">=</p>
+                    <p className="right">0</p>
+                  </div>
+                  <div className="start reverse">
+                    <p className="left">-y</p>
+                    <p className="center">=</p>
+                    <p className="right">-31</p>
+                  </div>
+                  <div className="start reverse">
+                    <p className="left">y</p>
+                    <p className="center">=</p>
+                    <p className="right">31</p>
+                  </div>
                 </div>
-                <div className="start reverse">
-                  <p className="left">-5x</p>
-                  <p className="center">=</p>
-                  <p className="right">31</p>
-                </div>
-                <div className="start reverse">
-                  <p className="left">x</p>
-                  <p className="center">=</p>
-                  <p className="right">31/5</p>
+              </div>
+              <div className="right">
+                <div className="Solution_Example">
+                  <p className="label">Finding z-intercepts:</p>
+                  <p className="label">Let x = 0 and y = 0. Then,</p>
+                  <div className="start reverse">
+                    <p className="left">-5x - y + 2z + 31</p>
+                    <p className="center">=</p>
+                    <p className="right">0</p>
+                  </div>
+                  <div className="start reverse">
+                    <p className="left">-5(0) - 0 + 2z + 31</p>
+                    <p className="center">=</p>
+                    <p className="right">0</p>
+                  </div>
+                  <div className="start reverse">
+                    <p className="left">2z</p>
+                    <p className="center">=</p>
+                    <p className="right">-31</p>
+                  </div>
+                  <div className="start reverse">
+                    <p className="left">z</p>
+                    <p className="center">=</p>
+                    <p className="right">31/2</p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="middle">
-              <div className="Solution_Example">
-                <p className="label">Finding y-intercepts:</p>
-                <p className="label">Let x = 0 and z = 0. Then,</p>
-                <div className="start reverse">
-                  <p className="left">-5x - y + 2z + 31</p>
-                  <p className="center">=</p>
-                  <p className="right">0</p>
-                </div>
-                <div className="start reverse">
-                  <p className="left">-5(0) - y + 2(0) + 31</p>
-                  <p className="center">=</p>
-                  <p className="right">0</p>
-                </div>
-                <div className="start reverse">
-                  <p className="left">-y</p>
-                  <p className="center">=</p>
-                  <p className="right">-31</p>
-                </div>
-                <div className="start reverse">
-                  <p className="left">y</p>
-                  <p className="center">=</p>
-                  <p className="right">31</p>
+            <div className="Triple_Grid">
+              <div className="left">
+                <div className="Solution_Example">
+                  <p className="label">
+                    <span className="Italic Bold">Plane’s Intercept:</span>
+                  </p>
+                  <div className="start">
+                    <p className="left"></p>
+                    <p className="center"></p>
+                    <p className="right">
+                      <span className="LimeGreen">x-intercepts:</span>
+                    </p>
+                  </div>
+                  <div className="start">
+                    <p className="left"></p>
+                    <p className="center"></p>
+                    <p className="right">
+                      <span className="LimeGreen">(31/5, 0, 0)</span>
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="right">
-              <div className="Solution_Example">
-                <p className="label">Finding z-intercepts:</p>
-                <p className="label">Let x = 0 and y = 0. Then,</p>
-                <div className="start reverse">
-                  <p className="left">-5x - y + 2z + 31</p>
-                  <p className="center">=</p>
-                  <p className="right">0</p>
-                </div>
-                <div className="start reverse">
-                  <p className="left">-5(0) - 0 + 2z + 31</p>
-                  <p className="center">=</p>
-                  <p className="right">0</p>
-                </div>
-                <div className="start reverse">
-                  <p className="left">2z</p>
-                  <p className="center">=</p>
-                  <p className="right">-31</p>
-                </div>
-                <div className="start reverse">
-                  <p className="left">z</p>
-                  <p className="center">=</p>
-                  <p className="right">31/2</p>
+              <div className="middle noBorder">
+                <div className="Solution_Example">
+                  <p className="label">&nbsp;</p>
+                  <div className="start">
+                    <p className="left"></p>
+                    <p className="center"></p>
+                    <p className="right">
+                      <span className="LimeGreen">y-intercepts:</span>
+                    </p>
+                  </div>
+                  <div className="start">
+                    <p className="left"></p>
+                    <p className="center"></p>
+                    <p className="right">
+                      <span className="LimeGreen">(0,31, 0)</span>
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div className="Triple_Grid">
-            <div className="left">
-              <div className="Solution_Example">
-                <p className="label">
-                  <span className="Italic Bold">Plane’s Intercept:</span>
-                </p>
-                <div className="start">
-                  <p className="left"></p>
-                  <p className="center"></p>
-                  <p className="right">
-                    <span className="LimeGreen">x-intercepts:</span>
-                  </p>
-                </div>
-                <div className="start">
-                  <p className="left"></p>
-                  <p className="center"></p>
-                  <p className="right">
-                    <span className="LimeGreen">(31/5, 0, 0)</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="middle noBorder">
-              <div className="Solution_Example">
-                <p className="label">&nbsp;</p>
-                <div className="start">
-                  <p className="left"></p>
-                  <p className="center"></p>
-                  <p className="right">
-                    <span className="LimeGreen">y-intercepts:</span>
-                  </p>
-                </div>
-                <div className="start">
-                  <p className="left"></p>
-                  <p className="center"></p>
-                  <p className="right">
-                    <span className="LimeGreen">(0,31, 0)</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="right">
-              <div className="Solution_Example">
-                <p className="label">&nbsp;</p>
-                <div className="start">
-                  <p className="left"></p>
-                  <p className="center"></p>
-                  <p className="right">
-                    <span className="LimeGreen">y-intercepts:</span>
-                  </p>
-                </div>
-                <div className="start">
-                  <p className="left"></p>
-                  <p className="center"></p>
-                  <p className="right">
-                    <span className="LimeGreen">(0, 0, -31/2)</span>
-                  </p>
+              <div className="right">
+                <div className="Solution_Example">
+                  <p className="label">&nbsp;</p>
+                  <div className="start">
+                    <p className="left"></p>
+                    <p className="center"></p>
+                    <p className="right">
+                      <span className="LimeGreen">y-intercepts:</span>
+                    </p>
+                  </div>
+                  <div className="start">
+                    <p className="left"></p>
+                    <p className="center"></p>
+                    <p className="right">
+                      <span className="LimeGreen">(0, 0, -31/2)</span>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1024,7 +1032,7 @@ function PELesson3() {
                 <div className="Group">
                   <div className="Solution_Example">
                     <div className="start">
-                      <p className="left">
+                      <p className="left alignStart">
                         <span className="Bold">a.</span>
                       </p>
                       <p className="center"></p>
@@ -1134,143 +1142,145 @@ function PELesson3() {
               to the general equation.
             </p>
           </div>
-          <div className="Triple_Grid">
-            <div className="left">
-              <div className="Solution_Example">
-                <p className="label">Finding x-intercepts:</p>
-                <p className="label">Let y = 0 and z = 0. Then,</p>
-                <div className="start reverse">
-                  <p className="left">7x + 2y - 6z + 26</p>
-                  <p className="center">=</p>
-                  <p className="right">0</p>
+          <div className="Paragraph_Topic paddingLeft">
+            <div className="Triple_Grid">
+              <div className="left">
+                <div className="Solution_Example">
+                  <p className="label">Finding x-intercepts:</p>
+                  <p className="label">Let y = 0 and z = 0. Then,</p>
+                  <div className="start reverse">
+                    <p className="left">7x + 2y - 6z + 26</p>
+                    <p className="center">=</p>
+                    <p className="right">0</p>
+                  </div>
+                  <div className="start reverse">
+                    <p className="left">7x + 2(0) - 6(0) + 26</p>
+                    <p className="center">=</p>
+                    <p className="right">0</p>
+                  </div>
+                  <div className="start reverse">
+                    <p className="left">7x</p>
+                    <p className="center">=</p>
+                    <p className="right">-26</p>
+                  </div>
+                  <div className="start reverse">
+                    <p className="left">x</p>
+                    <p className="center">=</p>
+                    <p className="right">-26/7</p>
+                  </div>
                 </div>
-                <div className="start reverse">
-                  <p className="left">7x + 2(0) - 6(0) + 26</p>
-                  <p className="center">=</p>
-                  <p className="right">0</p>
+              </div>
+              <div className="middle">
+                <div className="Solution_Example">
+                  <p className="label">Finding y-intercepts:</p>
+                  <p className="label">Let x = 0 and z = 0. Then,</p>
+                  <div className="start reverse">
+                    <p className="left">7x + 2y - 6z + 26</p>
+                    <p className="center">=</p>
+                    <p className="right">0</p>
+                  </div>
+                  <div className="start reverse">
+                    <p className="left">7(0) + 2y - 6(0) + 26</p>
+                    <p className="center">=</p>
+                    <p className="right">0</p>
+                  </div>
+                  <div className="start reverse">
+                    <p className="left">2y</p>
+                    <p className="center">=</p>
+                    <p className="right">-26</p>
+                  </div>
+                  <div className="start reverse">
+                    <p className="left">y</p>
+                    <p className="center">=</p>
+                    <p className="right">-13</p>
+                  </div>
                 </div>
-                <div className="start reverse">
-                  <p className="left">7x</p>
-                  <p className="center">=</p>
-                  <p className="right">-26</p>
-                </div>
-                <div className="start reverse">
-                  <p className="left">x</p>
-                  <p className="center">=</p>
-                  <p className="right">-26/7</p>
+              </div>
+              <div className="right">
+                <div className="Solution_Example">
+                  <p className="label">Finding z-intercepts:</p>
+                  <p className="label">Let x = 0 and y = 0. Then,</p>
+                  <div className="start reverse">
+                    <p className="left">7x + 2y - 6z + 26</p>
+                    <p className="center">=</p>
+                    <p className="right">0</p>
+                  </div>
+                  <div className="start reverse">
+                    <p className="left">7(0) + 2(0) - 6z + 26</p>
+                    <p className="center">=</p>
+                    <p className="right">0</p>
+                  </div>
+                  <div className="start reverse">
+                    <p className="left">-6z</p>
+                    <p className="center">=</p>
+                    <p className="right">-26</p>
+                  </div>
+                  <div className="start reverse">
+                    <p className="left">z</p>
+                    <p className="center">=</p>
+                    <p className="right">13/3</p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="middle">
-              <div className="Solution_Example">
-                <p className="label">Finding y-intercepts:</p>
-                <p className="label">Let x = 0 and z = 0. Then,</p>
-                <div className="start reverse">
-                  <p className="left">7x + 2y - 6z + 26</p>
-                  <p className="center">=</p>
-                  <p className="right">0</p>
-                </div>
-                <div className="start reverse">
-                  <p className="left">7(0) + 2y - 6(0) + 26</p>
-                  <p className="center">=</p>
-                  <p className="right">0</p>
-                </div>
-                <div className="start reverse">
-                  <p className="left">2y</p>
-                  <p className="center">=</p>
-                  <p className="right">-26</p>
-                </div>
-                <div className="start reverse">
-                  <p className="left">y</p>
-                  <p className="center">=</p>
-                  <p className="right">-13</p>
+            <div className="Triple_Grid">
+              <div className="left">
+                <div className="Solution_Example">
+                  <p className="label">
+                    <span className="Italic Bold">Plane’s Intercept:</span>
+                  </p>
+                  <div className="start">
+                    <p className="left"></p>
+                    <p className="center"></p>
+                    <p className="right">
+                      <span className="LimeGreen">x-intercepts:</span>
+                    </p>
+                  </div>
+                  <div className="start">
+                    <p className="left"></p>
+                    <p className="center"></p>
+                    <p className="right">
+                      <span className="LimeGreen">(-26/7, 0, 0)</span>
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="right">
-              <div className="Solution_Example">
-                <p className="label">Finding z-intercepts:</p>
-                <p className="label">Let x = 0 and y = 0. Then,</p>
-                <div className="start reverse">
-                  <p className="left">7x + 2y - 6z + 26</p>
-                  <p className="center">=</p>
-                  <p className="right">0</p>
-                </div>
-                <div className="start reverse">
-                  <p className="left">7(0) + 2(0) - 6z + 26</p>
-                  <p className="center">=</p>
-                  <p className="right">0</p>
-                </div>
-                <div className="start reverse">
-                  <p className="left">-6z</p>
-                  <p className="center">=</p>
-                  <p className="right">-26</p>
-                </div>
-                <div className="start reverse">
-                  <p className="left">z</p>
-                  <p className="center">=</p>
-                  <p className="right">13/3</p>
+              <div className="middle noBorder">
+                <div className="Solution_Example">
+                  <p className="label">&nbsp;</p>
+                  <div className="start">
+                    <p className="left"></p>
+                    <p className="center"></p>
+                    <p className="right">
+                      <span className="LimeGreen">y-intercepts:</span>
+                    </p>
+                  </div>
+                  <div className="start">
+                    <p className="left"></p>
+                    <p className="center"></p>
+                    <p className="right">
+                      <span className="LimeGreen">(0, -13, 0)</span>
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div className="Triple_Grid">
-            <div className="left">
-              <div className="Solution_Example">
-                <p className="label">
-                  <span className="Italic Bold">Plane’s Intercept:</span>
-                </p>
-                <div className="start">
-                  <p className="left"></p>
-                  <p className="center"></p>
-                  <p className="right">
-                    <span className="LimeGreen">x-intercepts:</span>
-                  </p>
-                </div>
-                <div className="start">
-                  <p className="left"></p>
-                  <p className="center"></p>
-                  <p className="right">
-                    <span className="LimeGreen">(-26/7, 0, 0)</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="middle noBorder">
-              <div className="Solution_Example">
-                <p className="label">&nbsp;</p>
-                <div className="start">
-                  <p className="left"></p>
-                  <p className="center"></p>
-                  <p className="right">
-                    <span className="LimeGreen">y-intercepts:</span>
-                  </p>
-                </div>
-                <div className="start">
-                  <p className="left"></p>
-                  <p className="center"></p>
-                  <p className="right">
-                    <span className="LimeGreen">(0, -13, 0)</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="right">
-              <div className="Solution_Example">
-                <p className="label">&nbsp;</p>
-                <div className="start">
-                  <p className="left"></p>
-                  <p className="center"></p>
-                  <p className="right">
-                    <span className="LimeGreen">y-intercepts:</span>
-                  </p>
-                </div>
-                <div className="start">
-                  <p className="left"></p>
-                  <p className="center"></p>
-                  <p className="right">
-                    <span className="LimeGreen">(0, 0, 13/3)</span>
-                  </p>
+              <div className="right">
+                <div className="Solution_Example">
+                  <p className="label">&nbsp;</p>
+                  <div className="start">
+                    <p className="left"></p>
+                    <p className="center"></p>
+                    <p className="right">
+                      <span className="LimeGreen">y-intercepts:</span>
+                    </p>
+                  </div>
+                  <div className="start">
+                    <p className="left"></p>
+                    <p className="center"></p>
+                    <p className="right">
+                      <span className="LimeGreen">(0, 0, 13/3)</span>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1485,7 +1495,7 @@ function PELesson3() {
             </p>
           </div>
 
-          <div className="Solution_Example">
+          <div className="Solution_Example largerLeft">
             <div className="start">
               <p className="left">
                 <span>u = (3, 8) and v = (6, -1)</span>

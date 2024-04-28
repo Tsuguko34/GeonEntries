@@ -444,41 +444,44 @@ function NELesson1() {
           <p className="Sub_Title">Definition 1.1</p>
         </div>
         <div className="Sub_Topic_Lesson">
-          <div className="Bullet_Topic">
-            <p className="Title">SENSED PARALLEL LINES</p>
-            <p className="Explanation block">
-              Let P be a point not on line{" "}
-              <span className="stack">
-                <sup>⟷</sup>
-                <p>XY</p>
-              </span>{" "}
-              . In hyperbolic geometry, the first lines in either direction
-              through the point P that do not intersect the line{" "}
-              <span className="stack">
-                <sup>⟷</sup>
-                <p>XY</p>
-              </span>{" "}
-              are called parallel lines or sensed parallel lines .
-            </p>
+          <div className="Paragraph_Topic paddingLeft">
+            <div className="Bullet_Topic">
+              <p className="Title">SENSED PARALLEL LINES</p>
+              <p className="Explanation block">
+                Let P be a point not on line{" "}
+                <span className="stack">
+                  <sup>⟷</sup>
+                  <p>XY</p>
+                </span>{" "}
+                . In hyperbolic geometry, the first lines in either direction
+                through the point P that do not intersect the line{" "}
+                <span className="stack">
+                  <sup>⟷</sup>
+                  <p>XY</p>
+                </span>{" "}
+                are called parallel lines or sensed parallel lines .
+              </p>
+            </div>
           </div>
-
-          <div className="Bullet_Topic">
-            <p className="Title">ULTRAPARALLEL LINES</p>
-            <p className="Explanation block">
-              Let P be a point not on line{" "}
-              <span className="stack">
-                <sup>⟷</sup>
-                <p>XY</p>
-              </span>{" "}
-              . In hyperbolic geometry, the line through the point P that do not
-              intersect the line{" "}
-              <span className="stack">
-                <sup>⟷</sup>
-                <p>XY</p>
-              </span>{" "}
-              , and not parallel to it, are called nonintersecting lines or
-              ultraparallel lines .
-            </p>
+          <div className="Paragraph_Topic paddingLeft">
+            <div className="Bullet_Topic">
+              <p className="Title">ULTRAPARALLEL LINES</p>
+              <p className="Explanation block">
+                Let P be a point not on line{" "}
+                <span className="stack">
+                  <sup>⟷</sup>
+                  <p>XY</p>
+                </span>{" "}
+                . In hyperbolic geometry, the line through the point P that do
+                not intersect the line{" "}
+                <span className="stack">
+                  <sup>⟷</sup>
+                  <p>XY</p>
+                </span>{" "}
+                , and not parallel to it, are called nonintersecting lines or
+                ultraparallel lines .
+              </p>
+            </div>
           </div>
 
           <div className="Topic_Visual">

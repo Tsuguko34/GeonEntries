@@ -1850,14 +1850,14 @@ function PELesson5() {
             <p>Determine the scalar triple product of the given vectors.</p>
           </div>
 
-          <div className="Paragraph_Topic paddingLeft">
+          <div className="Paragraph_Topic paddingLeft2">
             <p>u = (-11, 5, -2)</p>
             <p>v = (-1, 4, 9)</p>
             <p>w = (0, 12, -7)</p>
           </div>
 
           <div className="Paragraph_Topic paddingLeft2">
-            <div className="Solution_Example">
+            <div className="Solution_Example largerLeft">
               <div className="start">
                 <p className="left">
                   det
