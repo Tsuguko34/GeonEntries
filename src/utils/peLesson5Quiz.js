@@ -156,8 +156,7 @@ var questions = [
       "The area of the parallelogram determined by vectors u & v is the magnitude of the cross product of u & v.",
       "The cross product of two distinct unit vectors produces another unit vector.",
     ],
-    correctAnswer:
-      "Cross product is not associative. By Theorem 5.1, u × (v × w) = (u ⋅ w)(v) - (u ⋅ v)(w) ≠ (u × v) × w.",
+    correctAnswer: "Cross product is associative.",
     type: "text",
     explanation: p15,
     explanationType: "image",

@@ -43,6 +43,27 @@ function ScoreOverview() {
       navigate(`/Lesson/Quiz/${lessonName}`);
     }
   }, []);
+
+  const navigateToLesson = (name) => {
+    console.log(name);
+    if (name === "PlaneEuclideanGeometry" || name === "NonEuclideanGeometry") {
+      navigate(`/Lesson/${name}`);
+    } else if (name === "VectorsIn2Space3Space") {
+      navigate(`/Lesson/PlaneEuclideanGeometry/${name}`);
+    } else if (name === "NormDistanceAndDotProduct") {
+      navigate(`/Lesson/PlaneEuclideanGeometry/${name}`);
+    } else if (name === "Orthogonality") {
+      navigate(`/Lesson/PlaneEuclideanGeometry/${name}`);
+    } else if (name === "EquationsOfLinesAndPlanes") {
+      navigate(`/Lesson/PlaneEuclideanGeometry/${name}`);
+    } else if (name === "CrossProduct") {
+      navigate(`/Lesson/PlaneEuclideanGeometry/${name}`);
+    } else if (name === "HyperbolicGeometry") {
+      navigate(`/Lesson/NonEuclideanGeometry/${name}`);
+    } else if (name === "SphericalGeometry") {
+      navigate(`/Lesson/NonEuclideanGeometry/${name}`);
+    }
+  };
   return (
     <section id="ScoreOverview" className="ScoreOverview">
       <div className="wrapper">
@@ -139,7 +160,7 @@ function ScoreOverview() {
             ></button>
             <button
               className="Lessons"
-              onClick={() => navigate(`/Lesson/${lessonName}`)}
+              onClick={() => navigateToLesson(lessonName)}
             ></button>
           </div>
 

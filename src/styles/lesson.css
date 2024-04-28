@@ -333,6 +333,10 @@
     gap: 40px;
 }
 
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Formula_Field > .Formula > .Formula_Main * {
+    font-size: 20px;
+}
+
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Formula_Field > .Formula > .Formula_Main > div{
     min-height: 100px;
 }
@@ -404,7 +408,6 @@
 #Lesson > .wrapper .stack > sup{
     font-size: 28px;
     position: absolute;
-    padding-left: 3px;
     top: -23px;
 }
 
@@ -559,7 +562,7 @@
 }
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Topic_Visual > .Visual_Holder.text > p{
-    font-size: 28px;
+    font-size: 20px;
 }
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Topic_Visual > .Visual_Holder.text > .Formula{
@@ -570,14 +573,14 @@
 }
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Topic_Visual > .Visual_Holder.text > .Formula > p{
-    font-size: 28px;
+    font-size: 20px;
     position: relative;
     color: var(--dark-blue);
 } 
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Topic_Visual > .Visual_Holder.text > .Formula > p > p{
     font-weight: bold;
-    font-size: 28px;
+    font-size: 20px;
 }
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Topic_Visual > .Visual_Holder.text > .Formula > div{
@@ -594,7 +597,7 @@
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Topic_Visual > .Visual_Holder.text > .Formula > div > .Vertical{
     color: var(--dark-blue);
-    font-size: 28px;
+    font-size: 20px;
 }
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself{

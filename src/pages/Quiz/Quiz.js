@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useMemo, useState } from "react";
 import "../../styles/quiz.css";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 
@@ -47,6 +47,7 @@ function Quiz() {
     questions,
     setQuestions,
   } = useContext(SidebarContext);
+
   const getLessonName = (name) => {
     if (name === "PlaneEuclideanGeometry") {
       return "Plane Euclidean Geometry";
@@ -76,27 +77,39 @@ function Quiz() {
     });
   };
 
+  const shuffle = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  };
+
+  const sliceAndShuffleQuestions = (questions, count) => {
+    const shuffledQuestions = shuffle([...questions]);
+    return shuffledQuestions.slice(0, count);
+  };
+
   const getQuestions = (lessonName) => {
-    setQuestions([]);
     let questionList = [];
     if (lessonName === "NonEuclideanGeometry") {
       questionList = neQuestions;
     } else if (lessonName === "PlaneEuclideanGeometry") {
       questionList = peQuestions;
     } else if (lessonName === "VectorsIn2Space3Space") {
-      questionList = peLesson1Questions;
+      questionList = sliceAndShuffleQuestions(peLesson1Questions, 10);
     } else if (lessonName === "NormDistanceAndDotProduct") {
-      questionList = peLesson2Questions;
+      questionList = sliceAndShuffleQuestions(peLesson2Questions, 10);
     } else if (lessonName === "Orthogonality") {
-      questionList = peLesson3Questions;
+      questionList = sliceAndShuffleQuestions(peLesson3Questions, 10);
     } else if (lessonName === "EquationsOfLinesAndPlanes") {
-      questionList = peLesson4Questions;
+      questionList = sliceAndShuffleQuestions(peLesson4Questions, 10);
     } else if (lessonName === "CrossProduct") {
-      questionList = peLesson5Questions;
+      questionList = sliceAndShuffleQuestions(peLesson5Questions, 10);
     } else if (lessonName === "HyperbolicGeometry") {
-      questionList = neLesson1Questions;
+      questionList = sliceAndShuffleQuestions(neLesson1Questions, 7);
     } else if (lessonName === "SphericalGeometry") {
-      questionList = neLesson2Questions;
+      questionList = sliceAndShuffleQuestions(neLesson2Questions, 7);
     }
     console.log(questionList);
     setQuestions(removeStatusField(questionList));
@@ -164,6 +177,7 @@ function Quiz() {
   };
 
   useEffect(() => {
+    setQuestions([]);
     document.title = `${getLessonName(lessonName)} Quiz`;
     setScore(0);
     setActiveQuestion(1);

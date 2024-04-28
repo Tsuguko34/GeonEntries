@@ -86,7 +86,12 @@ function QuizSidebar({ handleScrollClick, closeSidebar }) {
 
   return (
     <>
-      <div className="Questions_Container" ref={containerRef}>
+      <div
+        className={`Questions_Container ${
+          questions.length > 10 ? "withShadow" : ""
+        }`}
+        ref={containerRef}
+      >
         {questions.length > 0 &&
           questions.map((question, index) => (
             <p
