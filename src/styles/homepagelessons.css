@@ -57,10 +57,12 @@
 }
 
 #HomePageLessons > .wrapper > .Container > .Lesson > .Lesson_Description{
+    height: 100%;
     color: white;
-    font-size: 18px;
+    font-size: 20px;
+    display: flex;
     text-align: center;
-    width: 100%;
+    width: 85%;
 }
 
 #HomePageLessons > .wrapper > .Container > .Lesson:hover{

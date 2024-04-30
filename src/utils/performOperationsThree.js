@@ -6,26 +6,26 @@ export default function performOperations3D(uX, uY, uZ, vX, vY, vZ) {
   // Perform vector operations
   // Addition u + v
   var uPlusV = [
-    (u[0] + v[0]).toFixed(2),
-    (u[1] + v[1]).toFixed(2),
-    (u[2] + v[2]).toFixed(2),
+    (u[0] + v[0]).toFixed(0),
+    (u[1] + v[1]).toFixed(0),
+    (u[2] + v[2]).toFixed(0),
   ];
 
   // Scalar multiplication 3u
   var threeU = [
-    (3 * u[0]).toFixed(2),
-    (3 * u[1]).toFixed(2),
-    (3 * u[2]).toFixed(2),
+    (3 * u[0]).toFixed(0),
+    (3 * u[1]).toFixed(0),
+    (3 * u[2]).toFixed(0),
   ];
 
   // Negation -u
-  var negU = [(-u[0]).toFixed(2), (-u[1]).toFixed(2), (-u[2]).toFixed(2)];
+  var negU = [(-u[0]).toFixed(0), (-u[1]).toFixed(0), (-u[2]).toFixed(0)];
 
   // Subtraction v - u
   var vMinusU = [
-    (v[0] - u[0]).toFixed(2),
-    (v[1] - u[1]).toFixed(2),
-    (v[2] - u[2]).toFixed(2),
+    (v[0] - u[0]).toFixed(0),
+    (v[1] - u[1]).toFixed(0),
+    (v[2] - u[2]).toFixed(0),
   ];
 
   // Update rectangles with user input values

@@ -18,6 +18,7 @@ import miniLogo from "../../assets/images/miniLogo.png";
 
 //Icons
 import * as IoIcons from "react-icons/io";
+import { Tooltip } from "@mui/material";
 
 function Lesson() {
   const navigate = useNavigate();
@@ -65,8 +66,6 @@ function Lesson() {
     <section id="Lesson" className="Lesson">
       <div
         className="Bottom_Options Lesson"
-        onMouseEnter={() => setOptionsOpen(true)}
-        onMouseLeave={() => setOptionsOpen(false)}
         onClick={() => setOptionsOpen(!optionsOpen)}
       >
         <div className="Trigger">
@@ -83,41 +82,54 @@ function Lesson() {
             <span>Q?</span>
           </Link>
           <div className="Option" onClick={() => redirectQuiz()}>
-            {lessonName === "PlaneEuclideanGeometry" && (
-              <span className="Test">UNIT TEST I</span>
-            )}
-
-            {lessonName === "NonEuclideanGeometry" && (
-              <span className="Test">UNIT TEST II</span>
-            )}
+            <Tooltip
+              title={
+                <p style={{ fontSize: "14px" }}>
+                  {lessonName === "NonEuclideanGeometry"
+                    ? "NEG Unit Test"
+                    : "PEG Unit Test"}
+                </p>
+              }
+              placement="left"
+            >
+              <span className="Test">Unit Test</span>
+            </Tooltip>
           </div>
 
-          {currentLocation.includes("PlaneEuclideanGeometry") && (
-            <div
-              className="Option"
-              onClick={() => {
-                navigate("/Lesson/NonEuclideanGeometry");
-                setOptionsOpen(false);
-              }}
+          <div
+            className="Option"
+            onClick={() => {
+              navigate(
+                `/Lesson/${
+                  lessonName === "NonEuclideanGeometry"
+                    ? "PlaneEuclideanGeometry"
+                    : "NonEuclideanGeometry"
+                }`
+              );
+              setOptionsOpen(false);
+            }}
+          >
+            <Tooltip
+              title={
+                <p style={{ fontSize: "14px" }}>
+                  {lessonName === "NonEuclideanGeometry"
+                    ? "Plane Euclidean Geometry"
+                    : "Non-Euclidean Geometry"}
+                </p>
+              }
+              placement="left"
             >
-              <span>
-                II. <IoIcons.IoMdListBox />
-              </span>
-            </div>
-          )}
-          {currentLocation.includes("NonEuclideanGeometry") && (
-            <div
-              className="Option"
-              onClick={() => {
-                navigate("/Lesson/PlaneEuclideanGeometry");
-                setOptionsOpen(false);
-              }}
-            >
-              <span>
-                I. <IoIcons.IoMdListBox />
-              </span>
-            </div>
-          )}
+              {lessonName === "NonEuclideanGeometry" ? (
+                <span>
+                  I. <IoIcons.IoMdListBox />
+                </span>
+              ) : (
+                <span>
+                  II. <IoIcons.IoMdListBox />
+                </span>
+              )}
+            </Tooltip>
+          </div>
         </div>
       </div>
       <div className="wrapper">

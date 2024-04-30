@@ -4,23 +4,23 @@ export default function performOperations(vX, vY, wX, wY) {
 
   // Addition v + w
   var vPlusW = [
-    (parseFloat(v[0]) + parseFloat(w[0])).toFixed(2),
-    (parseFloat(v[1]) + parseFloat(w[1])).toFixed(2),
+    (parseFloat(v[0]) + parseFloat(w[0])).toFixed(0),
+    (parseFloat(v[1]) + parseFloat(w[1])).toFixed(0),
   ];
 
   // Scalar multiplication 3v
   var threeV = [
-    (3 * parseFloat(v[0])).toFixed(2),
-    (3 * parseFloat(v[1])).toFixed(2),
+    (3 * parseFloat(v[0])).toFixed(0),
+    (3 * parseFloat(v[1])).toFixed(0),
   ];
 
   // Negation -v
-  var negV = [(-parseFloat(v[0])).toFixed(2), (-parseFloat(v[1])).toFixed(2)];
+  var negV = [(-parseFloat(v[0])).toFixed(0), (-parseFloat(v[1])).toFixed(0)];
 
   // Subtraction w - v
   var wMinusV = [
-    (parseFloat(w[0]) - parseFloat(v[0])).toFixed(2),
-    (parseFloat(w[1]) - parseFloat(v[1])).toFixed(2),
+    (parseFloat(w[0]) - parseFloat(v[0])).toFixed(0),
+    (parseFloat(w[1]) - parseFloat(v[1])).toFixed(0),
   ];
 
   // Update rectangles with user input values

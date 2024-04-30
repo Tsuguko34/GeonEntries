@@ -37,7 +37,7 @@ var questions = [
   },
   {
     question:
-      "Let XY be a vector with initial point X(4, -17) and terminal point Y(-3m, m). If the components of the vector is (-10, 19), what is m?",
+      "Let vector XY be a vector with initial point X(4, -17) and terminal point Y(-3m, m). If the components of the vector is (-10, 19), what is m?",
     choices: ["-2", "-3", "3", "2"],
     correctAnswer: "2",
     type: "text",
@@ -101,7 +101,7 @@ var questions = [
   },
   {
     question:
-      "Let u, v, and w be vectors in Rn, and a and b be scalars. Which of the following is NOT true?",
+      "Let u, v, and w be vectors in Rⁿ, and a and b be scalars. Which of the following is NOT true?",
     choices: [
       "u + (-u) = 0",
       "(u + v) + w = u + (v + w)",
@@ -115,7 +115,7 @@ var questions = [
   },
   {
     question:
-      "Let CD be a vector with terminal point D(-5, -3, 7) and initial point C(-5, 16, 0). What is the standard unit form of its components?",
+      "Let vector CD be a vector with terminal point D(-5, -3, 7) and initial point C(-5, 16, 0). What is the standard unit form of its components?",
     choices: ["-19i + 7j", "19i - 7j", "-19j + 7k", "19j - 7k"],
     correctAnswer: "-19j + 7k",
     type: "text",

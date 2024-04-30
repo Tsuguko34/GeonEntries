@@ -13,16 +13,41 @@ import p12 from "../assets/images/Quiz Images/lessonQuizImages/PELesson2Quiz/12 
 import p13 from "../assets/images/Quiz Images/lessonQuizImages/PELesson2Quiz/13 P L2.png";
 import p14 from "../assets/images/Quiz Images/lessonQuizImages/PELesson2Quiz/14 P L2.png";
 import p15 from "../assets/images/Quiz Images/lessonQuizImages/PELesson2Quiz/15 P L2.png";
+import c1a from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson2Choices/L2 1A.png";
+import c1b from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson2Choices/L2 1B.png";
+import c1c from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson2Choices/L2 1C.png";
+import c1d from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson2Choices/L2 1D.png";
+import c3a from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson2Choices/L2 3A.png";
+import c3b from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson2Choices/L2 3B.png";
+import c3c from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson2Choices/L2 3C.png";
+import c3d from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson2Choices/L2 3D.png";
+import c5a from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson2Choices/L2 5A.png";
+import c5b from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson2Choices/L2 5B.png";
+import c5c from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson2Choices/L2 5C.png";
+import c5d from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson2Choices/L2 5D.png";
+import c6a from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson2Choices/L2 6A.png";
+import c6b from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson2Choices/L2 6B.png";
+import c6c from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson2Choices/L2 6C.png";
+import c6d from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson2Choices/L2 6D.png";
+import c12a from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson2Choices/L2 12A.png";
+import c12b from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson2Choices/L2 12B.png";
+import c12c from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson2Choices/L2 12C.png";
+import c12d from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson2Choices/L2 12D.png";
+import c15a from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson2Choices/L2 15A.png";
+import c15b from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson2Choices/L2 15B.png";
+import c15c from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson2Choices/L2 15C.png";
+import c15d from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson2Choices/L2 15D.png";
 
 var questions = [
   {
     question:
       "What is the distance between the zero vector and the standard unit vector j in R2?",
-    choices: ["1", "0", "√2", "2"],
-    correctAnswer: "1",
-    type: "text",
+    choices: [c1a, c1b, c1c, c1d],
+    correctAnswer: c1a,
+    type: "images",
     explanation: p1,
     explanationType: "image",
+    imageChoice: true,
   },
   {
     question: "Which of the does not belong to the group?",
@@ -39,16 +64,12 @@ var questions = [
   },
   {
     question: "What is the unit vector in the direction of v = (-1, -8)?",
-    choices: [
-      "(-1/8,-1 )",
-      "(1/√65,8/√65  )",
-      "(-8/√65,-1/√65  )",
-      "(-1/√65,-8/√65  )",
-    ],
-    correctAnswer: "(-1/√65,-8/√65  )",
-    type: "text",
+    choices: [c3a, c3b, c3c, c3d],
+    correctAnswer: c3d,
+    type: "images",
     explanation: p3,
     explanationType: "image",
+    imageChoice: true,
   },
   {
     question: "Which of the following is NOT true?",
@@ -66,19 +87,21 @@ var questions = [
   },
   {
     question: "What is the norm of the vector w = (-12, 8, -7)?",
-    choices: ["257", "√275", "√257", "275"],
-    correctAnswer: "√257",
-    type: "text",
+    choices: [c5a, c5b, c5c, c5d],
+    correctAnswer: c5c,
+    type: "images",
     explanation: p5,
     explanationType: "image",
+    imageChoice: true,
   },
   {
     question: "What is the norm of the vector u = (-9, 0, -4, 17)?",
-    choices: ["√386", "368", "√368", "386"],
-    correctAnswer: "√386",
-    type: "text",
+    choices: [c6a, c6b, c6c, c6d],
+    correctAnswer: c6a,
+    type: "images",
     explanation: p6,
     explanationType: "image",
+    imageChoice: true,
   },
   {
     question: "Let u = (2, -1) and v = (-4, -1). What is [d(u, v)](u ⋅ v)?",
@@ -130,11 +153,12 @@ var questions = [
   },
   {
     question: "If u = (9, 5) and v = (3, 8), what is 2[d(u, v)]?",
-    choices: ["6√5", "3√5", "2√5", "2√41"],
-    correctAnswer: "6√5",
-    type: "text",
+    choices: [c12a, c12b, c12c, c12d],
+    correctAnswer: c12a,
+    type: "images",
     explanation: p12,
     explanationType: "image",
+    imageChoice: true,
   },
   {
     question:
@@ -156,16 +180,12 @@ var questions = [
   },
   {
     question: "Which of the following is a unit vector?",
-    choices: [
-      "((-2)/√78,3/√78)",
-      "(5/√89,(-8)/√89)",
-      "((-1)/√3,(-2)/√3)",
-      "(7/17,10/17)",
-    ],
-    correctAnswer: "(5/√89,(-8)/√89)",
-    type: "text",
+    choices: [c15a, c15b, c15c, c15d],
+    correctAnswer: c15b,
+    type: "images",
     explanation: p15,
     explanationType: "image",
+    imageChoice: true,
   },
 ];
 

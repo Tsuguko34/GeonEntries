@@ -4,8 +4,8 @@ export default function calculateVector(
   terminalX,
   terminalY
 ) {
-  var xComponent = (terminalX - initialX).toFixed(2);
-  var yComponent = (terminalY - initialY).toFixed(2);
+  var xComponent = (terminalX - initialX).toFixed(0);
+  var yComponent = (terminalY - initialY).toFixed(0);
 
   // Update rectangles with user input values
   document.getElementById("rectangle-20-1").innerHTML = yComponent;

@@ -34,7 +34,7 @@ var questions = [
   },
   {
     question:
-      "What is the distance between P = (√5/2  ,√5/7,-√3/14) and Q = (-√2/3  ,√2/5,√7/4) in S2?",
+      "What is the distance between P = (√5/2  ,√5/7,-√3/14) and Q = (-√2/3  ,√2/5,√7/4) in S²?",
     choices: ["0.773", "1.773", "2.773", "3.773"],
     correctAnswer: "1.773",
     explanation: n2,

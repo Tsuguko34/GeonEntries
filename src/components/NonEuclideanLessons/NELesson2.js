@@ -36,18 +36,15 @@ function NELesson2() {
   });
 
   const handleCalculateAngle = () => {
+    const { p, q, r } = sides;
     if (
-      sides.p < 10 ||
-      sides.p > 89 ||
-      sides.q < 10 ||
-      sides.q > 89 ||
-      sides.r < 10 ||
-      sides.r > 89
+      (p !== 0 && !isNaN(p) && p !== "" && (p < 20 || p > 89)) ||
+      (q !== 0 && !isNaN(q) && q !== "" && (q < 20 || q > 89)) ||
+      (r !== 0 && !isNaN(r) && r !== "" && (r < 20 || r > 89))
     ) {
-      toast.error("Sides must be between 10° and 89°.");
+      toast.error("Sides must be between 20° and 89°.");
     } else {
-      console.log(true);
-      calculateAngle(sides.p, sides.q, sides.r);
+      calculateAngle(p, q, r);
     }
   };
 
@@ -64,7 +61,7 @@ function NELesson2() {
       angles.angleB < 45 ||
       angles.angleB > 90
     ) {
-      toast.error("Angles must be between 45° and 90°.");
+      toast.error("Angles must have a sum greater than 90°.");
     } else {
       calculateSides(angles.angleA, angles.angleB);
     }
@@ -379,8 +376,8 @@ function NELesson2() {
                   </p>
                 </div>
                 <div className="Paragraph_Topic paddingLeft">
-                  <p>If P = (x₁, y₁, z₁) )</p>
-                  <p>Q = (x₂, y₂, z₂) ), </p>
+                  <p>If P = (x₁, y₁, z₁)</p>
+                  <p>Q = (x₂, y₂, z₂), </p>
                 </div>
 
                 <div className="Paragraph_Topic paddingLeft">

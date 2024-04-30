@@ -8,5 +8,5 @@ export default function calculateNorm3D(a, b, c) {
   document.getElementById("rectangle-4-2").innerHTML = "" + a + "";
   document.getElementById("rectangle-3-2").innerHTML = "" + b + "";
   document.getElementById("rectangle-2-1").innerHTML = "" + c + "";
-  document.getElementById("rectangle-aa").innerHTML = "" + norm.toFixed(2);
+  document.getElementById("rectangle-aa").innerHTML = "" + norm.toFixed(0);
 }

@@ -8,6 +8,7 @@ import miniLogo from "../../assets/images/miniLogo.png";
 import { useNavigate, useParams } from "react-router-dom";
 import { SidebarContext } from "../../context/context";
 import { GetWindowWidth, neQuestions, peQuestions } from "../../utils";
+import { Tooltip } from "@mui/material";
 
 function ScoreOverview() {
   const windowWith = GetWindowWidth();
@@ -150,18 +151,35 @@ function ScoreOverview() {
             </div>
           </div>
           <div className="Actions">
-            <button
-              className="Retry"
-              onClick={() => navigate(`/Lesson/Quiz/${lessonName}`)}
-            ></button>
-            <button
-              className="Home"
-              onClick={() => navigate(`/LessonsList`)}
-            ></button>
-            <button
-              className="Lessons"
-              onClick={() => navigateToLesson(lessonName)}
-            ></button>
+            <Tooltip
+              placement={windowWith > 1439 ? "top-start" : "top"}
+              title={<p style={{ fontSize: "14px" }}>Retry Quiz</p>}
+            >
+              <button
+                className="Retry"
+                onClick={() => navigate(`/Lesson/Quiz/${lessonName}`)}
+              ></button>
+            </Tooltip>
+
+            <Tooltip
+              placement="top"
+              title={<p style={{ fontSize: "14px" }}>Home</p>}
+            >
+              <button
+                className="Home"
+                onClick={() => navigate(`/LessonsList`)}
+              ></button>
+            </Tooltip>
+
+            <Tooltip
+              placement="top-end"
+              title={<p style={{ fontSize: "14px" }}>Back to lesson</p>}
+            >
+              <button
+                className="Lessons"
+                onClick={() => navigateToLesson(lessonName)}
+              ></button>
+            </Tooltip>
           </div>
 
           <div className="Bottom_Text">

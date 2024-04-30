@@ -436,23 +436,45 @@
         bottom: 0;
         display: flex;
         flex-direction: row;
+        display: flex;
+        justify-content: center;
+        background-color: var(--background-blue);
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         gap: 30px;
     }
 
     #ScoreOverview > .wrapper > .Contents > .Actions > button.Retry{
         width: 100px;
         height: 60px;
+        background-position: center;
     }
     
     #ScoreOverview > .wrapper > .Contents > .Actions > button.Home{
         width: 100px;
         height: 50px;
+        background-position: center;
     }
 
     
     #ScoreOverview > .wrapper > .Contents > .Actions > button.Lessons{
         width: 100px;
         height: 50px;
+        background-position: center;
+    }
+
+    #ScoreOverview > .wrapper > .Contents > .Actions > button.Retry:hover{
+        background-position: center;
+    }
+    
+    #ScoreOverview > .wrapper > .Contents > .Actions > button.Home:hover{
+        background-position: center;
+    }
+
+    
+    #ScoreOverview > .wrapper > .Contents > .Actions > button.Lessons:hover{
+        background-position: center;
     }
 
     #ScoreOverview > .wrapper > .Contents > .Bottom_Text{

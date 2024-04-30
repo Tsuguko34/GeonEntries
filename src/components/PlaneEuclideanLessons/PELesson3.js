@@ -20,7 +20,7 @@ function PELesson3() {
   });
 
   const isNumeric = (value) => {
-    return /^[\d\s,-.]+$/.test(value);
+    return /^[\d,-.]+$/.test(value);
   };
   const solvePointNormal = () => {
     const pointNumbers = pointNormal.point
@@ -29,6 +29,14 @@ function PELesson3() {
     const normalNumbers = pointNormal.normal
       .split(",")
       .map((num) => parseInt(num.trim(), 10));
+    if (
+      pointNumbers.some((num) => num > 999 || num < -999) ||
+      normalNumbers.some((num) => num > 999 || num < -999)
+    ) {
+      toast.error("Input numbers should be between -999 and 999.");
+      return;
+    }
+
     if (pointNumbers.length === 0 || normalNumbers.length === 0) {
       toast.error("Please provide all the inputs.");
       return;
@@ -36,10 +44,10 @@ function PELesson3() {
       toast.error("Please provide 2 numbers.");
       return;
     } else if (pointNumbers.some(isNaN) || normalNumbers.some(isNaN)) {
-      toast.error("Please provide 2 numbers.");
+      toast.error("Input only accepts up to 2 numbers");
       return;
     } else if (pointNumbers.length > 2 || normalNumbers.length > 2) {
-      toast.error("Please provide 2 numbers.");
+      toast.error("Input only accepts up to 2 numbers");
       return;
     } else if (pointNumbers.length === 2 || normalNumbers.length === 2) {
       if (isNumeric(pointNormal.point) && isNumeric(pointNormal.normal)) {

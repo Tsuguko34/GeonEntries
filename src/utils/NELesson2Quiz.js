@@ -11,19 +11,28 @@ import p10 from "../assets/images/Quiz Images/lessonQuizImages/NELesson2Quiz/10 
 import p11 from "../assets/images/Quiz Images/lessonQuizImages/NELesson2Quiz/11 N L2.png";
 import p12 from "../assets/images/Quiz Images/lessonQuizImages/NELesson2Quiz/12 N L2.png";
 
+import c1a from "../assets/images/Quiz Images/lessonQuizChoicesImages/NELesson2Choices/L2 1A.png";
+import c1b from "../assets/images/Quiz Images/lessonQuizChoicesImages/NELesson2Choices/L2 1B.png";
+import c1c from "../assets/images/Quiz Images/lessonQuizChoicesImages/NELesson2Choices/L2 1C.png";
+import c1d from "../assets/images/Quiz Images/lessonQuizChoicesImages/NELesson2Choices/L2 1D.png";
+import c6a from "../assets/images/Quiz Images/lessonQuizChoicesImages/NELesson2Choices/L2 6A.png";
+import c6b from "../assets/images/Quiz Images/lessonQuizChoicesImages/NELesson2Choices/L2 6B.png";
+import c6c from "../assets/images/Quiz Images/lessonQuizChoicesImages/NELesson2Choices/L2 6C.png";
+import c6d from "../assets/images/Quiz Images/lessonQuizChoicesImages/NELesson2Choices/L2 6D.png";
+import c11a from "../assets/images/Quiz Images/lessonQuizChoicesImages/NELesson2Choices/L2 11A.png";
+import c11b from "../assets/images/Quiz Images/lessonQuizChoicesImages/NELesson2Choices/L2 11B.png";
+import c11c from "../assets/images/Quiz Images/lessonQuizChoicesImages/NELesson2Choices/L2 11C.png";
+import c11d from "../assets/images/Quiz Images/lessonQuizChoicesImages/NELesson2Choices/L2 11D.png";
+
 var questions = [
   {
     question: "What is the angle sum of any elliptic triangle?",
-    choices: [
-      "less than or equal to π",
-      "greater than π",
-      "less than π",
-      "greater than or equal to π",
-    ],
-    correctAnswer: "greater than π",
-    type: "text",
+    choices: [c1a, c1b, c1c, c1d],
+    correctAnswer: c1b,
+    type: "images",
     explanation: p1,
     explanationType: "image",
+    imageChoice: true,
   },
   {
     question:
@@ -36,7 +45,7 @@ var questions = [
   },
   {
     question:
-      "What is the spherical distance between P = (√3/2  ,1/3  ,√3/3  ) and Q = (√2/3  ,√6/4  ,√2/2  ) in S2?",
+      "What is the spherical distance between P = (√3/2  ,1/3  ,√3/3  ) and Q = (√2/3  ,√6/4  ,√2/2  ) in S²?",
     choices: ["0.1 rad.", "0.3 rad.", "0.5 rad.", "0.7 rad."],
     correctAnswer: "0.5 rad.",
     type: "text",
@@ -83,20 +92,16 @@ var questions = [
   {
     question:
       "Let △ABC be a right spherical triangle where C = 90°, such that p = AB, q = AC, and r = BC. If we have the values for A and p, which of the following can be used to determine the angle measure of r?",
-    choices: [
-      "90° - tan^(-1) ((sin p)/(tan (90° - A)))",
-      "90° - cos^(-1) ((cos p)/(sin (90° - A)))",
-      "90° - sin^(-1) ((tan p)/(tan (90° - A)))",
-      "90° - cos^(-1) ((sin p)/(cos (90° - A)))",
-    ],
-    correctAnswer: "90° - cos^(-1) ((sin p)/(cos (90° - A)))",
-    type: "text",
+    choices: [c6a, c6b, c6c, c6d],
+    correctAnswer: c6d,
+    type: "images",
     explanation: p6,
     explanationType: "image",
+    imageChoice: true,
   },
   {
     question:
-      "What is the distance between P = (-3/2  ,√5/7,√3/8) and Q = (√11/3  ,-√2/6,0) in S2?",
+      "What is the distance between P = (-3/2  ,√5/7,√3/8) and Q = (√11/3  ,-√2/6,0) in S²?",
     choices: ["2.6728", "3.6728", "4.6728", "5.6728"],
     correctAnswer: "2.6728",
     type: "text",
@@ -137,16 +142,12 @@ var questions = [
   {
     question:
       "Let △ABC be a right spherical triangle where C = 90°, such that p = AB, q = AC, and r = BC. If we have the values for r and B, which of the following can be used to determine the angle measure of A?",
-    choices: [
-      "90° - sin^(-1) (tan⁡(90° – r)/tan⁡(90° - B) )",
-      "90° - tan^(-1) (sin⁡(90° – r)/tan⁡(90° - B) )",
-      "90° - sin^(-1) (cos⁡(90° – r)/cos⁡(90° - B) )",
-      "90° - cos^(-1) (sin⁡(90° – r)/cos⁡(90° - B) )",
-    ],
-    correctAnswer: "90° - tan^(-1) (sin⁡(90° – r)/tan⁡(90° - B) )",
-    type: "text",
+    choices: [c11a, c11b, c11c, c11d],
+    correctAnswer: c11d,
+    type: "images",
     explanation: p11,
     explanationType: "image",
+    imageChoice: true,
   },
   {
     question:

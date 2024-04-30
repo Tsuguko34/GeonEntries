@@ -275,7 +275,17 @@ function Quiz() {
                             <p>{choice}</p>
                           )}
                           {questions[activeQuestion - 1].type === "images" && (
-                            <img src={choice} alt="" />
+                            <img
+                              src={choice}
+                              alt=""
+                              className={
+                                questions[activeQuestion - 1].imageChoice &&
+                                questions[activeQuestion - 1].imageChoice ===
+                                  true
+                                  ? "mini"
+                                  : ""
+                              }
+                            />
                           )}
                         </div>
                       )

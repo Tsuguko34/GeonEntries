@@ -11,6 +11,19 @@ import p10 from "../assets/images/Quiz Images/lessonQuizImages/NELesson1Quiz/10 
 import p11 from "../assets/images/Quiz Images/lessonQuizImages/NELesson1Quiz/11 N L1.png";
 import p12 from "../assets/images/Quiz Images/lessonQuizImages/NELesson1Quiz/12 N L1.png";
 
+import c8a from "../assets/images/Quiz Images/lessonQuizChoicesImages/NELesson1Choices/L1 8A.png";
+import c8b from "../assets/images/Quiz Images/lessonQuizChoicesImages/NELesson1Choices/L1 8B.png";
+import c8c from "../assets/images/Quiz Images/lessonQuizChoicesImages/NELesson1Choices/L1 8C.png";
+import c8d from "../assets/images/Quiz Images/lessonQuizChoicesImages/NELesson1Choices/L1 8D.png";
+import c10a from "../assets/images/Quiz Images/lessonQuizChoicesImages/NELesson1Choices/L1 10A.png";
+import c10b from "../assets/images/Quiz Images/lessonQuizChoicesImages/NELesson1Choices/L1 10B.png";
+import c10c from "../assets/images/Quiz Images/lessonQuizChoicesImages/NELesson1Choices/L1 10C.png";
+import c10d from "../assets/images/Quiz Images/lessonQuizChoicesImages/NELesson1Choices/L1 10D.png";
+import c11a from "../assets/images/Quiz Images/lessonQuizChoicesImages/NELesson1Choices/L1 11A.png";
+import c11b from "../assets/images/Quiz Images/lessonQuizChoicesImages/NELesson1Choices/L1 11B.png";
+import c11c from "../assets/images/Quiz Images/lessonQuizChoicesImages/NELesson1Choices/L1 11C.png";
+import c11d from "../assets/images/Quiz Images/lessonQuizChoicesImages/NELesson1Choices/L1 11D.png";
+
 var questions = [
   {
     question:
@@ -42,7 +55,7 @@ var questions = [
   },
   {
     question:
-      "Let O be a point not on line (AB) ⃡. What do we call the lines through the point O that do not intersect line (AB) ⃡ and are not parallel to it?",
+      "Let O be a point not on line (AB). What do we call the lines through the point O that do not intersect line (AB) and are not parallel to it?",
     choices: ["asymptotic", "nonparallel", "ideal", "ultraparallel"],
     correctAnswer: "ultraparallel",
     type: "text",
@@ -101,11 +114,12 @@ var questions = [
   {
     question:
       "Let {4, 6} be the Schläfli symbol of a hyperbolic tessellation. What is the area of each quadrilateral in the tessellation?",
-    choices: ["4π/3", "3π/2", "2π/3", "3π/4"],
-    correctAnswer: "2π/3",
-    type: "text",
+    choices: [c8a, c8b, c8c, c8d],
+    correctAnswer: c8c,
+    type: "images",
     explanation: p8,
     explanationType: "image",
+    imageChoice: true,
   },
   {
     question:
@@ -119,24 +133,26 @@ var questions = [
   {
     question:
       "Let {6, 5} be the Schläfli symbol of a hyperbolic tessellation. What is the angle at each vertex of the hexagon in the tessellation?",
-    choices: ["5π/12", "5π/2", "12π/5", "2π/5"],
-    correctAnswer: "2π/5",
-    type: "text",
+    choices: [c10a, c10b, c10c, c10d],
+    correctAnswer: c10d,
+    type: "images",
     explanation: p10,
     explanationType: "image",
+    imageChoice: true,
   },
   {
     question:
       "Let {3, 7} be the Schläfli symbol of a hyperbolic tessellation. What is the angle sum of each triangle in the tessellation?",
-    choices: ["6π/7", "2π/7", "7π/6", "7π/2"],
-    correctAnswer: "6π/7",
-    type: "text",
+    choices: [c11a, c11b, c11c, c11d],
+    correctAnswer: c11a,
+    type: "images",
     explanation: p11,
     explanationType: "image",
+    imageChoice: true,
   },
   {
     question:
-      "Let X be a point not on line  (AB) ⃡. In hyperbolic geometry, what do you call the first lines in either direction that do not intersect the line (AB) ⃡ and passes through point X?",
+      "Let X be a point not on line  (AB). In hyperbolic geometry, what do you call the first lines in either direction that do not intersect the line (AB) and passes through point X?",
     choices: ["sensed parallel", "ultraparallel", "asymptotic", "nonparallel"],
     correctAnswer: "sensed parallel",
     type: "text",

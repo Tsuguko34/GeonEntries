@@ -29,6 +29,14 @@ function PELesson4() {
     const normalNumbers = pointNormal.normal
       .split(",")
       .map((num) => parseInt(num.trim(), 10));
+
+    if (
+      pointNumbers.some((num) => num > 999 || num < -999) ||
+      normalNumbers.some((num) => num > 999 || num < -999)
+    ) {
+      toast.error("Input numbers should be between -999 and 999.");
+      return;
+    }
     if (pointNumbers.length === 0 || normalNumbers.length === 0) {
       toast.error("Please provide all the inputs.");
       return;

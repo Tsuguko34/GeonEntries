@@ -72,11 +72,6 @@ function Sidebar() {
 
           <IoIcons.IoMdClose onClick={() => setToggleSidebar(false)} />
         </div>
-        {location.pathname && location.pathname.includes("/Lesson/Quiz") && (
-          <p className="Title" style={{ pointerEvents: "none" }}>
-            Questions
-          </p>
-        )}
 
         {location.pathname && !location.pathname.includes("/Lesson/Quiz") && (
           <p className="Title" onClick={() => redirect()}>

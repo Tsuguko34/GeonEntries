@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import image2 from "../../assets/images/Lessons Images/PELesson2/image-2.png";
 
 import { calculateDistance, calculateNorm, calculateNorm3D } from "../../utils";
+import toast from "react-hot-toast";
 
 function PELesson2() {
   const [norm, setNorm] = useState({
@@ -352,20 +353,31 @@ function PELesson2() {
                                 !value.startsWith("--") &&
                                 value !== "-")
                             ) {
-                              if (value === "-" || value >= -99) {
+                              if (value === "-" || value >= -999) {
                                 setNorm({
                                   ...norm,
                                   x: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             } else {
                               // Allow empty value or valid decimal value with up to two decimal places
                               const decimalPattern = /^-?\d*\.?\d{0,2}$/;
-                              if (value === "" || decimalPattern.test(value)) {
+                              if (
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
+                              ) {
                                 setNorm({
                                   ...norm,
                                   x: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             }
                           }}
@@ -390,20 +402,31 @@ function PELesson2() {
                                 !value.startsWith("--") &&
                                 value !== "-")
                             ) {
-                              if (value === "-" || value >= -99) {
+                              if (value === "-" || value >= -999) {
                                 setNorm({
                                   ...norm,
                                   y: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             } else {
                               // Allow empty value or valid decimal value with up to two decimal places
                               const decimalPattern = /^-?\d*\.?\d{0,2}$/;
-                              if (value === "" || decimalPattern.test(value)) {
+                              if (
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
+                              ) {
                                 setNorm({
                                   ...norm,
                                   y: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             }
                           }}
@@ -513,20 +536,31 @@ function PELesson2() {
                                 !value.startsWith("--") &&
                                 value !== "-")
                             ) {
-                              if (value === "-" || value >= -99) {
+                              if (value === "-" || value >= -999) {
                                 setNorm2({
                                   ...norm2,
                                   x: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             } else {
                               // Allow empty value or valid decimal value with up to two decimal places
                               const decimalPattern = /^-?\d*\.?\d{0,2}$/;
-                              if (value === "" || decimalPattern.test(value)) {
+                              if (
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
+                              ) {
                                 setNorm2({
                                   ...norm2,
                                   x: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             }
                           }}
@@ -551,20 +585,31 @@ function PELesson2() {
                                 !value.startsWith("--") &&
                                 value !== "-")
                             ) {
-                              if (value === "-" || value >= -99) {
+                              if (value === "-" || value >= -999) {
                                 setNorm2({
                                   ...norm2,
                                   y: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             } else {
                               // Allow empty value or valid decimal value with up to two decimal places
                               const decimalPattern = /^-?\d*\.?\d{0,2}$/;
-                              if (value === "" || decimalPattern.test(value)) {
+                              if (
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
+                              ) {
                                 setNorm2({
                                   ...norm2,
                                   y: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             }
                           }}
@@ -589,20 +634,31 @@ function PELesson2() {
                                 !value.startsWith("--") &&
                                 value !== "-")
                             ) {
-                              if (value === "-" || value >= -99) {
+                              if (value === "-" || value >= -999) {
                                 setNorm2({
                                   ...norm2,
                                   z: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             } else {
                               // Allow empty value or valid decimal value with up to two decimal places
                               const decimalPattern = /^-?\d*\.?\d{0,2}$/;
-                              if (value === "" || decimalPattern.test(value)) {
+                              if (
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
+                              ) {
                                 setNorm2({
                                   ...norm2,
                                   z: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             }
                           }}
@@ -1386,7 +1442,8 @@ function PELesson2() {
               <span className="Italic">v</span> be vectors in Rⁿ. The distance
               between <span className="Italic">u</span> &{" "}
               <span className="Italic">v</span> is the measure of how far apart
-              these vectors are in a given space. We denote the distance between
+              these vectors are in a given space. We denote the distance
+              between&nbsp;
               <span className="Italic">u</span> &{" "}
               <span className="Italic">v</span> by d
               <span className="Italic">(u, v)</span> .
@@ -1394,9 +1451,32 @@ function PELesson2() {
           </div>
           <div className="Paragraph_Topic">
             <p>
-              If u = (u₁, u₂, ..., uₙ) & v = (v₁, v₂, ..., vₙ), then the
-              distance between <span className="Italic">u</span> &{" "}
-              <span className="Italic">v</span> is:
+              <div className="Side_By_Side">
+                <div className="Left_Side">
+                  <div className="Solution_Example">
+                    <div className="start">
+                      <p className="left">If u</p>
+                      <p className="center">=</p>
+                      <p className="right">(u₁, u₂, ..., uₙ)</p>
+                    </div>
+                    <div className="start">
+                      <p className="left">v</p>
+                      <p className="center">=</p>
+                      <p className="right">(v₁, v₂, ..., vₙ),</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="Right_Side larger">
+                  <div className="Paragraph_Topic block">
+                    <p>&</p>
+                    <p style={{ marginTop: "20px" }}>
+                      then the distance between{" "}
+                      <span className="Italic">u</span> &{" "}
+                      <span className="Italic">v</span> is:
+                    </p>
+                  </div>
+                </div>
+              </div>
             </p>
           </div>
           <div className="Light_Blue_Holder">
@@ -1559,10 +1639,12 @@ function PELesson2() {
           <div className="Notes_Container">
             <div className="Label">Note:</div>
             <p className="Bold">Euclidean Plane E²</p>
-            <p className="Note">
-              The Euclidean Plane E² is a vector space R² equipped with the
-              distance function d.
-            </p>
+            <div className="Paragraph_Topic paddingLeft2">
+              <p>
+                The Euclidean Plane E² is a vector space R² equipped with the
+                distance function d.
+              </p>
+            </div>
           </div>
 
           <div className="Try_It_Yourself">
@@ -1600,20 +1682,31 @@ function PELesson2() {
                                 !value.startsWith("--") &&
                                 value !== "-")
                             ) {
-                              if (value === "-" || value >= -99) {
+                              if (value === "-" || value >= -999) {
                                 setDistance({
                                   ...distance,
                                   x1: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             } else {
                               // Allow empty value or valid decimal value with up to two decimal places
                               const decimalPattern = /^-?\d*\.?\d{0,2}$/;
-                              if (value === "" || decimalPattern.test(value)) {
+                              if (
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
+                              ) {
                                 setDistance({
                                   ...distance,
                                   x1: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             }
                           }}
@@ -1622,48 +1715,6 @@ function PELesson2() {
                       <p>,</p>
                       <div className="vertical">
                         <p>y</p>
-                        <input
-                          type="text"
-                          pattern="-?\d*\.?\d{0,2}" // Updated pattern to allow negative numbers with up to two decimal places
-                          value={distance.x2 || ""}
-                          maxLength={6} // Increased maxLength to accommodate the optional '-' sign and decimal part
-                          onChange={(e) => {
-                            const value = e.target.value;
-
-                            console.log(value);
-                            // Check if the input value starts with '-' and is not followed by another '-' or empty
-                            if (
-                              value === "-" ||
-                              (value.startsWith("-") &&
-                                !value.startsWith("--") &&
-                                value !== "-")
-                            ) {
-                              if (value === "-" || value >= -99) {
-                                setDistance({
-                                  ...distance,
-                                  x2: value,
-                                });
-                              }
-                            } else {
-                              // Allow empty value or valid decimal value with up to two decimal places
-                              const decimalPattern = /^-?\d*\.?\d{0,2}$/;
-                              if (value === "" || decimalPattern.test(value)) {
-                                setDistance({
-                                  ...distance,
-                                  x2: value,
-                                });
-                              }
-                            }
-                          }}
-                        />
-                      </div>
-                      <p>)</p>
-                    </div>
-                  </div>
-                  <div className="Input_Group">
-                    <div className="Inputs">
-                      <p>v = (</p>
-                      <div className="vertical">
                         <input
                           type="text"
                           pattern="-?\d*\.?\d{0,2}" // Updated pattern to allow negative numbers with up to two decimal places
@@ -1680,20 +1731,84 @@ function PELesson2() {
                                 !value.startsWith("--") &&
                                 value !== "-")
                             ) {
-                              if (value === "-" || value >= -99) {
+                              if (value === "-" || value >= -999) {
                                 setDistance({
                                   ...distance,
                                   y1: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             } else {
                               // Allow empty value or valid decimal value with up to two decimal places
                               const decimalPattern = /^-?\d*\.?\d{0,2}$/;
-                              if (value === "" || decimalPattern.test(value)) {
+                              if (
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
+                              ) {
                                 setDistance({
                                   ...distance,
                                   y1: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
+                              }
+                            }
+                          }}
+                        />
+                      </div>
+                      <p>)</p>
+                    </div>
+                  </div>
+                  <div className="Input_Group">
+                    <div className="Inputs">
+                      <p>v = (</p>
+                      <div className="vertical">
+                        <input
+                          type="text"
+                          pattern="-?\d*\.?\d{0,2}" // Updated pattern to allow negative numbers with up to two decimal places
+                          value={distance.x2 || ""}
+                          maxLength={6} // Increased maxLength to accommodate the optional '-' sign and decimal part
+                          onChange={(e) => {
+                            const value = e.target.value;
+
+                            console.log(value);
+                            // Check if the input value starts with '-' and is not followed by another '-' or empty
+                            if (
+                              value === "-" ||
+                              (value.startsWith("-") &&
+                                !value.startsWith("--") &&
+                                value !== "-")
+                            ) {
+                              if (value === "-" || value >= -999) {
+                                setDistance({
+                                  ...distance,
+                                  x2: value,
+                                });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
+                              }
+                            } else {
+                              // Allow empty value or valid decimal value with up to two decimal places
+                              const decimalPattern = /^-?\d*\.?\d{0,2}$/;
+                              if (
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
+                              ) {
+                                setDistance({
+                                  ...distance,
+                                  x2: value,
+                                });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             }
                           }}
@@ -1717,20 +1832,31 @@ function PELesson2() {
                                 !value.startsWith("--") &&
                                 value !== "-")
                             ) {
-                              if (value === "-" || value >= -99) {
+                              if (value === "-" || value >= -999) {
                                 setDistance({
                                   ...distance,
                                   y2: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             } else {
                               // Allow empty value or valid decimal value with up to two decimal places
                               const decimalPattern = /^-?\d*\.?\d{0,2}$/;
-                              if (value === "" || decimalPattern.test(value)) {
+                              if (
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
+                              ) {
                                 setDistance({
                                   ...distance,
                                   y2: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             }
                           }}
@@ -1870,8 +1996,30 @@ function PELesson2() {
               <p className="Title">Component Form of the Dot Product</p>
               <p className="Explanation">Let u & v be vectors in Rⁿ .</p>
               <p className="Explanation">
-                If u = (u₁, u₂, ..., uₙ ) & v = (v₁, v₂, ..., vₙ) , then the dot
-                product of u & v is:
+                <div className="Side_By_Side">
+                  <div className="Left_Side">
+                    <div className="Solution_Example">
+                      <div className="start">
+                        <p className="left">If u</p>
+                        <p className="center">=</p>
+                        <p className="right">(u₁, u₂, ..., uₙ)</p>
+                      </div>
+                      <div className="start">
+                        <p className="left">v</p>
+                        <p className="center">=</p>
+                        <p className="right">(v₁, v₂, ..., vₙ),</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="Right_Side larger">
+                    <div className="Paragraph_Topic block">
+                      <p>&</p>
+                      <p style={{ marginTop: "20px" }}>
+                        then the dot product of u & v is:
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </p>
             </div>
           </div>
@@ -2172,7 +2320,13 @@ function PELesson2() {
               </div>
               <div className="right">
                 <div className="Light_Blue">
-                  <p>u ⋅ v ≥ 0 and v ⋅ v = 0 iff. v = 0</p>
+                  <p>
+                    u ⋅ v ≥ 0 and v ⋅ v = 0 iff. v ={" "}
+                    <span className="stack">
+                      <sup>→</sup>
+                      <p>0</p>
+                    </span>
+                  </p>
                 </div>
               </div>
             </div>

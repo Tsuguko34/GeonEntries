@@ -23,6 +23,7 @@ import {
   performOperations,
   performOperations3D,
 } from "../../utils";
+import toast from "react-hot-toast";
 
 function PELesson1() {
   const windowWidth = GetWindowWidth();
@@ -227,7 +228,7 @@ function PELesson1() {
             </p>
           </div>
           <div className="Topic_Visual">
-            <div className="Visual_Holder image">
+            <div className="Visual_Holder image noBG">
               <img src={l1p2} alt="Graph Image" />
             </div>
           </div>
@@ -367,15 +368,22 @@ function PELesson1() {
                               ...exampleA,
                               xAxis: value,
                             });
+                          } else {
+                            toast.error("Value can only be between -16 to 16");
                           }
                         } else {
                           // Allow empty value or valid decimal value with up to two decimal places
                           const decimalPattern = /^-?\d*\.?\d{0,2}$/;
-                          if (value === "" || decimalPattern.test(value)) {
+                          if (
+                            (value === "" || decimalPattern.test(value)) &&
+                            value <= 16
+                          ) {
                             setExampleA({
                               ...exampleA,
                               xAxis: value,
                             });
+                          } else {
+                            toast.error("Value can only be between -16 to 16");
                           }
                         }
                       }}
@@ -405,15 +413,22 @@ function PELesson1() {
                               ...exampleA,
                               yAxis: value,
                             });
+                          } else {
+                            toast.error("Value can only be between -16 to 16");
                           }
                         } else {
                           // Allow empty value or valid decimal value with up to two decimal places
                           const decimalPattern = /^-?\d*\.?\d{0,2}$/;
-                          if (value === "" || decimalPattern.test(value)) {
+                          if (
+                            (value === "" || decimalPattern.test(value)) &&
+                            value <= 16
+                          ) {
                             setExampleA({
                               ...exampleA,
                               yAxis: value,
                             });
+                          } else {
+                            toast.error("Value can only be between -16 to 16");
                           }
                         }
                       }}
@@ -824,20 +839,31 @@ function PELesson1() {
                                 !value.startsWith("--") &&
                                 value !== "-")
                             ) {
-                              if (value === "-" || value >= -99) {
+                              if (value === "-" || value >= -999) {
                                 setExampleC2({
                                   ...exampleC2,
                                   initialX: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             } else {
                               // Allow empty value or valid decimal value with up to two decimal places
                               const decimalPattern = /^-?\d*\.?\d{0,2}$/;
-                              if (value === "" || decimalPattern.test(value)) {
+                              if (
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
+                              ) {
                                 setExampleC2({
                                   ...exampleC2,
                                   initialX: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             }
                           }}
@@ -862,20 +888,31 @@ function PELesson1() {
                                 !value.startsWith("--") &&
                                 value !== "-")
                             ) {
-                              if (value === "-" || value >= -99) {
+                              if (value === "-" || value >= -999) {
                                 setExampleC2({
                                   ...exampleC2,
                                   initialY: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             } else {
                               // Allow empty value or valid decimal value with up to two decimal places
                               const decimalPattern = /^-?\d*\.?\d{0,2}$/;
-                              if (value === "" || decimalPattern.test(value)) {
+                              if (
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
+                              ) {
                                 setExampleC2({
                                   ...exampleC2,
                                   initialY: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             }
                           }}
@@ -908,20 +945,31 @@ function PELesson1() {
                                 !value.startsWith("--") &&
                                 value !== "-")
                             ) {
-                              if (value === "-" || value >= -99) {
+                              if (value === "-" || value >= -999) {
                                 setExampleC2({
                                   ...exampleC2,
                                   terminalX: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             } else {
                               // Allow empty value or valid decimal value with up to two decimal places
                               const decimalPattern = /^-?\d*\.?\d{0,2}$/;
-                              if (value === "" || decimalPattern.test(value)) {
+                              if (
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
+                              ) {
                                 setExampleC2({
                                   ...exampleC2,
                                   terminalX: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             }
                           }}
@@ -946,20 +994,31 @@ function PELesson1() {
                                 !value.startsWith("--") &&
                                 value !== "-")
                             ) {
-                              if (value === "-" || value >= -99) {
+                              if (value === "-" || value >= -999) {
                                 setExampleC2({
                                   ...exampleC2,
                                   terminalY: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             } else {
                               // Allow empty value or valid decimal value with up to two decimal places
                               const decimalPattern = /^-?\d*\.?\d{0,2}$/;
-                              if (value === "" || decimalPattern.test(value)) {
+                              if (
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
+                              ) {
                                 setExampleC2({
                                   ...exampleC2,
                                   terminalY: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             }
                           }}
@@ -982,7 +1041,7 @@ function PELesson1() {
                 <p className="Label">OUTPUT</p>
                 <div className="Content output">
                   <div class="Label">Component Form:</div>
-                  <div className="Solution_Example margin_top">
+                  <div className="Solution_Example">
                     <div className="start">
                       <p className="left">
                         <p className="withStack">
@@ -1025,7 +1084,8 @@ function PELesson1() {
                         </div>
                       </p>
                     </div>
-                    <div className="start">
+
+                    <div className="start" style={{ marginTop: "70px" }}>
                       <p className="left">
                         <span className="stack">
                           <sup>→</sup>
@@ -1091,20 +1151,31 @@ function PELesson1() {
                                 !value.startsWith("--") &&
                                 value !== "-")
                             ) {
-                              if (value === "-" || value >= -99) {
+                              if (value === "-" || value >= -999) {
                                 setExampleC3({
                                   ...exampleC3,
                                   initialX: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             } else {
                               // Allow empty value or valid decimal value with up to two decimal places
                               const decimalPattern = /^-?\d*\.?\d{0,2}$/;
-                              if (value === "" || decimalPattern.test(value)) {
+                              if (
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
+                              ) {
                                 setExampleC3({
                                   ...exampleC3,
                                   initialX: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             }
                           }}
@@ -1129,20 +1200,31 @@ function PELesson1() {
                                 !value.startsWith("--") &&
                                 value !== "-")
                             ) {
-                              if (value === "-" || value >= -99) {
+                              if (value === "-" || value >= -999) {
                                 setExampleC3({
                                   ...exampleC3,
                                   initialY: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             } else {
                               // Allow empty value or valid decimal value with up to two decimal places
                               const decimalPattern = /^-?\d*\.?\d{0,2}$/;
-                              if (value === "" || decimalPattern.test(value)) {
+                              if (
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
+                              ) {
                                 setExampleC3({
                                   ...exampleC3,
                                   initialY: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             }
                           }}
@@ -1167,20 +1249,31 @@ function PELesson1() {
                                 !value.startsWith("--") &&
                                 value !== "-")
                             ) {
-                              if (value === "-" || value >= -99) {
+                              if (value === "-" || value >= -999) {
                                 setExampleC3({
                                   ...exampleC3,
                                   initialZ: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             } else {
                               // Allow empty value or valid decimal value with up to two decimal places
                               const decimalPattern = /^-?\d*\.?\d{0,2}$/;
-                              if (value === "" || decimalPattern.test(value)) {
+                              if (
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
+                              ) {
                                 setExampleC3({
                                   ...exampleC3,
                                   initialZ: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             }
                           }}
@@ -1213,20 +1306,31 @@ function PELesson1() {
                                 !value.startsWith("--") &&
                                 value !== "-")
                             ) {
-                              if (value === "-" || value >= -99) {
+                              if (value === "-" || value >= -999) {
                                 setExampleC3({
                                   ...exampleC3,
                                   terminalX: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             } else {
                               // Allow empty value or valid decimal value with up to two decimal places
                               const decimalPattern = /^-?\d*\.?\d{0,2}$/;
-                              if (value === "" || decimalPattern.test(value)) {
+                              if (
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
+                              ) {
                                 setExampleC3({
                                   ...exampleC3,
                                   terminalX: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             }
                           }}
@@ -1251,20 +1355,31 @@ function PELesson1() {
                                 !value.startsWith("--") &&
                                 value !== "-")
                             ) {
-                              if (value === "-" || value >= -99) {
+                              if (value === "-" || value >= -999) {
                                 setExampleC3({
                                   ...exampleC3,
                                   terminalY: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             } else {
                               // Allow empty value or valid decimal value with up to two decimal places
                               const decimalPattern = /^-?\d*\.?\d{0,2}$/;
-                              if (value === "" || decimalPattern.test(value)) {
+                              if (
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
+                              ) {
                                 setExampleC3({
                                   ...exampleC3,
                                   terminalY: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             }
                           }}
@@ -1289,20 +1404,31 @@ function PELesson1() {
                                 !value.startsWith("--") &&
                                 value !== "-")
                             ) {
-                              if (value === "-" || value >= -99) {
+                              if (value === "-" || value >= -999) {
                                 setExampleC3({
                                   ...exampleC3,
                                   terminalZ: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             } else {
                               // Allow empty value or valid decimal value with up to two decimal places
                               const decimalPattern = /^-?\d*\.?\d{0,2}$/;
-                              if (value === "" || decimalPattern.test(value)) {
+                              if (
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
+                              ) {
                                 setExampleC3({
                                   ...exampleC3,
                                   terminalZ: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             }
                           }}
@@ -1326,7 +1452,7 @@ function PELesson1() {
                 <p className="Label">OUTPUT</p>
                 <div className="Content output">
                   <div class="Label">Component Form:</div>
-                  <div className="Solution_Example margin_top">
+                  <div className="Solution_Example">
                     <div className="start">
                       <p className="left">
                         <p className="withStack">
@@ -1379,7 +1505,7 @@ function PELesson1() {
                         </div>
                       </p>
                     </div>
-                    <div className="start">
+                    <div className="start" style={{ marginTop: "70px" }}>
                       <p className="left">
                         <span className="stack">
                           <sup>→</sup>
@@ -1655,20 +1781,31 @@ function PELesson1() {
                                 !value.startsWith("--") &&
                                 value !== "-")
                             ) {
-                              if (value === "-" || value >= -99) {
+                              if (value === "-" || value >= -999) {
                                 setVectorOp1({
                                   ...vectorOp1,
                                   vX: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             } else {
                               // Allow empty value or valid decimal value with up to two decimal places
                               const decimalPattern = /^-?\d*\.?\d{0,2}$/;
-                              if (value === "" || decimalPattern.test(value)) {
+                              if (
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
+                              ) {
                                 setVectorOp1({
                                   ...vectorOp1,
                                   vX: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             }
                           }}
@@ -1693,20 +1830,31 @@ function PELesson1() {
                                 !value.startsWith("--") &&
                                 value !== "-")
                             ) {
-                              if (value === "-" || value >= -99) {
+                              if (value === "-" || value >= -999) {
                                 setVectorOp1({
                                   ...vectorOp1,
                                   vY: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             } else {
                               // Allow empty value or valid decimal value with up to two decimal places
                               const decimalPattern = /^-?\d*\.?\d{0,2}$/;
-                              if (value === "" || decimalPattern.test(value)) {
+                              if (
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
+                              ) {
                                 setVectorOp1({
                                   ...vectorOp1,
                                   vY: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             }
                           }}
@@ -1737,20 +1885,31 @@ function PELesson1() {
                                 !value.startsWith("--") &&
                                 value !== "-")
                             ) {
-                              if (value === "-" || value >= -99) {
+                              if (value === "-" || value >= -999) {
                                 setVectorOp1({
                                   ...vectorOp1,
                                   wX: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             } else {
                               // Allow empty value or valid decimal value with up to two decimal places
                               const decimalPattern = /^-?\d*\.?\d{0,2}$/;
-                              if (value === "" || decimalPattern.test(value)) {
+                              if (
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
+                              ) {
                                 setVectorOp1({
                                   ...vectorOp1,
                                   wX: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             }
                           }}
@@ -1774,20 +1933,31 @@ function PELesson1() {
                                 !value.startsWith("--") &&
                                 value !== "-")
                             ) {
-                              if (value === "-" || value >= -99) {
+                              if (value === "-" || value >= -999) {
                                 setVectorOp1({
                                   ...vectorOp1,
                                   wY: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             } else {
                               // Allow empty value or valid decimal value with up to two decimal places
                               const decimalPattern = /^-?\d*\.?\d{0,2}$/;
-                              if (value === "" || decimalPattern.test(value)) {
+                              if (
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
+                              ) {
                                 setVectorOp1({
                                   ...vectorOp1,
                                   wY: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             }
                           }}
@@ -1927,20 +2097,31 @@ function PELesson1() {
                                 !value.startsWith("--") &&
                                 value !== "-")
                             ) {
-                              if (value === "-" || value >= -99) {
+                              if (value === "-" || value >= -999) {
                                 setVectorOp2({
                                   ...vectorOp2,
                                   vX: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             } else {
                               // Allow empty value or valid decimal value with up to two decimal places
                               const decimalPattern = /^-?\d*\.?\d{0,2}$/;
-                              if (value === "" || decimalPattern.test(value)) {
+                              if (
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
+                              ) {
                                 setVectorOp2({
                                   ...vectorOp2,
                                   vX: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             }
                           }}
@@ -1965,20 +2146,31 @@ function PELesson1() {
                                 !value.startsWith("--") &&
                                 value !== "-")
                             ) {
-                              if (value === "-" || value >= -99) {
+                              if (value === "-" || value >= -999) {
                                 setVectorOp2({
                                   ...vectorOp2,
                                   vY: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             } else {
                               // Allow empty value or valid decimal value with up to two decimal places
                               const decimalPattern = /^-?\d*\.?\d{0,2}$/;
-                              if (value === "" || decimalPattern.test(value)) {
+                              if (
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
+                              ) {
                                 setVectorOp2({
                                   ...vectorOp2,
                                   vY: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             }
                           }}
@@ -2003,20 +2195,31 @@ function PELesson1() {
                                 !value.startsWith("--") &&
                                 value !== "-")
                             ) {
-                              if (value === "-" || value >= -99) {
+                              if (value === "-" || value >= -999) {
                                 setVectorOp2({
                                   ...vectorOp2,
                                   vZ: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             } else {
                               // Allow empty value or valid decimal value with up to two decimal places
                               const decimalPattern = /^-?\d*\.?\d{0,2}$/;
-                              if (value === "" || decimalPattern.test(value)) {
+                              if (
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
+                              ) {
                                 setVectorOp2({
                                   ...vectorOp2,
                                   vZ: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             }
                           }}
@@ -2047,20 +2250,31 @@ function PELesson1() {
                                 !value.startsWith("--") &&
                                 value !== "-")
                             ) {
-                              if (value === "-" || value >= -99) {
+                              if (value === "-" || value >= -999) {
                                 setVectorOp2({
                                   ...vectorOp2,
                                   wX: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             } else {
                               // Allow empty value or valid decimal value with up to two decimal places
                               const decimalPattern = /^-?\d*\.?\d{0,2}$/;
-                              if (value === "" || decimalPattern.test(value)) {
+                              if (
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
+                              ) {
                                 setVectorOp2({
                                   ...vectorOp2,
                                   wX: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             }
                           }}
@@ -2084,20 +2298,31 @@ function PELesson1() {
                                 !value.startsWith("--") &&
                                 value !== "-")
                             ) {
-                              if (value === "-" || value >= -99) {
+                              if (value === "-" || value >= -999) {
                                 setVectorOp2({
                                   ...vectorOp2,
                                   wY: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             } else {
                               // Allow empty value or valid decimal value with up to two decimal places
                               const decimalPattern = /^-?\d*\.?\d{0,2}$/;
-                              if (value === "" || decimalPattern.test(value)) {
+                              if (
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
+                              ) {
                                 setVectorOp2({
                                   ...vectorOp2,
                                   wY: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             }
                           }}
@@ -2121,20 +2346,31 @@ function PELesson1() {
                                 !value.startsWith("--") &&
                                 value !== "-")
                             ) {
-                              if (value === "-" || value >= -99) {
+                              if (value === "-" || value >= -999) {
                                 setVectorOp2({
                                   ...vectorOp2,
                                   wZ: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             } else {
                               // Allow empty value or valid decimal value with up to two decimal places
                               const decimalPattern = /^-?\d*\.?\d{0,2}$/;
-                              if (value === "" || decimalPattern.test(value)) {
+                              if (
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
+                              ) {
                                 setVectorOp2({
                                   ...vectorOp2,
                                   wZ: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             }
                           }}
@@ -2310,7 +2546,7 @@ function PELesson1() {
           <div className="Notes_Container">
             <div className="Label">Note:</div>
             <p className="Bold">Additive Identity</p>
-            <div className="Paragraph_Topic paddingLeft2">
+            <div className="Paragraph_Topic block paddingLeft3">
               <p>
                 The additive identity in both the R² and R³ is represented by
                 the zero vector denoted by{" "}
@@ -2327,7 +2563,7 @@ function PELesson1() {
               </p>
             </div>
             <p className="Bold">Additive Inverse</p>
-            <div className="Paragraph_Topic paddingLeft2">
+            <div className="Paragraph_Topic paddingLeft3">
               <p>The additive inverse of v is represented by -v.</p>
             </div>
           </div>

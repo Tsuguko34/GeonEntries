@@ -16,51 +16,51 @@ export default function calculatePoint3D(pointInput, directionInput) {
     // Calculate equations
     const vectorEquation = `${vectorSpace} = (${
       parseFloat(pointCoordinates[0]) >= 0 ? "+" : ""
-    }${parseFloat(pointCoordinates[0]).toFixed(2)} + t * ${parseFloat(
+    }${parseFloat(pointCoordinates[0]).toFixed(0)} + t * ${parseFloat(
       directionComponents[0]
-    ).toFixed(2)}, ${
+    ).toFixed(0)}, ${
       parseFloat(pointCoordinates[1]) >= 0 ? "+" : ""
-    }${parseFloat(pointCoordinates[1]).toFixed(2)} + t * ${parseFloat(
+    }${parseFloat(pointCoordinates[1]).toFixed(0)} + t * ${parseFloat(
       directionComponents[1]
-    ).toFixed(2)}${
+    ).toFixed(0)}${
       dimension === 3
         ? `, ${parseFloat(pointCoordinates[2]) >= 0 ? "+" : ""}${parseFloat(
             pointCoordinates[2]
-          ).toFixed(2)} + t * ${parseFloat(directionComponents[2]).toFixed(2)}`
+          ).toFixed(0)} + t * ${parseFloat(directionComponents[2]).toFixed(0)}`
         : ""
     })`;
 
     const parametricEquations = `x = ${
       parseFloat(pointCoordinates[0]) >= 0 ? "+" : ""
-    }${parseFloat(pointCoordinates[0]).toFixed(2)} + t * ${parseFloat(
+    }${parseFloat(pointCoordinates[0]).toFixed(0)} + t * ${parseFloat(
       directionComponents[0]
-    ).toFixed(2)}\n y = ${
+    ).toFixed(0)}\n y = ${
       parseFloat(pointCoordinates[1]) >= 0 ? "+" : ""
-    }${parseFloat(pointCoordinates[1]).toFixed(2)} + t * ${parseFloat(
+    }${parseFloat(pointCoordinates[1]).toFixed(0)} + t * ${parseFloat(
       directionComponents[1]
-    ).toFixed(2)}${
+    ).toFixed(0)}${
       dimension === 3
         ? `\n z = ${
             parseFloat(pointCoordinates[2]) >= 0 ? "+" : ""
-          }${parseFloat(pointCoordinates[2]).toFixed(2)} + t * ${parseFloat(
+          }${parseFloat(pointCoordinates[2]).toFixed(0)} + t * ${parseFloat(
             directionComponents[2]
-          ).toFixed(2)}`
+          ).toFixed(0)}`
         : ""
     }`;
 
     const symmetricEquations = `(x ${
       parseFloat(pointCoordinates[0]) >= 0 ? "-" : "+"
-    } ${Math.abs(parseFloat(pointCoordinates[0])).toFixed(2)}) / ${parseFloat(
+    } ${Math.abs(parseFloat(pointCoordinates[0])).toFixed(0)}) / ${parseFloat(
       directionComponents[0]
-    ).toFixed(2)} = (y ${
+    ).toFixed(0)} = (y ${
       parseFloat(pointCoordinates[1]) >= 0 ? "-" : "+"
-    } ${Math.abs(parseFloat(pointCoordinates[1])).toFixed(2)}) / ${parseFloat(
+    } ${Math.abs(parseFloat(pointCoordinates[1])).toFixed(0)}) / ${parseFloat(
       directionComponents[1]
-    ).toFixed(2)}${
+    ).toFixed(0)}${
       dimension === 3
         ? ` = (z ${parseFloat(pointCoordinates[2]) >= 0 ? "-" : "+"} ${Math.abs(
             parseFloat(pointCoordinates[2])
-          ).toFixed(2)}) / ${parseFloat(directionComponents[2]).toFixed(2)}`
+          ).toFixed(0)}) / ${parseFloat(directionComponents[2]).toFixed(0)}`
         : ""
     }`;
 

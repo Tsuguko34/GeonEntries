@@ -210,6 +210,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(5, 59, 80, 0.8);
 }
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Topic_Visual > .Visual_Holder.image > img{
@@ -217,7 +218,13 @@
     height: 100%;
     border-radius: 30px;
     object-fit: contain;
-    background-color: rgba(5, 59, 80, 0.8);
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Topic_Visual > .Visual_Holder.image > img.small{
+    width: 70%;
+    height: 70%;
+    border-radius: 30px;
+    object-fit: contain;
 }
 
 
@@ -549,7 +556,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(5, 59, 80, 0.8);
 }
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Topic_Visual.sideBySide > .Visual_Holder.video > video{
@@ -618,7 +624,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 30px;
-    padding: 20px 30px;
+    padding: 10px;
     background-color: rgba(5, 59, 80, 0.8);
     border-radius: 30px;
     gap: 20px;
@@ -698,9 +704,9 @@
     align-items: center;
 }
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself .Input_Group > .Inputs > .vertical > input{
-    width: 50px;
+    width: 70px;
     height: 30px;
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
     color: var(--dark-blue);
 }
@@ -817,6 +823,7 @@
     flex-wrap: wrap;
     align-items: center;
     width: 100%;
+    gap: 5px;
 }
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself .Output_Rectangles_Holder.Long{
@@ -843,6 +850,7 @@
     justify-content: center;
     align-items: center;
     font-size: 16px;
+    font-weight: bold;
     content: '';
     width: 40px;
     min-height: 30px;
@@ -965,6 +973,10 @@
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Side_By_Side > .Left_Side.larger{
     width: 60%;
+}
+
+#Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Side_By_Side > .Right_Side.larger{
+    width: 100%;
 }
 
 #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson .Side_By_Side > .Left_Side.noGap,
@@ -2089,7 +2101,7 @@
     }
 
     #Lesson > .wrapper > .Lesson_Container > .Topic_Container > .Sub_Topic > .Sub_Topic_Lesson > .Try_It_Yourself .Input_Group > .Inputs > .vertical > input{
-        width: 30px;
+        width: 60px;
         height: 25px;
     }
 

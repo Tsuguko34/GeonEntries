@@ -13,21 +13,32 @@ import p12 from "../assets/images/Quiz Images/lessonQuizImages/PELesson4Quiz/12 
 import p13 from "../assets/images/Quiz Images/lessonQuizImages/PELesson4Quiz/13 P L4.png";
 import p14 from "../assets/images/Quiz Images/lessonQuizImages/PELesson4Quiz/14 P L4.png";
 import p15 from "../assets/images/Quiz Images/lessonQuizImages/PELesson4Quiz/15 P L4.png";
+import c1a from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson4Choices/L4 1A.png";
+import c1b from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson4Choices/L4 1B.png";
+import c1c from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson4Choices/L4 1C.png";
+import c1d from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson4Choices/L4 1D.png";
+import c6a from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson4Choices/L4 6A.png";
+import c6b from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson4Choices/L4 6B.png";
+import c6c from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson4Choices/L4 6C.png";
+import c6d from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson4Choices/L4 6D.png";
+import c9a from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson4Choices/L4 9A.png";
+import c9b from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson4Choices/L4 9B.png";
+import c9c from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson4Choices/L4 9C.png";
+import c9d from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson4Choices/L4 9D.png";
+import c12a from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson4Choices/L4 12A.png";
+import c12b from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson4Choices/L4 12B.png";
+import c12c from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson4Choices/L4 12C.png";
+import c12d from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson4Choices/L4 12D.png";
 
 var questions = [
   {
     question: "Which of the following is TRUE?",
-    choices: [
-      "Two distinct lines have the same direction if and only if they are parallel.",
-      "The vector equation of the line r = r0+ tv is orthogonal to the nonzero vector v.",
-      "The symmetric equation of a line is always unique.",
-      "Three or more points that lie on the same line are called concurrent points.",
-    ],
-    correctAnswer:
-      "Two distinct lines have the same direction if and only if they are parallel.",
-    type: "text",
+    choices: [c1a, c1b, c1c, c1d],
+    correctAnswer: c1a,
+    type: "images",
     explanation: p1,
     explanationType: "image",
+    imageChoice: true,
   },
   {
     question:
@@ -74,7 +85,7 @@ var questions = [
     question:
       "Let P = (-8, 14) and Q = (0, -2). What is the midpoint of segment PQ?",
     choices: ["(4, -6)", "(-4, 6)", "(4, -8)", "(-4, 8)"],
-    correctAnswer: "(4, -6)",
+    correctAnswer: "(-4, 6)",
     type: "text",
     explanation: p5,
     explanationType: "image",
@@ -82,16 +93,12 @@ var questions = [
   {
     question:
       "What are the parametric equations of the plane 5z + 11x = y + 2?",
-    choices: [
-      "x = t1; y = 11t1 + 5t2 – 2; z = t2",
-      "x = 11t1 + 5t2 – 2; y = t1; z = t2",
-      "x = t1; y = 5t1 + 11t2 – 2; z = t2",
-      "x = 5t1 + 11t2 – 2; y = t1; z = t2",
-    ],
-    correctAnswer: "x = t1; y = 11t1 + 5t2 – 2; z = t2",
-    type: "text",
+    choices: [c6a, c6b, c6c, c6d],
+    correctAnswer: c6a,
+    type: "images",
     explanation: p6,
     explanationType: "image",
+    imageChoice: true,
   },
   {
     question:
@@ -113,21 +120,17 @@ var questions = [
   },
   {
     question:
-      "What is the symmetric equation of the line in R2 that passes through point P0 (-13, 3) and is parallel to vector v = (2, -7)?",
-    choices: [
-      "(x - 13)/2 = (y + 3)/(-7)",
-      "(x + 13)/2 = (y - 3)/(-7)",
-      "(x - 2)/(-13) = (y + 7)/3",
-      "(x + 2)/(-13) = (y - 7)/3",
-    ],
-    correctAnswer: "(x - 13)/2 = (y + 3)/(-7)",
-    type: "text",
+      "What is the symmetric equation of the line in R2 that passes through point P₀(-13, 3) and is parallel to vector v = (2, -7)?",
+    choices: [c9a, c9b, c9c, c9d],
+    correctAnswer: c9b,
+    type: "images",
     explanation: p9,
     explanationType: "image",
+    imageChoice: true,
   },
   {
     question:
-      "What is the vector equation of a plane passing through point P0(13, -22, 5) and is parallel to vectors v1 = (11, -4, 18) and v2 = (-9, 6, -1)?",
+      "What is the vector equation of a plane passing through point P₀(13, -22, 5) and is parallel to vectors v1 = (11, -4, 18) and v2 = (-9, 6, -1)?",
     choices: [
       "r = (13, -22, 5) + t1(11, -4, 18) + t2(-9, 6, -1)",
       "r = (-9, 6, -1) + t1(11, -4, 18) + t2(13, -22, 5)",
@@ -154,17 +157,13 @@ var questions = [
   },
   {
     question:
-      "What is the symmetric equation of the line in R3 that passes through point P0 (-1, 13, 2) and is parallel to vector v = (8, -1, 5)?",
-    choices: [
-      "(x-1)/8  =  (y+13)/(-1)  =  (z+ 2)/5",
-      "(x+1)/(-8)  = y-13 =  (z - 2)/(-5)",
-      "(x-1)/(-8)  = y+13 =  (z+ 2)/(-5)",
-      "(x+1)/8  =  (y -13)/(-1)  =  (z - 2)/5",
-    ],
-    correctAnswer: "(x-1)/8  =  (y+13)/(-1)  =  (z+ 2)/5",
-    type: "text",
+      "What is the symmetric equation of the line in R3 that passes through point P₀(-1, 13, 2) and is parallel to vector v = (8, -1, 5)?",
+    choices: [c12a, c12b, c12c, c12d],
+    correctAnswer: c12d,
+    type: "images",
     explanation: p12,
     explanationType: "image",
+    imageChoice: true,
   },
   {
     question:
@@ -184,7 +183,7 @@ var questions = [
     question:
       "What is the angle measure between planes 3z – 11y + x = 4 and 7x – 4z - 10= 5y?",
     choices: ["90°", "51.47°", "40.36°", "62.58°"],
-    correctAnswer: "90°",
+    correctAnswer: "62.58°",
     type: "text",
     explanation: p14,
     explanationType: "image",

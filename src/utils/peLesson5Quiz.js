@@ -14,6 +14,19 @@ import p13 from "../assets/images/Quiz Images/lessonQuizImages/PELesson5Quiz/13 
 import p14 from "../assets/images/Quiz Images/lessonQuizImages/PELesson5Quiz/14 P L5.png";
 import p15 from "../assets/images/Quiz Images/lessonQuizImages/PELesson5Quiz/15 P L5.png";
 
+import c10a from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson5Choices/L5 10A.png";
+import c10b from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson5Choices/L5 10B.png";
+import c10c from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson5Choices/L5 10C.png";
+import c10d from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson5Choices/L5 10D.png";
+import c12a from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson5Choices/L5 12A.png";
+import c12b from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson5Choices/L5 12B.png";
+import c12c from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson5Choices/L5 12C.png";
+import c12d from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson5Choices/L5 12D.png";
+import c15a from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson5Choices/L5 15A.png";
+import c15b from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson5Choices/L5 15B.png";
+import c15c from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson5Choices/L5 15C.png";
+import c15d from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson5Choices/L5 15D.png";
+
 var questions = [
   {
     question:
@@ -103,11 +116,12 @@ var questions = [
   },
   {
     question: "Evaluate: 4j × (-7i × 10k)",
-    choices: ["k", "0 ⃗", "i", "j"],
-    correctAnswer: "0 ⃗",
-    type: "text",
+    choices: [c10a, c10b, c10c, c10d],
+    correctAnswer: c10b,
+    type: "images",
     explanation: p10,
     explanationType: "image",
+    imageChoice: true,
   },
   {
     question: "Evaluate: (4i × -6k) × (2k × -8j)",
@@ -119,11 +133,12 @@ var questions = [
   },
   {
     question: "Evaluate: (6i × -15k) × (-j × -j)",
-    choices: ["k", "i", "j", "0 ⃗"],
-    correctAnswer: "0 ⃗",
-    type: "text",
+    choices: [c12a, c12b, c12c, c12d],
+    correctAnswer: c12d,
+    type: "images",
     explanation: p12,
     explanationType: "image",
+    imageChoice: true,
   },
   {
     question:
@@ -150,16 +165,12 @@ var questions = [
   },
   {
     question: "Which of the following is NOT true?",
-    choices: [
-      "The cross product of u & v is an operation in R3 that produces a vector orthogonal to both u & v.",
-      "Cross product is associative.",
-      "The area of the parallelogram determined by vectors u & v is the magnitude of the cross product of u & v.",
-      "The cross product of two distinct unit vectors produces another unit vector.",
-    ],
-    correctAnswer: "Cross product is associative.",
-    type: "text",
+    choices: [c15a, c15b, c15c, c15d],
+    correctAnswer: c15d,
+    type: "images",
     explanation: p15,
     explanationType: "image",
+    imageChoice: true,
   },
 ];
 

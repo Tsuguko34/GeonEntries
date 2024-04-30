@@ -9,15 +9,16 @@ import image101 from "../../assets/images/Lessons Images/PELesson5/image-101.png
 import image102 from "../../assets/images/Lessons Images/PELesson5/image-102.png";
 
 import { calculateCrossProduct, calculatePoint3D } from "../../utils";
+import toast from "react-hot-toast";
 
 function PELesson5() {
   const [vectors, setVectors] = useState({
-    ux: 0,
-    uy: 0,
-    uz: 0,
-    vx: 0,
-    vy: 0,
-    vz: 0,
+    ux: null,
+    uy: null,
+    uz: null,
+    vx: null,
+    vy: null,
+    vz: null,
   });
 
   const isNumeric = () => {
@@ -365,98 +366,122 @@ function PELesson5() {
             <p>Create a 2 x 3 matrix containing u and v components.</p>
           </div>
 
-          <div className="Paragraph_Topic paddingLeft center">
-            <p>
-              <span className="large">[</span>
-              <span className="Vertical">
-                <span>u₁</span> <span>v₁</span>
-              </span>
-              <span className="Vertical">
-                <span>u₂</span> <span>v₂</span>
-              </span>
-              <span className="Vertical">
-                <span>u₃</span> <span>v₃</span>
-              </span>
-              <span className="large">]</span> <span className="arrow">→</span>
-              <span className="large">[</span>
-              <span className="Vertical">
-                <span>-4</span> <span>9</span>
-              </span>
-              <span className="Vertical">
-                <span>7</span> <span>-8</span>
-              </span>
-              <span className="Vertical">
-                <span>3</span> <span>-1</span>
-              </span>
-              <span className="large">]</span>
-            </p>
-          </div>
+          <div className="Paragraph_Topic paddingLeft3 center">
+            <div className="Solution_Example largerLeft2">
+              <div className="start">
+                <p className="left">
+                  <span className="large">[</span>
+                  <span className="Vertical">
+                    <span>u₁</span> <span>v₁</span>
+                  </span>
+                  <span className="Vertical">
+                    <span>u₂</span> <span>v₂</span>
+                  </span>
+                  <span className="Vertical">
+                    <span>u₃</span> <span>v₃</span>
+                  </span>
+                  <span className="large">]</span>{" "}
+                </p>
+                <p className="center">
+                  <span className="arrow">→</span>
+                </p>
+                <p className="right">
+                  <span className="large">[</span>
+                  <span className="Vertical">
+                    <span>-4</span> <span>9</span>
+                  </span>
+                  <span className="Vertical">
+                    <span>7</span> <span>-8</span>
+                  </span>
+                  <span className="Vertical">
+                    <span>3</span> <span>-1</span>
+                  </span>
+                  <span className="large">]</span>
+                </p>
+              </div>
 
-          <div className="Paragraph_Topic paddingLeft center">
-            <p>
-              <span className="large">[</span>
-              <span className="Vertical DarkBlue disabled">
-                <span>-4</span> <span>9</span>
-              </span>
-              <span className="Vertical Orange">
-                <span>7</span> <span>-8</span>
-              </span>
-              <span className="Vertical Orange">
-                <span>3</span> <span>-1</span>
-              </span>
-              <span className="large">]</span> <span className="arrow">→</span>
-              <span className="Vertical borderLeft white Orange">
-                <span>7</span> <span>-8</span>
-              </span>
-              <span className="Vertical borderRight white Orange">
-                <span>3</span> <span>-1</span>
-              </span>
-            </p>
-          </div>
+              <div className="start">
+                <p className="left">
+                  <span className="large">[</span>
+                  <span className="Vertical DarkBlue disabled">
+                    <span>-4</span> <span>9</span>
+                  </span>
+                  <span className="Vertical Orange">
+                    <span>7</span> <span>-8</span>
+                  </span>
+                  <span className="Vertical Orange">
+                    <span>3</span> <span>-1</span>
+                  </span>
+                  <span className="large">]</span>{" "}
+                </p>
+                <p className="center">
+                  <span className="arrow">→</span>
+                </p>
+                <p className="right">
+                  <span className="Vertical borderLeft white Orange">
+                    <span>7</span> <span>-8</span>
+                  </span>
+                  <span className="Vertical borderRight white Orange">
+                    <span>3</span> <span>-1</span>
+                  </span>
+                </p>
+              </div>
 
-          <div className="Paragraph_Topic paddingLeft center">
-            <p>
-              <span className="large">[</span>
-              <span className="Vertical Orange">
-                <span>-4</span> <span>9</span>
-              </span>
-              <span className="Vertical DarkBlue disabled">
-                <span>7</span> <span>-8</span>
-              </span>
-              <span className="Vertical Orange">
-                <span>3</span> <span>-1</span>
-              </span>
-              <span className="large">]</span> <span className="arrow">→</span>
-              <span className="Orange">-</span>
-              <span className="Vertical borderLeft white Orange">
-                <span>-4</span> <span>9</span>
-              </span>
-              <span className="Vertical borderRight white Orange">
-                <span>3</span> <span>-1</span>
-              </span>
-            </p>
-          </div>
+              <div className="start">
+                <p className="left">
+                  <span className="large">[</span>
+                  <span className="Vertical Orange">
+                    <span>-4</span> <span>9</span>
+                  </span>
+                  <span className="Vertical DarkBlue disabled">
+                    <span>7</span> <span>-8</span>
+                  </span>
+                  <span className="Vertical Orange">
+                    <span>3</span> <span>-1</span>
+                  </span>
+                  <span className="large">]</span>
+                </p>
+                <p className="center">
+                  <span className="arrow">→</span>
+                </p>
+                <p className="right">
+                  <span className="Orange">-</span>
+                  <span className="Vertical borderLeft white Orange">
+                    <span>-4</span> <span>9</span>
+                  </span>
+                  <span className="Vertical borderRight white Orange">
+                    <span>3</span> <span>-1</span>
+                  </span>
+                </p>
+              </div>
 
-          <div className="Paragraph_Topic paddingLeft center">
-            <p>
-              <span className="large">[</span>
-              <span className="Vertical Orange">
-                <span>-4</span> <span>9</span>
-              </span>
-              <span className="Vertical Orange">
-                <span>7</span> <span>-8</span>
-              </span>
-              <span className="Vertical DarkBlue disabled">
-                <span>3</span> <span>-1</span>
-              </span>
-              <span className="large">]</span> <span className="arrow">→</span>
-              <span className="Vertical borderLeft white Orange">
-                <span>-4</span> <span>9</span>
-              </span>
-              <span className="Vertical borderRight white Orange">
-                <span>7</span> <span>-8</span>
-              </span>
-            </p>
+              <div className="start">
+                <p className="left">
+                  <span className="large">[</span>
+                  <span className="Vertical Orange">
+                    <span>-4</span> <span>9</span>
+                  </span>
+                  <span className="Vertical Orange">
+                    <span>7</span> <span>-8</span>
+                  </span>
+                  <span className="Vertical DarkBlue disabled">
+                    <span>3</span> <span>-1</span>
+                  </span>
+                  <span className="large">]</span>
+                </p>
+                <p className="center">
+                  <span className="arrow">→</span>
+                </p>
+                <p className="right">
+                  <span className="Vertical borderLeft white Orange">
+                    <span>-4</span> <span>9</span>
+                  </span>
+                  <span className="Vertical borderRight white Orange">
+                    <span>7</span> <span>-8</span>
+                  </span>
+                </p>
+              </div>
+            </div>
           </div>
 
           <div className="Paragraph_Topic paddingLeft center">
@@ -527,9 +552,9 @@ function PELesson5() {
                         <p>x</p>
                         <input
                           type="text"
-                          pattern="-?([0-9]|1[0-6])"
+                          pattern="-?\d*\.?\d{0,2}"
                           value={vectors.ux || ""}
-                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
+                          maxLength={6} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
                             const value = e.target.value;
 
@@ -541,24 +566,31 @@ function PELesson5() {
                                 !value.startsWith("--") &&
                                 value !== "-")
                             ) {
-                              if (value === "-" || value >= -99) {
+                              if (value === "-" || value >= -999) {
                                 setVectors({
                                   ...vectors,
                                   ux: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             } else {
-                              const intValue = parseInt(value);
+                              // Allow empty value or valid decimal value with up to two decimal places
+                              const decimalPattern = /^-?\d*\.?\d{0,2}$/;
                               if (
-                                value === "" || // Allow empty value
-                                (!isNaN(intValue) &&
-                                  intValue >= -99 &&
-                                  intValue <= 99)
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
                               ) {
                                 setVectors({
                                   ...vectors,
-                                  ux: intValue,
+                                  ux: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             }
                           }}
@@ -569,9 +601,9 @@ function PELesson5() {
                         <p>y</p>
                         <input
                           type="text"
-                          pattern="-?([0-9]|1[0-6])"
+                          pattern="-?\d*\.?\d{0,2}"
                           value={vectors.uy || ""}
-                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
+                          maxLength={6} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
                             const value = e.target.value;
 
@@ -583,24 +615,31 @@ function PELesson5() {
                                 !value.startsWith("--") &&
                                 value !== "-")
                             ) {
-                              if (value === "-" || value >= -99) {
+                              if (value === "-" || value >= -999) {
                                 setVectors({
                                   ...vectors,
                                   uy: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             } else {
-                              const intValue = parseInt(value);
+                              // Allow empty value or valid decimal value with up to two decimal places
+                              const decimalPattern = /^-?\d*\.?\d{0,2}$/;
                               if (
-                                value === "" || // Allow empty value
-                                (!isNaN(intValue) &&
-                                  intValue >= -99 &&
-                                  intValue <= 99)
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
                               ) {
                                 setVectors({
                                   ...vectors,
-                                  uy: intValue,
+                                  uy: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             }
                           }}
@@ -611,9 +650,9 @@ function PELesson5() {
                         <p>z</p>
                         <input
                           type="text"
-                          pattern="-?([0-9]|1[0-6])"
+                          pattern="-?\d*\.?\d{0,2}"
                           value={vectors.uz || ""}
-                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
+                          maxLength={6} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
                             const value = e.target.value;
 
@@ -625,24 +664,31 @@ function PELesson5() {
                                 !value.startsWith("--") &&
                                 value !== "-")
                             ) {
-                              if (value === "-" || value >= -99) {
+                              if (value === "-" || value >= -999) {
                                 setVectors({
                                   ...vectors,
                                   uz: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             } else {
-                              const intValue = parseInt(value);
+                              // Allow empty value or valid decimal value with up to two decimal places
+                              const decimalPattern = /^-?\d*\.?\d{0,2}$/;
                               if (
-                                value === "" || // Allow empty value
-                                (!isNaN(intValue) &&
-                                  intValue >= -99 &&
-                                  intValue <= 99)
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
                               ) {
                                 setVectors({
                                   ...vectors,
-                                  uz: intValue,
+                                  uz: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             }
                           }}
@@ -660,9 +706,9 @@ function PELesson5() {
                       <div className="vertical">
                         <input
                           type="text"
-                          pattern="-?([0-9]|1[0-6])"
+                          pattern="-?\d*\.?\d{0,2}"
                           value={vectors.vx || ""}
-                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
+                          maxLength={6} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
                             const value = e.target.value;
 
@@ -674,24 +720,31 @@ function PELesson5() {
                                 !value.startsWith("--") &&
                                 value !== "-")
                             ) {
-                              if (value === "-" || value >= -99) {
+                              if (value === "-" || value >= -999) {
                                 setVectors({
                                   ...vectors,
                                   vx: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             } else {
-                              const intValue = parseInt(value);
+                              // Allow empty value or valid decimal value with up to two decimal places
+                              const decimalPattern = /^-?\d*\.?\d{0,2}$/;
                               if (
-                                value === "" || // Allow empty value
-                                (!isNaN(intValue) &&
-                                  intValue >= -99 &&
-                                  intValue <= 99)
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
                               ) {
                                 setVectors({
                                   ...vectors,
-                                  vx: intValue,
+                                  vx: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             }
                           }}
@@ -701,9 +754,9 @@ function PELesson5() {
                       <div className="vertical">
                         <input
                           type="text"
-                          pattern="-?([0-9]|1[0-6])"
+                          pattern="-?\d*\.?\d{0,2}"
                           value={vectors.vy || ""}
-                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
+                          maxLength={6} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
                             const value = e.target.value;
 
@@ -715,24 +768,31 @@ function PELesson5() {
                                 !value.startsWith("--") &&
                                 value !== "-")
                             ) {
-                              if (value === "-" || value >= -99) {
+                              if (value === "-" || value >= -999) {
                                 setVectors({
                                   ...vectors,
                                   vy: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             } else {
-                              const intValue = parseInt(value);
+                              // Allow empty value or valid decimal value with up to two decimal places
+                              const decimalPattern = /^-?\d*\.?\d{0,2}$/;
                               if (
-                                value === "" || // Allow empty value
-                                (!isNaN(intValue) &&
-                                  intValue >= -99 &&
-                                  intValue <= 99)
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
                               ) {
                                 setVectors({
                                   ...vectors,
-                                  vy: intValue,
+                                  vy: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             }
                           }}
@@ -742,9 +802,9 @@ function PELesson5() {
                       <div className="vertical">
                         <input
                           type="text"
-                          pattern="-?([0-9]|1[0-6])"
+                          pattern="-?\d*\.?\d{0,2}"
                           value={vectors.vz || ""}
-                          maxLength={3} // Increase maxLength to accommodate the optional '-' sign
+                          maxLength={6} // Increase maxLength to accommodate the optional '-' sign
                           onChange={(e) => {
                             const value = e.target.value;
 
@@ -756,24 +816,31 @@ function PELesson5() {
                                 !value.startsWith("--") &&
                                 value !== "-")
                             ) {
-                              if (value === "-" || value >= -99) {
+                              if (value === "-" || value >= -999) {
                                 setVectors({
                                   ...vectors,
                                   vz: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             } else {
-                              const intValue = parseInt(value);
+                              // Allow empty value or valid decimal value with up to two decimal places
+                              const decimalPattern = /^-?\d*\.?\d{0,2}$/;
                               if (
-                                value === "" || // Allow empty value
-                                (!isNaN(intValue) &&
-                                  intValue >= -99 &&
-                                  intValue <= 99)
+                                (value === "" || decimalPattern.test(value)) &&
+                                value <= 999
                               ) {
                                 setVectors({
                                   ...vectors,
-                                  vz: intValue,
+                                  vz: value,
                                 });
+                              } else {
+                                toast.error(
+                                  "Value can only be between -999 to 999"
+                                );
                               }
                             }
                           }}
@@ -874,13 +941,16 @@ function PELesson5() {
 
           <div className="Theorem">
             <div className="Label_Container">
-              <p className="Label">THEOREM 5.1</p>
+              <p className="Label">THEOREM 5.2</p>
             </div>
             <div className="Theorem_Content">
               <p className="Label">
                 Let u , v, and w be vectors in R³, and k is a scalar, then:
               </p>
-              <div className="Paragraph_Topic paddingLeft2">
+              <div
+                className="Paragraph_Topic paddingLeft2"
+                style={{ display: "flex", flexDirection: "column", gap: "5px" }}
+              >
                 <p>1. u × v = -(v × u)</p>
                 <p>2. u × (v + w) = (u × v) + (u × w)</p>
                 <p>3. (u + v) × w = (u × w) + (v × w)</p>
@@ -924,7 +994,7 @@ function PELesson5() {
           </div>
 
           <div className="Paragraph_Topic paddingLeft2">
-            <p>Component Form</p>
+            <p className="Italic">Component Form</p>
           </div>
           <div className="Paragraph_Topic paddingLeft3">
             <p>v = (x, y, z)</p>
@@ -933,8 +1003,8 @@ function PELesson5() {
           <div className="Paragraph_Topic paddingLeft2">
             <div className="Side_By_Side">
               <div className="Left_Side noGap">
-                <div className="Paragraph_Topic">
-                  <p>Component Form</p>
+                <div className="Paragraph_Topic noPadding">
+                  <p className="Italic">Standard Unit Form</p>
                 </div>
                 <div className="Paragraph_Topic paddingLeft">
                   <p>v = (x, y, z)</p>
@@ -1066,8 +1136,8 @@ function PELesson5() {
             <p>Evaluate the given expression.</p>
           </div>
 
-          <div className="Paragraph_Topic paddingLeft2">
-            <p>5i × (8i × 2j)</p>
+          <div className="Paragraph_Topic paddingLeft">
+            <p>1.) 5i × (8i × 2j)</p>
           </div>
 
           <div className="Paragraph_Topic paddingLeft3">
@@ -1175,8 +1245,8 @@ function PELesson5() {
             </div>
           </div>
 
-          <div className="Paragraph_Topic paddingLeft2">
-            <p>(7k × 5i) × (-8i × 4j)</p>
+          <div className="Paragraph_Topic paddingLeft">
+            <p>2.) (7k × 5i) × (-8i × 4j)</p>
           </div>
 
           <div className="Paragraph_Topic paddingLeft2">
@@ -1629,8 +1699,7 @@ function PELesson5() {
             <div className="Side_By_Side">
               <div className="Left_Side">
                 <div className="Solution_Example largerLeft">
-                  <p className="label">Finding the components of</p>
-                  <p className="label">u:</p>
+                  <p className="label">Finding the components of u:</p>
                   <div className="start">
                     <p className="left withStack">
                       <span className="stack">
@@ -1658,8 +1727,7 @@ function PELesson5() {
               </div>
               <div className="Right_Side">
                 <div className="Solution_Example largerLeft">
-                  <p className="label">Finding the components of</p>
-                  <p className="label">v:</p>
+                  <p className="label">Finding the components of v:</p>
                   <div className="start">
                     <p className="left withStack">
                       <span className="stack">
@@ -1696,19 +1764,20 @@ function PELesson5() {
           </div>
 
           <div className="Paragraph_Topic paddingLeft2">
-            <div className="Solution_Example largerLeft">
+            <div className="Solution_Example largerLeft2">
               <div className="start">
                 <p className="left">
-                  A ▱ = abs <span className="large">(</span>det
-                  <span className="large">[</span>
+                  A ▱ = abs &nbsp;<span className="large">(&nbsp;</span>
+                  det&nbsp;
+                  <span className="large">[&nbsp;</span>
                   <span className="Vertical borderLeft center white">
                     <span>u₂</span> <span>v₂</span>
                   </span>
                   <span className="Vertical borderRight center white">
                     <span>u₃</span> <span>v₃</span>
                   </span>
-                  <span className="large">]</span>
-                  <span className="large">)</span>
+                  <span className="large">&nbsp;]</span>
+                  <span className="large">&nbsp;)</span>
                 </p>
                 <p className="center">=</p>
                 <p className="right">
@@ -1860,9 +1929,9 @@ function PELesson5() {
             <div className="Solution_Example largerLeft">
               <div className="start">
                 <p className="left">
-                  det
+                  det &nbsp;
                   <span className="large" style={{ fontWeight: "300" }}>
-                    [
+                    [&nbsp;
                   </span>
                   <span className="Vertical borderLeft center white">
                     <span>u₁</span> <span>v₁</span> <span>w₁</span>
@@ -1874,7 +1943,7 @@ function PELesson5() {
                     <span>u₃</span> <span>v₃</span> <span>w₃</span>
                   </span>
                   <span className="large" style={{ fontWeight: "300" }}>
-                    ]
+                    &nbsp;]
                   </span>
                 </p>
                 <p className="center">=</p>
@@ -2065,13 +2134,13 @@ function PELesson5() {
             <div className="Solution_Example largerLeft2">
               <div className="start">
                 <p className="left">
-                  V ▱ = abs
+                  V ▱ = abs&nbsp;
                   <span className="large" style={{ fontWeight: "300" }}>
-                    (
+                    (&nbsp;
                   </span>
-                  det
+                  det&nbsp;
                   <span className="large" style={{ fontWeight: "300" }}>
-                    [
+                    [&nbsp;
                   </span>
                   <span className="Vertical borderLeft center white">
                     <span>u₁</span> <span>v₁</span> <span>w₁</span>
@@ -2083,10 +2152,10 @@ function PELesson5() {
                     <span>u₃</span> <span>v₃</span> <span>w₃</span>
                   </span>
                   <span className="large" style={{ fontWeight: "300" }}>
-                    ]
+                    &nbsp;]
                   </span>
                   <span className="large" style={{ fontWeight: "300" }}>
-                    )
+                    &nbsp;)
                   </span>
                 </p>
                 <p className="center">=</p>

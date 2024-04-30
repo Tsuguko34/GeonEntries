@@ -13,11 +13,27 @@ import p12 from "../assets/images/Quiz Images/lessonQuizImages/PELesson3Quiz/12 
 import p13 from "../assets/images/Quiz Images/lessonQuizImages/PELesson3Quiz/13 P L3.png";
 import p14 from "../assets/images/Quiz Images/lessonQuizImages/PELesson3Quiz/14 P L3.png";
 import p15 from "../assets/images/Quiz Images/lessonQuizImages/PELesson3Quiz/15 P L3.png";
+import c5a from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson3Choices/L3 5A.png";
+import c5b from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson3Choices/L3 5B.png";
+import c5c from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson3Choices/L3 5C.png";
+import c5d from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson3Choices/L3 5D.png";
+import c6a from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson3Choices/L3 6A.png";
+import c6b from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson3Choices/L3 6B.png";
+import c6c from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson3Choices/L3 6C.png";
+import c6d from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson3Choices/L3 6D.png";
+import c9a from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson3Choices/L3 9A.png";
+import c9b from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson3Choices/L3 9B.png";
+import c9c from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson3Choices/L3 9C.png";
+import c9d from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson3Choices/L3 9D.png";
+import c14a from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson3Choices/L3 14A.png";
+import c14b from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson3Choices/L3 14B.png";
+import c14c from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson3Choices/L3 14C.png";
+import c14d from "../assets/images/Quiz Images/lessonQuizChoicesImages/PELesson3Choices/L3 14D.png";
 
 var questions = [
   {
     question:
-      "What is the point-normal equation of the line passing through point P0(-14, 2) and having a normal vector n = (8, -17)?",
+      "What is the point-normal equation of the line passing through point P₀(-14, 2) and having a normal vector n = (8, -17)?",
     choices: [
       "-14(x + 8) + 2(y - 17) = 0",
       "8(x - 14) – 17(y + 2) = 0",
@@ -31,7 +47,7 @@ var questions = [
   },
   {
     question:
-      "What is the general equation of the plane passing through point P0(5, -11, -7) and having a normal vector n = (0, 13, -6)?",
+      "What is the general equation of the plane passing through point P₀(5, -11, -7) and having a normal vector n = (0, 13, -6)?",
     choices: [
       "13y + 6z - 185 = 0",
       "13y – 6z + 101 = 0",
@@ -63,26 +79,22 @@ var questions = [
   },
   {
     question: "Which of the following is NOT true?",
-    choices: [
-      "The zero vector in Rn is orthogonal to every vector in Rn.",
-      "Vectors u and v are orthogonal iff. ||u + v||2 = ||u||2 - ||v||2",
-      "Vectors v = (a, b) and w = (-b, a) are orthogonal.",
-      "Two planes are parallel if their normal vectors are parallel.",
-    ],
-    correctAnswer:
-      "Vectors u and v are orthogonal iff. ||u + v||2 = ||u||2 - ||v||2",
-    type: "text",
+    choices: [c5a, c5b, c5c, c5d],
+    correctAnswer: c5b,
+    type: "images",
     explanation: p5,
     explanationType: "image",
+    imageChoice: true,
   },
   {
     question:
       "Let u = (4, -9) and v = (-1, 2). What is the orthogonal projection of u onto v?",
-    choices: ["(22/3,-44/3)", "(-22/3,44/3)", "(-88/3,66)", "(88/3,-66)"],
-    correctAnswer: "(22/3,-44/3)",
-    type: "text",
+    choices: [c6a, c6b, c6c, c6d],
+    correctAnswer: c6a,
+    type: "images",
     explanation: p6,
     explanationType: "image",
+    imageChoice: true,
   },
   {
     question:
@@ -100,7 +112,7 @@ var questions = [
   },
   {
     question:
-      "What is the general equation of the line passing through point P0(-11, -16) and having a normal vector n = (-2, 2)?",
+      "What is the general equation of the line passing through point P₀(-11, -16) and having a normal vector n = (-2, 2)?",
     choices: [
       "2x - 2y + 54 = 0",
       "-2x + 2y + 54 = 0",
@@ -114,16 +126,12 @@ var questions = [
   },
   {
     question: "What are the vectors that are orthogonal to (12, -7)?",
-    choices: [
-      "u = m(1,12/7) ∀ m ∈ ℝ",
-      "u = m(12/7,   1) ∀ m ∈ ℝ",
-      "u = m(1,-12/7) ∀ m ∈ ℝ",
-      "u = m(-12/7,   1) ∀ m ∈ ℝ",
-    ],
-    correctAnswer: "u = m(1,-12/7) ∀ m ∈ ℝ",
-    type: "text",
+    choices: [c9a, c9b, c9c, c9d],
+    correctAnswer: c9a,
+    type: "images",
     explanation: p9,
     explanationType: "image",
+    imageChoice: true,
   },
   {
     question: "Which of the following vectors are orthogonal?",
@@ -168,7 +176,7 @@ var questions = [
     question:
       "What is the distance between the point (-7, 2, -3) and the plane 13y – 6x = z + 1?",
     choices: ["2.877", "3.877", "4.877", "5.877"],
-    correctAnswer: "2.877",
+    correctAnswer: "4.877",
     type: "text",
     explanation: p13,
     explanationType: "image",
@@ -176,16 +184,12 @@ var questions = [
   {
     question:
       "Let u = (-3, -7) and v = (-14, 8). What is the vector component of u orthogonal to v?",
-    choices: [
-      "(-244/65,-427/65)",
-      "(244/65,-427/65)",
-      "(-244/65,427/65)",
-      "(244/65,427/65)",
-    ],
-    correctAnswer: "(-244/65,-427/65)",
-    type: "text",
+    choices: [c14a, c14b, c14c, c14d],
+    correctAnswer: c14a,
+    type: "images",
     explanation: p14,
     explanationType: "image",
+    imageChoice: true,
   },
   {
     question:

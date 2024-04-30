@@ -88,7 +88,7 @@ function NELesson1() {
           <div className="Paragraph_Topic">
             <p>
               Euclid identified a set of basic assumptions that he called
-              postulates (or axioms ) and common notions that serves as the
+              postulates (or axioms) and common notions that serves as the
               fundamental principles upon which the rest of his geometric
               arguments and proofs were built.
             </p>
@@ -110,7 +110,7 @@ function NELesson1() {
               <div className="Right_Side">
                 <div className="Topic_Visual">
                   <div className="Visual_Holder image">
-                    <img src={image29} alt="Graph Image" />
+                    <img src={image29} alt="Graph Image" className="small" />
                   </div>
                 </div>
               </div>
@@ -130,7 +130,7 @@ function NELesson1() {
               <div className="Right_Side">
                 <div className="Topic_Visual">
                   <div className="Visual_Holder image">
-                    <img src={image28} alt="Graph Image" />
+                    <img src={image28} alt="Graph Image" className="small" />
                   </div>
                 </div>
               </div>
@@ -150,7 +150,7 @@ function NELesson1() {
               <div className="Right_Side">
                 <div className="Topic_Visual">
                   <div className="Visual_Holder image">
-                    <img src={image27} alt="Graph Image" />
+                    <img src={image27} alt="Graph Image" className="small" />
                   </div>
                 </div>
               </div>
@@ -167,7 +167,7 @@ function NELesson1() {
               <div className="Right_Side">
                 <div className="Topic_Visual">
                   <div className="Visual_Holder image">
-                    <img src={image26} alt="Graph Image" />
+                    <img src={image26} alt="Graph Image" className="small" />
                   </div>
                 </div>
               </div>
@@ -190,7 +190,7 @@ function NELesson1() {
               <div className="Right_Side">
                 <div className="Topic_Visual">
                   <div className="Visual_Holder image">
-                    <img src={image30} alt="Graph Image" />
+                    <img src={image30} alt="Graph Image" className="small" />
                   </div>
                 </div>
               </div>
@@ -212,7 +212,7 @@ function NELesson1() {
             </p>
             <p>
               Controversies regarding the fifth postulate (also called the
-              parallel postulate ) emerged following the publication of Euclid's
+              parallel postulate) emerged following the publication of Euclid's
               Elements . Mathematicians began to question whether if the fifth
               postulate is considered as a postulate. A number of alternative
               statements for the said postulates were proposed including the
@@ -237,7 +237,7 @@ function NELesson1() {
               <div className="Right_Side">
                 <div className="Topic_Visual">
                   <div className="Visual_Holder image">
-                    <img src={image31} alt="Graph Image" />
+                    <img src={image31} alt="Graph Image" className="small" />
                   </div>
                 </div>
               </div>
@@ -257,7 +257,7 @@ function NELesson1() {
               <div className="Right_Side">
                 <div className="Topic_Visual">
                   <div className="Visual_Holder image">
-                    <img src={image33} alt="Graph Image" />
+                    <img src={image33} alt="Graph Image" className="small" />
                   </div>
                 </div>
               </div>
@@ -274,7 +274,7 @@ function NELesson1() {
               <div className="Right_Side">
                 <div className="Topic_Visual">
                   <div className="Visual_Holder image">
-                    <img src={image34} alt="Graph Image" />
+                    <img src={image34} alt="Graph Image" className="small" />
                   </div>
                 </div>
               </div>
@@ -294,7 +294,7 @@ function NELesson1() {
               <div className="Right_Side">
                 <div className="Topic_Visual">
                   <div className="Visual_Holder image">
-                    <img src={image35} alt="Graph Image" />
+                    <img src={image35} alt="Graph Image" className="small" />
                   </div>
                 </div>
               </div>
@@ -314,7 +314,7 @@ function NELesson1() {
               <div className="Right_Side">
                 <div className="Topic_Visual">
                   <div className="Visual_Holder image">
-                    <img src={image36} alt="Graph Image" />
+                    <img src={image36} alt="Graph Image" className="small" />
                   </div>
                 </div>
               </div>
@@ -334,7 +334,7 @@ function NELesson1() {
               <div className="Right_Side">
                 <div className="Topic_Visual">
                   <div className="Visual_Holder image">
-                    <img src={image38} alt="Graph Image" />
+                    <img src={image38} alt="Graph Image" className="small" />
                   </div>
                 </div>
               </div>
@@ -407,7 +407,7 @@ function NELesson1() {
 
           <div className="Topic_Visual">
             <div className="Visual_Holder image">
-              <img src={image40} alt="Graph Image" />
+              <img src={image40} alt="Graph Image" className="small" />
             </div>
           </div>
 
@@ -486,7 +486,7 @@ function NELesson1() {
 
           <div className="Topic_Visual">
             <div className="Visual_Holder image">
-              <img src={image52} alt="Graph Image" />
+              <img src={image52} alt="Graph Image" className="small" />
             </div>
           </div>
 
@@ -551,7 +551,7 @@ function NELesson1() {
             </div>
             <div className="Theorem_Content">
               <p className="Label">
-                The two angles of parallelism for the same segment are
+                The two angles of parallelism for the same segment are&nbsp;
                 <span className="Bold">congruent</span> and{" "}
                 <span className="Bold">acute</span>.{" "}
                 <span className="Italic">
@@ -636,7 +636,7 @@ function NELesson1() {
 
           <div className="Topic_Visual">
             <div className="Visual_Holder image">
-              <img src={image46} alt="Graph Image" />
+              <img src={image46} alt="Graph Image" className="small" />
             </div>
           </div>
 
@@ -680,7 +680,7 @@ function NELesson1() {
               <div className="Right_Side">
                 <div className="Topic_Visual">
                   <div className="Visual_Holder image">
-                    <img src={image50} alt="Graph Image" />
+                    <img src={image50} alt="Graph Image" className="small" />
                   </div>
                 </div>
               </div>
@@ -705,7 +705,7 @@ function NELesson1() {
                 <div className="Right_Side">
                   <div className="Topic_Visual">
                     <div className="Visual_Holder image">
-                      <img src={image49} alt="Graph Image" />
+                      <img src={image49} alt="Graph Image" className="small" />
                     </div>
                   </div>
                 </div>
@@ -744,7 +744,11 @@ function NELesson1() {
                   <div className="Right_Side">
                     <div className="Topic_Visual">
                       <div className="Visual_Holder image">
-                        <img src={image51} alt="Graph Image" />
+                        <img
+                          src={image51}
+                          alt="Graph Image"
+                          className="small"
+                        />
                       </div>
                     </div>
                   </div>
@@ -781,7 +785,7 @@ function NELesson1() {
               <div className="Right_Side">
                 <div className="Topic_Visual">
                   <div className="Visual_Holder image">
-                    <img src={image56} alt="Graph Image" />
+                    <img src={image56} alt="Graph Image" className="small" />
                   </div>
                 </div>
               </div>
@@ -826,7 +830,7 @@ function NELesson1() {
               <div className="Right_Side">
                 <div className="Topic_Visual">
                   <div className="Visual_Holder image">
-                    <img src={image58} alt="Graph Image" />
+                    <img src={image58} alt="Graph Image" className="small" />
                   </div>
                 </div>
               </div>
@@ -930,7 +934,7 @@ function NELesson1() {
               <div className="Right_Side">
                 <div className="Topic_Visual">
                   <div className="Visual_Holder image">
-                    <img src={hyp1} alt="Graph Image" />
+                    <img src={hyp1} alt="Graph Image" className="small" />
                   </div>
                 </div>
               </div>
@@ -952,7 +956,7 @@ function NELesson1() {
               <div className="Right_Side">
                 <div className="Topic_Visual">
                   <div className="Visual_Holder image">
-                    <img src={hyp2} alt="Graph Image" />
+                    <img src={hyp2} alt="Graph Image" className="small" />
                   </div>
                 </div>
               </div>
@@ -975,7 +979,7 @@ function NELesson1() {
               <div className="Right_Side">
                 <div className="Topic_Visual">
                   <div className="Visual_Holder image">
-                    <img src={image61} alt="Graph Image" />
+                    <img src={image61} alt="Graph Image" className="small" />
                   </div>
                 </div>
               </div>

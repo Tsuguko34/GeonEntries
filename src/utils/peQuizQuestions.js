@@ -179,7 +179,7 @@ var questions = [
     question:
       "A plane passes through point (13, -7, 3) and is orthogonal to vector n = (-1, -5, 2). Determine the z-intercept of the plane.",
     choices: ["(0, 0, 14)", "(0, 0, -28)", "(0, 0, -14)", "(0, 0, 28)"],
-    correctAnswer: "(0, 0, -14)",
+    correctAnswer: "(0, 0, 14)",
     explanation: p14,
     explanationType: "image",
     type: "text",

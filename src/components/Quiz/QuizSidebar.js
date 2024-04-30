@@ -88,7 +88,7 @@ function QuizSidebar({ handleScrollClick, closeSidebar }) {
     <>
       <div
         className={`Questions_Container ${
-          questions.length > 10 ? "withShadow" : ""
+          questions.length > 15 ? "withShadow" : ""
         }`}
         ref={containerRef}
       >
