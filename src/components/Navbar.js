@@ -112,14 +112,6 @@ function Navbar({ setOpenSidebar, pageHasSidebar }) {
                     comprehension in modern geometry.
                   </p>
                 </div>
-                <div className="Credits">
-                  <span>Huge credits to:</span>
-                  <br />
-                  <p>
-                    Estrella, B. M. (2020). Modern Geometry. Bulacan State
-                    University
-                  </p>
-                </div>
 
                 <div className="Trademark">
                   <span>GeomEntries • 2023</span>
